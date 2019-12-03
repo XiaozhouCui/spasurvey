@@ -1,0 +1,67 @@
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"><![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"><!--<![endif]-->
+	<head>
+		<title>eSurvey - Best Practice Australia</title>
+		<meta id="viewport" name="viewport"/>
+		<link rel="shortcut icon" href="https://i.bpanz.com/SurveyAssets/bpa_favicon.png"/>
+		<mrRef RefType="link" rel="stylesheet" type="text/css" href="style.css"></mrRef>
+		<style type="text/css">
+			.question_response textarea {
+				height: 1.5em !important;
+				width: 10em !important;
+				font-size: 150% !important;
+				text-align: center !important;
+			}
+		</style>
+	</head>
+	<body class="page">
+		<mrPage IncludeElementIDs="true"/>
+		<span class="sessionID" style="display:none"><mrData Index="1" QuestionElement="Label"/></span>
+		<div class="container">
+			<div class="header">
+				<div class="header-bar">
+					<h1>Verify Access Code</h1>
+				</div>
+			</div>
+			<div class="content" id="WorkUnitPage">
+				<div class="demographic grid">
+					<h1 class="question_title" style="letter-spacing:0">We encountered an issue verifying your Access Code.</h1>
+					<div class="question_title -no_shadow"><strong><a id="ReturnToAuthenticationPage" href="https://bpanz.com/esurvey">Please click or tap here and return to the login page and enter your Access Code again.</a><br/>Or scan the QR code once more.</strong></div>
+					<div class="question_response" style="display:none;">
+						<mrData QuestionName="WorkUnitCode" QuestionElement="Controls" />
+						<mrData QuestionName="WorkUnitCode" QuestionElement="Error" />
+					</div>
+				</div>
+				<div class="survey-nav">
+					<input type="submit" name="_NStop" value="Stop &amp; Save" style="display:none;" />
+					<input type="submit" name="_NNext" value="Next" title="Proceed to the next page" style="display:none;" />
+				</div>
+			</div>
+			<div class="footer">
+				<div class="footer__section -links">
+					<a href="https://bpanz.com/bpacopyright" target="_blank" rel="noopener noreferrer" class="copyright">© 2019 Best Practice Australia</a>
+					<a href="https://bpanz.com/privacypolicy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+					<a href="https://bpanz.com/disclaimer" target="_blank" rel="noopener noreferrer">Ts &amp; Cs</a>
+					<a href="https://bpanz.com/intellectual-property-statement" target="_blank" rel="noopener noreferrer">Intellectual Property</a>
+				</div>
+				<div class="confidential">Confidential - your feedback will be anonymous</div>
+				<div class="clearelement"></div>
+			</div>
+		</div>
+		<script type="text/javascript" src="https://i.bpanz.com/SurveyAssets/jquery.1.11.3.min.js"></script>
+		<script type="text/javascript" src="https://i.bpanz.com/SurveyAssets/jquery-ui.1.10.3.min.js"></script>
+		<mrRef RefType="script" src="master.js">master.js</mrRef>
+		<script type="text/javascript">
+    //<![CDATA[
+    $(function() {
+      var colourControl = $('textarea[name="_QWorkUnitPage_QWorkUnitCode"]')
+      colourControl.focus()
+    })
+    //]]>
+    </script>
+	</body>
+</html>

@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<defaults xmlns="http://www.bpanz.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.bpanz.com Defaults.xsd">
+  <categories id="MultipleChoice">
+    <category value="1" description="Affirmative response" />
+    <category value="-1" description="No response" missing="true" />
+  </categories>
+  <categories id="YesNo">
+    <category value="1" label="Yes" />
+    <category value="2" label="No" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="YesNoNoOpinion"><!-- Same as YesNotSureNo, display order on survey instrument might be different -->
+    <category value="1" label="Yes" />
+    <category value="3" label="No" />
+    <category value="2" label="No opinion" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="YesNoPreferNotToSay">
+    <category value="1" label="Yes" />
+    <category value="2" label="No" />
+    <category value="998" label="Prefer not to say" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="YesNoNAPreferNotToSay">
+    <category value="1" label="Yes" />
+    <category value="2" label="No" />
+    <category value="3" label="Not Applicable" refused="true" />
+    <category value="998" label="Prefer not to say" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="YesNoNA">
+    <category value="1" label="Yes" />
+    <category value="2" label="No" />
+    <category value="3" label="Not applicable" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="YesNotSureNo">
+    <category value="1" label="Yes" />
+    <category value="2" label="Not Sure" />
+    <category value="3" label="No" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="YesNotSureNoNotEmployed">
+    <category value="1" description="Yes" label="Yes" />
+    <category value="2" description="Not Sure" label="Not Sure" />
+    <category value="3" description="No" label="No" />
+    <category value="4" description="Not employed here at the time" label="Not employed here at the time" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="YesNoMustAnswer">
+    <category value="1" label="Yes" />
+    <category value="2" label="No" />
+  </categories>
+  <categories id="Scale1to3">
+    <category value="1" />
+    <category value="2" />
+    <category value="3" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to3NA">
+    <category value="1" description="Positive Impact"               label="Positive Impact" />
+    <category value="2" description="No Impact"                     label="No Impact" />
+    <category value="3" description="Negative Impact"               label="Negative Impact" />
+    <category value="4" description="Not Applicable"                label="Not Applicable" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to3YesNotSureNo">
+    <category value="1" description="Yes"                           label="Yes" />
+    <category value="2" description="Not Sure"                      label="Not Sure" />
+    <category value="3" description="No"                            label="No" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to3RegularlySometimesNever">
+    <category value="1" description="Regularly"                     label="Regularly" />
+    <category value="2" description="Sometimes"                     label="Sometimes" />
+    <category value="3" description="Never"                         label="Never" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to3Issues">
+    <category value="1" description="Org. does this well"           label="Org. does this well" />
+    <category value="2" description="Room for improvement"          label="Room for improvement" />
+    <category value="3" description="Cause for significant concern" label="Cause for significant concern" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to3Integrity">
+    <category value="1" description="Everyone performs well"        label="Everyone performs well" />
+    <category value="2" description="Some lapses"                   label="Some lapses" />
+    <category value="3" description="Cause for concern"             label="Cause for concern" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to3ClientSafety">
+    <category value="1" description="No cause for concern"          label="No cause for concern" />
+    <category value="2" description="Some potential signs"          label="Some potential signs" />
+    <category value="3" description="Cause for concern"             label="Cause for concern" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to4">
+    <category value="1" />
+    <category value="2" />
+    <category value="3" />
+    <category value="4" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to5">
+    <category value="1" />
+    <category value="2" />
+    <category value="3" />
+    <category value="4" />
+    <category value="5" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to5Agree">
+    <category value="1" description="Strongly Agree"                label="Strongly Agree" />
+    <category value="2" description="Agree"                         label="Agree" />
+    <category value="3" description="Neither"                       label="Neither" />
+    <category value="4" description="Disagree"                      label="Disagree" />
+    <category value="5" description="Strongly Disagree"             label="Strongly Disagree" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to6">
+    <category value="1" />
+    <category value="2" />
+    <category value="3" />
+    <category value="4" />
+    <category value="5" />
+    <category value="6" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to6NA">
+    <category value="1" />
+    <category value="2" />
+    <category value="3" />
+    <category value="4" />
+    <category value="5" />
+    <category value="6" />
+    <category value="7" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to6Agree">
+    <category value="1" description="Strongly agree"                label="Strongly agree" />
+    <category value="2" description="Agree"                         label="Agree" />
+    <category value="3" description="Somewhat agree"                label="Somewhat agree" />
+    <category value="4" description="Somewhat disagree"             label="Somewhat disagree" />
+    <category value="5" description="Disagree"                      label="Disagree" />
+    <category value="6" description="Strongly Disagree"             label="Strongly Disagree" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to6AgreeNA">
+    <category value="1" description="Strongly agree"                label="Strongly agree" />
+    <category value="2" description="Agree"                         label="Agree" />
+    <category value="3" description="Somewhat agree"                label="Somewhat agree" />
+    <category value="4" description="Somewhat disagree"             label="Somewhat disagree" />
+    <category value="5" description="Disagree"                      label="Disagree" />
+    <category value="6" description="Strongly Disagree"             label="Strongly Disagree" />
+    <category value="7" description="Not Applicable"                label="Not Applicable" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to6AgreeNO">
+    <category value="1" description="Strongly agree"                label="Strongly agree" />
+    <category value="2" description="Agree"                         label="Agree" />
+    <category value="3" description="Somewhat agree"                label="Somewhat agree" />
+    <category value="4" description="Somewhat disagree"             label="Somewhat disagree" />
+    <category value="5" description="Disagree"                      label="Disagree" />
+    <category value="6" description="Strongly Disagree"             label="Strongly Disagree" />
+    <category value="7" description="No opinion"                    label="No opinion" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to6AgreeNK">
+    <category value="1" description="Strongly agree"                label="Strongly agree" />
+    <category value="2" description="Agree"                         label="Agree" />
+    <category value="3" description="Somewhat agree"                label="Somewhat agree" />
+    <category value="4" description="Somewhat disagree"             label="Somewhat disagree" />
+    <category value="5" description="Disagree"                      label="Disagree" />
+    <category value="6" description="Strongly Disagree"             label="Strongly Disagree" />
+    <category value="7" description="Not Known"                     label="Not Known" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to6AgreeDK">
+    <category value="1" description="Strongly agree"                label="Strongly agree" />
+    <category value="2" description="Agree"                         label="Agree" />
+    <category value="3" description="Somewhat agree"                label="Somewhat agree" />
+    <category value="4" description="Somewhat disagree"             label="Somewhat disagree" />
+    <category value="5" description="Disagree"                      label="Disagree" />
+    <category value="6" description="Strongly Disagree"             label="Strongly Disagree" />
+    <category value="7" description="Don't Know"                    label="Don't Know" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to6Positive">
+    <category value="1" description="Very positive"                 label="Very positive" />
+    <category value="2" description="Positive"                      label="Positive" />
+    <category value="3" description="Somewhat positive"             label="Somewhat positive" />
+    <category value="4" description="Somewhat negative"             label="Somewhat negative" />
+    <category value="5" description="Negative"                      label="Negative" />
+    <category value="6" description="Very negative"                 label="Very negative" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to6PositiveNA">
+    <category value="1" description="Very positive"                 label="Very positive" />
+    <category value="2" description="Positive"                      label="Positive" />
+    <category value="3" description="Somewhat positive"             label="Somewhat positive" />
+    <category value="4" description="Somewhat negative"             label="Somewhat negative" />
+    <category value="5" description="Negative"                      label="Negative" />
+    <category value="6" description="Very negative"                 label="Very negative" />
+    <category value="7" description="Not applicable"                label="Not applicable" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to6PositiveNO">
+    <category value="1" description="Very positive"                 label="Very positive" />
+    <category value="2" description="Positive"                      label="Positive" />
+    <category value="3" description="Somewhat positive"             label="Somewhat positive" />
+    <category value="4" description="Somewhat negative"             label="Somewhat negative" />
+    <category value="5" description="Negative"                      label="Negative" />
+    <category value="6" description="Very negative"                 label="Very negative" />
+    <category value="7" description="No opinion"                    label="No opinion" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to6Satisfied">
+    <category value="1" description="Very satisfied"                label="Very satisfied" />
+    <category value="2" description="Satisfied"                     label="Satisfied" />
+    <category value="3" description="Somewhat satisfied"            label="Somewhat satisfied" />
+    <category value="4" description="Somewhat dissatisfied"         label="Somewhat dissatisfied" />
+    <category value="5" description="Dissatisfied"                  label="Dissatisfied" />
+    <category value="6" description="Very dissatisfied"             label="Very dissatisfied" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to6SatisfiedNA">
+    <category value="1" description="Very satisfied"                label="Very satisfied" />
+    <category value="2" description="Satisfied"                     label="Satisfied" />
+    <category value="3" description="Somewhat satisfied"            label="Somewhat satisfied" />
+    <category value="4" description="Somewhat dissatisfied"         label="Somewhat dissatisfied" />
+    <category value="5" description="Dissatisfied"                  label="Dissatisfied" />
+    <category value="6" description="Very dissatisfied"             label="Very dissatisfied" />
+    <category value="7" description="Not applicable"                label="Not applicable" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to6SatisfiedNO">
+    <category value="1" description="Very satisfied"                label="Very satisfied" />
+    <category value="2" description="Satisfied"                     label="Satisfied" />
+    <category value="3" description="Somewhat satisfied"            label="Somewhat satisfied" />
+    <category value="4" description="Somewhat dissatisfied"         label="Somewhat dissatisfied" />
+    <category value="5" description="Dissatisfied"                  label="Dissatisfied" />
+    <category value="6" description="Very dissatisfied"             label="Very dissatisfied" />
+    <category value="7" description="No opinion"                    label="No opinion" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to7">
+    <category value="1" />
+    <category value="2" />
+    <category value="3" />
+    <category value="4" />
+    <category value="5" />
+    <category value="6" />
+    <category value="7" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to8">
+    <category value="1" />
+    <category value="2" />
+    <category value="3" />
+    <category value="4" />
+    <category value="5" />
+    <category value="6" />
+    <category value="7" />
+    <category value="8" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to9">
+    <category value="1" />
+    <category value="2" />
+    <category value="3" />
+    <category value="4" />
+    <category value="5" />
+    <category value="6" />
+    <category value="7" />
+    <category value="8" />
+    <category value="9" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale1to10">
+    <category value="1" />
+    <category value="2" />
+    <category value="3" />
+    <category value="4" />
+    <category value="5" />
+    <category value="6" />
+    <category value="7" />
+    <category value="8" />
+    <category value="9" />
+    <category value="10" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Scale0to10" orientation="row" rows="1" description="Use for Net Promoter Score">
+    <category value="0" description="Absolutely not" label="Absolutely not" />
+    <category value="1" description="Absolutely not" label="Absolutely not" />
+    <category value="2" description="Probably not" label="Probably not" />
+    <category value="3" description="Probably not" label="Probably not" />
+    <category value="4" description="Probably not" label="Probably not" />
+    <category value="5" description="Neutral" label="Neutral" />
+    <category value="6" description="Probably would" label="Probably would" />
+    <category value="7" description="Probably would" label="Probably would" />
+    <category value="8" description="Probably would" label="Probably would" />
+    <category value="9" description="Absolutely would" label="Absolutely would" />
+    <category value="10" description="Absolutely would" label="Absolutely would" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="DemoPercentOfPractice" orientation="column" columns="1" description="Used in doctor/VMO (visiting medical officer) surveys">
+    <category value="1" label="Less than 10%" />
+    <category value="2" label="11% - 20%" />
+    <category value="3" label="21% - 30%" />
+    <category value="4" label="31% - 40%" />
+    <category value="5" label="41% - 50%" />
+    <category value="6" label="51% - 60%" />
+    <category value="7" label="61% - 70%" />
+    <category value="8" label="71% - 80%" />
+    <category value="9" label="81% - 90%" />
+    <category value="10" label="91% - 100%" />
+    <category value="998" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="D0069_Years" orientation="column" columns="4">
+    <category value="1" label="Less than 1 yr " />
+    <category value="2" label="1 - 2 yrs" />
+    <category value="3" label="3 - 5 yrs" />
+    <category value="4" label="6 - 10 yrs" />
+    <category value="5" label="11 - 15 yrs" />
+    <category value="6" label="16 - 20 yrs" />
+    <category value="7" label="21 - 25 yrs" />
+    <category value="8" label="26 - 30 yrs" />
+    <category value="9" label="Greater than 30 yrs" />
+    <category value="998" label="Prefer not to say" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="D0060_Age" orientation="column" columns="4">
+    <category value="1" label="Up to 25 yrs" />
+    <category value="2" label="26 - 30 yrs" />
+    <category value="3" label="31 - 35 yrs" />
+    <category value="4" label="36 - 40 yrs" />
+    <category value="5" label="41 - 45 yrs" />
+    <category value="6" label="46 - 50 yrs" />
+    <category value="7" label="51 - 55 yrs" />
+    <category value="8" label="56 - 60 yrs" />
+    <category value="9" label="Over 60 yrs" />
+    <category value="998" label="Prefer not to say" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="D0039_EmployStatus" orientation="column" columns="4">
+    <category value="1" label="Full-time" />
+    <category value="2" label="Part-time" />
+    <category value="3" label="Casual" />
+    <category value="998" label="Prefer not to say" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="D0039_EmployStatusPermanentTemporary" orientation="column" columns="4">
+    <category value="1" label="Permanent Full-time" />
+    <category value="2" label="Permanent Part-time" />
+    <category value="3" label="Temporary Full-time" />
+    <category value="4" label="Temporary Part-time" />
+    <category value="5" label="Fixed term contract" />
+    <category value="6" label="Casual" />
+    <category value="998" label="Prefer not to say" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="D0024_Gender" orientation="column" columns="3">
+    <category value="1" label="Male" />
+    <category value="2" label="Female" />
+    <category value="998" label="Prefer not to say" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="D0024_Gender_other" orientation="column" columns="4">
+    <category value="1" label="Male" />
+    <category value="2" label="Female" />
+    <category value="3" label="Other" />
+    <category value="998" label="Prefer not to say" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="D0024_Gender_other_identify" orientation="column" columns="1">
+    <category value="1" label="Male" />
+    <category value="2" label="Female" />
+    <category value="3" label="Other (prefer not to identify exclusively as being either Male or Female)" />
+    <category value="998" label="Prefer not to say" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="D0024_Gender_other_specify" orientation="column" columns="1">
+    <category value="1" label="Male" />
+    <category value="2" label="Female" />
+    <category value="3" label="Other (please specify if you wish)" />
+    <category value="998" label="Prefer not to say" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="D0347_Intention" orientation="column" columns="4">
+    <category value="1" label="Less than 1 yr" />
+    <category value="2" label="1 - 2 yrs" />
+    <category value="3" label="3 - 5 yrs" />
+    <category value="4" label="6 - 10 yrs " />
+    <category value="5" label="Greater than 10 yrs" />
+    <category value="6" label="Not sure" />
+    <category value="998" label="Prefer not to say" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Demo_ATSI_Aboriginal_NonEnglish" orientation="column" columns="1">
+    <category value="1" label="Aboriginal and/or Torres Strait Islander descent" />
+    <category value="2" label="Non-English speaking heritage/background" />
+    <category value="998" label="Prefer not to say" refused="true" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Demo90">
+    <category value="1" label="The patient" />
+    <category value="2" label="Their partner or spouse" />
+    <category value="3" label="Their parent or legal guardian" />
+    <category value="4" label="Their relative" />
+    <category value="5" label="Their carer" />
+    <category value="6" label="A friend" />
+    <category value="998" label="Prefer not to say" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="DemoAge_Patient">
+    <category value="1" label="Less than 20 yrs" />
+    <category value="2" label="21 - 30 yrs" />
+    <category value="3" label="31 - 40 yrs" />
+    <category value="4" label="41 - 50 yrs" />
+    <category value="5" label="51 - 60 yrs" />
+    <category value="6" label="61 - 70 yrs" />
+    <category value="7" label="71 - 80 yrs" />
+    <category value="8" label="81 - 90 yrs" />
+    <category value="9" label="Greater than 90 yrs" />
+    <category value="998" label="Prefer not to say" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="DemoAgeBy5">
+    <category value="1" label="Up to 25 yrs" />
+    <category value="2" label="26 - 30 yrs" />
+    <category value="3" label="31 - 35 yrs" />
+    <category value="4" label="36 - 40 yrs" />
+    <category value="5" label="41 - 45 yrs" />
+    <category value="6" label="46 - 50 yrs" />
+    <category value="7" label="51 - 55 yrs" />
+    <category value="8" label="56 - 60 yrs" />
+    <category value="9" label="Over 60 yrs" />
+    <category value="998" label="Prefer not to say" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Demo_PatientVisitedHospital">
+    <category value="1" label="Once (this is the first time)" />
+    <category value="2" label="2-3 times in the past 12 months" />
+    <category value="3" label="More than 3 times in the past 12 months" />
+    <category value="998" label="Prefer not to say" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Demo_Gender_Patient">
+    <category value="1" label="Male" />
+    <category value="2" label="Female" />
+    <category value="998" label="Prefer not to say" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="DemoGender_Patient">
+    <category value="1" label="Male" />
+    <category value="2" label="Female" />
+    <category value="3" label="Other (Prefer not to identify exclusively as being either Male or Female)" />
+    <category value="998" label="Prefer not to say" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="WardList">
+    <category value="1" label="1C" />
+    <category value="2" label="1D" />
+    <category value="3" label="2A" />
+    <category value="4" label="2B" />
+    <category value="5" label="2C" />
+    <category value="6" label="2D" />
+    <category value="7" label="2E" />
+    <category value="8" label="3C" />
+    <category value="9" label="3E/CCU" />
+    <category value="10" label="4A" />
+    <category value="11" label="4BR" />
+    <category value="12" label="4BT" />
+    <category value="13" label="4C" />
+    <category value="14" label="4D" />
+    <category value="15" label="4E" />
+    <category value="16" label="5A" />
+    <category value="17" label="5B" />
+    <category value="18" label="5C" />
+    <category value="19" label="5D" />
+    <category value="20" label="Cassia" />
+    <category value="21" label="Banksia" />
+    <category value="22" label="Bunya" />
+    <category value="23" label="SIU" />
+    <category value="24" label="BIRU" />
+    <category value="25" label="MAPU" />
+    <category value="26" label="Surgical Care Unit" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="MonthOfHospitalisation_2017">
+    <category value="1" label="February 2017" />
+    <category value="2" label="May 2017" />
+    <category value="3" label="August 2017" />
+    <category value="4" label="November 2017" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Demo_PatientAgeGroup">
+    <category value="1" label="Less than 20 yrs" />
+    <category value="2" label="21 - 30 yrs" />
+    <category value="3" label="31 - 40 yrs" />
+    <category value="4" label="41 - 50 yrs" />
+    <category value="5" label="51 - 60 yrs" />
+    <category value="6" label="61 - 70 yrs" />
+    <category value="7" label="71 - 80 yrs" />
+    <category value="8" label="81 - 90 yrs" />
+    <category value="9" label="Greater than 90 yrs" />
+    <category value="998" label="Prefer not to say" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Demo4_Years">
+    <category value="1" label="Less than 1 yr " />
+    <category value="2" label="1 - 2 yrs" />
+    <category value="3" label="3 - 5 yrs" />
+    <category value="4" label="6 - 10 yrs" />
+    <category value="5" label="11 - 15 yrs" />
+    <category value="6" label="16 - 20 yrs" />
+    <category value="7" label="21 - 25 yrs" />
+    <category value="8" label="26 - 30 yrs" />
+    <category value="9" label="Greater than 30 yrs" />
+    <category value="998" label="Prefer not to say" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Demo3_Age">
+    <category value="1" label="Up to 25 yrs" />
+    <category value="2" label="26 - 30 yrs" />
+    <category value="3" label="31 - 35 yrs" />
+    <category value="4" label="36 - 40 yrs" />
+    <category value="5" label="41 - 45 yrs" />
+    <category value="6" label="46 - 50 yrs" />
+    <category value="7" label="51 - 55 yrs" />
+    <category value="8" label="56 - 60 yrs" />
+    <category value="9" label="Over 60 yrs" />
+    <category value="998" label="Prefer not to say" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Demo2_EmployStatus">
+    <category value="1" label="Full-time" />
+    <category value="2" label="Part-time" />
+    <category value="3" label="Casual" />
+    <category value="998" label="Prefer not to say" />
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Demo11_Gender">
+    <category value="1" label="Male" />
+    <category value="2" label="Female" />
+    <category value="998" label="Prefer not to say" />
+    <category value="999" missing="true" />
+  </categories>
+</defaults>

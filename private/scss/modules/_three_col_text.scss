@@ -1,0 +1,43 @@
+/**
+ * File Name: _three_col_text.scss
+ * File Author: Todd Johnson 
+ * File Creation Date: 15/10/2014
+ *
+ * Best Practice Australia styles for eSurvey
+ *
+ * All styling for questions with 3 textboxes.
+ * They are aligned in one row next to each other.
+ */
+
+.three_col_text {
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 50px;
+
+	.question_table {
+		@extend %grid;
+
+		width: 100%;
+		margin-top: 10px;
+		
+		td {
+			vertical-align: top;
+			text-align: center;
+			
+			@extend %grid__item;
+			@extend %one-third;
+
+			textarea {
+				width: 215px;
+				height: 32px;
+			}
+		}
+	}
+}
+
+/* Print layout */
+@media print {
+	.three_col_text {
+		margin-bottom: 30px;
+	}
+}

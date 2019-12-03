@@ -1,0 +1,281 @@
+/**
+ * File Name: _mixins.scss
+ * File Author: Todd Johnson 
+ * File Creation Date: 15/10/2014
+ *
+ * Best Practice Australia styles for eSurvey
+ *
+ * Contains a collection of Sass mixins to be included in
+ * other Sass Styling.
+ */
+
+
+/**
+ * Module Name: box-sizing
+ * Module Author: Todd Johnson
+ * Module Creation Date: 15/10/2014
+ *
+ * The box-sizing property is used to tell the browser what 
+ * the sizing properties (width and height) should include.
+ *
+ * @param $box-model: content-box|border-box|initial|inherit;
+ *
+ * @eg - @include box-sizing(border-box);
+ */
+@mixin box-sizing($box-model){  
+    -webkit-box-sizing: $box-model;   /* Safari/Chrome, other WebKit */
+       -moz-box-sizing: $box-model;   /* Firefox, other Gecko */
+            box-sizing: $box-model;   /* Opera/IE 8+ */
+}
+
+
+/**
+ * Module Name: border-radius-simple
+ * Module Author: Todd Johnson
+ * Module Creation Date: 15/10/2014
+ *
+ * Applys a border radius to all corners of the element in question.
+ *
+ * @param $radius: integer in pixels;
+ *
+ * @eg - @include border-radius-simple(4px);
+ */
+@mixin border-radius-simple($radius){
+    -webkit-border-radius: $radius;
+    -khtml-border-radius : $radius;
+    -moz-border-radius   : $radius;
+    -ms-border-radius    : $radius;
+    -o-border-radius     : $radius;
+    border-radius        : $radius;
+}
+
+
+/**
+ * Module Name: border-radius-complex
+ * Module Author: Todd Johnson
+ * Module Creation Date: 15/10/2014
+ *
+ * Applys a border radius to specific corners of the element in question.
+ *
+ * @param $top-left    : integer in pixels;
+ * @param $top-right   : integer in pixels;
+ * @param $bottom-right: integer in pixels;
+ * @param $bottom-left : integer in pixels;
+ *
+ * @eg - @include border-radius-simple(4px, 4px, 0, 0);
+ */
+@mixin border-radius-complex($top-left, $top-right, $bottom-right, $bottom-left){
+    -webkit-border-radius: $top-left $top-right $bottom-right $bottom-left;
+    -khtml-border-radius : $top-left $top-right $bottom-right $bottom-left;
+    -moz-border-radius   : $top-left $top-right $bottom-right $bottom-left;
+    -ms-border-radius    : $top-left $top-right $bottom-right $bottom-left;
+    -o-border-radius     : $top-left $top-right $bottom-right $bottom-left;
+    border-radius        : $top-left $top-right $bottom-right $bottom-left;
+}
+
+
+/**
+ * Module Name: transition
+ * Module Author: Steven Lomas
+ *
+ * Adds an animation to a property on-change for a dom element
+ * @param $name: Property name to animate
+ * @param $duration: Duration of animation
+ * @param $timingfunction: Animation style e.g. ease-in-out, swing
+ * @param $delay: Delay before animation starts
+ */
+@mixin transition($name, $duration: 1s, $timingfunction: ease, $delay: 0s) {
+    @if $name {
+        -webkit-transition: $name $duration $timingfunction $delay;
+        -moz-transition: $name $duration $timingfunction $delay;
+        -o-transition: $name $duration $timingfunction $delay;
+        transition: $name $duration $timingfunction $delay;
+    } @else {
+        -webkit-transition: $duration $timingfunction $delay;
+        -moz-transition: $duration $timingfunction $delay;
+        -o-transition: $duration $timingfunction $delay;
+        transition: $duration $timingfunction $delay;
+    }
+}
+
+
+/**
+ * Module Name: box-shadow
+ *
+ * Adds a drop shadow to an element
+ * @param $shadow: Argument list
+ */
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+%no-box-shadow {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+
+/**
+* Module Name: -linear-gradient
+* Module Author: Anita Diamond
+* Module Creation Date: 09/04/2015
+*
+* Applys a linear gradient to background of element in question. Namely, the page header bar on all pages.
+* A for loop has been created to ensure this linear gradient works on all browsers.
+*
+* @param $fromColor: Hex colour value at start of gradient;
+* @param $toColor: Hex colour value at end of gradient;
+*
+*@eg - @include -linear-gradient(#006B8D, #00A7C9);
+*/
+
+$vendor: -webkit, -moz, -ms, -o;
+$vendors: -webkit, -moz, -ms, -o;
+
+@mixin -linear-gradient($fromColor, $toColor) {
+    @each $vendor in $vendors
+    {
+        background-image: #{$vendor}-linear-gradient($fromColor, $toColor);
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}'); // Workaround for IE6-9
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#{$fromColor}', endColorstr='#{$toColor}')"; // Workaround for IE8-9
+    }
+}
+
+
+$vendor: -webkit, -moz, -ms, -o;
+$vendors: -webkit, -moz, -ms, -o;
+$type: -linear;
+
+/**
+*Custom mixin for background colour to change when mouse hovers over a row. Mixin takes in the type of gradient e.g. a linear one, the gradient colour at the top and at the bottom.
+*
+* @param $type: Type of gradient e.g. linear;
+* @param $gradienttop: A colour in Hex format e.g. #F7F5F5;
+* @param $gradientbottom: A colour in Hex format e.g. #CADDFD;
+*
+* A for loop has been generated to make sure the gradient works on all browsers.
+* @param $vendor: A browser e.g. Chrome;
+* @param $vendors: All browsers e.g. Chrome, Firefox, ie, Opera;
+*
+* This mixin can be used with the following declaration @include -gradient(-linear,#F7F5F5,#CADDFD);
+*/
+@mixin -gradient($type, $gradienttop, $gradientbottom) {
+    @each $vendor in $vendors {
+        background: #{$vendor}#{$type}-gradient($gradienttop, $gradientbottom);
+    }
+}
+
+
+/**
+ * Module Name: ie-fallback
+ * Module Author: Todd Johnson
+ * Module Creation Date: 15/10/2014
+ *
+ * Applys a style to a specific IE version, Must include IE conditional
+ * HTML tags.
+ * Support: IE6, IE7, IE8, IE9
+ *
+ * @param $wrapper-class: ie | ie6 | ie7 | ie8 | ie9
+ *
+ * @eg - @include ie-fallback(ie7) { width:860px; };
+ */
+@mixin ie-fallback($wrapper-class) {
+    .#{$wrapper-class} & {
+        @content;
+    }
+}
+
+
+/**
+ * Module Name: clearfix
+ * Module Author: Todd Johnson
+ * Module Creation Date: 15/10/2014
+ * Reference: Nicolas Gallagher - http://nicolasgallagher.com/micro-clearfix-hack/
+ *
+ * The clearfix hack is a popular way to contain floats without resorting to 
+ * using presentational markup
+ *
+ * @eg - @extend %clearfix;
+ */
+%clearfix {
+    *zoom: 1;
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+/**
+ * Sets position sticky on an element. Must also specify absolute positioning beneath relative element.
+ * @eg - @extend %position-sticky;
+ */
+%position-sticky {
+    position: relative; // Use relative as a fallback for IE
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+}
+
+/**
+ * Removes pointer events and text selection.
+ */
+%unselectable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+
+/**
+ * Module Name: opacity
+ * Module Author: Todd Johnson
+ * Module Creation Date: 4/11/2014
+ *
+ * Applys an opacity to the element in question.
+ * Support down to IE 5s
+ *
+ * @param $opacity: The opacity needed;
+ *
+ * @eg - @include opacity(0.8);
+ */
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+
+/*** Media Query Mixin ***/
+@mixin bp($constraint){
+    @if (MQs){
+        @if $constraint == palm {
+            @media screen and (max-width: $palm-max){
+                @content;
+            }
+        }
+        @else if $constraint == portable {
+            @media screen and (min-width: $portable-min) and (max-width: $portable-max){
+                @content;
+            }
+        }
+        @else if $constraint == lap {
+            @media screen and (min-width: $lap-min) and (max-width: $lap-max){
+                @content;
+            }
+        }
+        @else if $constraint == desk {
+            @media screen and (min-width: $desk-min){
+                @content;
+            }
+        }
+    } 
+}

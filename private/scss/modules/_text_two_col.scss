@@ -1,0 +1,44 @@
+/**
+ * File Name: _text_two_col.scss
+ * File Author: Todd Johnson 
+ * File Creation Date: 15/10/2014
+ *
+ * Best Practice Australia styles for eSurvey
+ *
+ * All styling for questions that are two columns of textboxes
+ * They then get centered in the page.
+ */
+
+.text_two_col {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	text-align: center;
+
+	.question_title {
+		padding-left: 2.5em;
+	}
+
+	.question_table {
+		@extend %grid;
+
+		width: 100%;
+		margin-top: 10px;
+
+		td {
+			@extend %grid__item;
+			@extend %one-half;
+		}
+	}
+
+	.question_response {
+		text-align: center;
+	}
+
+	textarea {
+		width: 312px;
+		height: 32px;
+	}
+}

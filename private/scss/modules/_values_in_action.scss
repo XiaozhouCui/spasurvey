@@ -1,0 +1,190 @@
+/**
+ * File Name: _values_in_action.scss
+ * File Author: Thomas Cranny 
+ * File Creation Date: 26/11/2014
+ *
+ * Best Practice Australia styles for eSurvey
+ *
+ * For the Values-in-Action matrix.
+ */
+
+.via-small { 
+	/* Shrink the font-size of the header.  */
+	font-size: 19px;
+}
+
+.values_in_action {
+	margin-top: 30px;
+
+	.question_table {
+		@extend %grid;
+
+		width: 100%;
+		border-collapse: collapse;
+
+		.empty {
+			border: 0px;
+		}
+
+		.question_table__header {
+			font-weight: normal;
+			color: #FFFFFF;
+			background-color: #303030;
+			padding: 0.5em;
+
+			.definition {
+				border-bottom: 2px dotted #DDD;
+			}
+		}
+
+		.question_table__scale {
+			padding: 0.5em;
+			border: 1px solid $font_color !important;
+		}
+	}
+
+	td, th {
+		text-align: center;
+
+		img {
+			margin: auto;
+		}
+	}
+
+	.td {
+		@extend %grid__item;
+		@extend %one-quarter;
+	}
+
+	.value {
+		td.value-heading {
+			width: 22%;
+			text-align: left;
+			padding: 1em 1em 0;
+			border-top: 1px solid $font_color !important;
+
+			h3 {
+				font-size: 16px;
+				font-weight: bold;
+				margin: 5px;
+				letter-spacing: 0;
+			}
+
+			ul, ol {
+				padding-left: 15px;
+			}
+		}
+
+		&:last-of-type {
+			border-bottom: 1px solid $font_color;
+		}
+
+		.ValueExec, .ValueManager, .ValuePrac {
+			border-top: 1px solid $font_color;
+			border-right: 1px solid $font_color;
+			border-left: 1px solid $font_color;
+			vertical-align: top;
+			padding-top: 15px;
+			width: 25%;
+		}
+
+		.value-heading-top {
+			border-right: 1px solid $font_color;
+			text-align: left;
+		}
+
+		.value-heading-bottom{
+			border-bottom: 1px solid $font_color;
+			text-align: left;
+		}
+
+		td > span {
+			margin-left: 0px !important;
+			padding-left: 0px !important;
+		}
+
+		.value1 {
+			margin-top: -50px !important;
+		}
+	}
+
+	.mrQuestionTable{
+		margin-left: -9px !important; // Override SPSS Styling
+
+			// Align Pixel Perfect inputs
+			#Cell\.2\.0 { padding-left: 3px; }
+			#Cell\.3\.0 { padding-left: 3px; }
+			#Cell\.4\.0 { padding-left: 3px; }
+			#Cell\.5\.0 { padding-left: 3px; }
+
+			@include ie-fallback(ie9) {
+				margin-left: -8px !important; // Override SPSS Styling
+
+				#Cell\.1\.0 { padding-left: 0px; }
+				#Cell\.2\.0 { padding-left: 0px; }
+				#Cell\.3\.0 { padding-left: 1px; }
+				#Cell\.4\.0 { padding-left: 0px; }
+				#Cell\.5\.0 { padding-left: 0px; }
+			}
+	}
+}
+
+.question_yes_ns_no {
+	margin-top: 60px;
+	
+	.observation_options {
+		text-align: center;
+		font-weight: bold;
+		padding-top: 20px;
+		line-height: 1em;
+
+		span {
+			display: inline-block;
+			width: 33%;
+		}
+	}
+
+	.question_response {
+		width: 25%;
+
+		.mrQuestionTable {
+			margin-left: 0px !important; // Override SPSS Styling
+			font-size: 0 !important; // Clear white space
+			text-align: center;
+
+			& > span {
+				width: 33%;
+				text-align: center;
+
+				input[type="radio"] {
+					margin: 0 !important;
+				}
+			}
+		}
+	}
+}
+
+/* Print layout */
+@media print {
+	.values_in_action {
+		margin-top: 10px;
+
+		.question_table__header {
+			color: #000000 !important;
+		}
+		.value-heading {
+			padding: 7px !important;
+
+			p {
+				margin-bottom: 0;
+			}
+		}
+		.ValueExec, .ValueManager, .ValuePrac {
+			padding-top: 10px !important;
+		}
+	}
+	.question_yes_ns_no {
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+}

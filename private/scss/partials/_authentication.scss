@@ -1,0 +1,172 @@
+/**
+ * File Name: _authenticate.scss
+ * File Author: Todd Johnson 
+ * File Creation Date: 15/10/2014
+ *
+ * Best Practice Australia styles for eSurvey
+ *
+ * All styles for the Truly Great Question/Module that is usually found
+ * on the Engagement Culture page.
+ */
+
+$inputBorderColor: #818181 !default;
+$messageColor: #0082c8 !default;
+$errorMessage: #ff4c4c !default;
+$warnMessage: #ffa800 !default;
+
+.auth_box {
+	width: 250px;
+	margin: 35px auto;
+	padding: 20px;
+	padding-left: 150px;
+	border: 5px solid #B5B5B5;
+	
+	@include border-radius-simple(4px);
+	
+	.title {
+		font-size: 16px;
+		font-weight: bold;
+		color: #006B8D;
+		margin-bottom: 15px;
+	}
+	.title p {
+		margin: 0 0 10px 0;
+	}
+	.subtitle {
+		padding: 10px;
+		color: black;
+		font-size: 12px;
+		border: 1px dashed #667682;
+		background: #EFEFEF;
+		@include border-radius-simple(4px);
+	}
+	br {
+		display: none;
+	}
+}
+.auth_notice {
+	width: 400px;
+	background-color: #247ab1;
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 5px solid #7fcafa;
+	&.-hide {
+		display: none;
+	}
+	p {
+		margin: 0;
+	}
+	a {
+		color: white;
+		&:hover {
+			color: #E8E8E8;
+		}
+	}
+}
+/// custom auth
+.auth_container {
+	width: 650px;
+	margin: 50px auto;
+	border: 3px solid #E7E7E7;
+	background-color: #FFFFFF;
+
+	@include border-radius-simple(20px);
+	
+	input {
+		font-size: 20px;
+		font-family: $font-stack;
+	}
+	input.mrNext {
+		padding: 0.3em 1em;
+		background-color: #459FE2;
+		border: 1px solid #CCCCCC;
+		color: #fff;
+		font-weight: bold;
+
+		@include box-shadow(0px 1px 2px rgba(0, 0, 0, 0.2));
+		@include border-radius-simple(4px);
+
+		&:hover {
+			cursor: pointer;
+			background-color: #5cace7;
+		}
+	}
+	#auth_id_container {
+		margin: 30px 0;
+		
+		.nobrs {
+			div > br { display: none; }
+		}
+		.start_survey_btn {
+			input {
+				@extend .btn-info;
+				height: 2em;
+				min-width: 4em !important;
+				font-size: 18px !important;
+				&[value$="Survey"] {
+					@extend .btn-success;
+					margin: 0 auto;
+					min-width: 6em !important;
+				}
+			}
+		}
+	}
+	.mrEdit {
+		margin-top: 10px;
+		padding: 5px;
+		font-weight: 400;
+		text-align: center;
+		border: 0;
+		background: #b0bccb; // a weird blueish-grey color - use as default from now on
+		letter-spacing: 1px;
+
+		@include box-shadow(inset 1px 1px 2px rgba(0, 0, 0, 0.2));
+		@include border-radius-simple(4px);
+	}
+	.content {
+		padding: 30px 0;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.survey_image {
+		margin: 0px auto 35px;
+	}
+	.notice_text {
+		width: 400px;
+		background-color: #363435;
+		// background-color: #6b2f00;
+		// @include -linear-gradient(#cf505a, #b9232f);
+		@include border-radius-simple(10px);
+		color: #fff;
+		padding: 20px;
+		margin: 0 auto;
+		border: 5px solid #888787;
+		// border: 5px solid #ff9099;
+		&.-hide {
+			display: none;
+		}
+		&.error strong {
+			// color: #ff9c93;
+			// border-color: #EFB2A8;
+		}
+		p {
+			margin: 0;
+		}
+		a {
+			color: white;
+			&:hover {
+				color: #E8E8E8;
+			}
+		}
+		h1, h2, h3, h4, h5, h6 {
+			display: block;
+			color: white; 
+			margin: 0 auto 12pt auto;
+			line-height: 1.5em;
+			letter-spacing: 0;
+		}
+	}
+}

@@ -1,0 +1,52 @@
+/**
+ * File Name: _tooltip.scss
+ * File Author: Todd Johnson 
+ * File Creation Date: 15/10/2014
+ *
+ * Best Practice Australia styles for eSurvey
+ *
+ * Contains Styling Related to the Tooltips and Definitions
+ * throughout the eSurvey
+ */
+
+.ui-tooltip, .tooltip {
+  @extend %unselectable;
+  
+  max-width: 600px;
+  padding: 0.6em 1em;
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  color: #ffffff;
+  text-align: left;
+  font-weight: 400;
+  border:1px solid #898989;
+  z-index: 2;
+  background-color: #333;
+  pointer-events: none;
+  text-shadow: 0 0 1px rgba(0,0,0,1);
+
+  @include border-radius-simple(4px);
+
+  ul {
+    margin: 5px 0;
+  }
+}
+
+.definition {
+  position: relative;
+  cursor: help;
+  border-bottom: 1px dotted #003366;
+}
+
+#field_instruction {
+    width: 100px;
+    margin: 0;
+    margin-left: 15px;
+    margin-top: 20px;
+    padding: 1px;
+    padding-left: 15px;
+    color: #000000;
+    border:1px solid #eee;
+    background-color: #e3e3e3;
+}

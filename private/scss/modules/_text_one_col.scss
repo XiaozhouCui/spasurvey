@@ -1,0 +1,52 @@
+/**
+ * File Name: _text_one_col.scss
+ * File Author: Todd Johnson 
+ * File Creation Date: 15/10/2014
+ *
+ * Best Practice Australia styles for eSurvey
+ *
+ * All styling for questions that only have one textbox
+ * eg. Attraction01 & Retention01
+ */
+
+.text_one_col {
+	margin-top: 20px;
+	margin-bottom: 50px;
+
+
+	.question_response {
+		margin-top: 10px;
+	}
+
+	textarea {
+		width: 300px;
+		height: 60px;
+	}
+
+	&.-feedback {
+		margin-top: 0px;
+		padding-left: 2em;
+
+		& > .question_title {
+			margin-top: 10px;
+		}
+
+		textarea {
+			height: 3.5em;
+		}
+	}
+
+	.response_values_above_all {
+		textarea {
+			width: 250px;
+			height: 40px;
+		}
+	}
+}
+
+/* Print layout */
+@media print {
+	.text_one_col {
+		margin-bottom: 30px !important;
+	}
+}

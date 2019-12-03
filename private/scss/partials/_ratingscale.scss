@@ -1,0 +1,119 @@
+/**
+ * File Name: _ratingscale.scss
+ * File Author: Todd Johnson, Anita Diamond and Ashley Dunbabin 
+ * File Creation Date: 15/10/2014
+ *
+ * Best Practice Australia styles for eSurvey
+ *
+ * All styling for the 'extent' questions. Options for a 7pt scale,
+ * a rating scale and no rating scale.
+ *
+ * 
+ * PARAMETERS:
+ * 
+ * -point7          Removes the numbers in <ol> list to allow for custom
+ *                  numbering in the HTML, applys padding that would've
+ *                  existed in normal <ol> list.
+ *                  NOTE: Will need to add the the last 'point' on scale, 
+ *                        usually 'na' or 'nk'. Will also need to add the 
+ *                        number ordering as CSS removes the default.
+ */
+
+.rating_scale {
+    width:180px;
+    margin: 0 auto;
+    padding-top:0;
+    padding-right:0;
+    padding-bottom:5px;
+    padding-left:0;
+    color: #606060;
+    text-align: left;
+    border: 1px solid #E7EFF4;
+    background-color:#E7EFF4;
+
+    @include border-radius-simple(5%);
+
+    ol {
+        margin-left: 10px; // Allow space for smiley faces.
+        margin-top: 8px;
+    }
+
+    .na{
+            list-style-type: none;
+        }
+
+    &.-point7{
+        height: 190px;
+        
+        // Mozilla Firefox
+        @media screen and (-moz-images-in-menus:0) {
+            height: 180px; // Moz renders text slightly different, adjust box to fit.
+            width: 185px; 
+
+            .naScale {
+                margin-left: -10px !important;
+            }
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 5px;
+        }
+
+        .smileyFaceHappy {
+            padding-left: 4px;
+            margin-left: 0;
+        }
+        .smileyFaceSad {
+            margin-top: -53px;
+            padding-left: 4px;
+            margin-left: 0;
+        }
+        .na {
+            margin-left: -15px; 
+        }
+    }
+
+    td {
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .rating_scale__heading{
+        margin-bottom:5px;
+        padding:5px;
+        color:black;
+        font-weight:bold;
+        text-decoration:none;
+        margin-left:7px;
+        text-align: center;
+        @include border-radius-simple(5%);
+    }
+
+    img {
+        width: 25px;
+    }
+
+    // Position smiley faces.
+    .smileyFaceHappy {
+        margin-bottom:-33px;
+        margin-left: 5px;
+    }
+
+    .smileyFaceSad {
+        margin-top: -32px;
+        margin-left: 5px;
+        margin-bottom: 5px;
+    }
+}
+/* Print layout */
+@media print {
+    .rating_scale {
+        border: 1px solid #777777 !important;
+        text-shadow: none !important; // Remove all text shadows
+
+        .rating_scale__heading {
+            margin-top: 5px;
+        }
+    }
+}

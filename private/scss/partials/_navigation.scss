@@ -1,0 +1,100 @@
+/**
+ * File Name: _navigation.scss
+ * File Author: Todd Johnson 
+ * File Creation Date: 15/10/2014
+ *
+ * Best Practice Australia styles for eSurvey
+ *
+ * Contains Styling Related to the Navigation Buttons at the bottom
+ * of each eSurvey page.
+ *
+ * PARAMETERS:
+ *
+ * -final		Change the styling of the last button on the last page.
+ *				It changes the border to red.
+ *				NOTE: You will have to change the HTML to change the 
+ *					  text from 'Next' to 'Finish Survey' manually.
+ */
+
+.nav{
+	margin-top: 60px;
+	margin-bottom: 20px;
+	text-align: center;
+
+	&.-auth{
+		margin-top: 5px;
+		margin-bottom: 5px;
+		text-align: left;
+	}
+
+	.mrNext{
+		background-color: #459FE2;
+		color: #ffffff;
+	}
+
+	&.-final .mrNext {
+		border: 1px solid #FF0000;
+	}
+
+	input{
+		width	    :100px !important; // Important to override SPSS Styling
+		height	    :30px;
+		padding     :5px;
+		font-family :$font-stack;
+		background-color: #CCCCCC;
+		font-weight :bold;
+		color       :#4A4A4A;
+		cursor      :pointer;
+		border      :1px solid #CCCCCC;
+
+		@include border-radius-simple(5px);
+
+		&:hover{
+			color: #ffffff;
+		}
+	}
+
+	input:focus{
+		outline: none;
+	}
+}
+
+.survey-nav {
+	text-align: center;
+	margin-top: 80px;
+
+	input {
+		@extend .btn;
+
+		height: 2em;
+		min-width: 4em !important;
+		font-size: 18px !important;
+
+		&[value="Previous"] {
+			//min-width: 5em !important;
+		}
+
+		&[value="Next"] {
+			@extend .btn-info;
+		}
+
+		&[value^="Start"], &[value$="Survey"] {
+			@extend .btn-success;
+			margin: 0 auto;
+			min-width: 6em !important;
+		}
+
+		&[value^="Finish"], &[value^="Submit"], &[value^="Complete"] {
+			@extend .btn-success;
+			width: auto !important;
+		}
+	}
+}
+
+/* Print layout */
+@media print {
+	.nav, .survey-nav {
+		display: none;
+	}
+}
+

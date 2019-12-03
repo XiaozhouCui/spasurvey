@@ -1,0 +1,130 @@
+/**
+ * File Name: _demographic.scss
+ * File Author: Todd Johnson 
+ * File Creation Date: 15/10/2014
+ *
+ * Best Practice Australia styles for eSurvey
+ *
+ * All styling for all Demographic Questions.
+ *
+ *
+ * PARAMETERS:
+ *
+ * -pfix		Adds styles to <p> tags within the demographic questions
+ 				usually examples of the question that are enclosed in
+ 				parentheses.
+ */
+
+.demographic {
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	max-height: 999999px; // add a max height to prevent font boosting in Android Chrome
+
+	// Algins all cells/radios that have an id that begins with "cell" to a fixed width.
+
+	[id^="Cell"] {
+		width: 160px;
+	}
+
+	&.wide [id^=Cell] {
+		width: 190px;
+	}
+
+	&.-no_response {
+		margin-bottom: 15px;
+	}
+
+	&.multi {
+		.question_response {
+			width: 100%;
+			text-align: left;
+		}
+
+		[id^="Cell"] {
+			width: 100%;
+		}
+	}
+
+	&.-feedback {
+		width: auto;
+		margin-top: 0px;
+		margin-bottom: 30px;
+		padding-left: 2em;
+
+		& > .question_title {
+			margin-top: 10px;
+		}
+	}
+
+	&.three_col_pos {
+		.question_response {
+			height: 30px;
+		}
+		.posrow {
+			display: -webkit-box;
+			flex-wrap: wrap;
+			width: 100%;
+			vertical-align:top;
+			.col1, .col2 {
+				width: 35%;
+				padding-left: 12px;
+			}
+			.col3 {
+				width: 20%;
+				padding-left: 12px;
+			}
+		}
+	}
+
+	.question_response {
+		margin-top: 10px;
+		&.single_column {
+			display: -webkit-box;
+		}
+		/* Fix for multi-line demo's */
+		&.-pfix p {
+			font-size    : 10px;
+			font-style   : italic;
+			margin-top   : 0px;
+			margin-left  : 35px;
+			margin-bottom: 0px;
+		}
+	}
+	
+	td.specify textarea {
+		height: 1em;
+		width: 200px;
+		margin-left: 0 !important;
+		margin-top: 1.3em;
+		overflow-y: hidden;
+	}
+	
+	/* Formatting for Message In A Bottle To Designated Managers */
+	.-miab {
+		// Indent position descrption
+		em {
+			padding-left: 2.6em;
+		}
+		
+		// Increase width of multiple columns
+		[id^="Cell"]{
+			width: 400px;
+		}
+	}
+
+	.response_field.smallheight textarea {
+		height: 4em;
+	}
+}
+
+/* Print layout */
+@media print {
+	.demographic {
+		margin-bottom: 30px;
+
+		[id^="Cell"] {
+			width: 200px;
+		}
+	}
+}

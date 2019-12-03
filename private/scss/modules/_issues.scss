@@ -1,0 +1,209 @@
+/**
+ * File Name: _issues.scss
+ * Original File Author: Todd Johnson
+ * OriginalFile Creation Date: 15/10/2014.
+ *
+ * File Refactor Author(s): Alex McNeill, Ashley Dunbabin, Anita Diamond.
+ * File Refactor Date: 18/03/2015.
+ * Best Practice Australia styles for eSurvey
+ *
+ * All styling for the Issues That Matter Table.
+ */
+
+.issues {
+
+
+	&.-matter{
+		$iTopBorder: 0 1 4 13 16 22;
+		$iBotBorder: 0 3 12 15 21 27;
+		$black: #000000;
+		$grey: #E3E3E3;
+
+		@mixin borderStyle ($type, $weight, $style, $color) {
+			border-#{$type}: #{$weight}px $style $color;
+		}
+
+		@mixin backgroundColor ($color) {
+			background-color: $color;
+		}
+
+	 	.normalCell {
+	  		padding:10px 10px 8px 10px;
+	 		width: 140px;
+	 	}
+		.wideCell{
+			text-align: right !important;
+			width: 350px;
+		}
+		.alternateCell{
+			@include backgroundColor ($grey);
+		}
+		.topBorderedCell{
+			@include borderStyle (top, 1, solid, $black);
+		}
+		.rightBorderedCell{
+			@include borderStyle (right, 1, solid, $black);
+		}
+		.botBorderedCell{
+			@include borderStyle (bottom, 1, solid, $black);
+		}
+
+		#Cell {
+			$iCol: 0;
+			@while $iCol < 4 {
+				$iRow: 0;
+				@while $iRow < 36 {
+					&\.#{$iCol}\.#{$iRow} {
+						@extend .normalCell;
+						@extend .rightBorderedCell;
+						@if $iCol == 0 {
+							@extend .wideCell;
+						}
+						@if $iRow % 2 == 1 {
+							@extend .alternateCell;
+						}
+						@if index($iTopBorder, $iRow) != null {
+							@extend .topBorderedCell;
+						}
+						@if index($iBotBorder, $iRow) != null {
+							@extend .botBorderedCell;
+						}
+					}
+					$iRow: $iRow + 1;
+				}
+				$iCol: $iCol + 1;
+			} // end while.
+		} // end #Cell
+			// add the extra bottom border.
+		// #Cell\.0\.32, #Cell\.1\.32, #Cell\.2\.32, #Cell\.3\.32 {
+	 //  		border-bottom:2px solid $black;
+		// }
+	} //end &.-matter
+
+	&.-integrity{
+		$iTopBorder: 0;
+		$iBotBorder: 0 11;
+		$black: #000000;
+		$grey: #E3E3E3;
+
+		@mixin borderStyle ($type, $weight, $style, $color) {
+			border-#{$type}: #{$weight}px $style $color;
+		}
+
+		@mixin backgroundColor ($color) {
+			background-color: $color;
+		}
+
+	 	.normalCell {
+	  		padding:10px 10px 8px 10px;
+	 		width: 140px;
+	 	}
+		.wideCell{
+			text-align: right !important;
+			width: 350px;
+		}
+		.alternateCell{
+			@include backgroundColor ($grey);
+		}
+		.topBorderedCell{
+			@include borderStyle (top, 1, solid, $black);
+		}
+		.rightBorderedCell{
+			@include borderStyle (right, 1, solid, $black);
+		}
+		.botBorderedCell{
+			@include borderStyle (bottom, 1, solid, $black);
+		}
+
+		#Cell {
+			$iCol: 0;
+			@while $iCol < 4 {
+				$iRow: 0;
+				@while $iRow < 36 {
+					&\.#{$iCol}\.#{$iRow} {
+						@extend .normalCell;
+						@extend .rightBorderedCell;
+						@if $iCol == 0 {
+							@extend .wideCell;
+						}
+						@if $iRow % 2 == 1 {
+							@extend .alternateCell;
+						}
+						@if index($iTopBorder, $iRow) != null {
+							@extend .topBorderedCell;
+						}
+						@if index($iBotBorder, $iRow) != null {
+							@extend .botBorderedCell;
+						}
+					}
+					$iRow: $iRow + 1;
+				}
+				$iCol: $iCol + 1;
+			}
+		}
+	}
+
+	&.-safety{
+		$iTopBorder: 0;
+		$iBotBorder: 0 5;
+		$black: #000000;
+		$grey: #E3E3E3;
+
+		@mixin borderStyle ($type, $weight, $style, $color) {
+			border-#{$type}: #{$weight}px $style $color;
+		}
+
+		@mixin backgroundColor ($color) {
+			background-color: $color;
+		}
+
+	 	.normalCell {
+	  		padding:10px 10px 8px 10px;
+	 		width: 140px;
+	 	}
+		.wideCell{
+			text-align: right !important;
+			width: 350px;
+		}
+		.alternateCell{
+			@include backgroundColor ($grey);
+		}
+		.topBorderedCell{
+			@include borderStyle (top, 1, solid, $black);
+		}
+		.rightBorderedCell{
+			@include borderStyle (right, 1, solid, $black);
+		}
+		.botBorderedCell{
+			@include borderStyle (bottom, 1, solid, $black);
+		}
+
+		#Cell {
+			$iCol: 0;
+			@while $iCol < 4 {
+				$iRow: 0;
+				@while $iRow < 36 {
+					&\.#{$iCol}\.#{$iRow} {
+						@extend .normalCell;
+						@extend .rightBorderedCell;
+						@if $iCol == 0 {
+							@extend .wideCell;
+						}
+						@if $iRow % 2 == 1 {
+							@extend .alternateCell;
+						}
+						@if index($iTopBorder, $iRow) != null {
+							@extend .topBorderedCell;
+						}
+						@if index($iBotBorder, $iRow) != null {
+							@extend .botBorderedCell;
+						}
+					}
+					$iRow: $iRow + 1;
+				}
+				$iCol: $iCol + 1;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,85 @@
+/**
+ * File Name: _questiontitle.scss
+ * File Author: Todd Johnson 
+ * File Creation Date: 15/10/2014
+ *
+ * Best Practice Australia styles for eSurvey
+ *
+ * All styling for the 'extent' questions. Options for a 7pt scale,
+ * a rating scale and no rating scale.
+ *
+ * 
+ * PARAMETERS:
+ * 
+ * -no_shadow		Removes the background color and border of the 
+ *					class question_title, however keeps the padding
+ *					and other styling
+ *
+ * -right			Aligns text to the right
+ *					
+ */
+
+
+.question_title {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	padding: 7px 14px;
+	border: 1px solid #e3e3e3;
+	background-color: #f5f5f5;
+	text-shadow: 1px 1px rgba(255, 255, 255, 0.4);
+	max-height: 999999px;// add a max height to prevent font boosting in Android Chrome
+
+	@include box-shadow(inset 1px 1px 0 rgba(0, 0, 0, 0.05));
+	@include border-radius-simple(4px);
+	@include box-sizing(border-box);
+
+	&.-no_shadow {
+		@extend %no-box-shadow;
+		
+		background-color: transparent;
+		border: 0;
+		text-shadow: none;
+	}
+
+	&.-dashed {
+		padding-left: 4em !important;
+	}
+	&.-dashed::before {
+		content: "– ";
+		margin-left: -2.8em;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+
+	&.-align_right {
+		text-align: right;
+	}
+}
+
+.question_table {
+	td.question_title {
+		display: table-cell;
+	}
+	.pos_neg_fixed {
+		float: left;
+		margin-left: 44px;
+
+		@include ie-fallback(ie9) { margin-left: 50px; }
+
+		#pos_neg_scale {
+			background: white;
+		}
+	}
+}
+
+@media print {
+	.question_title {
+		border: none;
+		border-bottom: 1px solid #777777;
+		border-radius: 0;
+		text-shadow: none !important;
+
+		@include box-shadow(0 0 0 rgba(0, 0, 0, 0))
+	}
+}

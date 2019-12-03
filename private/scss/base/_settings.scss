@@ -1,0 +1,55 @@
+/**
+ * File Name: _settings.scss
+ * File Author: Todd Johnson
+ * File Creation Date: 29/09/2014
+ *
+ * Best Practice Australia styles for eSurvey
+ *
+ * Contains any Variables that can impact on Sass functionality
+ */
+
+
+/* Variables - Sizes */
+$max-content-width: 1020px;
+$min-content-width: 850px;
+
+$palm-max: 480px;
+$lap-min: 900px;
+$lap-max: 1300px;
+$portable-min: 481px;
+$portable-max: 901px;
+$desk-min: 1301px;
+
+
+/* Fonts */
+$font-stack: 'Noto Sans', Helvetica, Arial, sans-serif;
+
+$font-size: 13px !default;
+
+// Standard line height of textarea's
+$input-line-height: 1.2em !default;
+
+
+/* Colours */
+$font-color: #111111;
+
+// BPA
+$bpa-blue-light: rgb(0, 133, 185);
+$bpa-blue: rgb(0,113,156);
+$bpa-blue-dark: rgb(0, 88, 122);
+$bpa-orange: #FF9E18;
+
+// Light blue for classification text
+$bpa-classification: rgb(0, 102, 128);
+
+// Header background colour
+$header-background: #424547 !default;
+
+// Border colours
+$issues-border-color: $header-background !default;
+
+/* Media Queries */
+$MQs: true;
+
+/* Debugging */
+$debugging: true;

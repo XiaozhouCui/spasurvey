@@ -1,0 +1,317 @@
+/**
+ * File Name: _extent.scss
+ * File Author: Todd Johnson 
+ * File Creation Date: 15/10/2014
+ *
+ * Best Practice Australia styles for eSurvey
+ *
+ * All styling for the 'extent' questions. Options for a 7pt scale,
+ * a rating scale and no rating scale.
+ *
+ * 
+ * PARAMETERS:
+ *
+ * -rating_scale		Aligns the page and modifies styling to allow room
+ *						for a visual representation of the rating scale to 
+ *						the user. This means changing module to 3 columns.
+ *						NOTE: You will need to add the HTML for the scale.
+ *
+ * -no_rating_scale		Aligns the page and modifies the styling into 2 
+ *						columns as there is no visual representation of the
+ *						rating scale.
+ *						NOTE: You will need to remove the HTML for the scale.
+ * 
+ * -scale7				Aligns the columns slightly to allow room for a 7th 
+ *						scale. This 7th input can be NA or NK.
+ *						NOTE: The extra input will need to made added to the 
+ *							  rating scale in the HTML appropriately. 		
+ */
+
+.extent {
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 50px;
+
+	.question_table {
+		@extend %grid;
+		
+		width: 100%;
+	}
+
+	&.-rating_scale {
+		.question_table__header {
+			padding: 0;
+			padding-bottom: 15px;
+			
+			&.-col_one {
+				@extend %grid__item;
+				@extend %five-eighths;
+
+				vertical-align: bottom;
+
+				.question_title {
+					width: 100%;
+				}
+
+			}
+			&.-col_two {
+				@extend %grid__item;
+				@extend %three-eighths;
+				
+				text-align: center;
+			}
+			&.-col_three {
+				@extend %position-sticky;
+
+				text-align: center;
+			}
+		}
+
+		.question_title {
+			&.-no_shadow {
+				@extend %grid__item;
+				@extend %five-eighths;
+				
+				padding: 7px 0 7px 1em;
+
+				ul {
+					margin-top: 0;
+					margin-bottom: 0;
+				}
+			}
+
+			&.-no_response {
+				padding-top: 10px;
+			}
+		}
+
+		.question_response {
+			@extend %grid__item;
+			@extend %three-eighths;
+
+			text-align: center;
+		}
+
+		.question_blank {
+			height: 20px;
+		}
+
+
+		.mrQuestionTable {
+			margin-left: -6px !important; // Override SPSS Styling
+
+			@include ie-fallback(ie9) {
+				margin-left: -8px !important; // Override SPSS Styling
+
+				#Cell\.1\.0 { padding-left: 0px; }
+				#Cell\.2\.0 { padding-left: 0px; }
+				#Cell\.3\.0 { padding-left: 1px; }
+				#Cell\.4\.0 { padding-left: 0px; }
+				#Cell\.5\.0 { padding-left: 0px; }
+			}
+		}
+	}
+
+	&.-no_rating_scale {
+		.question_table__header {
+			padding: 0;
+			padding-bottom: 15px;
+
+			&.-col_one {
+				@extend %grid__item;
+				@extend %eight-twelfths;
+				
+				vertical-align: bottom;
+			}
+			&.-col_two {
+				@extend %grid__item;
+				@extend %four-twelfths;
+				
+				padding-bottom: 10px;
+				text-align: center;
+			}
+		}
+
+		.question_title {
+			display: inline-block;
+
+			&.-padding {
+				padding: 7px 14px;
+			}
+			&.-no_shadow {
+				@extend %grid__item;
+				@extend %two-thirds;
+				
+				padding: 0.5em 1em;
+
+				&.-title_position {
+					width: 381px;
+				}
+				&.-indent {
+					padding-left: 27px;
+				}
+
+				ul {
+					margin-top:0;
+					margin-bottom:0;
+				}
+			}
+		}
+
+		.question_response {
+			@extend %grid__item;
+			@extend %one-third;
+
+			text-align: center;
+
+			label {
+				display: none;
+			}
+		}
+
+		.mrQuestionTable {
+			margin-left: -7px !important; // Override SPSS Styling
+
+			// Align Pixel Perfect inputs
+			#Cell\.2\.0 { padding-left: 1px; }
+			#Cell\.3\.0 { padding-left: 1px; }
+			#Cell\.4\.0 { padding-left: 1px; }
+
+			@include ie-fallback(ie9) {
+				margin-left: -8px !important; // Override SPSS Styling
+
+				#Cell\.1\.0 { padding-left: 0px; }
+				#Cell\.2\.0 { padding-left: 0px; }
+				#Cell\.3\.0 { padding-left: 1px; }
+				#Cell\.4\.0 { padding-left: 0px; }
+				#Cell\.5\.0 { padding-left: 0px; }
+			}
+
+			.mrSingleText {
+				padding-left: 1px;
+				@include ie-fallback(ie) { padding-left:0; }
+			}
+		}
+	}
+
+	&.-scale7 {
+		.question_table__header {
+			padding: 0;
+			padding-bottom: 15px;
+		
+			&.-col_one {
+				@extend %three-fifths;
+
+				vertical-align: bottom;
+
+				&.-fixed_question {
+					width:350px !important;
+				}
+			}
+			&.-col_two {
+				@extend %two-fifths;
+				
+				margin-left: 10px;
+				text-align: center;
+
+				&.-fixed_question {
+					width: 275px !important;
+				}
+
+				img {
+					width:235px !important;
+				}
+			}
+			&.-col_three {
+				@extend %position-sticky;
+			}
+		}
+
+		.question_title {
+			&.-no_shadow {
+				padding: 0.5em 1em;
+			}
+		}
+
+		.question_response {
+			text-align: left;
+
+			&.-response_position {
+				width:350px;
+			}
+
+			.mrQuestionTable {
+				margin-left: 3px !important;
+
+				input[type="radio"] {
+					margin-left: 10px !important;
+					padding: 2px !important;
+				}
+			}
+		}
+
+
+		.mrQuestionTable {
+			white-space: nowrap;
+			overflow: visible;
+
+			@include ie-fallback(ie9) { margin-left: -5px !important; }
+
+			.mrSingleText {
+				padding-left: 1px;
+
+				@include ie-fallback(ie) { padding-left: 0; }
+			}
+
+			// Remove the label elements which push up radio buttons
+			[id^="Cell."] label { display: none; }
+
+			// Align Pixel Perfect inputs
+			#Cell\.0\.0 { padding-left: 0px; }
+			#Cell\.1\.0 { padding-left: 5px; }
+			#Cell\.2\.0 { padding-left: 5px; }
+			#Cell\.3\.0 { padding-left: 5px; }
+			#Cell\.4\.0 { padding-left: 5px; }
+			#Cell\.5\.0 { padding-left: 5px; }
+			#Cell\.6\.0 { padding-left: 5px; }
+
+			@include ie-fallback(ie9) {
+				#Cell\.1\.0 { padding-left: 2px; }
+				#Cell\.2\.0 { padding-left: 3px; }
+				#Cell\.3\.0 { padding-left: 2px; }
+				#Cell\.4\.0 { padding-left: 4px; }
+				#Cell\.5\.0 { padding-left: 5px; }
+				#Cell\.6\.0 { padding-left: 10px; }
+			}
+		}
+	}
+}
+
+/* Print layout */
+@media print {
+	.extent {
+		margin-bottom: 30px;
+
+		.rating_scale__heading {
+			margin-top: 5px;
+		}
+
+		.question_title {
+			&.-no_shadow {
+				padding-top: 5px !important;
+				padding-bottom: 5px !important;
+				line-height: 1.4em;
+			}
+		}
+
+		.question_table {
+			.question_table__header {
+				padding-bottom: 5px;
+			}
+		}
+
+		.mrQuestionTable {
+			label { display: none; }
+		}
+	}
+}

@@ -1,0 +1,138 @@
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"><![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"><!--<![endif]-->
+	<head>
+		<title>eSurvey - Best Practice Australia</title>
+		<meta id="viewport" name="viewport"/>
+		<link rel="shortcut icon" href="https://i.bpanz.com/SurveyAssets/bpa_favicon.png"/>
+		<mrRef RefType="link" rel="stylesheet" type="text/css" href="style.css"></mrRef>
+	</head>
+	<body class="page">
+		<mrPage IncludeElementIDs="true"/>
+		<div class="container">
+			<div class="header">
+				<div class="header__logo -bpanz"><img src="https://i.bpanz.com/SurveyAssets/bpa_logo.png" alt="Best Practice Australia logo"/></div>
+				<div class="header__logo -client"><mrRef RefType="img" src="logo.png"></mrRef></div>
+				<div class="header-bar">
+					<h1>Truly Great Place to Work</h1>
+				</div>
+			</div>
+			<div class="content">
+				<div class="truly_great">
+					<table class="question_table">
+						<tr>
+							<td colspan="4">
+								<div class="question_title"><strong>On balance, is your <span class="definition" id="orga">organisation</span> a "<em>truly great place to work</em>"?</strong> <em>(please select)</em></div>
+								<div class="question_response">
+									<mrData QuestionName="f01180_TrulyGreat" QuestionElement="Controls"/>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td rowspan="2">
+								<div class="question_arrow -yes"><img src="https://i.bpanz.com/i/m5aik7A.png"/></div>
+							</td>
+							<td>
+								<div class="question_response -text">
+									<p>If <strong>YES</strong>, what makes it a <br/> "<em>truly great place to work</em>"?</p>
+									<mrData QuestionName="f01181_WhyYes" QuestionElement="Controls"/>
+									<mrData QuestionName="f01181_WhyYes" QuestionElement="Error"/>
+								</div>
+							</td>
+							<td rowspan="2">
+								<div class="question_arrow -no"><img src="https://i.bpanz.com/i/m5aik7A.png"/></div>
+							</td>
+							<td>
+								<div class="question_response -text">
+									<p>If <strong>NO</strong>, what is stopping it from becoming <br/> a "<em>truly great place to work</em>"?</p>
+									<mrData QuestionName="f01182_WhyNo" QuestionElement="Controls"/>
+									<mrData QuestionName="f01182_WhyNo" QuestionElement="Error"/>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="header">
+				<div class="header-bar">
+					<h1>Net Promoter Score</h1>
+				</div>
+			</div>
+			<div class="content">
+				<div class="question_title -no_shadow" style="margin:10px 0;"><em>(Please note the rating scale is reversed for this next question.)</em></div>
+				<div class="question_title" style="margin-top:0">
+					<strong>On a scale of 0-10 (where 10 = Absolutely Yes, and 0 = Absolutely No), how likely are you to recommend your organisation (where appropriate) to a friend or family member as ...</strong>
+				</div>
+				<table class="styled_inputs">
+					<tr>
+						<td class="question_title -no_shadow" colspan="3"><strong>... a good place to work</strong> <em>(please select below)</em></td>
+					</tr>
+					<tr>
+						<td class="absolnotrecom">
+							<p>I would absolutely <strong>NOT</strong> recommend the organisation.</p><img src="https://i.bpanz.com/i/p0y9ejL.png" alt="sad face"/>
+						</td>
+						<td class="question_response">
+							<mrData QuestionName="f21833_NPSWork" QuestionElement="Controls"/>
+							<div class="numbers_fallback">
+								<span class="red">0</span>
+								<span class="red">1</span>
+								<span class="yellow">2</span>
+								<span class="yellow">3</span>
+								<span class="yellow">4</span>
+								<span class="yellow">5</span>
+								<span class="yellow">6</span>
+								<span class="yellow">7</span>
+								<span class="yellow">8</span>
+								<span class="green">9</span>
+								<span class="green">10</span>
+							</div>
+							<div class="bracket -reason"></div>
+							<div class="small_vertical_line -reason"></div>
+						</td>
+						<td class="absolrecom"><img src="https://i.bpanz.com/i/OqKIIBq.png" alt="happy face"/>
+							<p>I would absolutely recommend the organisation.</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="reason" colspan="3" style="padding-bottom:30px;">
+							<div class="question_title -no_shadow"><strong>Why did you give this score?</strong></div>
+							<div class="question_response">
+								<mrData QuestionName="f21925_NPSWorkReason" QuestionElement="Controls"/>
+								<mrData QuestionName="f21925_NPSWorkReason" QuestionElement="Error"/>
+							</div>
+						</td>
+					</tr>
+
+				</table>
+				<div class="survey-nav">
+					<input type="submit" name="_NPrev" value="Previous" title="Return to the previous page"/>
+					<input type="submit" name="_NStop" value="Stop &amp; Save" title="Save your progress and return later"/>
+					<input type="submit" name="_NNext" value="Next" title="Proceed to the next page"/>
+				</div>
+				<div class="pageInfoElement" style="display:none;">
+					<mrProgressBar ShowBar="False" ShowCounts="AsValues"/>
+				</div>
+				<div id="progressBar" class="progress">
+					<div class="bar"></div>
+				</div>
+				<p class="nps-disclaimer">®Net Promoter, Net Promoter Score and NPS are registered trademarks of Bain and Company, Inc., Satmetrix Systems, Inc., and Fred Reichheld.</p>
+			</div>
+			<div class="footer">
+				<div class="footer__section -links">
+					<a href="https://bpanz.com/bpacopyright" target="_blank" rel="noopener noreferrer" class="copyright">© 2019 Best Practice Australia</a>
+					<a href="https://bpanz.com/privacypolicy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+					<a href="https://bpanz.com/disclaimer" target="_blank" rel="noopener noreferrer">Ts &amp; Cs</a>
+					<a href="https://bpanz.com/intellectual-property-statement" target="_blank" rel="noopener noreferrer">Intellectual Property</a>
+				</div>
+				<div class="confidential">Confidential - your feedback will be anonymous</div>
+				<div class="clearelement"></div>
+			</div>
+		</div>
+		<script type="text/javascript" src="https://i.bpanz.com/SurveyAssets/jquery.1.11.3.min.js"></script>
+		<script type="text/javascript" src="https://i.bpanz.com/SurveyAssets/jquery-ui.1.10.3.min.js"></script>
+		<mrRef RefType="script" src="master.js">master.js</mrRef>
+	</body>
+</html>

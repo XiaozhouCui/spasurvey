@@ -1,0 +1,42 @@
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"><![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"><!--<![endif]-->
+	<head>
+		<title>eSurvey - Best Practice Australia</title>
+		<meta id="viewport" name="viewport"/>
+		<link rel="shortcut icon" href="https://i.bpanz.com/SurveyAssets/bpa_favicon.png"/>
+		<mrRef RefType="link" rel="stylesheet" type="text/css" href="style.css"></mrRef>
+	</head>
+	<body>
+		<style type="text/css">
+			#_Q1 { display: none; }
+			label[for="_Q0"] { display: none; }
+			.notice_text { border-color: #888787 !important; }
+		</style>
+		<mrPage IncludeElementIDs="true"/>
+		<div class="auth_container">
+			<div class="content">
+				<div class="survey_image"><mrRef RefType="img" src="logo.png" style="max-width:90%"></mrRef></div>
+				<div class="notice_text">
+					<h2 style="display:block;letter-spacing:0;margin-top:0;">Test Survey</h2>
+					<h3 style="display:block;color:#fff;letter-spacing:0;line-height:2em;">Survey closes Monday, 25 November 2019</h3>
+					The password you entered was incorrect or there was a problem logging in. Try the password again.
+				</div>
+				<div id="auth_id_container">
+					<mrData Name="Authentication ID"/>
+					<p class="message">If you have tried the correct password and still cannot log in, send us an email at <a id="support_link" href="mailto:survey.support@bpanz.com?subject=BPA password not working">survey.support@bpanz.com</a><br/>Or contact BPA in Australia via phone on (07) 3367 0613 during business hours (8:30am - 5:00pm, Brisbane).</p>
+					<div class="start_survey_btn">
+						<mrNavButton Name="Next" Text="Start Survey"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer -auth">Best Practice Australia</div>
+		<script type="text/javascript" src="https://i.bpanz.com/SurveyAssets/jquery.1.11.3.min.js"></script>
+		<script type="text/javascript" src="https://i.bpanz.com/SurveyAssets/jquery-ui.1.10.3.min.js"></script>
+		<mrRef RefType="script" src="master.js" type="text/javascript">js</mrRef>
+	</body>
+</html>

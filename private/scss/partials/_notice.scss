@@ -1,0 +1,74 @@
+/**
+ * File Name: _notice.scss
+ * File Author: Todd Johnson 
+ * File Creation Date: 15/10/2014
+ *
+ * Best Practice Australia styles for eSurvey
+ *
+ * All styling for the 'extent' questions. Options for a 7pt scale,
+ * a rating scale and no rating scale.
+ *
+ * 
+ * PARAMETERS:
+ * 
+ * -warning			For any warning messages to the user, This applys a red
+ *					font.
+ *					
+ * -important		For the last page of the eSurvey notifying the user about
+ *					ending the eSurvey. This changes the styling of a normal
+ *					notice.
+ */
+
+
+.notice {
+	font-size: 12px;
+	padding: 10px;
+	margin-top: 20px;
+	background: #efefef;
+	text-align: center;
+
+	@include border-radius-simple(4px);
+
+	&.-warning {
+		color: #FF0000;
+		border: 1px solid #DD2146;
+		background-color: #F6E2E1;
+
+	}
+	&.-important {
+		width: 50%;
+		margin-left: 25%;
+		margin-right: 25%;
+		font-weight: bold;
+		margin-bottom: 20px;
+	}
+}
+
+// Confidentiality and Privacy disclaimer
+.disclaimer {
+	font-style: italic;
+	text-align: center;
+	margin: 20px auto 30px;
+	padding: 0 14px;
+	
+	p { margin: 0; }
+}
+
+// Copyright text
+.nps-disclaimer {
+	text-align: center;
+	font-style: italic;
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+
+// Thank you for your participation
+.thank-you {
+	margin-top: 60px;
+	margin-bottom: 40px;
+	text-align: center;
+	font-size: 1.25em;
+	font-weight: bold;
+	font-style: italic;
+	letter-spacing: 0;
+}

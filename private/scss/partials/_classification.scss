@@ -1,0 +1,121 @@
+/**
+ * File Name: _classification.scss
+ * File Author: Steven Lomas
+ * File Creation Date: 12/06/2018
+ *
+ * Best Practice Australia styles for eSurvey
+ *
+ * Styling for all Classification Text and Analysis Values.
+ *
+ * PARAMETERS:
+ * -radio		Classifications for all categorical questions.
+ * -text		Classifications for all text questions.
+ * -analysis	Analysis values of all categorical questions.
+ */
+
+.classification {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 8px;
+	background-color: rgba(255, 255, 255, 0.3);
+	color: $bpa-classification;
+	font-size: 13px;
+	line-height: 1em;
+	z-index: 1;
+
+	&.-radio {
+		top: -11px;
+	}
+	&.-text {
+		top: -11px;
+		left: 20px;
+	}
+	&.-analysis {
+		top: -1px;
+		left: 4px;
+	}
+	&.-fsm {
+		top: 18px;
+		left: auto;
+		right: 2em;
+		color: #FFFFFF;
+	}
+}
+
+/** Demographics */
+.demographic {
+	.question_response {
+		.classification {
+			&.-analysis {
+				// Right-align analysis values to better handle longer demo values
+				top: 4px;
+				left: auto;
+				right: calc(100% - 1em);
+			}
+		}
+	}
+}
+
+/** Threetier */
+.threetier {
+	.question_table__question {
+		.classification {
+			&.-radio {
+				top: -15px;
+			}
+			&.-analysis {
+				top: -1px;
+				left: 0px;
+			}
+		}
+	}
+}
+
+/** Fourtier */
+.fourtier {
+	.question_table__question {
+		.classification {
+			&.-analysis {
+				top: -3px;
+				left: 0px;
+			}
+		}
+	}
+}
+
+/** The Issues That Matter */
+.issues {
+	.classification {
+		&.-radio {
+			top: -13px;
+		}
+		&.-analysis {
+			top: 0px;
+			left: 33%;
+		}
+	}
+}
+
+/** Net Promoter Score */
+table.styled_inputs {
+	td.question_response {
+		.classification {
+			&.-radio {
+				top: -16px;
+				left: 0px;
+			}
+			&.-analysis {
+				top: 33px;
+				left: 13px;
+			}
+		}
+	}
+}
+
+@media print {
+	.classification {
+		background-color: #FFFFFF !important;
+		color: $bpa-classification !important;
+	}
+}

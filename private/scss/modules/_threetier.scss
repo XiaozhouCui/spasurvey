@@ -1,0 +1,172 @@
+/**
+ * File Name: _threetier.scss
+ * File Author: Todd Johnson 
+ * File Creation Date: 15/10/2014
+ *
+ * Best Practice Australia styles for eSurvey
+ *
+ * All styles for pages with 3 columns with text(displayed to the user)
+ * are on the left and right and a scale of radio buttons in the centre
+ * column.
+ * eg. Engagement Culture.
+ */
+
+.threetier {
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 60px;
+
+	.question_table {
+		@extend %grid;
+		
+		width: 100%;
+		margin-top: 20px;
+
+		&.-favouritism_table {
+			.header_row {
+				background: #f5f5f5;
+				border: 1px solid #e3e3e3;
+				display: inline-block;
+
+				@include border-radius-simple(4px);
+			}
+
+			td {
+				padding: 4px;
+			}
+		}
+
+		&.-initiatives_table {
+			.question_table__header {
+				margin-bottom: 10px;
+
+				table {
+					width: 100%;
+					text-align: center;
+
+					td {
+						@extend %grid__item;
+						@extend %one-quarter;
+
+						vertical-align: middle;
+						text-align: center;
+
+						&:first-child {
+							margin-left: 0 !important;
+						}
+					}
+				}
+			}
+
+			.question_response {
+				textarea {
+					width: 90%;
+					width: calc(100% - 2em);
+					height: $input-line-height * 3;
+					margin-left: 1em !important;
+					margin: 0;
+				}
+			}
+
+			tr.row:nth-of-type(2n) {
+				background-color: #F5F5F5;
+				border-top: 1px solid #E3E3E3;
+				border-bottom: 1px solid #E3E3E3;
+
+				&:hover {
+					background-color: #EEEEEE;
+				}
+			}
+		}
+
+		tr td:first-child {
+			margin-left: 1.5%;
+		}
+	}
+
+	.question_response {
+
+		textarea {
+			width: 100%;
+			height: $input-line-height * 2;
+			margin-left: 0 !important;
+		}
+	}
+
+	.question_table__header {
+		@extend %grid__item;
+		@extend %one-third;
+
+		&.-scale_img {
+			text-align: center;
+		}
+	}
+
+	.question_table__question {
+		@extend %grid__item;
+		@extend %one-third;
+
+		padding-top: 7px;
+		padding-bottom: 7px;
+
+		&.-align_left { text-align: left; }
+		&.-align_center { text-align: center; }
+		&.-align_right { text-align: right; }
+
+		&.-radio_buttons {
+			.mrQuestionTable {
+
+				// Align Pixel Perfect inputs
+				#Cell\.0\.0 { margin-left: 29px; }
+				#Cell\.1\.0 { margin-left: 56px; }
+				#Cell\.2\.0 { margin-left: 57px; }
+
+				@include ie-fallback(ie9) {
+					margin-left: -8px !important; // Override SPSS Styling
+
+					#Cell\.0\.0 { margin-left: 31px; }	
+					#Cell\.1\.0 { margin-left: 46px; }
+					#Cell\.2\.0 { margin-left: 52px; }
+				}
+			}
+		}
+		
+		&.-radio_buttons_four {
+			.mrQuestionTable {
+				margin-left: 0 !important;
+				font-size: 0;
+				text-align: center;
+				
+				// Align radios
+				[id^="Cell."] {
+					@extend %grid__item;
+					@extend %one-quarter;
+
+					text-align: center;
+					font-size: 13px;
+				}
+			}
+		}
+
+		.mrQuestionTable {
+			margin-left: 5px !important;
+
+			input {
+				width: 25px;
+				margin: 0 3px !important;
+				
+				// IE
+				&.mrSingle {
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+
+/* Print layout */
+@media print {
+	.threetier {
+		margin-bottom: 30px;
+	}
+}

@@ -1,0 +1,62 @@
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"><![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"><!--<![endif]-->
+	<head>
+		<title>eSurvey - Best Practice Australia</title>
+		<meta id="viewport" name="viewport"/>
+		<link rel="shortcut icon" href="https://i.bpanz.com/SurveyAssets/bpa_favicon.png"/>
+		<mrRef RefType="link" rel="stylesheet" type="text/css" href="style.css"></mrRef>
+	</head>
+	<body class="page">
+		<mrPage IncludeElementIDs="true"/>
+		<div class="container">
+			<div class="header">
+				<div class="header__logo -bpanz"><img src="https://i.bpanz.com/SurveyAssets/bpa_logo.png" alt="Best Practice Australia logo"/></div>
+				<div class="header__logo -client"><mrRef RefType="img" src="logo.png"></mrRef></div>
+				<div class="header-bar">
+					<h1>Message in a Bottle</h1>
+				</div>
+			</div>
+			<div class="content">
+				<div class="definitions_table"><p>This next question is called “Message in a Bottle”. It is your chance to send a confidential message directly to the most senior leader in your <span class="definition" id="orga">organisation</span>. For the best results, this message should be constructive, descriptive and something people can realistically do something about.</p></div>
+				<div class="message_in_a_bottle">
+					<div class="question_title">If there was one message you would like to pass on to <strong>Carol Jeffs, Chief Executive Officer of BPA,</strong> that would assist in making the organisation a better place to work, it would be ...</div>
+					<div class="question_response miab">
+						<mrData QuestionName="f00930_MessageinaBottle" maxlength="1000" QuestionElement="Controls"/>
+						<mrData QuestionName="f00930_MessageinaBottle" QuestionElement="Error"/>
+					</div>
+				</div>
+				<div class="survey-nav">
+					<input type="submit" name="_NPrev" value="Previous" title="Return to the previous page"/>
+					<input type="submit" name="_NStop" value="Stop &amp; Save" title="Save your progress and return later"/>
+					<input type="submit" name="_NNext" value="Next" title="Proceed to the next page"/>
+				</div>
+				<div class="pageInfoElement" style="display:none;">
+					<mrProgressBar ShowBar="False" ShowCounts="AsValues"/>
+				</div>
+				<div id="progressBar" class="progress">
+					<div class="bar"></div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="footer__section -links">
+					<a href="https://bpanz.com/bpacopyright" target="_blank" rel="noopener noreferrer" class="copyright">© 2019 Best Practice Australia</a>
+					<a href="https://bpanz.com/privacypolicy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+					<a href="https://bpanz.com/disclaimer" target="_blank" rel="noopener noreferrer">Ts &amp; Cs</a>
+					<a href="https://bpanz.com/intellectual-property-statement" target="_blank" rel="noopener noreferrer">Intellectual Property</a>
+				</div>
+				<div class="confidential">Confidential - your feedback will be anonymous</div>
+				<div class="clearelement"></div>
+			</div>
+		</div>
+		<script type="text/javascript" src="https://i.bpanz.com/SurveyAssets/jquery.1.11.3.min.js"></script>
+		<script type="text/javascript" src="https://i.bpanz.com/SurveyAssets/jquery-ui.1.10.3.min.js"></script>
+		<script>
+			$('.miab textarea').attr({placeholder: '(1000 character limit)'})
+		</script>
+		<mrRef RefType="script" src="master.js">master.js</mrRef>
+	</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "removeComments": true,
+    "allowJs": true,
+    "target": "ES5",
+  },
+  "exclude": ["private"]
+}

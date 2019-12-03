@@ -1,0 +1,29 @@
+/**
+ * File Name: _messageinabottle.scss
+ * File Author: Todd Johnson 
+ * File Creation Date: 15/10/2014
+ *
+ * Best Practice Australia styles for eSurvey
+ *
+ * All Styling for the Message in a Bottle Question
+ */
+
+.message_in_a_bottle{
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 60px;
+
+	.question_response{
+		width: 100%;
+		text-align: center;
+		padding-top: 20px;
+
+		textarea{
+			width: 635px;
+			height:128px;
+		}
+	}
+}
+
+
+

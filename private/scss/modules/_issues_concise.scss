@@ -1,0 +1,126 @@
+/**
+ * File Name: _issues_concice.scss
+ * Original File Author: Todd Johnson
+ * OriginalFile Creation Date: 15/10/2014.
+ *
+ * File Refactor Author(s): Alex McNeill, Ashley Dunbabin, Anita Diamond.
+ * File Refactor Date: 18/03/2015.
+ * Best Practice Australia styles for eSurvey
+ *
+ * All styling for the Issues That Matter Table.
+ */
+
+$issues-row-height: 2em !default;
+
+
+.issues {
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+  .mrQuestionTable {
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 0;
+    line-height: $issues-row-height;
+    text-align: center;
+  }
+
+  .header__row td {
+    width: 140px;
+    border: 1px solid $issues-border-color;
+    border-left: 0;
+    background: white !important;
+    text-align: center;
+  }
+  
+  &.-integrity {
+    table tbody tr td:first-child {
+      text-align: left;
+    }
+  }
+  
+  span[id^=Cell] {
+    height: 100%;
+    width: 33% !important;
+    text-align: center;
+    box-sizing: border-box;
+    
+    input {
+      margin: 0 !important;
+      padding: 0;
+    }
+  }
+
+  tr {
+    border-right: 1px solid $issues-border-color;
+    border-top: 1px solid #E3E3E3;
+    td {
+      width: 390px;
+      border-right: 1px solid $issues-border-color;
+      min-height: $issues-row-height;
+      padding: 0;
+    }
+    td:first-child {
+      padding: 7px 14px;
+      text-align: right;
+    }
+    &.row__title {
+      background: white;
+      border-top: 1px solid $issues-border-color;
+      border-bottom: 1px solid $issues-border-color;
+      border-right: 0;
+      td {
+        text-align: left !important;
+        padding: 0 0 0 14px !important;
+        border-right: 0;
+      }
+      &:hover {
+        background-color: #FFFFFF;
+      }
+    }
+    &:hover {
+      background-color: #EEEEEE !important;
+    }
+  }
+  tr:not(.row__title):nth-child(odd) {
+    background-color: #F5F5F5;
+  }
+  tr:first-child {
+    border-top: 0;
+  }
+  tr:last-child {
+    border-bottom:1px solid $issues-border-color;
+  }
+}
+
+/* Print layout */
+@media print {
+  .issues {
+    margin-bottom: 20px;
+
+    tr {
+      td {
+        padding: 1px 14px !important;
+        line-height: 1.4em;
+      }
+      td:first-child {
+        padding: 5px 14px;
+      }
+    }
+    tr.header__row {
+      .question_title {
+        &.-no_shadow {
+          padding: 0 14px;
+        }
+      }
+    }
+    &.-integrity {
+      tr {
+        td {
+          padding: 7px 14px !important;
+        }
+      }
+    }
+  }
+}

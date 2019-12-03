@@ -1,0 +1,777 @@
+@media (max-width:1280px) and (min-width:768px) {
+
+	.container {
+		width: auto;
+		max-width: 1280px;
+		.question_title {
+			font-size: 30px;
+			line-height: 1.5;
+		}
+	}
+
+	textarea, input[type="text"] {
+		font-size: 30px;
+	}
+
+	.survey-rejected, .survey-completed, .survey-inactive, .survey-stopped {
+		.content__box {
+			p {
+				font-size: 30px !important;
+				line-height: 1.5;
+			}
+			.response_box p {
+				font-size: 35px !important;
+				line-height: 1.5;
+				img {
+					margin-right: 12px;
+					margin-bottom: 15px;
+					transform: scale(1.5);
+				}
+			}
+		}
+	}
+
+	.header {
+		.header-bar {
+			h1 {
+				font-size: 36px;
+			}
+		}
+	}
+
+	.extent {
+		font-size: 30px;
+		line-height: 1.5;
+		.question_table {
+			.row .question_title.-no_shadow {
+				padding-top: 25px;
+				padding-bottom: 25px;
+			}
+		}
+		&.-rating_scale {
+			.question_table__header {
+				.img_agree, img {
+					width: 80%;
+					margin-left: 15px;
+				}
+				.rating_scale {
+					display: none;
+				}
+			}
+			.question_response {
+				.mrQuestionTable{
+					[id^="Cell."] {
+						width: 12%;
+						input[type="radio"] {
+							transform: scale(2);
+						}
+					}
+				}
+			}
+		}
+		&.-scale7 {
+			.question_table__header.-col_two {
+				img {
+					width: 100% !important;
+					margin-left: 6px !important;
+				}
+			}
+		}
+		&.-no_rating_scale {
+			.question_table__header {
+				.img_agree, img {
+					width: 85%;
+					margin-left: 10px;
+				}
+				&.-col_three {
+					display: none;
+				}
+			}
+			.question_response {
+				.mrQuestionTable{
+					[id^="Cell."] {
+						width: 12%;
+						input[type="radio"] {
+							transform: scale(2);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.extent.-rating_scale {
+		font-size: 30px;
+		line-height: 1.5;
+	}
+
+	.if_text {
+		.question_response {
+			.mrQuestionTable {
+				[id^="Cell."] {
+					font-size: 22px;
+					width: 23%;
+					margin-left: 16px;
+					input[type="radio"] {
+						transform: scale(2);
+					}
+				}
+			}
+			textarea {
+				font-size: 30px;
+				width: 80%;
+				height: 5em;
+			}
+		}
+		.question_title.-why_question {
+			padding-top: 55px;
+		}
+		&.-no {
+			table tbody tr td .arrow{
+				padding-left: 250px !important;
+				img {
+					width: 80px;
+				}
+			}
+		}
+		&.-yes {
+			table tbody tr td .arrow{
+				padding-left: 67px !important;
+				img {
+					width: 77px;
+				}
+			}
+		}
+	}
+
+	.coaching {
+		font-size: 30px;
+		line-height: 1.5;
+		.question_table {
+			.question_table__header.-col_two {
+				font-size: 20px;
+				border-bottom: 1px solid gray;
+			}
+			.row td {
+				padding: 20px 0;
+			}
+			.mrQuestionTable {
+				[id^="Cell."] {
+					width: 15px;
+					input[type="radio"] {
+						transform: scale(2);
+					}
+				}
+			}
+		}
+	}
+
+	.threetier {
+		font-size: 30px;
+		line-height: 1.5;
+		.question_table {
+			.question_table__question_row td {
+				padding: 25px 0;
+			}
+			.question_table__header {
+				&.-scale_img img {
+					width: 80%;
+				}
+				.pos_neg_fixed {
+					float: none;
+					margin-left: 0;
+					text-align: center;
+					#pos_neg_scale {
+						background: none;
+					}
+				}
+			}
+
+			.question_table__question {
+				img {
+					width: 82%;
+				}
+				.mrQuestionTable{
+					[id^="Cell."] {
+						width: 11.5%;
+						input[type="radio"] {
+							transform: scale(2);
+						}
+					}
+				}
+			}
+			tr td:first-child {
+				margin-left: 0;
+			}
+			&.-favouritism_table {
+				tr.header_row, tr.question_table__question_row {
+					.question_table__header, .question_table__question {
+						line-height: 1.2;
+						.question_title {
+							line-height: 1.2;
+						}
+						.question_response {
+							textarea {
+								height: 5em;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.question_yes_ns_no {
+		font-size: 30px;
+		line-height: 1.5;
+		.question_table {
+			.row td {
+				padding: 25px 0;
+			}
+			.observation_options {
+				font-size: 24px;
+			}
+			.question_response {
+				.mrQuestionTable {
+					[id^="Cell."] {
+						input[type="radio"] {
+							transform: scale(2);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.fourtier {
+		font-size: 24px;
+		line-height: 1.2;
+		.question_table {
+			.question_table__header.-scale_img {
+				img {
+					width: 93%;
+					margin-left: 8px;
+				}
+			}
+			.question_table__question {
+				.mrQuestionTable{
+					[id^="Cell."] {
+						width: 11.5%;
+						input[type="radio"] {
+							transform: scale(2);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.expectation {
+		font-size: 30px;
+		line-height: 1.2;
+		.question_table {
+			td.question_title {
+				padding-top: 25px !important;
+				padding-bottom: 25px !important;
+			}
+			.question_table__header {
+				.img_agree, img {
+					width: 80%;
+					margin-left: 10px;
+				}
+				.rating_scale {
+					display: none;
+				}
+				&.-col_two {
+					font-size: 24px;
+				}
+			}
+			.question_response {
+				.mrQuestionTable {
+					[id^="Cell."] {
+						width: 12%;
+						input[type="radio"] {
+							transform: scale(2);
+						}
+					}
+				}
+				.message-radio {
+					bottom: -3em;
+				}
+				&.-text {
+					margin-top: 20px;
+					margin-bottom: 20px;
+					textarea {
+						font-size: 30px;
+						width: 88%;
+						height: 4em;
+					}
+				}
+			}
+		}
+		&.-ourIdentity {
+			.question_table .question_response {
+				textarea {
+					width: 90%;
+					height: 8em;
+				}
+				.bracket.-reason {
+					min-height: 1em;
+					width: 23%;
+					margin: -30px 0 0 38px;
+				}
+				.small_vertical_line.-reason {
+					margin-left: 22%;
+					min-height: 2em;
+				}
+			}
+		}
+	}
+
+	.issues {
+		font-size: 30px;
+		line-height: 1.5;
+		table tbody tr {
+			td:first-child {
+				padding: 20px;
+			}
+			.mrQuestionTable{
+				[id^="Cell."] {
+					input[type="radio"] {
+						transform: scale(2);
+					}
+				}
+			}
+			&.header__row .question_title {
+				font-size: 24px;
+			}
+		}
+		&.-services {
+			font-size: 24px;
+			tr td {
+				&:first-child {
+					width: 180px;
+					padding: 1em;
+				}
+				&:nth-child(2),
+				&:nth-child(3) {
+					width: 140px;
+				}
+				&:nth-child(4) {
+					textarea {
+						height: 3em;
+						width: 11em;
+					}
+				}
+			}
+			.header__row {
+				td {
+					padding: 5px;
+				}
+			}
+			.vertical_radios {
+				.mrQuestionTable {
+					[id^="Cell."] {
+						input {
+							margin: 15px 0 !important;
+						}
+						.mrSingleText {
+							font-size: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.text_one_col {
+		.response_values_above_all textarea {
+			font-size: 30px;
+			width: 90%;
+			height: 5em;
+		}
+	}
+
+	.three_col_text {
+		font-size: 30px;
+		line-height: 1.5;
+		.question_table {
+			td {
+				width: 95%;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				textarea {
+					font-size: 30px;
+					width: 90%;
+					height: 4em;
+					
+				}
+			}
+		}
+	}
+
+	.text_three_col {
+		font-size: 30px;
+		line-height: 1.2;
+		.question_table {
+			tr {
+				td:nth-child(1) {
+					width: 28%;
+					text-align: center;
+					p {
+						font-size: 26px;
+					}
+				}
+			}
+			td textarea {
+				font-size: 30px;
+				width: 90%;
+				height: 5em;
+			}
+		}
+	}
+
+	.values_in_action {
+		font-size: 26px;
+		line-height: 1.2;
+		.question_table {
+			tr th {
+				width: 25%;
+				font-size: 25px;
+			}
+			.question_table__scale {
+				height: 15em;
+				padding: 0;
+				background-image: url("https://i.bpanz.com/i/DBOuI2yVerticle.png");
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: auto 90%;
+				img {
+					display: none;
+				}
+			}
+			.value .value-heading {
+				h3 {
+					font-size: 30px;
+				}
+			}
+			.mrQuestionTable {
+				#Cell\.2\.0 { padding-left: 0; }
+				#Cell\.3\.0 { padding-left: 0; }
+				#Cell\.4\.0 { padding-left: 0; }
+				#Cell\.5\.0 { padding-left: 0; }
+				[id^="Cell."] {
+					width: 70%;
+					height: 1em;
+					margin: 0.5em;
+					input[type="radio"] {
+						transform: scale(2);
+					}
+				}
+			}
+		}
+	}
+
+	.feedback {
+		font-size: 30px;
+		line-height: 1.5;
+		tr td:last-child {
+			// width: auto;
+		}
+		.rating_scale__title {
+			font-size: 24px;
+			line-height: 1.2;
+		}
+		.question_response .mrQuestionTable {
+			margin-left: -15px !important;
+			[id^="Cell."] {
+				width: 22%;
+				input[type="radio"] {
+					transform: scale(2);
+				}
+			}
+		}
+	}
+	#PaidFor {
+		font-size: 30px;
+		line-height: 1.5;
+		textarea {
+			width: 60%;
+			height: 2em !important;
+		}
+		input[type="checkbox"] {
+			transform: scale(2);
+		}
+	}
+	.demographic {
+		font-size: 30px;
+		line-height: 1.5;
+		.question_response {
+			.mrQuestionTable [id^="Cell."] {
+				width: 25%;
+				padding-bottom: 10px;
+				input[type="radio"] {
+					transform: scale(2);
+				}
+				.mrSingleText {
+					font-size: 22px;
+				}
+			}
+		}
+		.question_table {
+			tr td .response_field.smallheight {
+				textarea {
+					width: 88%;
+				}
+
+			}
+		}
+		&.multi.-feedback {
+			padding-left: 1em;
+			.question_response {
+				.mrQuestionTable {
+					margin-left: 2em !important;
+					[id^="Cell."] {
+						width: 95%;
+						padding-bottom: 30px;
+						input[type="checkbox"] {
+							transform: scale(2);
+							margin-left: -1.7em !important;
+						}
+						.mrSingleText {
+							font-size: 22px;
+						}
+					}
+				}
+
+			}
+		}
+		&.three_col_pos {
+			font-size: 22px;
+			line-height: 2;
+			input[type="radio"] {
+				transform: scale(2);
+			}
+			.posrow {
+				.col1, .col2, .col3 {
+					width: 90%;
+					padding: 0 0 30px 30px;
+				}
+			}
+		}
+	}
+
+	.text_one_col {
+		.response_field textarea {
+			width: 90%;
+			height: 5em;
+		}
+		&.-feedback {
+			.question_response {
+				.response_field textarea {
+					width: 90%;
+					height: 5em;
+				}
+			}
+		}
+	}
+
+
+	.truly_great {
+		font-size: 30px;
+		line-height: 1.5;
+		.question_table {
+			tr:nth-child(2) {
+				td:nth-child(1) { display: none; } // Hide the arrows and re-arrange layout
+				td:nth-child(2) { width: 48%; padding: 0 1em; }
+				td:nth-child(3) { display: none; }
+				td:nth-child(4) { width: 48%; }
+			}
+			.question_response {
+				.mrQuestionTable [id^="Cell."] {
+					width: 48%;
+					input[type="radio"] {
+						transform: scale(2);
+					}
+				}
+				&.-text {
+					p {
+						font-size: 24px;
+					}
+					textarea {
+						font-size: 24px;
+						width: 90%;
+						height: 5em;
+					}
+				}
+			}
+		}
+	}
+
+	.styled_inputs {
+		font-size: 24px;
+		line-height: 1.5px;
+		tbody {
+			tr:nth-child(2), tr:nth-child(5) {
+				td:nth-child(1), td:nth-child(3) {
+					width: 15%;
+					font-size: 20px;
+					img {
+						display: none;
+					}
+				}
+				.mrQuestionTable {
+					float: none;
+					text-align: center;
+					margin-left: 0 !important;
+					margin-bottom: -30px;
+
+					[id^="Cell."] {
+						transform: scale(1.2);
+					}
+				}
+			}
+			tr:nth-child(3), tr:nth-child(6) {
+				.question_response {
+					textarea {
+						font-size: 24px;
+						width: 80%;
+						height: 5em;
+					}
+				}
+			}
+		}
+	}
+
+	.message_in_a_bottle {
+		.question_response {
+			textarea {
+				font-size: 24px;
+				width: 85%;
+				height: 16em;
+				margin-left: 0 !important;
+			}
+		}
+	}
+
+	.raffle {
+		font-size: 30px;
+		line-height: 1.5;
+		.response_label {
+			.response_header {
+				width: 100%;
+			}
+			.raffle_img1 {
+				width: 100%;
+			}
+		}
+		.response_question {
+			padding-bottom: 60px;
+			.question_response {
+				.mrQuestionTable [id^="Cell."] {
+					width: 30%;
+					input[type="radio"] {
+						transform: scale(2);
+					}
+				}
+			}
+		}
+	}
+
+	.textbox {
+		font-size: 30px;
+		line-height: 1.5;
+		border-width: 5px;
+	}
+
+	.response_label { // Definitions page
+		font-size: 30px;
+		line-height: 1.5;
+	}
+
+	.definitions_table {
+		font-size: 30px;
+		line-height: 1.5;
+	}
+
+	.notice.-warning {
+		font-size: 30px;
+		line-height: 1.5;
+	}
+
+	.thank-you {
+		font-size: 30px;
+		line-height: 1.5;
+	}
+
+	.esurvey_instructions {
+		.instructions__row .instructions__col {
+			font-size: 30px;
+			line-height: 1.5;
+		}
+	}
+
+	.coverpage .cover_letter {
+		.cover_letter__content {
+			font-size: 30px;
+			line-height: 1.5;
+		}
+	}
+
+	.auth_container {
+		width: 80%;
+		.notice_text {
+			width: 80%;
+			padding: 50px auto;
+			h2 {
+				font-size: 40px;
+			}
+			h3 {
+				font-size: 30px;
+			}
+			.notice_message {
+				font-size: 24px;
+				margin: 15px auto;
+			}
+		}
+		#auth_id_container {
+			.nobrs input[type="text"] {
+				padding: 20px;
+			}
+			.start_survey_btn input[type="submit"] {
+				font-size: 32px !important;
+			}
+		}
+	}
+
+	.survey-nav {
+		input {
+			font-size: 32px !important;
+			margin: 8px;
+		}
+		.btn {
+			border-radius: 10px;
+		}
+	}
+
+	#progressBar {
+		width: 600px;
+		height: 45px;
+		.bar {
+			font-size: 30px;
+			line-height: 45px;
+		}
+	}
+
+	.ui-tooltip, .tooltip {
+		font-size: 30px;
+		line-height: 1.5;
+	}
+
+	.footer{
+		&.-auth {
+			font-size: 30px;
+		}
+	}
+
+}

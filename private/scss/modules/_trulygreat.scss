@@ -1,0 +1,408 @@
+/**
+ * File Name: _trulygreat.scss
+ * File Author: Todd Johnson
+ * File Creation Date: 15/10/2014
+ *
+ * Best Practice Australia styles for eSurvey
+ *
+ * All styles for the Truly Great Question/Module that is usually found
+ * on the Engagement Culture page.
+ */
+
+.truly_great {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 60px;
+
+    .question_table {
+        width:100%;
+    }
+
+    .question_response .mrQuestionTable span {
+        width: 49%;
+        margin-top: 10px;
+    }
+
+    .question_response {
+        textarea {
+            width: 250px;
+            height: 48px;
+            margin-left:0!important;
+        }
+    }
+
+    .question_arrow {
+
+        &.-yes {
+            padding-left: 53px;
+            padding-bottom: 105px;
+        }
+
+        &.-no {
+            padding-left: 24px;
+            padding-bottom: 105px;
+        }
+    }
+}
+
+$green: #44973d;
+$yellow: #eda32d;
+$red: #e43730;
+$black: #000000;
+
+@function very_light_color($color) {
+    @return lighten($color, 30%);
+}
+
+@function lighter_color($color) {
+    @return lighten($color, 20%);
+}
+
+@function darker_color($color) {
+    @return darken($color, 10%);
+}
+
+/** 
+ * To be used in conjunction with style_input(). Fixes a droop-down bug in IE9+ when the styled inputs
+ * have the CSS property 'content' set.
+ * @param  {[type]} $content: 0 [defaults to 0, add anything that is valid for the regular css property 
+ * 'content:']
+ */
+@mixin style_input_iefix($content: 0) {
+    input[type='radio'].mrSingle ~ label > span::before { content: '#{$content}'; }
+}
+
+/**
+ * Use this mixin in conjunction with style_input_size() and style_input_color() to style radio inputs 
+ * rendered by SPSS as a circle (it uses the adjacent label element to show the circle).
+ * 
+ * As it is Written to style SPSS mrInputs it must be used on a selector that targets the containing element
+ * that holds the inputs and its associated label, which is usually a span[id="Cell.0.1"] element. Other times
+ * if the MDD file has been set to render a question using a multi-column layout, this containing element 
+ * will be a <td>, inside a <tr>, which would be inside a <table>
+ * 
+ * Because of the amount of repeating CSS code this mixin (and its companions style_input_color(), style_input_size()) 
+ * can generate, you should use these mixins once on a placeholder SASS rule, then create derived (inherited) 
+ * rules that set the specific color and size; use style_input_color() and style_input_size() for that purpose. 
+ * In fact if you dont use those other two mixins, nothing will properly show.
+ */
+@mixin style_input() {
+    input[type='radio'].mrSingle {
+        margin: 0 !important;
+        opacity: 0;
+        padding: 0;
+
+        ~ label {
+            display: inline-block;
+            margin-left: -24px !important;
+        }
+
+        // general appearance of the circle
+        ~ label > span {
+            display: inline-block;
+            font-weight: normal;
+            margin-left: 0;
+            vertical-align: bottom;
+
+            &::before {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        // when the input is checked, the background-color, and border is set
+        &:checked ~ label > span {
+            font-weight: bold;
+
+            &::before { font-weight: bold; }
+        }
+    }
+}
+
+/** 
+ * Adjusts the size of the styled input. Must be used in conjunction with style_input()
+ * 
+ * @param {size unit in px, em, rem, pt etc.} $size [the size of the circle; default is 27px. 
+ * This also sets the border radius size]
+ */
+@mixin style_input_size($size: 27px) {
+    $font_size: ($size * 0.55);
+    $number_lineheight: $size;
+    $border_radius_size: ($size * 0.7);
+
+    input[type='radio'].mrSingle {
+        height: 23px;
+        width: 23px;
+
+        ~ label {
+            line-height: $number_lineheight;
+        }
+
+        // general appearance of the circle
+        ~ label > span {
+            border-radius: $border_radius_size;
+            height: $size;
+            width: $size;
+
+            &::before {
+                font-size: $font_size;
+                line-height: $number_lineheight; // vertical alignment of the checked inside number
+            }
+        }
+    }
+}
+
+/** 
+ * Adjusts the colors (border, checked and hover colors) of the styled input.
+ * Must be used in conjunction with style_input()
+ * 
+ * @param  {rgb or hex value} $color [a color to style the border and fill]
+ */
+@mixin style_input_color($color) {
+    input[type='radio'].mrSingle {
+        ~ label > span {
+            border: 2px solid $color;
+            color: $color;
+        }
+
+        &:checked ~ label > span {
+            background-color: lighter_color($color);
+            border: 2px solid darker_color($color);
+            color: darker_color($color);
+            &::before { color: $color; }
+        }
+
+        // no hover styling on touch devices
+        @include ie-fallback(mod-no-touchevents) {
+            &:hover ~ label > span, & ~ label:hover > span {
+                background-color: very_light_color($color);
+                &::before { color: $color; }
+            }
+
+            &:checked:hover ~ label > span, &:checked ~ label:hover > span { 
+                background-color: very_light_color($color); 
+                &::before { color: light_color($color); }
+            }
+        }
+    }
+}
+
+table.styled_inputs {
+    margin: 30px auto 0 auto;
+    width: 90%;
+
+    td.question_response {
+        padding: 6px 0px 3px 3px;
+        vertical-align: top
+    }
+
+    textarea {
+        height: 48px;
+        width: 260px;
+        margin-left: 0 !important;
+    }
+
+    .question_title {
+        display: table-cell;
+    }
+
+    .whynot {
+        text-align: left;
+
+        .question_title {
+            margin-left: 35%
+        }
+
+        .question_response {
+            margin-left: 23.5%;
+        }
+    }
+
+    .reason {
+        text-align: center;
+    }
+
+    .whynot, .reason {
+        .question_title {
+            display: inline;
+        }
+
+        &:first-of-type {
+            // padding-bottom: 20px;
+        }
+    }
+}
+
+
+%styled_input_generic {
+    @include style_input();
+    @include style_input_size(27px);
+}
+
+%styled_input_red {
+    @extend %styled_input_generic;
+    @include style_input_color($color: $red); 
+}
+
+%styled_input_green {
+    @extend %styled_input_generic;
+    @include style_input_color($color: $green); 
+}
+
+%styled_input_yellow {
+    @extend %styled_input_generic;
+    @include style_input_color($color: $yellow); 
+}
+
+.styled_inputs span.mrQuestionTable {
+    float: left;
+    cursor: default;
+
+    @for $j from 0 through 11 {
+        span#Cell\.#{$j}\.0 {
+            @extend %styled_input_generic;
+            @if $j == 0 or $j == 1 { @extend %styled_input_red; }
+            @if $j > 1 and $j < 9 { @extend %styled_input_yellow; }
+            @if $j == 10 or $j == 9 { @extend %styled_input_green; }
+            
+            // prevents a stupid IE bug from dropping the height of the circle
+            @include style_input_iefix($j)
+        }
+    }
+}
+
+div.bracket {
+    border: 1px solid black;
+    margin: 40px 0px 0px 17px;
+    width: 91%;
+    height: 15px;
+    border-top: none;
+
+    &.-reason {
+        width: 91%;
+    }
+}
+
+div.small_vertical_line {
+    border-left: 1px solid black;
+    width: 1px;
+    height: 30px;
+    margin-left: 215px;
+
+    &.-reason {
+        margin-left: 50%;
+    }
+}
+
+.numbers_fallback {
+    display: none;
+    clear: left;
+    margin-left: 10px;
+
+    span {
+        margin: 0 11px;
+        font-weight: bold;
+        font-size: 10pt;
+
+        &.last-child, &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.absolrecom, .absolnotrecom {
+    padding: 0 0 40px 0;
+}
+
+%recommendation_paragraph {
+    width: 120px;
+    height: 55px;
+    line-height: 17px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.absolnotrecom p {
+    @extend %recommendation_paragraph;
+    
+    float: left;
+    margin-right: 10px;
+    text-align: right;
+    color: $red;
+}
+
+.absolrecom {
+    & p {
+        @extend %recommendation_paragraph;
+        
+        display: inline-block;
+        text-align: left;
+        color: #44973d;
+    }
+
+    & > img {
+        float: left;
+        margin-right: 10px;
+    }
+}
+
+.red {
+    color: $red;
+}
+
+.yellow {
+    color: $yellow;
+}
+
+.green {
+    color: $green;
+}
+
+#modal_container {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background-color: transparent;
+    height: 1px;
+    top: 900px;
+    z-index: 1;
+}
+
+#modal {
+    visibility: visible;
+    background: #303030;
+    width: 300px;
+    margin: 0 auto 0 auto;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+
+    @include border-radius-simple(7px);
+    @include box-shadow(0 0 20px black);
+
+    .-close {
+        float: right;
+        margin: -20px;
+        padding: 7px 21px;
+        background: red;
+        
+        @include border-radius-complex(0, 7px, 0, 7px);
+
+        &:hover {
+            @include box-shadow(0 0 7px red);
+        }
+    }
+}
+
+#modal h1 {
+    color: #fff;
+    clear: both;
+    margin-top: 0;
+}
+
+/* Print layout */
+@media print {
+    .truly_great {
+        margin-bottom: 30px !important;
+    }
+}

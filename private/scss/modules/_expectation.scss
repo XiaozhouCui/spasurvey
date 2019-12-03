@@ -1,0 +1,164 @@
+/**
+ * File Name: _expectation.scss
+ * File Author: Todd Johnson
+ * File Creation Date: 15/10/2014
+ *
+ * Best Practice Australia styles for eSurvey
+ *
+ * All styling for all Expectation Questions that contain 3 textboxes
+ * and 3 radio button scales. Options for displaying rating scale and
+ * no rating scale.
+ *
+ *
+ * PARAMETERS:
+ *
+ *	-rating_scale		Aligns the page and modifies styling to allow room
+ *						for a visual representation of the rating scale to
+ *						the user. This means changing module to 3 columns.
+ *						NOTE: You will need to add the HTML for the scale.
+ *
+ * -no_rating_scale		Aligns the page and modifies the styling into 2
+ *						columns as there is no visual representation of the
+ *						rating scale.
+ *						NOTE: You will need to remove the HTML for the scale.
+ *
+ */
+
+.expectation {
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 50px;
+
+	.question_table {
+		width:100%;
+
+		@extend %grid;
+	}
+
+	.question_table__header {
+		padding: 2px;
+		padding-bottom: 0.5em;
+		
+		&.-col_one {
+			@extend %grid__item;
+			@extend %three-fifths;
+			
+			vertical-align: middle;
+		}
+		&.-col_two {
+			@extend %grid__item;
+			@extend %two-fifths;
+
+			text-align: center;
+		}
+		&.-col_three {
+			@extend %position-sticky;
+		}
+	}
+
+	.question_title {
+
+		&.-no_shadow {
+			@extend %grid__item;
+			@extend %three-fifths;
+
+			ul {
+				margin-top:0;
+				margin-bottom:0;
+			}
+		}
+	}
+
+	.question_response {
+		@extend %grid__item;
+		@extend %two-fifths;
+		
+		text-align: center;
+		vertical-align: middle;
+		position: relative;
+
+		.message-radio, .message-text {
+    	    @extend %unselectable;
+    	    
+    	    display: none;
+    	    position: absolute;
+    	    color: #EE3225;
+    	    font-style: italic;
+    	    z-index: 1;
+    	}
+    	.message-radio {
+    	    width: 100%;
+    		left: 0px;
+    	    bottom: -1.5em;
+
+			@include ie-fallback(ie9) {
+				bottom: 0px;
+			}
+    	}
+    	.message-text {
+    		right: 1.5em;
+    		bottom: 1.2em;
+    		text-align: right;
+
+    		@include ie-fallback(ie9) {
+				bottom: 0.75em;
+				right: 2em;
+			}
+    	}
+
+		&.-text {
+			@extend %three-fifths;
+			
+			text-align: left;
+		}
+
+		textarea {
+			width: 360px;
+			height: 32px;
+		}
+	}
+
+	.mrQuestionTable {
+		margin-left: -4px !important; // Override SPSS Styling
+
+		// Remove the empty labels that push radios upward unnecessarily
+		label { display: none; }
+
+		.mrSingleText {
+			padding-left: 1px;
+			
+			@include ie-fallback(ie) { padding-left:0; };
+		}
+
+		@include ie-fallback(ie9) {
+			margin-left: -11px !important; // Override SPSS Styling
+
+			#Cell\.1\.0 { padding-left: 0px; }
+			#Cell\.2\.0 { padding-left: 0px; }
+			#Cell\.3\.0 { padding-left: 1px; }
+			#Cell\.4\.0 { padding-left: 0px; }
+			#Cell\.5\.0 { padding-left: 0px; }
+
+			input[type="radio"] {
+				margin-left: 11px !important;
+			}
+		}
+	}
+}
+
+/* Print layout */
+@media print {
+	.expectation {
+		margin-bottom: 30px;
+		
+		.question_table {
+			.question_table__header {
+				padding-bottom: 0;
+			}
+		}
+
+		.mrQuestionTable {
+			label { display: none; }
+		}
+	}
+}

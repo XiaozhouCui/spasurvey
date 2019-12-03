@@ -1,0 +1,45 @@
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"><![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"><!--<![endif]-->
+	<head>
+		<title>eSurvey - Best Practice Australia</title>
+		<meta id="viewport" name="viewport"/>
+		<link rel="shortcut icon" href="https://i.bpanz.com/SurveyAssets/bpa_favicon.png"/>
+		<mrRef RefType="link" rel="stylesheet" type="text/css" href="style.css"></mrRef>
+	</head>
+	<body>
+		<style type="text/css">
+			#_Q1 { display: none; }
+			label[for="_Q0"] { display: none; }
+			.start_survey_btn { margin-top: 2em; }
+			.notice_text { border-color: #888787 !important; }
+		</style>
+		<mrPage IncludeElementIDs="true"/>
+		<div class="auth_container">
+			<div class="content">
+				<div class="survey_image"><mrRef RefType="img" src="logo.png" style="max-width:90%"></mrRef></div>
+				<div class="notice_text">
+					<h2 class="survey_name" style="display:block;letter-spacing:0;margin-top:0;">Test Survey</h2>
+					<h3 class="closing_date" style="display:block;color:#fff;letter-spacing:0;line-height:2em;">Survey closes Monday, 25 November 2019</h3>
+					<div class="notice_message">Please enter your survey password below:</div>
+				</div>
+				<div id="auth_id_container">
+					<div class="nobrs">
+						<mrData Name="Authentication ID"/>
+					</div>
+					<p class="message"></p>
+					<div class="start_survey_btn">
+						<mrNavButton Name="Next" Text="Start Survey"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer -auth">Best Practice Australia</div>
+		<script type="text/javascript" src="https://i.bpanz.com/SurveyAssets/jquery.1.11.3.min.js"></script>
+		<script type="text/javascript" src="https://i.bpanz.com/SurveyAssets/jquery-ui.1.10.3.min.js"></script>
+		<mrRef RefType="script" src="master.js" type="text/javascript">js</mrRef>
+	</body>
+</html>

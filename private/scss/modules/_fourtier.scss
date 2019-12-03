@@ -1,0 +1,84 @@
+/**
+ * File Name: _fourtier.scss
+ * File Author: Todd Johnson 
+ * File Creation Date: 15/10/2014
+ *
+ * Best Practice Australia styles for eSurvey
+ *
+ * All styles for pages with 3 columns with text(displayed to the user)
+ * are on the left and right and a scale of radio buttons in the centre
+ * column.
+ * eg. Engagement Culture.
+ */
+
+.fourtier {
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 60px;
+
+	.question_table {
+		width:100%;
+		margin-top: 20px;
+
+		@extend %grid;
+
+		tr {
+			td:nth-child(1) { @extend %one-fifth; }
+			td:nth-child(2) { margin-right: 2%; }
+			td:nth-child(4) { margin-left: 2%; }
+		}
+	}
+
+	.question_table__header {
+		@extend %grid__item;
+		@extend %one-quarter;
+
+		&.-scale_img { text-align: center; }
+	}
+
+	.question_table__question {
+		@extend %grid__item;
+		@extend %one-quarter;
+
+		padding-top: 7px;
+		padding-bottom: 7px;
+		
+		&.-align_left { text-align: left; }
+		&.-align_center { text-align: center; }
+		&.-align_right { text-align: right; }
+
+		.mrQuestionTable {
+			margin-left: 0 !important;
+		}
+
+		.mrQuestionTable input {
+			margin-left: 9px !important;
+			margin-right: 5px;
+			
+			// IE
+			&.mrSingle {
+				padding: 0;
+			}
+		}
+	}
+}
+
+/* Print layout */
+@media print {
+	.fourtier {
+		margin-bottom: 30px;
+
+		& > .question_title {
+			// margin-top: 20px;
+		}
+
+		.question_table {
+			margin-top: 10px;
+		}
+
+		.question_table__question {
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+	}
+}

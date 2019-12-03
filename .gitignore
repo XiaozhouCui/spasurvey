@@ -1,0 +1,9 @@
+emails/
+images/
+node_modules/
+private/html/*
+public/*/*.css
+public/*/*.js
+public/*/*.map
+public/*/*.xml
+*.indd

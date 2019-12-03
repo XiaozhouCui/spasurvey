@@ -1,0 +1,83 @@
+/**
+ * File Name: _typography.scss
+ * File Author: Todd Johnson 
+ * File Creation Date: 15/10/2014
+ *
+ * Best Practice Australia styles for eSurvey
+ *
+ * Sets all the Common Typography styling throughout the
+ * BPA eSurvey
+ */
+
+$line-height: 1.56em !default;
+
+body {
+	font-family: $font-stack;
+	line-height: $line-height;
+	color: $font-color;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	color: $font-color;
+	line-height: 1.5;
+	letter-spacing: -1px;
+	margin: 20px 0;
+}
+
+div.question_title {
+	strong + em {
+		display: inline-block;
+	}
+}
+
+
+/*
+ * Noto Sans: we link directly to the fonts instead of using a CSS import.
+ * This is due to a bug in Internet Explorer painting fonts after building the DOM.
+ * Which causes text to overflow outside of elements 
+ * These may need to be updated if the fonts stop working.
+ * https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i
+ */
+
+/* Noto Sans */
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans'), local('NotoSans'), url(https://fonts.gstatic.com/s/notosans/v7/o-0IIpQlx3QUlC5A4PNr5TRA.woff2) format('woff2'), url(https://fonts.gstatic.com/s/notosans/v7/o-0IIpQlx3QUlC5A4PNr5TRG.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Noto Sans Bold */
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(https://fonts.gstatic.com/s/notosans/v7/o-0NIpQlx3QUlC5A4PNjXhFVZNyB.woff2) format('woff2'), url(https://fonts.gstatic.com/s/notosans/v7/o-0NIpQlx3QUlC5A4PNjXhFVZNyH.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Noto Sans Italic */
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Noto Sans Italic'), local('NotoSans-Italic'), url(https://fonts.gstatic.com/s/notosans/v7/o-0OIpQlx3QUlC5A4PNr4ARCQ_k.woff2) format('woff2'), url(https://fonts.gstatic.com/s/notosans/v7/o-0OIpQlx3QUlC5A4PNr4ARCQ_8.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Noto Sans Bold Italic */
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Noto Sans Bold Italic'), local('NotoSans-BoldItalic'), url(https://fonts.gstatic.com/s/notosans/v7/o-0TIpQlx3QUlC5A4PNr4Az5ZuyDzW0.woff2) format('woff2'), url(https://fonts.gstatic.com/s/notosans/v7/o-0TIpQlx3QUlC5A4PNr4Az5ZuyDzWs.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Print */
+@media print {
+  body, h1, h2, h3, h4, h5, h6 {
+    color: #000000;
+  }
+}

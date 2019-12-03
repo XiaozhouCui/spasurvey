@@ -1,0 +1,83 @@
+/**
+ * File Name: _if_text.scss
+ * File Author: Todd Johnson 
+ * File Creation Date: 15/10/2014
+ *
+ * Best Practice Australia styles for eSurvey
+ *
+ * All styling for questions that are 'If yes' or 'If no' etc.
+ *
+ *
+ * PARAMETERS:
+ *
+ * -yes				Aligns the 'If Yes' question & corresponding arrow
+ *					under the Yes radio button/input.
+ *
+ * no				Aligns the 'If No' question  & corresponding arror
+ *					under the No radio button/input
+ * 
+ * -employment_status_temp		Aligns the 'If So' question underneath the
+ *								Temporary option for the question;
+ *								"What was your employment status?" 
+ */
+
+.if_text {
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 40px;
+
+	.question_table {
+		width: 100%;
+	}
+
+	.question_title {
+
+		&.-why_question {
+			padding-top: 25px;
+		}
+	}
+
+	.question_response {
+		margin-top: 10px;
+
+		[id="Cell.0.0"] {
+			width: 170px;
+		}
+	}
+
+	&.-yes{
+		.arrow{
+			padding-left: 51px;
+			padding-top: 5px;
+		}
+	}
+
+	&.-no{
+		.arrow{
+			padding-left: 110px;
+			padding-top: 5px;
+		}
+		[id="Cell.0.0"] {
+			width: inherit;
+		}
+	}
+
+	&.-employment_status_temp {
+		.arrow{
+			padding-left: 420px;
+			padding-top: 5px;
+		}
+	}
+
+	textarea{
+		width:340px;
+		height:48px;
+	}
+}
+
+/* Print layout */
+@media print {
+	.if_text {
+		margin-bottom: 30px;
+	}
+}

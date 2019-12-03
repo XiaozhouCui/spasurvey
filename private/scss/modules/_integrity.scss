@@ -1,0 +1,53 @@
+.integrity {
+  input.mrSingle {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  [id^="Cell.0."] {
+    text-align: right !important;
+    padding-right: 1em !important;
+  }
+  table tbody tr:first-child td[id^=Cell] {
+    background-color: white;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 1em 0.5em;
+  }
+
+  $topBorderIndeces: (0);
+  $bottomBorderIndeces: (11);
+
+  [id^="Cell"] {
+    padding-right: 0;
+
+    @each $tIndex in $topBorderIndeces {
+      $topIndex: $tIndex + 1;
+      &[id$=".#{$topIndex}"] {
+        border-top: 1px solid black;
+      }
+    }
+
+    @each $bIndex in $bottomBorderIndeces {
+      &[id$=".#{$bIndex}"] {
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+
+  table tr td[id^=Cell] {
+    border-right: 1px solid black;
+    padding: 1em 0;
+    width: 140px;
+    [id^="Cell.0."] {
+      padding-right: 1em;
+    }
+  }
+
+  table tr td[id^=Cell]:first-child {
+    width: 50%;
+  }
+  table tr:nth-child(odd) td[id^=Cell] {
+    background-color: #E3E3E3;
+  }
+}

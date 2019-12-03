@@ -1,0 +1,33 @@
+/**
+ * File Name: _surveyinstructions.scss
+ * File Author: Todd Johnson 
+ * File Creation Date: 15/10/2014
+ *
+ * Contains all footer Styling
+ */
+
+.esurvey_instructions {
+	margin-top: 20px;
+
+	.instructions__row {
+		width: 100%;
+
+		.instructions__col {
+			min-width: 150px;
+			line-height:20px; 
+			border-bottom:1px solid #E0E0E0;
+			&.-no_border {
+				border-bottom: none;
+			}
+			.instructions__title {
+				font-weight: bold;
+				text-align: left;
+			}
+			
+			.instructions__content {
+				padding:0px 5px 0px 0px; 
+				text-align:justify;
+			}
+		}
+	}
+}

@@ -1,0 +1,107 @@
+/**
+ * File Name: _coaching.scss
+ * File Author: Todd Johnson 
+ * File Creation Date: 15/10/2014
+ *
+ * Best Practice Australia styles for eSurvey
+ * 
+ * All styling related to the Coaching Questions Table that is
+ * usually found on the Management Skills Page
+ */
+
+.coaching {
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 40px;
+
+	.question_table {
+		@extend %grid;
+
+		width: 100%;
+
+		&.-three_col {
+			
+			td {
+				@extend %grid__item;
+				@extend %one-third;
+
+				text-align: center;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	.question_table__header {
+		padding: 0;
+		padding-bottom: 15px;
+		&.-col_one {
+			@extend %grid__item;
+			@extend %three-fifths;
+
+			vertical-align: bottom;
+		}
+
+		&.-col_two {
+			@extend %grid__item;
+			@extend %two-fifths;
+			
+			text-align: center;
+
+			table {
+				width: 100%;
+
+				td {
+					width: 32%;
+					vertical-align: middle;
+					text-align: center;
+					color: #111;
+				}
+			}
+		}
+	}
+
+	.question_title {
+		&.-no_shadow {
+			@extend %grid__item;
+			@extend %three-fifths;
+
+			padding: 0;
+			padding-top: 4px;
+			padding-bottom: 4px;
+			padding-left: 15px;
+			padding-right: 35px;
+
+			ul {
+				margin-top:0;
+				margin-bottom:0;
+			}
+		}
+	}
+
+	.question_response {
+		@extend %grid__item;
+		@extend %two-fifths;
+
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.mrQuestionTable {
+		margin-left: 0 !important; // Override SPSS Styling
+		font-size: 0; // Deal with white space between inline-block elements
+		text-align: center;
+		
+		span[id^=Cell] {
+			height: 100%;
+			width: 33% !important;
+			text-align: center;
+			box-sizing: border-box;
+			font-size: $font-size;
+			
+			input {
+				margin: 0 !important;
+				padding: 0;
+			}
+		}
+	}
+}

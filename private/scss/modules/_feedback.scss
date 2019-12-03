@@ -1,0 +1,66 @@
+.feedback {
+  margin-top: 20px;
+
+  input.mrSingle {
+    margin: 0 !important;
+  }
+
+  [id^="Cell."] {
+    text-align: center;
+    width: 24%;
+  }
+  [id^="Cell.0."] .mrQuestionText {
+    padding-right: 10px !important;
+  }
+  tr:first-child td[id^=Cell] {
+    background-color: white;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 1em 0.5em;
+  }
+
+  .mrQuestionTable {
+    margin-left: 0 !important;
+    text-align: center;
+  }
+
+  tr td:last-child {
+    width: 430px;
+  }
+
+  table tr td[id^=Cell] {
+    border-right: 1px solid black;
+    height: 40px;
+    width: 140px;
+  }
+
+  table tr td[id^=Cell]:first-child {
+    width: 50%;
+  }
+
+  table tr:nth-child(odd) td[id^=Cell] {
+    background-color: #E3E3E3;
+  }
+
+  &.-rating_scale{
+    width: 100%;
+  }
+  .rating_scale__title {
+    width: 24%;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    padding: 0.5em;
+  }
+
+  .question_title.-no_shadow ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  @include ie-fallback(ie9) {
+    .question_title.-no_shadow {
+      width: 48%;
+    }
+  };
+}
