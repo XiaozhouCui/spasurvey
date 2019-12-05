@@ -1,102 +1,87 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import Engagement from '../Engagement/Engagement';
 
 class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      
+      isLocalHost: false,
+      isStaging: false,
+      projectCode: 'TEST_20_ES',
+      session: this.props.session,
+      currentPage: 'Engagement',
+      data: {
+        "01183_Optimism01": 999,
+        "01184_Optimism02": 999,
+        "01194_Optimism02b": 999,
+        "01185_Optimism03": 999,
+        "01186_Optimism04": 999,
+        "01187_Optimism05": 999,
+        "01188_Optimism06": 999,
+        "01189_Optimism07": 999,
+        "01190_Optimism08": 999,
+        "01191_Optimism13": 999
+      },
     }
+
+    this.changeRadioSelection = this.changeRadioSelection.bind(this);
+  }
+  
+  // clicking a radio button will update the corresponding data in state.
+  changeRadioSelection(fieldId, selection) {
+    this.setState(prevState => ({
+      data: {                  // object that we want to update
+        ...prevState.data,     // keep all other key-value pairs
+        [fieldId]: selection   // update the value of specific key
+      }
+    }));
+  }
+  
+  componentDidUpdate() {
+    console.log(this.state.data);
   }
 
   componentDidMount() {
-    console.log('Mounted!')
+    console.log('Session: ' + this.state.session);
+
+    // Prepare the data for ajax POST request
+    let formData = {
+      'I.Engine': 'engine2',
+      'I.Project': this.state.projectCode,
+      'I.Session': this.state.session,
+      'I.SavePoint': 'Engagement',
+      'I.Renderer': 'HTMLPlayer',
+      '_QEngagement_Qf01183__Optimism01_C': '__' + this.state.data['01183_Optimism01'].toString(),
+      '_QEngagement_Qf01184__Optimism02_C': '__' + this.state.data['01184_Optimism02'].toString(),
+      '_QEngagement_Qf01194__Optimism02b_C': '__' + this.state.data['01194_Optimism02b'].toString(),
+      '_QEngagement_Qf01185__Optimism03_C': '__' + this.state.data['01185_Optimism03'].toString(),
+      '_QEngagement_Qf01186__Optimism04_C': '__' + this.state.data['01186_Optimism04'].toString(),
+      '_QEngagement_Qf01187__Optimism05_C': '__' + this.state.data['01187_Optimism05'].toString(),
+      '_QEngagement_Qf01188__Optimism06_C': '__' + this.state.data['01188_Optimism06'].toString(),
+      '_QEngagement_Qf01189__Optimism07_C': '__' + this.state.data['01189_Optimism07'].toString(),
+      '_QEngagement_Qf01190__Optimism08_C': '__' + this.state.data['01190_Optimism08'].toString(),
+      '_QEngagement_Qf01191__Optimism13_C': '__' + this.state.data['01191_Optimism13'].toString(),
+      '_NStop': 'Stop+%26+Save',
+    }
+    let parameters = [];
+    for (let key in formData) {
+      parameters.push(key + '=' + formData[key]);
+    }
+    let payLoad = parameters.join('&');
+
+    // fetch("https://esurvey.bpanz.com/mrIWeb/mrIWeb.dll", {"credentials":"include","headers":{"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3","accept-language":"en-GB,en-US;q=0.9,en;q=0.8","cache-control":"no-cache","content-type":"application/x-www-form-urlencoded","pragma":"no-cache","sec-fetch-mode":"navigate","sec-fetch-site":"same-origin","sec-fetch-user":"?1","upgrade-insecure-requests":"1"},"referrer":"https://esurvey.bpanz.com/mrIWeb/mrIWeb.dll","referrerPolicy":"no-referrer-when-downgrade","body":"I.Engine=engine2&I.Project=SCCWA_19_ES&I.Session=fx4kvvs4jpbe6a2lenkgidqkgbpakaaa&I.SavePoint=Engagement&I.Renderer=HTMLPlayer&_QEngagement_Qf01183__Optimism01_C=__1&_QEngagement_Qf01184__Optimism02_C=__1&_QEngagement_Qf01194__Optimism02b_C=__1&_QEngagement_Qf01185__Optimism03_C=__3&_QEngagement_Qf01186__Optimism04_C=__3&_QEngagement_Qf01187__Optimism05_C=__3&_QEngagement_Qf01188__Optimism06_C=__6&_QEngagement_Qf01189__Optimism07_C=__6&_QEngagement_Qf01190__Optimism08_C=__6&_QEngagement_Qf01191__Optimism13_C=__6&_NNext=Next","method":"POST","mode":"cors"});
   }
+
 
   render() {
     return (
       <div>
-        <div className="question_title -no_shadow">Below are sets of paired statements that describe what it may be like to work in your <span className="definition" name="orga">organisation</span>.</div>
-        <div className="threetier">
-          <div className="question_title"><strong>Please select the circle that best represents your views on each of these paired statements.</strong></div>
-          <table className="question_table">
-            <tbody>
-              <tr>
-                <td className="question_table__header" >In the organisation ...</td>
-                <td className="question_table__header -scale_img" style={{"height":74}}>
-                  <div className="pos_neg_fixed">
-                    <img id="pos_neg_scale" src="https://i.bpanz.com/i/mcwfFEN.png" alt="Positive ---- Negative"/>
-                  </div>
-                  <br/>
-                </td>
-                <td className="question_table__header"></td>
-              </tr>
-              <tr className="question_table__question_row row">
-                <td className="question_table__question -align_right">People are very optimistic about the organisation's future.</td>
-                <td className="question_table__question -align_center">
-                </td>
-                <td className="question_table__question -align_left">People are very pessimistic about the organisation's future.</td>
-              </tr>
-              <tr className="question_table__question_row row">
-                <td className="question_table__question -align_right">There is high trust in the <span className="definition" name="exec">Senior Leadership Team</span>.</td>
-                <td className="question_table__question -align_center">
-                </td>
-                <td className="question_table__question -align_left">There is low trust in the Senior Leadership Team.</td>
-              </tr>
-              <tr className="question_table__question_row row">
-                <td className="question_table__question -align_right">There is high trust in <span className="definition" name="midd">Management</span>.</td>
-                <td className="question_table__question -align_center">
-                </td>
-                <td className="question_table__question -align_left">There is low trust in Management.</td>
-              </tr>
-              <tr className="question_table__question_row row">
-                <td className="question_table__question -align_right">There is a strong sense of success and achievement - <em>'Things are getting better all the time'</em>.</td>
-                <td className="question_table__question -align_center">
-                </td>
-                <td className="question_table__question -align_left">There is a strong sense of the organisation having <em>'Lost its way'</em>.</td>
-              </tr>
-              <tr className="question_table__question_row row">
-                <td className="question_table__question -align_right">People are very positive about tackling problems. There is a <em>'Can do'</em> mentality.</td>
-                <td className="question_table__question -align_center">
-                </td>
-                <td className="question_table__question -align_left">People are very negative about tackling problems. There is a <em>'Things are too hard'</em> mentality.</td>
-              </tr>
-              <tr className="question_table__question_row row">
-                <td className="question_table__question -align_right">Change in the organisation = Better things to come for me.</td>
-                <td className="question_table__question -align_center">
-                </td>
-                <td className="question_table__question -align_left">Change in the organisation = I will be much worse off.</td>
-              </tr>
-              <tr className="question_table__question_row row">
-                <td className="question_table__question -align_right">There is a strong sense of purpose and direction.</td>
-                <td className="question_table__question -align_center">
-                </td>
-                <td className="question_table__question -align_left">It is common to hear <em>'Communication is poor'</em> or <em>'There is no leadership'</em>.</td>
-              </tr>
-              <tr className="question_table__question_row row">
-                <td className="question_table__question -align_right">People want to improve the way things work in the organisation.</td>
-                <td className="question_table__question -align_center">
-                </td>
-                <td className="question_table__question -align_left">People treat their work as <em>'Just a job'</em>.</td>
-              </tr>
-              <tr className="question_table__question_row row">
-                <td className="question_table__question -align_right">There is a climate of <em>'Trust and Respect'</em> throughout the organisation.</td>
-                <td className="question_table__question -align_center">
-                </td>
-                <td className="question_table__question -align_left">There is a climate of <em>'Fear'</em> throughout the organisation.</td>
-              </tr>
-              <tr className="question_table__question_row row">
-                <td className="question_table__question -align_right">People are proud of the successes and achievements of the organisation.</td>
-                <td className="question_table__question -align_center">
-                </td>
-                <td className="question_table__question -align_left">People focus on the negatives and the failures of the organisation.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <Engagement 
+        onSelect={this.changeRadioSelection} />
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;
