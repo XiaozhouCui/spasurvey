@@ -37,23 +37,11 @@ Sub OnAfterQuestionAsk(Question, IOM)
 End Sub
   '--- End of IOM Script item Script ---
 
-Engagement:
-  '--- Start of page Engagement ---
-  Engagement.LayoutTemplate = "Engagement.html"
-  Engagement.Ask()
-  '--- End of page Engagement ---
-
-TrulyGreatPlaceToWork:
-  '--- Start of page TrulyGreatPlaceToWork ---
-  TrulyGreatPlaceToWork.LayoutTemplate = "TrulyGreatPlaceToWork.html"
-  TrulyGreatPlaceToWork.Ask()
-  '--- End of page TrulyGreatPlaceToWork ---
-
-Expectations:
-  '--- Start of page Expectations ---
-  Expectations.LayoutTemplate = "Expectations.html"
-  Expectations.Ask()
-  '--- End of page Expectations ---
+Survey:
+  '--- Start of page Survey ---
+  Survey.LayoutTemplate = "Survey.html"
+  Survey.Ask()
+  '--- End of page Survey ---
 
 AttractionRetention:
   '--- Start of page AttractionRetention ---

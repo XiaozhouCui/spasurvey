@@ -1,5 +1,11 @@
 import React, { Component } from "react";
 import Engagement from '../Engagement/Engagement';
+import TrulyGreatPlaceToWork from '../TrulyGreatPlaceToWork/TrulyGreatPlaceToWork'
+import NPS from '../NPS/NPS';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+import SurveyNav from '../SurveyNav/SurveyNav';
+
 
 class App extends Component {
   constructor(props) {
@@ -21,7 +27,15 @@ class App extends Component {
         "01188_Optimism06": 999,
         "01189_Optimism07": 999,
         "01190_Optimism08": 999,
-        "01191_Optimism13": 999
+        "01191_Optimism13": 999,
+        "01180_TrulyGreat": 999,
+        "01181_WhyYes": '',
+        "01182_WhyNo": '',
+        "21833_NPSWork": 999,
+        "21925_NPSWorkReason": '',
+        "21834_NPSService": 999,
+        "21926_NPSServiceReason": '',
+
       },
     }
 
@@ -29,15 +43,24 @@ class App extends Component {
   }
   
   // clicking a radio button will update the corresponding data in state.
-  changeRadioSelection(fieldId, selection) {
+  changeRadioSelection(fieldId, value) {
     this.setState(prevState => ({
       data: {                  // object that we want to update
         ...prevState.data,     // keep all other key-value pairs
-        [fieldId]: selection   // update the value of specific key
+        [fieldId]: value   // update the value of specific key
       }
     }));
   }
   
+
+  moveContent(target, destination) {
+    if (!(target instanceof ($ || jQuery))) target = $(target)
+    if (!(destination instanceof ($ || jQuery))) destination = $(destination)
+    target.css({'visibility':'visible'}).show()
+    target.detach()
+    target.appendTo(destination)
+  }
+
   componentDidUpdate() {
     console.log(this.state.data);
   }
@@ -45,30 +68,38 @@ class App extends Component {
   componentDidMount() {
     console.log('Session: ' + this.state.session);
 
-    // Prepare the data for ajax POST request
+    // Prepare the data for POST request
     let formData = {
       'I.Engine': 'engine2',
       'I.Project': this.state.projectCode,
       'I.Session': this.state.session,
       'I.SavePoint': 'Engagement',
       'I.Renderer': 'HTMLPlayer',
-      '_QEngagement_Qf01183__Optimism01_C': '__' + this.state.data['01183_Optimism01'].toString(),
-      '_QEngagement_Qf01184__Optimism02_C': '__' + this.state.data['01184_Optimism02'].toString(),
-      '_QEngagement_Qf01194__Optimism02b_C': '__' + this.state.data['01194_Optimism02b'].toString(),
-      '_QEngagement_Qf01185__Optimism03_C': '__' + this.state.data['01185_Optimism03'].toString(),
-      '_QEngagement_Qf01186__Optimism04_C': '__' + this.state.data['01186_Optimism04'].toString(),
-      '_QEngagement_Qf01187__Optimism05_C': '__' + this.state.data['01187_Optimism05'].toString(),
-      '_QEngagement_Qf01188__Optimism06_C': '__' + this.state.data['01188_Optimism06'].toString(),
-      '_QEngagement_Qf01189__Optimism07_C': '__' + this.state.data['01189_Optimism07'].toString(),
-      '_QEngagement_Qf01190__Optimism08_C': '__' + this.state.data['01190_Optimism08'].toString(),
-      '_QEngagement_Qf01191__Optimism13_C': '__' + this.state.data['01191_Optimism13'].toString(),
+      '_QSurvey_Qf01183__Optimism01_C': '__' + this.state.data['01183_Optimism01'].toString(),
+      '_QSurvey_Qf01184__Optimism02_C': '__' + this.state.data['01184_Optimism02'].toString(),
+      '_QSurvey_Qf01194__Optimism02b_C': '__' + this.state.data['01194_Optimism02b'].toString(),
+      '_QSurvey_Qf01185__Optimism03_C': '__' + this.state.data['01185_Optimism03'].toString(),
+      '_QSurvey_Qf01186__Optimism04_C': '__' + this.state.data['01186_Optimism04'].toString(),
+      '_QSurvey_Qf01187__Optimism05_C': '__' + this.state.data['01187_Optimism05'].toString(),
+      '_QSurvey_Qf01188__Optimism06_C': '__' + this.state.data['01188_Optimism06'].toString(),
+      '_QSurvey_Qf01189__Optimism07_C': '__' + this.state.data['01189_Optimism07'].toString(),
+      '_QSurvey_Qf01190__Optimism08_C': '__' + this.state.data['01190_Optimism08'].toString(),
+      '_QSurvey_Qf01191__Optimism13_C': '__' + this.state.data['01191_Optimism13'].toString(),
+      '_QSurvey_Qf01180__TrulyGreat_C': '__' + this.state.data['01180_TrulyGreat'].toString(),
+      '_QSurvey_Qf01181__WhyYes': this.state.data['01181_WhyYes'],
+      '_QSurvey_Qf01182__WhyNo': this.state.data['01182_WhyNo'],
+      '_QSurvey_Qf21833__NPSWork_C': '__' + this.state.data['21833_NPSWork'].toString(),
+      '_QSurvey_Qf21925__NPSWorkReason': this.state.data['21925_NPSWorkReason'],
+      '_QSurvey_Qf21834__NPSService_C': '__' + this.state.data['21834_NPSService'].toString(),
+      '_QSurvey_Qf21926__NPSServiceReason': this.state.data['21926_NPSServiceReason'],
       '_NStop': 'Stop+%26+Save',
     }
     let parameters = [];
     for (let key in formData) {
       parameters.push(key + '=' + formData[key]);
     }
-    let payLoad = parameters.join('&');
+    let payLoadString = parameters.join('&');
+    // fetch("https://esurvey.bpanz.com/mrIWeb/mrIWeb.dll", {"credentials":"include","headers":{"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3","accept-language":"en-GB,en-US;q=0.9,en;q=0.8","cache-control":"no-cache","content-type":"application/x-www-form-urlencoded","pragma":"no-cache","sec-fetch-mode":"navigate","sec-fetch-site":"same-origin","sec-fetch-user":"?1","upgrade-insecure-requests":"1"},"referrer":"https://esurvey.bpanz.com/mrIWeb/mrIWeb.dll","referrerPolicy":"no-referrer-when-downgrade","body":"I.Engine=engine2&I.Project=WELLWAYS_19_ES&I.Session=myjtaosbt2yulcn2ric4rnakrrwqcaaa&I.SavePoint=TrulyGreatPlaceToWork&I.Renderer=HTMLPlayer&_QTrulyGreatPlaceToWork_Qf01180__TrulyGreat_C=__1&_QTrulyGreatPlaceToWork_Qf01181__WhyYes=goqwihjwndcrbzwbbjxymcsuzkuepknsczhfyshwhaeelraiwxsykjimmzysgfolacyhbvduugrivexjbivkunfcvkxzmfhmlvsm&_QTrulyGreatPlaceToWork_Qf01182__WhyNo=gqpannneoshpawgctioaikrjbilyealjscwrnlymsjytfgwhptrcsyvlgnbwyxaxwdsjsaucwoldahjvccwnwhcreflonkjbzpqz&_QTrulyGreatPlaceToWork_Qf21833__NPSWork_C=__3&_QTrulyGreatPlaceToWork_Qf21925__NPSWorkReason=ykyymkcktwbgfaqjhsrisblhjupehiyandvjiowojmkxsnquwrnvmgruknlntbqhsqvtumsnoseiruhxerdudtcqdxexhljuxdno&_QTrulyGreatPlaceToWork_Qf21834__NPSService_C=__7&_QTrulyGreatPlaceToWork_Qf21926__NPSServiceReason=qypvhbxslfujfnaemsetowivtoglxpdghxpcacohoawqenbybhygsxkrajnnocndnrhtfahyrfwzmoxfyjjstxzftpgsrsjeghag&_NNext=Next","method":"POST","mode":"cors"});
 
     // fetch("https://esurvey.bpanz.com/mrIWeb/mrIWeb.dll", {"credentials":"include","headers":{"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3","accept-language":"en-GB,en-US;q=0.9,en;q=0.8","cache-control":"no-cache","content-type":"application/x-www-form-urlencoded","pragma":"no-cache","sec-fetch-mode":"navigate","sec-fetch-site":"same-origin","sec-fetch-user":"?1","upgrade-insecure-requests":"1"},"referrer":"https://esurvey.bpanz.com/mrIWeb/mrIWeb.dll","referrerPolicy":"no-referrer-when-downgrade","body":"I.Engine=engine2&I.Project=SCCWA_19_ES&I.Session=fx4kvvs4jpbe6a2lenkgidqkgbpakaaa&I.SavePoint=Engagement&I.Renderer=HTMLPlayer&_QEngagement_Qf01183__Optimism01_C=__1&_QEngagement_Qf01184__Optimism02_C=__1&_QEngagement_Qf01194__Optimism02b_C=__1&_QEngagement_Qf01185__Optimism03_C=__3&_QEngagement_Qf01186__Optimism04_C=__3&_QEngagement_Qf01187__Optimism05_C=__3&_QEngagement_Qf01188__Optimism06_C=__6&_QEngagement_Qf01189__Optimism07_C=__6&_QEngagement_Qf01190__Optimism08_C=__6&_QEngagement_Qf01191__Optimism13_C=__6&_NNext=Next","method":"POST","mode":"cors"});
   }
@@ -77,8 +108,18 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Header moveContent={this.moveContent} />
         <Engagement 
-        onSelect={this.changeRadioSelection} />
+        onSelect={this.changeRadioSelection}
+        moveContent={this.moveContent} />
+        <TrulyGreatPlaceToWork 
+        onSelect={this.changeRadioSelection}
+        moveContent={this.moveContent} />
+        <NPS 
+        onSelect={this.changeRadioSelection}
+        moveContent={this.moveContent} />
+        <SurveyNav moveContent={this.moveContent} />
+        <Footer moveContent={this.moveContent} />
       </div>
     );
   }

@@ -195,7 +195,7 @@ Metadata(en-AU, Question, Label)
 
   '''''''''''''''''''' End_Definitions ''''''''''''''''''''
 
-  '''''''''''''''''''' Begin_Engagement ''''''''''''''''''''
+  '''''''''''''''''''' Begin_Survey ''''''''''''''''''''
   
   f01183_Optimism01 -  categorical [..1] { use Scale1to6Positive sublist };
   f01184_Optimism02 -  categorical [..1] { use Scale1to6Positive sublist };
@@ -207,21 +207,13 @@ Metadata(en-AU, Question, Label)
   f01189_Optimism07 -  categorical [..1] { use Scale1to6Positive sublist };
   f01190_Optimism08 -  categorical [..1] { use Scale1to6Positive sublist };
   f01191_Optimism13 -  categorical [..1] { use Scale1to6Positive sublist };
-
-  '''''''''''''''''''' End_Engagement ''''''''''''''''''''
-
-  '''''''''''''''''''' Begin_TrulyGreatPlaceToWork ''''''''''''''''''''
-  
   f01180_TrulyGreat -  categorical [..1] { use YesNo sublist };
   f01181_WhyYes - text [..500];
   f01182_WhyNo - text [..500];
   f21833_NPSWork - style(Orientation = "Row", Rows = "1") categorical [..1] { use Scale0to10 sublist };
   f21925_NPSWorkReason - text [..500];
-
-  '''''''''''''''''''' End_TrulyGreatPlaceToWork ''''''''''''''''''''
-
-  '''''''''''''''''''' Begin_Expectations ''''''''''''''''''''
-  
+  f21834_NPSService - style(Orientation = "Row", Rows = "1") categorical [..1] { use Scale0to10 sublist };
+  f21926_NPSServiceReason - text [..500];
   f00546_ExpectationOrgn01 - text [..250];
   f00547_ExpectationOrgn02 - text [..250];
   f00548_ExpectationOrgn03 - text [..250];
@@ -236,7 +228,7 @@ Metadata(en-AU, Question, Label)
   f04937_DailyFrustration02 - text [..500];
   f04938_DailyFrustration03 - text [..500];
 
-  '''''''''''''''''''' End_Expectations ''''''''''''''''''''
+  '''''''''''''''''''' End_Survey ''''''''''''''''''''
 
   '''''''''''''''''''' Begin_AttractionRetention ''''''''''''''''''''
   
@@ -459,7 +451,6 @@ Metadata(en-AU, Question, Label)
 
   '''''''''''''''''''' Begin_ThankYouForCompletingTheSurvey ''''''''''''''''''''
   
-  ThankYouForCompletingTheSurveyInfo "{#WorkUnit}";
   PaidYesNo -  categorical [..1] { use PaidYes sublist };
   NameForRelease - text [..255];
 
@@ -480,7 +471,7 @@ Metadata(en-AU, Question, Label)
     DefinitionsInfo
   );
 
-  Engagement -
+  Survey -
   page(
     f01183_Optimism01,
     f01184_Optimism02,
@@ -491,22 +482,14 @@ Metadata(en-AU, Question, Label)
     f01188_Optimism06,
     f01189_Optimism07,
     f01190_Optimism08,
-    f01191_Optimism13
-    
-  );
-
-  TrulyGreatPlaceToWork -
-  page(
+    f01191_Optimism13,
     f01180_TrulyGreat,
     f01181_WhyYes,
     f01182_WhyNo,
     f21833_NPSWork,
-    f21925_NPSWorkReason
-    
-  );
-
-  Expectations -
-  page(
+    f21925_NPSWorkReason,
+    f21834_NPSService,
+    f21926_NPSServiceReason,
     f00546_ExpectationOrgn01,
     f00547_ExpectationOrgn02,
     f00548_ExpectationOrgn03,
@@ -744,7 +727,6 @@ Metadata(en-AU, Question, Label)
 
   ThankYouForCompletingTheSurvey -
   page(
-    ThankYouForCompletingTheSurveyInfo,
     PaidYesNo,
     NameForRelease
     

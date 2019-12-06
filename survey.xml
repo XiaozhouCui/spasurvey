@@ -14,7 +14,7 @@
 	<definitions />
 
 	<!--Engaging Our People-->
-	<page title="Engagement">
+	<page title="Survey">
 		<question class="categorical:Scale1to6Positive" id="01183_Optimism01">People are very optimistic about the organisation’s future.</question>
 		<question class="categorical:Scale1to6Positive" id="01184_Optimism02">There is high trust in Executive Management.</question>
 		<question class="categorical:Scale1to6Positive" id="01194_Optimism02b">There is high trust in Middle Management.</question>
@@ -25,15 +25,13 @@
 		<question class="categorical:Scale1to6Positive" id="01189_Optimism07">People want to improve the way things work in the organisation.</question>
 		<question class="categorical:Scale1to6Positive" id="01190_Optimism08">There is a climate of ‘Trust and Respect’ throughout the organisation.</question>
 		<question class="categorical:Scale1to6Positive" id="01191_Optimism13">People are proud of the successes and achievements of the organisation.</question>
-	</page>
-	<page title="Truly Great Place To Work">
 		<question class="categorical:YesNo" id="01180_TrulyGreat">On balance, is your organisation a “truly great place to work”?</question>
 		<question class="text:500" id="01181_WhyYes">If YES, what makes it a “truly great place to work”?</question>
 		<question class="text:500" id="01182_WhyNo">If NO, what is stopping it from becoming a “truly great place to work”?</question>
 		<question class="categorical:Scale0to10" id="21833_NPSWork">... a good place to work</question>
 		<question class="text:500" id="21925_NPSWorkReason">Why did you give this score?</question>
-	</page>
-	<page title="Expectations">
+		<question class="categorical:Scale0to10" id="21834_NPSService">... the best choice if they required the type of service we provide</question>
+		<question class="text:500" id="21926_NPSServiceReason">Why did you give this score?</question>
 		<question class="text:250" id="00546_ExpectationOrgn01">What are the 3 most important things that you expect from the organisation?</question>
 		<question class="text:250" id="00547_ExpectationOrgn02">What are the 3 most important things that you expect from the organisation?</question>
 		<question class="text:250" id="00548_ExpectationOrgn03">What are the 3 most important things that you expect from the organisation?</question>
