@@ -27,10 +27,7 @@ class Engagement extends Component {
       for (let i = 0; i < radios.length; i++) {
         this.props.moveContent(radios[i], radioSlots[i]);
       }
-    } else {
-      console.log('Questions and field IDs do not match!')
     }
-
     // Update the values in state when clicking on a radio button.
     Array.from(document.querySelectorAll('.mrQuestionTable input[type="radio"]')).forEach(item => {
       item.addEventListener('click', this.handleSelection);
@@ -41,12 +38,7 @@ class Engagement extends Component {
     return (
       <div>
         <div className="question_title -no_shadow">
-          Below are sets of paired statements that describe what it may be like
-          to work in your{" "}
-          <span className="definition" name="orga">
-            organisation
-          </span>
-          .
+          Below are sets of paired statements that describe what it may be like to work in your <span className="definition" name="orga">organisation</span>.
         </div>
         <div className="threetier">
           <div className="question_title">
@@ -89,7 +81,7 @@ class Engagement extends Component {
               </tr>
               <tr className="question_table__question_row row">
                 <td className="question_table__question -align_right">
-                  There is high trust in the{" "}
+                  There is high trust in the
                   <span className="definition" name="exec">
                     Senior Leadership Team
                   </span>
@@ -104,7 +96,7 @@ class Engagement extends Component {
               </tr>
               <tr className="question_table__question_row row">
                 <td className="question_table__question -align_right">
-                  There is high trust in{" "}
+                  There is high trust in
                   <span className="definition" name="midd">
                     Management
                   </span>
@@ -119,27 +111,27 @@ class Engagement extends Component {
               </tr>
               <tr className="question_table__question_row row">
                 <td className="question_table__question -align_right">
-                  There is a strong sense of success and achievement -{" "}
+                  There is a strong sense of success and achievement -
                   <em>'Things are getting better all the time'</em>.
                 </td>
                 <td className="question_table__question -align_center">
                   <div className="engagementOptions"></div>
                 </td>
                 <td className="question_table__question -align_left">
-                  There is a strong sense of the organisation having{" "}
+                  There is a strong sense of the organisation having
                   <em>'Lost its way'</em>.
                 </td>
               </tr>
               <tr className="question_table__question_row row">
                 <td className="question_table__question -align_right">
-                  People are very positive about tackling problems. There is a{" "}
+                  People are very positive about tackling problems. There is a
                   <em>'Can do'</em> mentality.
                 </td>
                 <td className="question_table__question -align_center">
                   <div className="engagementOptions"></div>
                 </td>
                 <td className="question_table__question -align_left">
-                  People are very negative about tackling problems. There is a{" "}
+                  People are very negative about tackling problems. There is a
                   <em>'Things are too hard'</em> mentality.
                 </td>
               </tr>
@@ -162,7 +154,7 @@ class Engagement extends Component {
                   <div className="engagementOptions"></div>
                 </td>
                 <td className="question_table__question -align_left">
-                  It is common to hear <em>'Communication is poor'</em> or{" "}
+                  It is common to hear <em>'Communication is poor'</em> or
                   <em>'There is no leadership'</em>.
                 </td>
               </tr>

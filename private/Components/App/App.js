@@ -5,6 +5,7 @@ import NPS from '../NPS/NPS';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import SurveyNav from '../SurveyNav/SurveyNav';
+import Expectations from "../Expectations/Expectations";
 
 
 class App extends Component {
@@ -16,6 +17,24 @@ class App extends Component {
       isStaging: false,
       projectCode: 'TEST_20_ES',
       session: this.props.session,
+      modules: [
+        'Engagement',
+        'TrulyGreatPlaceToWork',
+        'AttractionRetention',
+        'DrivingTheFuture',
+        'ValuesInAction',
+        'LeadershipEssentials',
+        'LeadershipBehaviours',
+        'TheIssuesThatMatter',
+        'ChangeMomentum',
+        'CommunityExpectations',
+        'PersonalWellBeing',
+        'MessageinaBottle',
+        'FeedbackFromtheLastSurvey',
+        'StatisticalGroupings',
+        'AcknowledgementOfDiversity',
+        'ThankYouForCompletingTheSurvey',
+      ],
       currentPage: 'Engagement',
       data: {
         "01183_Optimism01": 999,
@@ -109,16 +128,21 @@ class App extends Component {
     return (
       <div>
         <Header moveContent={this.moveContent} />
-        <Engagement 
-        onSelect={this.changeRadioSelection}
-        moveContent={this.moveContent} />
-        <TrulyGreatPlaceToWork 
-        onSelect={this.changeRadioSelection}
-        moveContent={this.moveContent} />
-        <NPS 
-        onSelect={this.changeRadioSelection}
-        moveContent={this.moveContent} />
-        <SurveyNav moveContent={this.moveContent} />
+        <div className="contentContainer">
+          <Engagement 
+          onSelect={this.changeRadioSelection}
+          moveContent={this.moveContent} />
+          <TrulyGreatPlaceToWork 
+          onSelect={this.changeRadioSelection}
+          moveContent={this.moveContent} />
+          <NPS 
+          onSelect={this.changeRadioSelection}
+          moveContent={this.moveContent} />
+          <Expectations 
+          onSelect={this.changeRadioSelection}
+          moveContent={this.moveContent} />
+          <SurveyNav moveContent={this.moveContent} />
+        </div>
         <Footer moveContent={this.moveContent} />
       </div>
     );
