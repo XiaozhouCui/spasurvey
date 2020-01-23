@@ -1,11 +1,13 @@
 import React, { Component } from "react";
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 import Engagement from '../Engagement/Engagement';
 import TrulyGreatPlaceToWork from '../TrulyGreatPlaceToWork/TrulyGreatPlaceToWork'
 import NPS from '../NPS/NPS';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
 import SurveyNav from '../SurveyNav/SurveyNav';
 import Expectations from "../Expectations/Expectations";
+import Definitions from "../Definitions/Definitions";
+import Instructions from "../Instructions/Instructions";
 
 
 class App extends Component {
@@ -59,6 +61,7 @@ class App extends Component {
     }
 
     this.changeRadioSelection = this.changeRadioSelection.bind(this);
+    this.changeTextarea = this.changeTextarea.bind(this);
   }
   
   // clicking a radio button will update the corresponding data in state.
@@ -67,6 +70,15 @@ class App extends Component {
       data: {                  // object that we want to update
         ...prevState.data,     // keep all other key-value pairs
         [fieldId]: value   // update the value of specific key
+      }
+    }));
+  }
+  
+  changeTextarea(fieldId, newText) {
+    this.setState(prevState => ({
+      data: {                  // object that we want to update
+        ...prevState.data,     // keep all other key-value pairs
+        [fieldId]: newText   // update the value of specific key
       }
     }));
   }
@@ -80,13 +92,11 @@ class App extends Component {
     target.appendTo(destination)
   }
 
-  componentDidUpdate() {
-    console.log(this.state.data);
-  }
+  // componentDidUpdate() {
+  //   console.log(this.state.data);
+  // }
 
   componentDidMount() {
-    console.log('Session: ' + this.state.session);
-
     // Prepare the data for POST request
     let formData = {
       'I.Engine': 'engine2',
@@ -127,18 +137,22 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header moveContent={this.moveContent} />
+        { this.state.currentPage==='CoverPage' ? null : <Header title={this.state.currentPage} moveContent={this.moveContent} />}
         <div className="contentContainer">
+          <Instructions />
+          <Definitions />
           <Engagement 
           onSelect={this.changeRadioSelection}
           moveContent={this.moveContent} />
           <TrulyGreatPlaceToWork 
           onSelect={this.changeRadioSelection}
+          onType={this.changeTextarea}
           moveContent={this.moveContent} />
           <NPS 
           onSelect={this.changeRadioSelection}
           moveContent={this.moveContent} />
           <Expectations 
+          data={this.state.data}
           onSelect={this.changeRadioSelection}
           moveContent={this.moveContent} />
           <SurveyNav moveContent={this.moveContent} />

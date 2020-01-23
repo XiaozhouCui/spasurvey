@@ -10,14 +10,15 @@ class SurveyNav extends Component {
   }
 
   componentDidMount() {
-    let radios = document.querySelectorAll(".mrProgressText");
-    let radioSlots = document.querySelectorAll(".mrProgressBar");
-    if (radios.length === radioSlots.length) {
-      for (let i = 0; i < radios.length; i++) {
-        this.props.moveContent(radios[i], radioSlots[i]);
+    let progress = document.querySelectorAll(".mrProgressText");
+    let progressSlot = document.querySelectorAll(".mrProgressBar");
+    if (progress.length === progressSlot.length) {
+      for (let i = 0; i < progress.length; i++) {
+        this.props.moveContent(progress[i], progressSlot[i]);
       }
+      console.log('Good! Progress text moved.')
     } else {
-      console.log('Questions and field IDs do not match!')
+      console.log('Progress bar and mrData do not match!')
     }
   }
 
@@ -30,7 +31,7 @@ class SurveyNav extends Component {
           <input type="submit" name="_NNext" value="Next" title="Proceed to the next page"/>
         </div>
         <div className="pageInfoElement">
-          <div className="mrProgressBar"></div>
+          <div className="mrProgressBar" style={{display:'none'}}></div>
         </div>
         <div id="progressBar" className="progress">
           <div className="bar"></div>

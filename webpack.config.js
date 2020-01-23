@@ -8,7 +8,7 @@ const windowsGlobalNodeModules = '\\node_modules'
 console.info('Resolving global modules from :' + windowsGlobalNodeModules)
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   optimization: {
     minimizer: [
       // we specify a custom UglifyJsPlugin here to get source maps in production

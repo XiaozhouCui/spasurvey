@@ -8,25 +8,23 @@
     <title>eSurvey - Best Practice Australia</title>
     <meta id="viewport" name="viewport"/>
     <link rel="shortcut icon" href="https://i.bpanz.com/SurveyAssets/bpa_favicon.png"/>
-    <mrRef RefType="link" rel="stylesheet" type="text/css" href="style.css"></mrRef>
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:3000/style.css"/>
+    <!-- <mrRef RefType="link" rel="stylesheet" type="text/css" href="style.css"></mrRef> -->
   </head>
   <body class="page">
     <mrPage IncludeElementIDs="true"/>
     <div class="container">
-      <!-- <div class="header">
-        <div class="header__logo -bpanz"><img src="https://i.bpanz.com/SurveyAssets/bpa_logo.png" alt="Best Practice Australia logo"/></div>
-        <div class="header__logo -client"><mrRef RefType="img" src="logo.png"></mrRef></div>
-        <div class="header-bar">
-          <h1>Engagement</h1>
-        </div>
-      </div> -->
       <div class="content">
 
         <div id="root"></div>
         
         <div class="mrData">
           <div name="ClientLogo">
-            <mrRef RefType="img" src="logo.png"></mrRef>
+            <img src="http://127.0.0.1:3000/logo.png" alt="Best Practice Australia logo"/>
+            <!-- <mrRef RefType="img" src="logo.png"></mrRef> -->
+          </div>
+          <div name="Instructions">
+            <!-- <mrData Index="1" QuestionElement="Label"/> -->
           </div>
           <div name="Engagement">
             <mrData QuestionName="f01183_Optimism01" QuestionElement="Controls"/>
@@ -70,32 +68,12 @@
             <mrProgressBar ShowBar="False" ShowCounts="AsValues"/>
           </div>
         </div>
-        <!-- <div class="survey-nav">
-          <input type="submit" name="_NPrev" value="Previous" title="Return to the previous page"/>
-          <input type="submit" name="_NStop" value="Stop &amp; Save" title="Save your progress and return later"/>
-          <input type="submit" name="_NNext" value="Next" title="Proceed to the next page"/>
-        </div>
-        <div class="pageInfoElement" style="display:none;">
-          <mrProgressBar ShowBar="False" ShowCounts="AsValues"/>
-        </div>
-        <div id="progressBar" class="progress">
-          <div class="bar"></div>
-        </div> -->
       </div>
-      <!-- <div class="footer">
-        <div class="footer__section -links">
-          <a href="https://bpanz.com/bpacopyright" target="_blank" rel="noopener noreferrer" class="copyright">© 2019 Best Practice Australia</a>
-          <a href="https://bpanz.com/privacypolicy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-          <a href="https://bpanz.com/disclaimer" target="_blank" rel="noopener noreferrer">Ts &amp; Cs</a>
-          <a href="https://bpanz.com/intellectual-property-statement" target="_blank" rel="noopener noreferrer">Intellectual Property</a>
-        </div>
-        <div class="confidential">Confidential - your feedback will be anonymous</div>
-        <div class="clearelement"></div>
-      </div> -->
     </div>
     <script type="text/javascript" src="https://i.bpanz.com/SurveyAssets/jquery.1.11.3.min.js"></script>
     <script type="text/javascript" src="https://i.bpanz.com/SurveyAssets/jquery-ui.1.10.3.min.js"></script>
-    <mrRef RefType="script" src="master.js">master.js</mrRef>
+    <!-- <mrRef RefType="script" src="master.js">master.js</mrRef> -->
+    <script src="http://127.0.0.1:3000/master.js">master.js</script>
     <script type="text/javascript">
       // $(document).ready(function(e) { $('#pos_neg_scale').floatelement(0); });
     </script>

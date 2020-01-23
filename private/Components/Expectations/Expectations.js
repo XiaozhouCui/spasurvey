@@ -10,46 +10,41 @@ class Expectations extends Component {
     this.handleSelection = this.handleSelection.bind(this);
   }
 
+  // Update the values in state when clicking on a radio button.
+  handleSelection(event) {
+    let fieldId = event.target.name.match(/_Qf(.*?)(?=_C)/);
+    fieldId = fieldId[1].replace(/__/g, '_');
+    let targetId = event.target.id;
+    let targetValue = event.target.checked === false ? 999 : Number(targetId[targetId.length -1]) + 1;
+    this.props.onSelect(fieldId, targetValue);
+  }
+
+  
+  componentDidMount() {
+    let radios = document.querySelectorAll("div[name='Expectations'] .mrQuestionTable");
+    let radioSlots = document.querySelectorAll(".expectationsRadios");
+    if (radios.length === radioSlots.length) {
+      for (let i = 0; i < radios.length; i++) {
+        this.props.moveContent(radios[i], radioSlots[i]);
+      }
+    } else {
+      console.log('Expectations Radio Questions and field IDs do not match!')
+    }
     // Update the values in state when clicking on a radio button.
-    handleSelection(event) {
-      let fieldId = event.target.name.match(/_Qf(.*?)(?=_C)/);
-      fieldId = fieldId[1].replace(/__/g, '_');
-      let targetId = event.target.id;
-      let targetValue = event.target.checked === false ? 999 : Number(targetId[targetId.length -1]) + 1;
-      this.props.onSelect(fieldId, targetValue);
-    }
-  
-    componentDidMount() {
-      let radios = document.querySelectorAll("div[name='Expectations'] .mrQuestionTable");
-      let radioSlots = document.querySelectorAll(".expectationsRadios");
-      if (radios.length === radioSlots.length) {
-        for (let i = 0; i < radios.length; i++) {
-          this.props.moveContent(radios[i], radioSlots[i]);
-        }
-      } else {
-        console.log('Expectations Radio Questions and field IDs do not match!')
+    Array.from(document.querySelectorAll('.mrQuestionTable input[type="radio"]')).forEach(item => {
+      item.addEventListener('click', this.handleSelection);
+    });
+
+    let textFields = document.querySelectorAll("div[name='Expectations'] .mrEdit");
+    let textSlots = document.querySelectorAll(".expectationsText");
+    if (textFields.length === textSlots.length) {
+      for (let i = 0; i < textFields.length; i++) {
+        this.props.moveContent(textFields[i], textSlots[i]);
       }
-      // Update the values in state when clicking on a radio button.
-      Array.from(document.querySelectorAll('.mrQuestionTable input[type="radio"]')).forEach(item => {
-        item.addEventListener('click', this.handleSelection);
-      });
-  
-      let textFields = document.querySelectorAll("div[name='Expectations'] .mrEdit");
-      let textSlots = document.querySelectorAll(".expectationsText");
-      if (textFields.length === textSlots.length) {
-        for (let i = 0; i < textFields.length; i++) {
-          this.props.moveContent(textFields[i], textSlots[i]);
-        }
-      } else {
-        console.log('Expectations Text Questions and field IDs do not match!')
-      }
-      
-      // Update the values in state when clicking on a radio button.
-      // Array.from(document.querySelectorAll('.mrQuestionTable input[type="radio"]')).forEach(item => {
-      //   item.addEventListener('click', this.handleSelection);
-      // });
-  
+    } else {
+      console.log('Expectations Text Questions and field IDs do not match!')
     }
+  }
 
   render() {
     return (
@@ -59,7 +54,7 @@ class Expectations extends Component {
             <tbody>
               <tr>
                 <td className="question_table__header -col_one">
-                  <div className="question_title"><strong>What are the three most important things that you expect from the <span className="definition" id="orga">organisation</span>?</strong></div>
+                  <div className="question_title"><strong>What are the three most important things that you expect from the <span className="definition" name="orga">organisation</span>?</strong></div>
                 </td>
                 <td className="question_table__header -col_two" style={{paddingLeft:"1em", paddingRight:"1em"}}>How much do you agree that the organisation consistently meets your expectations? <em>(please select)</em></td>
                 <td className="question_table__header -col_three" rowSpan="5" style={{verticalAlign:'bottom'}}>

@@ -8,6 +8,7 @@ class TrulyGreatPlaceToWork extends Component {
 
     }
     this.handleSelection = this.handleSelection.bind(this);
+    this.handleText = this.handleText.bind(this);
   }
 
   // Update the values in state when clicking on a radio button.
@@ -19,6 +20,14 @@ class TrulyGreatPlaceToWork extends Component {
     this.props.onSelect(fieldId, targetValue);
   }
 
+  handleText(event) {
+    let fieldId = event.target.name.match(/_Qf(.*?)/);
+    // console.log(fieldId);
+    fieldId = fieldId[1].replace(/__/g, '_');
+    let targetText = event.target.value;
+    this.props.onType(fieldId, targetText);
+  }
+
   componentDidMount() {
     let radios = document.querySelectorAll("div[name='TrulyGreat'] .mrQuestionTable");
     let radioSlots = document.querySelectorAll(".trulyGreatRadios");
@@ -26,8 +35,9 @@ class TrulyGreatPlaceToWork extends Component {
       for (let i = 0; i < radios.length; i++) {
         this.props.moveContent(radios[i], radioSlots[i]);
       }
+      console.log('Good! TrulyGreat radio buttons mounted!')
     } else {
-      console.log('Questions and field IDs do not match!')
+      console.log('TrulyGreat Radio Questions and field IDs do not match!')
     }
     // Update the values in state when clicking on a radio button.
     Array.from(document.querySelectorAll('.mrQuestionTable input[type="radio"]')).forEach(item => {
@@ -41,14 +51,11 @@ class TrulyGreatPlaceToWork extends Component {
         this.props.moveContent(textFields[i], textSlots[i]);
       }
     } else {
-      console.log('Questions and field IDs do not match!')
+      console.log('TrulyGreate Text Questions and field IDs do not match!')
     }
-    
-    // Update the values in state when clicking on a radio button.
-    // Array.from(document.querySelectorAll('.mrQuestionTable input[type="radio"]')).forEach(item => {
-    //   item.addEventListener('click', this.handleSelection);
-    // });
-
+    textFields.forEach(item => {
+      item.addEventListener('keypress', this.handleText);
+    });
   }
 
   render() {

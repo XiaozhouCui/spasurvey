@@ -17,7 +17,7 @@ class NPS extends Component {
         this.props.moveContent(radios[i], radioSlots[i]);
       }
     } else {
-      console.log('Questions and field IDs do not match!')
+      console.log('NPS Radio Questions and field IDs do not match!')
     }
     // Update the values in state when clicking on a radio button.
     Array.from(document.querySelectorAll('.mrQuestionTable input[type="radio"]')).forEach(item => {
@@ -31,19 +31,18 @@ class NPS extends Component {
         this.props.moveContent(textFields[i], textSlots[i]);
       }
     } else {
-      console.log('Questions and field IDs do not match!')
+      console.log('NPS Text Questions and field IDs do not match!')
     }
-    
-    // Update the values in state when clicking on a radio button.
-    // Array.from(document.querySelectorAll('.mrQuestionTable input[type="radio"]')).forEach(item => {
-    //   item.addEventListener('click', this.handleSelection);
-    // });
-
   }
 
   render() {
     return (
       <div>
+        <div className="header">
+          <div className="header-bar">
+            <h1>Net Promoter Score</h1>
+          </div>
+        </div>
         <div className="question_title -no_shadow" style={{ margin:10 }}><em>(Please note the rating scale is reversed for this next question.)</em></div>
         <div className="question_title" style={{marginTop:0}}>
           <strong>On a scale of 0-10 (where 10 = Absolutely Yes, and 0 = Absolutely No), how likely are you to recommend your organisation (where appropriate) as ...</strong>

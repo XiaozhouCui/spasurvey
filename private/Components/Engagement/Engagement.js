@@ -27,6 +27,9 @@ class Engagement extends Component {
       for (let i = 0; i < radios.length; i++) {
         this.props.moveContent(radios[i], radioSlots[i]);
       }
+      console.log('Good! Engagement radio buttons mounted!');
+    } else {
+      console.log('Engagement Radio Questions and field IDs do not match!');
     }
     // Update the values in state when clicking on a radio button.
     Array.from(document.querySelectorAll('.mrQuestionTable input[type="radio"]')).forEach(item => {
@@ -81,11 +84,7 @@ class Engagement extends Component {
               </tr>
               <tr className="question_table__question_row row">
                 <td className="question_table__question -align_right">
-                  There is high trust in the
-                  <span className="definition" name="exec">
-                    Senior Leadership Team
-                  </span>
-                  .
+                  There is high trust in the <span className="definition" name="exec">Senior Leadership Team</span>.
                 </td>
                 <td className="question_table__question -align_center">
                   <div className="engagementOptions"></div>
@@ -96,11 +95,7 @@ class Engagement extends Component {
               </tr>
               <tr className="question_table__question_row row">
                 <td className="question_table__question -align_right">
-                  There is high trust in
-                  <span className="definition" name="midd">
-                    Management
-                  </span>
-                  .
+                  There is high trust in <span className="definition" name="midd">Management</span>.
                 </td>
                 <td className="question_table__question -align_center">
                   <div className="engagementOptions"></div>

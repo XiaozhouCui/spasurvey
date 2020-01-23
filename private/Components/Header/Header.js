@@ -8,14 +8,12 @@ class Header extends Component {
   }
 
   componentDidMount() {
-    let radios = document.querySelectorAll("div[name='ClientLogo']");
-    let radioSlots = document.querySelectorAll(".clientLogoSlot");
-    if (radios.length === radioSlots.length) {
-      for (let i = 0; i < radios.length; i++) {
-        this.props.moveContent(radios[i], radioSlots[i]);
+    let logoImg = document.querySelectorAll("div[name='ClientLogo']");
+    let logoSlot = document.querySelectorAll(".clientLogoSlot");
+    if (logoImg.length === logoSlot.length) {
+      for (let i = 0; i < logoImg.length; i++) {
+        this.props.moveContent(logoImg[i], logoSlot[i]);
       }
-    } else {
-      console.log('Questions and field IDs do not match!')
     }
   }
 
@@ -32,7 +30,7 @@ class Header extends Component {
           <div className="clientLogoSlot"></div>
         </div>
         <div className="header-bar">
-          <h1>Engagement</h1>
+          <h1>{this.props.title}</h1>
         </div>
       </div>
     );
