@@ -39,7 +39,7 @@ class NPS extends Component {
     return (
       <div>
         <div className="header">
-          <div className="header-bar">
+          <div className="header-bar" style={{'width':'96%', 'margin': '20px 2% 10px'}}>
             <h1>Net Promoter Score</h1>
           </div>
         </div>

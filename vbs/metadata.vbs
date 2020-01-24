@@ -183,20 +183,9 @@ Metadata(en-AU, Question, Label)
 
   '''''''''''''''''''' End_Coverpage ''''''''''''''''''''
 
-  '''''''''''''''''''' Instructions ''''''''''''''''''''
-
-  InstructionsInfo "{#WorkUnit}" info;
-
-  '''''''''''''''''''' End_Instructions ''''''''''''''''''''
-
-  '''''''''''''''''''' Definitions ''''''''''''''''''''
-
-  DefinitionsInfo - info;
-
-  '''''''''''''''''''' End_Definitions ''''''''''''''''''''
-
   '''''''''''''''''''' Begin_Survey ''''''''''''''''''''
   
+  SurveyInfo "{#WorkUnit}" info;
   f01183_Optimism01 -  categorical [..1] { use Scale1to6Positive sublist };
   f01184_Optimism02 -  categorical [..1] { use Scale1to6Positive sublist };
   f01194_Optimism02b -  categorical [..1] { use Scale1to6Positive sublist };
@@ -461,18 +450,9 @@ Metadata(en-AU, Question, Label)
     CoverpageInfo
   );
 
-  Instructions -
-  page(
-    InstructionsInfo
-  );
-
-  Definitions -
-  page(
-    DefinitionsInfo
-  );
-
   Survey -
   page(
+    SurveyInfo,
     f01183_Optimism01,
     f01184_Optimism02,
     f01194_Optimism02b,

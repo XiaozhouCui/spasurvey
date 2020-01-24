@@ -16,21 +16,9 @@ Coverpage:
   Coverpage.Ask()
   '--- End of page Coverpage ---
 
-Instructions:
-  '--- Start of page Instructions ---
-  Instructions.LayoutTemplate = "Instructions.html"
-  Instructions.Ask()
-  '--- End of page Instructions ---
-
-Definitions:
-  '--- Start of page Definitions ---
-  Definitions.LayoutTemplate = "Definitions.html"
-  Definitions.Ask()
-  '--- End of page Definitions ---
-
 Script:
   '--- Start of IOM Script item Script ---
-  IOM.Info.EstimatedPages = IOM.Pages.Count - 3
+  IOM.Info.EstimatedPages = IOM.Pages.Count - 1
   IOM.Info.EstimatedProgress = 1
 Sub OnAfterQuestionAsk(Question, IOM)
   IOM.Info.EstimatedProgress = IOM.Info.EstimatedProgress + 1

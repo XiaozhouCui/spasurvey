@@ -19,9 +19,13 @@ class App extends Component {
       isStaging: false,
       projectCode: 'TEST_20_ES',
       session: this.props.session,
+      workUnit: this.props.workunit,
       modules: [
+        'Instructions',
+        'Definitions',
         'Engagement',
         'TrulyGreatPlaceToWork',
+        'Expectations',
         'AttractionRetention',
         'DrivingTheFuture',
         'ValuesInAction',
@@ -60,10 +64,16 @@ class App extends Component {
       },
     }
 
+    this.changePage = this.changePage.bind(this);
     this.changeRadioSelection = this.changeRadioSelection.bind(this);
     this.changeTextarea = this.changeTextarea.bind(this);
   }
-  
+
+  // clicking a radio button will update the corresponding data in state.
+  changePage(page) {
+    this.setState({currentPage: page});
+  }
+
   // clicking a radio button will update the corresponding data in state.
   changeRadioSelection(fieldId, value) {
     this.setState(prevState => ({
@@ -135,28 +145,40 @@ class App extends Component {
 
 
   render() {
+
+    let page = null;
+    switch ( this.state.currentPage ) {
+      case ( 'Instructions' ):
+        page = <Instructions workunit={this.state.workUnit} />;
+        break;
+      case ( 'Definitions' ):
+        page = <Definitions />;
+        break;
+      case ( 'Engagement' ):
+        page = <Engagement onSelect={this.changeRadioSelection} moveContent={this.moveContent} />;
+        break;
+      case ( 'Truly Great Place to Work' ):
+        page = (
+          <div>
+            <TrulyGreatPlaceToWork onSelect={this.changeRadioSelection} onType={this.changeTextarea} moveContent={this.moveContent} />
+            <NPS onSelect={this.changeRadioSelection} onType={this.changeTextarea} moveContent={this.moveContent} />
+          </div>
+        );
+        break;
+      case ( 'Expectations' ):
+        page = <Expectations data={this.state.data} onSelect={this.changeRadioSelection} moveContent={this.moveContent} />;
+        break;
+      default:
+        page = null;
+    }
+
     return (
       <div>
-        { this.state.currentPage==='CoverPage' ? null : <Header title={this.state.currentPage} moveContent={this.moveContent} />}
+        { this.state.currentPage==='Cover Page' ? null : <Header title={this.state.currentPage} moveContent={this.moveContent} onPageChange={this.changePage} />}
         <div className="contentContainer">
-          <Instructions />
-          <Definitions />
-          <Engagement 
-          onSelect={this.changeRadioSelection}
-          moveContent={this.moveContent} />
-          <TrulyGreatPlaceToWork 
-          onSelect={this.changeRadioSelection}
-          onType={this.changeTextarea}
-          moveContent={this.moveContent} />
-          <NPS 
-          onSelect={this.changeRadioSelection}
-          moveContent={this.moveContent} />
-          <Expectations 
-          data={this.state.data}
-          onSelect={this.changeRadioSelection}
-          moveContent={this.moveContent} />
-          <SurveyNav moveContent={this.moveContent} />
+          {page}
         </div>
+        <SurveyNav moveContent={this.moveContent} />
         <Footer moveContent={this.moveContent} />
       </div>
     );

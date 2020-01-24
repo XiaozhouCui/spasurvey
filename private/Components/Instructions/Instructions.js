@@ -21,7 +21,7 @@ class Instructions extends Component {
               </td>
               <td className="instructions__col">
                 <div className="instructions__content">
-                  <p>In order to enable us to identify where we do things well and where we could improve, the responses you provide in this electronic survey will be allocated to: <span className="workunit_info"></span></p>
+                <p>In order to enable us to identify where we do things well and where we could improve, the responses you provide in this electronic survey will be allocated to: <span>{this.props.workunit}</span></p>
                 </div>
               </td>
             </tr>

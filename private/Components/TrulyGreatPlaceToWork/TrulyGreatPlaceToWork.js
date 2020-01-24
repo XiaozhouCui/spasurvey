@@ -21,8 +21,7 @@ class TrulyGreatPlaceToWork extends Component {
   }
 
   handleText(event) {
-    let fieldId = event.target.name.match(/_Qf(.*?)/);
-    // console.log(fieldId);
+    let fieldId = event.target.name.match(/_Qf(.*)/);
     fieldId = fieldId[1].replace(/__/g, '_');
     let targetText = event.target.value;
     this.props.onType(fieldId, targetText);
@@ -54,7 +53,7 @@ class TrulyGreatPlaceToWork extends Component {
       console.log('TrulyGreate Text Questions and field IDs do not match!')
     }
     textFields.forEach(item => {
-      item.addEventListener('keypress', this.handleText);
+      item.addEventListener('change', this.handleText);
     });
   }
 
