@@ -35,14 +35,22 @@ class NPS extends Component {
     }
   }
 
+  componentWillUnmount() { //before unmount component, return the radio buttons to where they belong
+    let radios = document.querySelectorAll(".NPSOptions .mrQuestionTable");
+    let radioSlot = document.querySelector("div[name='NPS']");
+    for (let i = 0; i < radios.length; i++) {
+      this.props.moveContent(radios[i], radioSlot);
+    }
+    let textFields = document.querySelectorAll(".NPSText .mrEdit");
+    let textSlot = document.querySelector("div[name='NPS']");
+    for (let i = 0; i < textFields.length; i++) {
+      this.props.moveContent(textFields[i], textSlot);
+    }
+  }
+
   render() {
     return (
       <div>
-        <div className="header">
-          <div className="header-bar" style={{'width':'96%', 'margin': '20px 2% 10px'}}>
-            <h1>Net Promoter Score</h1>
-          </div>
-        </div>
         <div className="question_title -no_shadow" style={{ margin:10 }}><em>(Please note the rating scale is reversed for this next question.)</em></div>
         <div className="question_title" style={{marginTop:0}}>
           <strong>On a scale of 0-10 (where 10 = Absolutely Yes, and 0 = Absolutely No), how likely are you to recommend your organisation (where appropriate) as ...</strong>

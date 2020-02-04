@@ -40,9 +40,43 @@
     <question class="categorical:Scale1to6Agree" id="00749_M28Workloads">Workloads that are fair and equitable.</question>
     <question class="categorical:Scale1to6Agree" id="00734_M13FairPay">A fair day’s pay for a fair day’s work.</question>
     <question class="categorical:Scale1to6Agree" id="00747_M26Remuneration">Appropriate remuneration for the responsibilities you have.</question>
+    <question class="categorical:Scale1to6Agree" id="00741_M20Recognition">The organisation provides … Recognition of my achievements.</question>
+    <question class="categorical:Scale1to6Agree" id="00738_M17FriendlyEnvironment">The organisation provides … A friendly work environment.</question>
+    <question class="categorical:Scale1to6Agree" id="00737_M16CareerOpportunities">The organisation provides … Good career opportunities.</question>
+    <question class="categorical:Scale1to6Agree" id="00736_M15DevelopmentOpportunities">The organisation provides … Opportunities for personal/professional development.</question>
+    <question class="categorical:Scale1to6Agree" id="00739_M18ClearCommunication">The organisation provides … Clear communication about things that affect me.</question>
+    <question class="categorical:Scale1to6Agree" id="00740_M19Support">The organisation provides … The support I need to get the work done.</question>
+    <question class="categorical:Scale1to6Agree" id="00732_M11_PhysicalConditions">The organisation provides … Good physical conditions of employment.</question>
+    <question class="categorical:Scale1to6Agree" id="00733_M12SafeEnvironment">A safe working environment for you.</question>
+    <question class="categorical:Scale1to6Agree" id="00735_M14JobSecurity">The organisation provides … Secure employment.</question>
     <question class="text:500" id="04936_DailyFrustration01">What are 3 things (if any) that currently frustrate you the most in your day-to-day work?</question>
     <question class="text:500" id="04937_DailyFrustration02">What are 3 things (if any) that currently frustrate you the most in your day-to-day work?</question>
     <question class="text:500" id="04938_DailyFrustration03">What are 3 things (if any) that currently frustrate you the most in your day-to-day work?</question>
+    <!-- Personal Well-Being -->
+    <question class="categorical:Scale1to6Agree" id="21588_WellBeing01InControl">... Being in control of many of my work choices.</question>
+    <question class="categorical:Scale1to6Agree" id="21589_WellBeing02Competent">... Being competent to do my role.</question>
+    <question class="categorical:Scale1to6Agree" id="21590_WellBeing03Optimistic">... Being optimistic about my future.</question>
+    <question class="categorical:Scale1to6Agree" id="21591_WellBeing04Useful">... Being useful to others.</question>
+    <question class="categorical:Scale1to6Agree" id="21592_WellBeing05MakingADifference">... Making a difference in my chosen field.</question>
+    <question class="categorical:Scale1to6Agree" id="21593_WellBeing06Valued">... Being valued by others.</question>
+    <question class="categorical:Scale1to6Agree" id="21594_WellBeing07TeamMember">... Being a valued member of a team.</question>
+    <question class="categorical:Scale1to6Agree" id="37155_WellBeing24Respect">... Being treated with respect.</question>
+    <question class="categorical:Scale1to6Agree" id="37156_WellBeing25Individual">... Being treated as an individual, not just a number.</question>
+    <question class="categorical:Scale1to6Agree" id="37566_WellBeing26Included">... Being included by others around me.</question>
+    <question class="categorical:Scale1to6Agree" id="37783_WellBeing35Decisions">... Being included in decisions and discussions that affect me.</question>
+    <question class="categorical:Scale1to6Agree" id="36900_WellBeing31_FeelSafe">... Feeling safe at work to be the person I am.</question>
+    <question class="categorical:Scale1to6Agree" id="37784_WellBeing36SpeakUp">... Feeling safe at work to “speak up” when required.</question>
+    <question class="categorical:Scale1to6Agree" id="21595_WellBeing08MyBest">... Being supported to do my best.</question>
+    <question class="categorical:Scale1to6Agree" id="21596_WellBeing09MyLearning">... Being supported in learning from my mistakes.</question>
+    <question class="categorical:Scale1to6Agree" id="21597_WellBeing10MyGoals">... Being supported to achieve my personal and professional goals.</question>
+    <question class="categorical:Scale1to6Agree" id="36808_WellBeing21LookAfterMyself">... Being supported to look after myself.</question>
+    <question class="categorical:Scale1to6Agree" id="36810_WellBeing23AddressConflict">... Being supported if I needed to address any workplace conflict.</question>
+    <question class="categorical:Scale1to6Agree" id="21713_WorkMeaningful">... Meaningful.</question>
+    <question class="categorical:Scale1to6Agree" id="21714_WorkPurposeful">... Purposeful.</question>
+    <question class="categorical:Scale1to6Agree" id="21715_WorkStimulating">... Stimulating.</question>
+    <question class="categorical:Scale1to6Agree" id="21711_WorkEnergizing">... Energising.</question>
+    <question class="categorical:Scale1to6Agree" id="37332_WorkProudOf">... Something I am proud of.</question>
+    <question class="text:250" id="37815_ProudOfPersonal">What is one thing that you have done well at work during the last 12 months that you are especially proud of?</question>
   </page>
   <page title="Attraction &amp; Retention">
     <question class="text:250" id="00618_Attraction01">What initially attracted you to work in this organisation?</question>
@@ -187,28 +221,6 @@
     <question class="categorical:Scale1to6Agree" id="ph_RatingComExp01">How much do you agree that the organisation consistently meets your expectations?</question>
     <question class="categorical:Scale1to6Agree" id="ph_RatingComExp02">How much do you agree that the organisation consistently meets your expectations?</question>
     <question class="categorical:Scale1to6Agree" id="ph_RatingComExp03">How much do you agree that the organisation consistently meets your expectations?</question>
-  </page>
-  <page title="Personal Well-Being">
-    <question class="categorical:Scale1to6Agree" id="21588_WellBeing01InControl">... Being in control of many of my work choices.</question>
-    <question class="categorical:Scale1to6Agree" id="21589_WellBeing02Competent">... Being competent to do my role.</question>
-    <question class="categorical:Scale1to6Agree" id="21590_WellBeing03Optimistic">... Being optimistic about my future.</question>
-    <question class="categorical:Scale1to6Agree" id="21591_WellBeing04Useful">... Being useful to others.</question>
-    <question class="categorical:Scale1to6Agree" id="21592_WellBeing05MakingADifference">... Making a difference in my chosen field.</question>
-    <question class="categorical:Scale1to6Agree" id="21593_WellBeing06Valued">... Being valued by others.</question>
-    <question class="categorical:Scale1to6Agree" id="21594_WellBeing07TeamMember">... Being a valued member of a team.</question>
-    <question class="categorical:Scale1to6Agree" id="37155_WellBeing24Respect">... Being treated with respect.</question>
-    <question class="categorical:Scale1to6Agree" id="37156_WellBeing25Individual">... Being treated as an individual, not just a number.</question>
-    <question class="categorical:Scale1to6Agree" id="36900_WellBeing31_FeelSafe">... Feeling safe at work to be the person I am.</question>
-    <question class="categorical:Scale1to6Agree" id="21595_WellBeing08MyBest">... Being supported to do my best.</question>
-    <question class="categorical:Scale1to6Agree" id="21596_WellBeing09MyLearning">... Being supported in learning from my mistakes.</question>
-    <question class="categorical:Scale1to6Agree" id="21597_WellBeing10MyGoals">... Being supported to achieve my personal and professional goals.</question>
-    <question class="categorical:Scale1to6Agree" id="36808_WellBeing21LookAfterMyself">... Being supported to look after myself.</question>
-    <question class="categorical:Scale1to6Agree" id="36810_WellBeing23AddressConflict">... Being supported if I needed to address any workplace conflict.</question>
-    <question class="categorical:Scale1to6Agree" id="21713_WorkMeaningful">... Meaningful.</question>
-    <question class="categorical:Scale1to6Agree" id="21714_WorkPurposeful">... Purposeful.</question>
-    <question class="categorical:Scale1to6Agree" id="21715_WorkStimulating">... Stimulating.</question>
-    <question class="categorical:Scale1to6Agree" id="21711_WorkEnergizing">... Energising.</question>
-    <question class="categorical:Scale1to6Agree" id="37332_WorkProudOf">... Something I am proud of.</question>
   </page>
   <page title="Message in a Bottle">
     <question class="text:1000" id="00930_MessageinaBottle">If there was one message you would like to pass on to the most senior executive in this organisation</question>

@@ -79,12 +79,6 @@ CommunityExpectations:
   CommunityExpectations.Ask()
   '--- End of page CommunityExpectations ---
 
-PersonalWellBeing:
-  '--- Start of page PersonalWellBeing ---
-  PersonalWellBeing.LayoutTemplate = "PersonalWellBeing.html"
-  PersonalWellBeing.Ask()
-  '--- End of page PersonalWellBeing ---
-
 MessageinaBottle:
   '--- Start of page MessageinaBottle ---
   MessageinaBottle.LayoutTemplate = "MessageinaBottle.html"

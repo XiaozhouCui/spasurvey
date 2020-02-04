@@ -33,7 +33,7 @@ class NavBar extends Component {
           <a href="#" className="dropbtn">Identity &amp; Direction</a>
           <div className="dropdown-content">
             <a href="#" onClick={this.handlePageChange}>Truly Great Place to Work</a>
-            <a href="#">Net Promoter Score</a>
+            <a href="#" onClick={this.handlePageChange}>Net Promoter Score</a>
             <a href="#">Attraction &amp; Retention</a>
             <a href="#">Inclusion@Work</a>
             <a href="#">Driving the Future</a>

@@ -57,6 +57,20 @@ class TrulyGreatPlaceToWork extends Component {
     });
   }
 
+  componentWillUnmount() { //before unmount component, return the radio buttons to where they belong
+    let radios = document.querySelectorAll(".trulyGreatRadios .mrQuestionTable");
+    let radioSlot = document.querySelector("div[name='TrulyGreat']");
+    for (let i = 0; i < radios.length; i++) {
+      this.props.moveContent(radios[i], radioSlot);
+    }
+    console.log('Bye bye! TrulyGreat radio buttons unmounted!');
+    let textFields = document.querySelectorAll(".trulyGreatText .mrEdit");
+    let textSlot = document.querySelector("div[name='TrulyGreat']");
+    for (let i = 0; i < textFields.length; i++) {
+      this.props.moveContent(textFields[i], textSlot);
+    }
+  }
+
   render() {
     return (
       <div className="truly_great">

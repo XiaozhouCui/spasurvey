@@ -63,7 +63,7 @@
 	}
 	.pos_neg_fixed {
 		float: left;
-		margin-left: 44px;
+		margin-left: 75px;
 
 		@include ie-fallback(ie9) { margin-left: 50px; }
 

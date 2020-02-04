@@ -46,6 +46,19 @@ class Expectations extends Component {
     }
   }
 
+  componentWillUnmount() { //before unmount component, return the radio buttons to where they belong
+    let radios = document.querySelectorAll(".expectationsRadios .mrQuestionTable");
+    let radioSlot = document.querySelector("div[name='Expectations']");
+    for (let i = 0; i < radios.length; i++) {
+      this.props.moveContent(radios[i], radioSlot);
+    }
+    let textFields = document.querySelectorAll(".expectationsText .mrEdit");
+    let textSlot = document.querySelector("div[name='Expectations']");
+    for (let i = 0; i < textFields.length; i++) {
+      this.props.moveContent(textFields[i], textSlot);
+    }
+  }
+
   render() {
     return (
       <div>
@@ -141,6 +154,60 @@ class Expectations extends Component {
               </tr>
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... Appropriate remuneration for the responsibilities you have.</td>
+                <td className="question_response row">
+                  <div className="expectationsRadios"></div>
+                </td>
+              </tr>
+              <tr className="row">
+                <td className="question_title -no_shadow -align_right">... The organisation provides … Recognition of my achievements.</td>
+                <td className="question_response row">
+                  <div className="expectationsRadios"></div>
+                </td>
+              </tr>
+              <tr className="row">
+                <td className="question_title -no_shadow -align_right">... The organisation provides … A friendly work environment.</td>
+                <td className="question_response row">
+                  <div className="expectationsRadios"></div>
+                </td>
+              </tr>
+              <tr className="row">
+                <td className="question_title -no_shadow -align_right">... The organisation provides … Good career opportunities.</td>
+                <td className="question_response row">
+                  <div className="expectationsRadios"></div>
+                </td>
+              </tr>
+              <tr className="row">
+                <td className="question_title -no_shadow -align_right">... The organisation provides … Opportunities for personal/professional development.</td>
+                <td className="question_response row">
+                  <div className="expectationsRadios"></div>
+                </td>
+              </tr>
+              <tr className="row">
+                <td className="question_title -no_shadow -align_right">... The organisation provides … Clear communication about things that affect me.</td>
+                <td className="question_response row">
+                  <div className="expectationsRadios"></div>
+                </td>
+              </tr>
+              <tr className="row">
+                <td className="question_title -no_shadow -align_right">... The organisation provides … The support I need to get the work done.</td>
+                <td className="question_response row">
+                  <div className="expectationsRadios"></div>
+                </td>
+              </tr>
+              <tr className="row">
+                <td className="question_title -no_shadow -align_right">... The organisation provides … Good physical conditions of employment.</td>
+                <td className="question_response row">
+                  <div className="expectationsRadios"></div>
+                </td>
+              </tr>
+              <tr className="row">
+                <td className="question_title -no_shadow -align_right">... A safe working environment for you.</td>
+                <td className="question_response row">
+                  <div className="expectationsRadios"></div>
+                </td>
+              </tr>
+              <tr className="row">
+                <td className="question_title -no_shadow -align_right">... The organisation provides … Secure employment.</td>
                 <td className="question_response row">
                   <div className="expectationsRadios"></div>
                 </td>

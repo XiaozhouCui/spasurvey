@@ -13,15 +13,16 @@
   width: 100%;
 
   .navBar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     width: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    li {
-      float: left;
-    }
     
     li a, .dropbtn {
       display: inline-block;
@@ -91,6 +92,7 @@
   line-height: 0;
 
   &.-client {
+    display: none;
     // margin-top: 25px;
 
     img {

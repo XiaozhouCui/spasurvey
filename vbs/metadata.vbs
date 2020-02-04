@@ -213,9 +213,42 @@ Metadata(en-AU, Question, Label)
   f00749_M28Workloads -  categorical [..1] { use Scale1to6Agree sublist };
   f00734_M13FairPay -  categorical [..1] { use Scale1to6Agree sublist };
   f00747_M26Remuneration -  categorical [..1] { use Scale1to6Agree sublist };
+  f00741_M20Recognition -  categorical [..1] { use Scale1to6Agree sublist };
+  f00738_M17FriendlyEnvironment -  categorical [..1] { use Scale1to6Agree sublist };
+  f00737_M16CareerOpportunities -  categorical [..1] { use Scale1to6Agree sublist };
+  f00736_M15DevelopmentOpportunities -  categorical [..1] { use Scale1to6Agree sublist };
+  f00739_M18ClearCommunication -  categorical [..1] { use Scale1to6Agree sublist };
+  f00740_M19Support -  categorical [..1] { use Scale1to6Agree sublist };
+  f00732_M11_PhysicalConditions -  categorical [..1] { use Scale1to6Agree sublist };
+  f00733_M12SafeEnvironment -  categorical [..1] { use Scale1to6Agree sublist };
+  f00735_M14JobSecurity -  categorical [..1] { use Scale1to6Agree sublist };
   f04936_DailyFrustration01 - text [..500];
   f04937_DailyFrustration02 - text [..500];
   f04938_DailyFrustration03 - text [..500];
+  f21588_WellBeing01InControl -  categorical [..1] { use Scale1to6Agree sublist };
+  f21589_WellBeing02Competent -  categorical [..1] { use Scale1to6Agree sublist };
+  f21590_WellBeing03Optimistic -  categorical [..1] { use Scale1to6Agree sublist };
+  f21591_WellBeing04Useful -  categorical [..1] { use Scale1to6Agree sublist };
+  f21592_WellBeing05MakingADifference -  categorical [..1] { use Scale1to6Agree sublist };
+  f21593_WellBeing06Valued -  categorical [..1] { use Scale1to6Agree sublist };
+  f21594_WellBeing07TeamMember -  categorical [..1] { use Scale1to6Agree sublist };
+  f37155_WellBeing24Respect -  categorical [..1] { use Scale1to6Agree sublist };
+  f37156_WellBeing25Individual -  categorical [..1] { use Scale1to6Agree sublist };
+  f37566_WellBeing26Included -  categorical [..1] { use Scale1to6Agree sublist };
+  f37783_WellBeing35Decisions -  categorical [..1] { use Scale1to6Agree sublist };
+  f36900_WellBeing31_FeelSafe -  categorical [..1] { use Scale1to6Agree sublist };
+  f37784_WellBeing36SpeakUp -  categorical [..1] { use Scale1to6Agree sublist };
+  f21595_WellBeing08MyBest -  categorical [..1] { use Scale1to6Agree sublist };
+  f21596_WellBeing09MyLearning -  categorical [..1] { use Scale1to6Agree sublist };
+  f21597_WellBeing10MyGoals -  categorical [..1] { use Scale1to6Agree sublist };
+  f36808_WellBeing21LookAfterMyself -  categorical [..1] { use Scale1to6Agree sublist };
+  f36810_WellBeing23AddressConflict -  categorical [..1] { use Scale1to6Agree sublist };
+  f21713_WorkMeaningful -  categorical [..1] { use Scale1to6Agree sublist };
+  f21714_WorkPurposeful -  categorical [..1] { use Scale1to6Agree sublist };
+  f21715_WorkStimulating -  categorical [..1] { use Scale1to6Agree sublist };
+  f21711_WorkEnergizing -  categorical [..1] { use Scale1to6Agree sublist };
+  f37332_WorkProudOf -  categorical [..1] { use Scale1to6Agree sublist };
+  f37815_ProudOfPersonal - text [..250];
 
   '''''''''''''''''''' End_Survey ''''''''''''''''''''
 
@@ -377,31 +410,6 @@ Metadata(en-AU, Question, Label)
 
   '''''''''''''''''''' End_CommunityExpectations ''''''''''''''''''''
 
-  '''''''''''''''''''' Begin_PersonalWellBeing ''''''''''''''''''''
-  
-  f21588_WellBeing01InControl -  categorical [..1] { use Scale1to6Agree sublist };
-  f21589_WellBeing02Competent -  categorical [..1] { use Scale1to6Agree sublist };
-  f21590_WellBeing03Optimistic -  categorical [..1] { use Scale1to6Agree sublist };
-  f21591_WellBeing04Useful -  categorical [..1] { use Scale1to6Agree sublist };
-  f21592_WellBeing05MakingADifference -  categorical [..1] { use Scale1to6Agree sublist };
-  f21593_WellBeing06Valued -  categorical [..1] { use Scale1to6Agree sublist };
-  f21594_WellBeing07TeamMember -  categorical [..1] { use Scale1to6Agree sublist };
-  f37155_WellBeing24Respect -  categorical [..1] { use Scale1to6Agree sublist };
-  f37156_WellBeing25Individual -  categorical [..1] { use Scale1to6Agree sublist };
-  f36900_WellBeing31_FeelSafe -  categorical [..1] { use Scale1to6Agree sublist };
-  f21595_WellBeing08MyBest -  categorical [..1] { use Scale1to6Agree sublist };
-  f21596_WellBeing09MyLearning -  categorical [..1] { use Scale1to6Agree sublist };
-  f21597_WellBeing10MyGoals -  categorical [..1] { use Scale1to6Agree sublist };
-  f36808_WellBeing21LookAfterMyself -  categorical [..1] { use Scale1to6Agree sublist };
-  f36810_WellBeing23AddressConflict -  categorical [..1] { use Scale1to6Agree sublist };
-  f21713_WorkMeaningful -  categorical [..1] { use Scale1to6Agree sublist };
-  f21714_WorkPurposeful -  categorical [..1] { use Scale1to6Agree sublist };
-  f21715_WorkStimulating -  categorical [..1] { use Scale1to6Agree sublist };
-  f21711_WorkEnergizing -  categorical [..1] { use Scale1to6Agree sublist };
-  f37332_WorkProudOf -  categorical [..1] { use Scale1to6Agree sublist };
-
-  '''''''''''''''''''' End_PersonalWellBeing ''''''''''''''''''''
-
   '''''''''''''''''''' Begin_MessageinaBottle ''''''''''''''''''''
   
   f00930_MessageinaBottle - text [..1000];
@@ -480,9 +488,42 @@ Metadata(en-AU, Question, Label)
     f00749_M28Workloads,
     f00734_M13FairPay,
     f00747_M26Remuneration,
+    f00741_M20Recognition,
+    f00738_M17FriendlyEnvironment,
+    f00737_M16CareerOpportunities,
+    f00736_M15DevelopmentOpportunities,
+    f00739_M18ClearCommunication,
+    f00740_M19Support,
+    f00732_M11_PhysicalConditions,
+    f00733_M12SafeEnvironment,
+    f00735_M14JobSecurity,
     f04936_DailyFrustration01,
     f04937_DailyFrustration02,
-    f04938_DailyFrustration03
+    f04938_DailyFrustration03,
+    f21588_WellBeing01InControl,
+    f21589_WellBeing02Competent,
+    f21590_WellBeing03Optimistic,
+    f21591_WellBeing04Useful,
+    f21592_WellBeing05MakingADifference,
+    f21593_WellBeing06Valued,
+    f21594_WellBeing07TeamMember,
+    f37155_WellBeing24Respect,
+    f37156_WellBeing25Individual,
+    f37566_WellBeing26Included,
+    f37783_WellBeing35Decisions,
+    f36900_WellBeing31_FeelSafe,
+    f37784_WellBeing36SpeakUp,
+    f21595_WellBeing08MyBest,
+    f21596_WellBeing09MyLearning,
+    f21597_WellBeing10MyGoals,
+    f36808_WellBeing21LookAfterMyself,
+    f36810_WellBeing23AddressConflict,
+    f21713_WorkMeaningful,
+    f21714_WorkPurposeful,
+    f21715_WorkStimulating,
+    f21711_WorkEnergizing,
+    f37332_WorkProudOf,
+    f37815_ProudOfPersonal
     
   );
 
@@ -641,31 +682,6 @@ Metadata(en-AU, Question, Label)
     ph_RatingComExp01,
     ph_RatingComExp02,
     ph_RatingComExp03
-    
-  );
-
-  PersonalWellBeing -
-  page(
-    f21588_WellBeing01InControl,
-    f21589_WellBeing02Competent,
-    f21590_WellBeing03Optimistic,
-    f21591_WellBeing04Useful,
-    f21592_WellBeing05MakingADifference,
-    f21593_WellBeing06Valued,
-    f21594_WellBeing07TeamMember,
-    f37155_WellBeing24Respect,
-    f37156_WellBeing25Individual,
-    f36900_WellBeing31_FeelSafe,
-    f21595_WellBeing08MyBest,
-    f21596_WellBeing09MyLearning,
-    f21597_WellBeing10MyGoals,
-    f36808_WellBeing21LookAfterMyself,
-    f36810_WellBeing23AddressConflict,
-    f21713_WorkMeaningful,
-    f21714_WorkPurposeful,
-    f21715_WorkStimulating,
-    f21711_WorkEnergizing,
-    f37332_WorkProudOf
     
   );
 

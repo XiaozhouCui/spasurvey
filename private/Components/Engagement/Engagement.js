@@ -20,21 +20,15 @@ class Engagement extends Component {
   }
 
   componentDidMount() {
-    let radios = document.querySelectorAll("div[name='Engagement'] .mrQuestionTable");
-    let radioSlots = document.querySelectorAll(".engagementOptions");
-    
-    if (radios.length === radioSlots.length) {
-      for (let i = 0; i < radios.length; i++) {
-        this.props.moveContent(radios[i], radioSlots[i]);
-      }
-      console.log('Good! Engagement radio buttons mounted!');
-    } else {
-      console.log('Engagement Radio Questions and field IDs do not match!');
-    }
+    this.props.mountContent('Engagement');
     // Update the values in state when clicking on a radio button.
     Array.from(document.querySelectorAll('.mrQuestionTable input[type="radio"]')).forEach(item => {
       item.addEventListener('click', this.handleSelection);
     })
+  }
+
+  componentWillUnmount() { //before unmount component, return the radio buttons to where they belong
+    this.props.unmountContent('Engagement')
   }
 
   render() {
@@ -76,7 +70,7 @@ class Engagement extends Component {
                   People are very optimistic about the organisation's future.
                 </td>
                 <td className="question_table__question -align_center">
-                  <div className="engagementOptions"></div>
+                  <div className="radiosEngagement"></div>
                 </td>
                 <td className="question_table__question -align_left">
                   People are very pessimistic about the organisation's future.
@@ -87,7 +81,7 @@ class Engagement extends Component {
                   There is high trust in the <span className="definition" name="exec">Senior Leadership Team</span>.
                 </td>
                 <td className="question_table__question -align_center">
-                  <div className="engagementOptions"></div>
+                  <div className="radiosEngagement"></div>
                 </td>
                 <td className="question_table__question -align_left">
                   There is low trust in the Senior Leadership Team.
@@ -98,7 +92,7 @@ class Engagement extends Component {
                   There is high trust in <span className="definition" name="midd">Management</span>.
                 </td>
                 <td className="question_table__question -align_center">
-                  <div className="engagementOptions"></div>
+                  <div className="radiosEngagement"></div>
                 </td>
                 <td className="question_table__question -align_left">
                   There is low trust in Management.
@@ -110,7 +104,7 @@ class Engagement extends Component {
                   <em>'Things are getting better all the time'</em>.
                 </td>
                 <td className="question_table__question -align_center">
-                  <div className="engagementOptions"></div>
+                  <div className="radiosEngagement"></div>
                 </td>
                 <td className="question_table__question -align_left">
                   There is a strong sense of the organisation having
@@ -123,7 +117,7 @@ class Engagement extends Component {
                   <em>'Can do'</em> mentality.
                 </td>
                 <td className="question_table__question -align_center">
-                  <div className="engagementOptions"></div>
+                  <div className="radiosEngagement"></div>
                 </td>
                 <td className="question_table__question -align_left">
                   People are very negative about tackling problems. There is a
@@ -135,7 +129,7 @@ class Engagement extends Component {
                   Change in the organisation = Better things to come for me.
                 </td>
                 <td className="question_table__question -align_center">
-                  <div className="engagementOptions"></div>
+                  <div className="radiosEngagement"></div>
                 </td>
                 <td className="question_table__question -align_left">
                   Change in the organisation = I will be much worse off.
@@ -146,7 +140,7 @@ class Engagement extends Component {
                   There is a strong sense of purpose and direction.
                 </td>
                 <td className="question_table__question -align_center">
-                  <div className="engagementOptions"></div>
+                  <div className="radiosEngagement"></div>
                 </td>
                 <td className="question_table__question -align_left">
                   It is common to hear <em>'Communication is poor'</em> or
@@ -159,7 +153,7 @@ class Engagement extends Component {
                   organisation.
                 </td>
                 <td className="question_table__question -align_center">
-                  <div className="engagementOptions"></div>
+                  <div className="radiosEngagement"></div>
                 </td>
                 <td className="question_table__question -align_left">
                   People treat their work as <em>'Just a job'</em>.
@@ -171,7 +165,7 @@ class Engagement extends Component {
                   the organisation.
                 </td>
                 <td className="question_table__question -align_center">
-                  <div className="engagementOptions"></div>
+                  <div className="radiosEngagement"></div>
                 </td>
                 <td className="question_table__question -align_left">
                   There is a climate of <em>'Fear'</em> throughout the
@@ -184,7 +178,7 @@ class Engagement extends Component {
                   organisation.
                 </td>
                 <td className="question_table__question -align_center">
-                  <div className="engagementOptions"></div>
+                  <div className="radiosEngagement"></div>
                 </td>
                 <td className="question_table__question -align_left">
                   People focus on the negatives and the failures of the
