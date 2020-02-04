@@ -1,51 +1,13 @@
 import React, { Component } from 'react'
 
 class NPS extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-         
-    }
-  }
 
   componentDidMount() {
-    let radios = document.querySelectorAll("div[name='NPS'] .mrQuestionTable");
-    let radioSlots = document.querySelectorAll(".NPSOptions");
-    if (radios.length === radioSlots.length) {
-      for (let i = 0; i < radios.length; i++) {
-        this.props.moveContent(radios[i], radioSlots[i]);
-      }
-    } else {
-      console.log('NPS Radio Questions and field IDs do not match!')
-    }
-    // Update the values in state when clicking on a radio button.
-    Array.from(document.querySelectorAll('.mrQuestionTable input[type="radio"]')).forEach(item => {
-      item.addEventListener('click', this.handleSelection);
-    });
-
-    let textFields = document.querySelectorAll("div[name='NPS'] .mrEdit");
-    let textSlots = document.querySelectorAll(".NPSText");
-    if (textFields.length === textSlots.length) {
-      for (let i = 0; i < textFields.length; i++) {
-        this.props.moveContent(textFields[i], textSlots[i]);
-      }
-    } else {
-      console.log('NPS Text Questions and field IDs do not match!')
-    }
+    this.props.mountContent('NPS');
   }
 
   componentWillUnmount() { //before unmount component, return the radio buttons to where they belong
-    let radios = document.querySelectorAll(".NPSOptions .mrQuestionTable");
-    let radioSlot = document.querySelector("div[name='NPS']");
-    for (let i = 0; i < radios.length; i++) {
-      this.props.moveContent(radios[i], radioSlot);
-    }
-    let textFields = document.querySelectorAll(".NPSText .mrEdit");
-    let textSlot = document.querySelector("div[name='NPS']");
-    for (let i = 0; i < textFields.length; i++) {
-      this.props.moveContent(textFields[i], textSlot);
-    }
+    this.props.unmountContent('NPS');
   }
 
   render() {
@@ -65,7 +27,7 @@ class NPS extends Component {
                 <p>I would absolutely <strong>NOT</strong> recommend the organisation.</p><img src="https://i.bpanz.com/i/p0y9ejL.png" alt="sad face"/>
               </td>
               <td className="question_response">
-                <div className="NPSOptions"></div>
+                <div className="radiosNPS"></div>
                 <div className="numbers_fallback">
                   <span className="red">0</span>
                   <span className="red">1</span>
@@ -90,7 +52,7 @@ class NPS extends Component {
               <td className="reason" colSpan="3" style={{paddingBottom:30}}>
                 <div className="question_title -no_shadow"><strong>Why did you give this score?</strong></div>
                 <div className="question_response">
-                  <div className="NPSText"></div>
+                  <div className="textNPS"></div>
                 </div>
               </td>
             </tr>
@@ -102,7 +64,7 @@ class NPS extends Component {
                 <p>I would absolutely <strong>NOT</strong> recommend the organisation.</p><img src="https://i.bpanz.com/i/p0y9ejL.png" alt="sad face"/>
               </td>
               <td className="question_response">
-                <div className="NPSOptions"></div>
+                <div className="radiosNPS"></div>
                 <div className="numbers_fallback">
                   <span className="red">0</span>
                   <span className="red">1</span>
@@ -127,7 +89,7 @@ class NPS extends Component {
               <td className="reason" colSpan="3">
                 <div className="question_title -no_shadow"><strong>Why did you give this score?</strong></div>
                 <div className="question_response">
-                  <div className="NPSText"></div>
+                  <div className="textNPS"></div>
                 </div>
               </td>
             </tr>

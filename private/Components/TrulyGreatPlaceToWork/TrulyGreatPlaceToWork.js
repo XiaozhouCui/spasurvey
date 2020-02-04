@@ -1,74 +1,13 @@
 import React, { Component } from "react";
 
 class TrulyGreatPlaceToWork extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-
-    }
-    this.handleSelection = this.handleSelection.bind(this);
-    this.handleText = this.handleText.bind(this);
-  }
-
-  // Update the values in state when clicking on a radio button.
-  handleSelection(event) {
-    let fieldId = event.target.name.match(/_Qf(.*?)(?=_C)/);
-    fieldId = fieldId[1].replace(/__/g, '_');
-    let targetId = event.target.id;
-    let targetValue = event.target.checked === false ? 999 : Number(targetId[targetId.length -1]) + 1;
-    this.props.onSelect(fieldId, targetValue);
-  }
-
-  handleText(event) {
-    let fieldId = event.target.name.match(/_Qf(.*)/);
-    fieldId = fieldId[1].replace(/__/g, '_');
-    let targetText = event.target.value;
-    this.props.onType(fieldId, targetText);
-  }
 
   componentDidMount() {
-    let radios = document.querySelectorAll("div[name='TrulyGreat'] .mrQuestionTable");
-    let radioSlots = document.querySelectorAll(".trulyGreatRadios");
-    if (radios.length === radioSlots.length) {
-      for (let i = 0; i < radios.length; i++) {
-        this.props.moveContent(radios[i], radioSlots[i]);
-      }
-      console.log('Good! TrulyGreat radio buttons mounted!')
-    } else {
-      console.log('TrulyGreat Radio Questions and field IDs do not match!')
-    }
-    // Update the values in state when clicking on a radio button.
-    Array.from(document.querySelectorAll('.mrQuestionTable input[type="radio"]')).forEach(item => {
-      item.addEventListener('click', this.handleSelection);
-    });
-
-    let textFields = document.querySelectorAll("div[name='TrulyGreat'] .mrEdit");
-    let textSlots = document.querySelectorAll(".trulyGreatText");
-    if (textFields.length === textSlots.length) {
-      for (let i = 0; i < textFields.length; i++) {
-        this.props.moveContent(textFields[i], textSlots[i]);
-      }
-    } else {
-      console.log('TrulyGreate Text Questions and field IDs do not match!')
-    }
-    textFields.forEach(item => {
-      item.addEventListener('change', this.handleText);
-    });
+    this.props.mountContent('TrulyGreat');
   }
 
   componentWillUnmount() { //before unmount component, return the radio buttons to where they belong
-    let radios = document.querySelectorAll(".trulyGreatRadios .mrQuestionTable");
-    let radioSlot = document.querySelector("div[name='TrulyGreat']");
-    for (let i = 0; i < radios.length; i++) {
-      this.props.moveContent(radios[i], radioSlot);
-    }
-    console.log('Bye bye! TrulyGreat radio buttons unmounted!');
-    let textFields = document.querySelectorAll(".trulyGreatText .mrEdit");
-    let textSlot = document.querySelector("div[name='TrulyGreat']");
-    for (let i = 0; i < textFields.length; i++) {
-      this.props.moveContent(textFields[i], textSlot);
-    }
+    this.props.unmountContent('TrulyGreat')
   }
 
   render() {
@@ -80,7 +19,7 @@ class TrulyGreatPlaceToWork extends Component {
               <td colSpan="4">
                 <div className="question_title"><strong>On balance, is your <span className="definition" name="orga">organisation</span> a "<em>truly great place to work</em>"?</strong> <em>(please select)</em></div>
                 <div className="question_response">
-                  <div className="trulyGreatRadios"></div>
+                  <div className="radiosTrulyGreat"></div>
                 </div>
               </td>
             </tr>
@@ -91,7 +30,7 @@ class TrulyGreatPlaceToWork extends Component {
               <td>
                 <div className="question_response -text">
                   <p>If <strong>YES</strong>, what makes it a <br/> "<em>truly great place to work</em>"?</p>
-                  <div className="trulyGreatText"></div>
+                  <div className="textTrulyGreat"></div>
                 </div>
               </td>
               <td rowSpan="2">
@@ -100,7 +39,7 @@ class TrulyGreatPlaceToWork extends Component {
               <td>
                 <div className="question_response -text">
                   <p>If <strong>NO</strong>, what is stopping it from becoming <br/> a "<em>truly great place to work</em>"?</p>
-                  <div className="trulyGreatText"></div>
+                  <div className="textTrulyGreat"></div>
                 </div>
               </td>
             </tr>

@@ -22,90 +22,49 @@ class App extends Component {
       session: this.props.session,
       workUnit: this.props.workunit,
       currentPage: 'Engagement',
-      modules: {
-        Instructions: {},
-        Definitions: {},
-        Engagement: {
-          "01183_Optimism01": 999,
-          "01184_Optimism02": 999,
-          "01194_Optimism02b": 999,
-          "01185_Optimism03": 999,
-          "01186_Optimism04": 999,
-          "01187_Optimism05": 999,
-          "01188_Optimism06": 999,
-          "01189_Optimism07": 999,
-          "01190_Optimism08": 999,
-          "01191_Optimism13": 999,
-        },
-        TrulyGreatPlaceToWork: {
-          "01180_TrulyGreat": 999,
-          "01181_WhyYes": '',
-          "01182_WhyNo": '',
-        },
-        Expectations: {
-          "00546_ExpectationOrgn01": '',
-          "00547_ExpectationOrgn02": '',
-          "00548_ExpectationOrgn03": '',
-          "00549_RatingOrgn01": 999,
-          "00550_RatingOrgn02": 999,
-          "00551_RatingOrgn03": 999,
-          "00748_M27FlexibleHours": 999,
-          "00749_M28Workloads": 999,
-          "00734_M13FairPay": 999,
-          "00747_M26Remuneration": 999,
-          "00741_M20Recognition": 999,
-          "00738_M17FriendlyEnvironment": 999,
-          "00737_M16CareerOpportunities": 999,
-          "00736_M15DevelopmentOpportunities": 999,
-          "00739_M18ClearCommunication": 999,
-          "00740_M19Support": 999,
-          "00732_M11_PhysicalConditions": 999,
-          "00733_M12SafeEnvironment": 999,
-          "00735_M14JobSecurity": 999,
-          "04936_DailyFrustration01": '',
-          "04937_DailyFrustration02": '',
-          "04938_DailyFrustration03": '',
-        },
-        PersonalWellBeing: {
-          "21588_WellBeing01InControl": 999,
-          "21589_WellBeing02Competent": 999,
-          "21590_WellBeing03Optimistic": 999,
-          "21591_WellBeing04Useful": 999,
-          "21592_WellBeing05MakingADifference": 999,
-          "21593_WellBeing06Valued": 999,
-          "21594_WellBeing07TeamMember": 999,
-          "37155_WellBeing24Respect": 999,
-          "37156_WellBeing25Individual": 999,
-          "37566_WellBeing26Included": 999,
-          "37783_WellBeing35Decisions": 999,
-          "36900_WellBeing31_FeelSafe": 999,
-          "37784_WellBeing36SpeakUp": 999,
-          "21595_WellBeing08MyBest": 999,
-          "21596_WellBeing09MyLearning": 999,
-          "21597_WellBeing10MyGoals": 999,
-          "36808_WellBeing21LookAfterMyself": 999,
-          "36810_WellBeing23AddressConflict": 999,
-          "21713_WorkMeaningful": 999,
-          "21714_WorkPurposeful": 999,
-          "21715_WorkStimulating": 999,
-          "21711_WorkEnergizing": 999,
-          "37332_WorkProudOf": 999,
-          "37815_ProudOfPersonal": '',
-        },
-        'AttractionRetention': '',
-        'DrivingTheFuture': '',
-        'ValuesInAction': '',
-        'LeadershipEssentials': '',
-        'LeadershipBehaviours': '',
-        'TheIssuesThatMatter': '',
-        'ChangeMomentum': '',
-        'CommunityExpectations': '',
-        'MessageinaBottle': '',
-        'FeedbackFromtheLastSurvey': '',
-        'StatisticalGroupings': '',
-        'AcknowledgementOfDiversity': '',
-        'ThankYouForCompletingTheSurvey': '',
-      },
+      modules: [
+        'Engagement',
+        'Expectations',
+        'Personal Well-Being',
+        'Work-Life Integration',
+        'Truly Great Place to Work',
+        'Net Promoter Score',
+        'Attraction & Retention',
+        'Inclusion@Work',
+        'Driving the Future',
+        'Strategic Direction',
+        'Strategic Direction Involving a Merger',
+        'Statistical Groupings',
+        'Acknowledgement of Diversity',
+        'Standards of Behaviour',
+        'Team Norms',
+        'Values-In-Action',
+        'The Do’s and Don’ts',
+        'Advice on Living the Values',
+        'Respect@Work',
+        'Causes for Concern',
+        'Safety@Work',
+        'Workplace Safety Culture',
+        'Harassment and Bullying',
+        'Occupational Violence',
+        'Leadership Essentials',
+        'Leadership Strengths',
+        'Leadership Priorities',
+        'Leadership Behaviours',
+        'Message in a Bottle',
+        'Message in a Bottle to Designated Managers',
+        'The Issues That Matter',
+        'Organisational Initiatives',
+        'Embracing Our Challenges',
+        'Change Momentum',
+        'How Are We Travelling',
+        'Your Advice',
+        'Client Expectations',
+        'Risk of Client Abuse',
+        'Client Safety Culture',
+        'Statement on Intellectual Property',
+        'Statement on Privacy'
+      ],
 
       data: {
         // Engagement
@@ -183,6 +142,8 @@ class App extends Component {
     this.changePage = this.changePage.bind(this);
     this.changeRadioSelection = this.changeRadioSelection.bind(this);
     this.changeTextarea = this.changeTextarea.bind(this);
+    this.handleSelection = this.handleSelection.bind(this);
+    this.handleText = this.handleText.bind(this);
   }
 
   // clicking a radio button will update the corresponding data in state.
@@ -208,7 +169,23 @@ class App extends Component {
       }
     }));
   }
-  
+
+  // Update the values in state when clicking on a radio button.
+  handleSelection(event) {
+    let fieldId = event.target.name.match(/_Qf(.*?)(?=_C)/);
+    fieldId = fieldId[1].replace(/__/g, '_');
+    let targetId = event.target.id;
+    let targetValue = event.target.checked === false ? 999 : Number(targetId[targetId.length -1]) + 1;
+    this.changeRadioSelection(fieldId, targetValue);
+  }
+
+  handleText(event) {
+    let fieldId = event.target.name.match(/_Qf(.*)/);
+    fieldId = fieldId[1].replace(/__/g, '_');
+    let targetText = event.target.value;
+    this.changeTextarea(fieldId, targetText);
+  }
+
   moveContent(target, destination) {
     target.parentNode.removeChild(target);
     destination.appendChild(target);
@@ -229,15 +206,15 @@ class App extends Component {
     let textSlots = document.querySelectorAll(".text" + page);
     if (textFields.length === textSlots.length) {
       for (let j = 0; j < textFields.length; j++) {
-        textFields[j].parentNode.removeChild(textFields[j]);
-        textSlot.appendChild(textFields[j]);
+        textFields[j].parentNode.parentNode.removeChild(textFields[j].parentNode);
+        textSlots[j].appendChild(textFields[j].parentNode);
       }
     } else {
       console.log(page + ' Text Questions and field IDs do not match!')
     }
   }
 
-  unmountContent ( page ) {
+  unmountContent ( page ) { // Clean up the content before component is unmounted
     let radios = document.querySelectorAll(".radios" + page + " .mrQuestionTable");
     let radioSlot = document.querySelector("div[name='" + page + "']");
     for (let i = 0; i < radios.length; i++) {
@@ -247,12 +224,20 @@ class App extends Component {
     let textFields = document.querySelectorAll(".text" + page + " .mrEdit");
     let textSlot = document.querySelector("div[name='" + page + "']");
     for (let j = 0; j < textFields.length; j++) {
-      textFields[j].parentNode.removeChild(textFields[j]);
-      textSlot.appendChild(textFields[j]);
+      textFields[j].parentNode.parentNode.removeChild(textFields[j].parentNode);
+      textSlot.appendChild(textFields[j].parentNode);
     }
   }
 
   componentDidMount() {
+
+    Array.from(document.querySelectorAll('.mrQuestionTable input[type="radio"]')).forEach(item => {
+      item.addEventListener('click', this.handleSelection);
+    })
+    Array.from(document.querySelectorAll(".trulyGreatText .mrEdit")).forEach(item => {
+      item.addEventListener('change', this.handleText);
+    });
+
     // Prepare the data for POST request
     let formData = {
       'I.Engine': 'engine2',
@@ -291,7 +276,10 @@ class App extends Component {
 
 
   render() {
-
+    const commonProps = {
+      mountContent: this.mountContent,
+      unmountContent: this.unmountContent
+    }
     let page = null;
     switch ( this.state.currentPage ) {
       case ( 'Instructions' ):
@@ -301,19 +289,19 @@ class App extends Component {
         page = <Definitions />;
         break;
       case ( 'Engagement' ):
-        page = <Engagement onSelect={this.changeRadioSelection} mountContent={this.mountContent} unmountContent={this.unmountContent} />;
+        page = <Engagement {...commonProps} />;
         break;
       case ( 'Truly Great Place to Work' ):
-        page = <TrulyGreatPlaceToWork onSelect={this.changeRadioSelection} onType={this.changeTextarea} moveContent={this.moveContent} />;
+        page = <TrulyGreatPlaceToWork {...commonProps} />;
         break;
       case ( 'Net Promoter Score' ):
-        page = <NPS onSelect={this.changeRadioSelection} onType={this.changeTextarea} moveContent={this.moveContent} />;
+        page = <NPS {...commonProps} />;
         break;
       case ( 'Expectations' ):
-        page = <Expectations data={this.state.data} onSelect={this.changeRadioSelection} moveContent={this.moveContent} />;
+        page = <Expectations {...commonProps} />;
         break;
       case ( 'Personal Well-Being' ):
-        page = <PersonalWellBeing data={this.state.data} onSelect={this.changeRadioSelection} onType={this.changeTextarea} moveContent={this.moveContent} />;
+        page = <PersonalWellBeing {...commonProps} />;
         break;
       default:
         page = null;
@@ -321,7 +309,7 @@ class App extends Component {
 
     return (
       <div>
-        { this.state.currentPage==='Cover Page' ? null : <Header title={this.state.currentPage} moveContent={this.moveContent} onPageChange={this.changePage} />}
+        { this.state.currentPage==='Cover Page' ? null : <Header title={this.state.currentPage} onPageChange={this.changePage} />}
         <div className="contentContainer">
           {page}
         </div>

@@ -1,30 +1,9 @@
 import React, { Component } from "react";
 
 class Engagement extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-
-    }
-    this.handleSelection = this.handleSelection.bind(this);
-  }
-
-  // Update the values in state when clicking on a radio button.
-  handleSelection(event) {
-    let fieldId = event.target.name.match(/_Qf(.*?)(?=_C)/);
-    fieldId = fieldId[1].replace(/__/g, '_');
-    let targetId = event.target.id;
-    let targetValue = event.target.checked === false ? 999 : Number(targetId[targetId.length -1]) + 1;
-    this.props.onSelect(fieldId, targetValue);
-  }
 
   componentDidMount() {
     this.props.mountContent('Engagement');
-    // Update the values in state when clicking on a radio button.
-    Array.from(document.querySelectorAll('.mrQuestionTable input[type="radio"]')).forEach(item => {
-      item.addEventListener('click', this.handleSelection);
-    })
   }
 
   componentWillUnmount() { //before unmount component, return the radio buttons to where they belong

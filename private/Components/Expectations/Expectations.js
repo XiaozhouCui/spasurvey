@@ -1,62 +1,13 @@
 import React, { Component } from 'react'
 
 class Expectations extends Component {
-  constructor(props) {
-    super(props)
 
-    this.state = {
-         
-    }
-    this.handleSelection = this.handleSelection.bind(this);
-  }
-
-  // Update the values in state when clicking on a radio button.
-  handleSelection(event) {
-    let fieldId = event.target.name.match(/_Qf(.*?)(?=_C)/);
-    fieldId = fieldId[1].replace(/__/g, '_');
-    let targetId = event.target.id;
-    let targetValue = event.target.checked === false ? 999 : Number(targetId[targetId.length -1]) + 1;
-    this.props.onSelect(fieldId, targetValue);
-  }
-
-  
   componentDidMount() {
-    let radios = document.querySelectorAll("div[name='Expectations'] .mrQuestionTable");
-    let radioSlots = document.querySelectorAll(".expectationsRadios");
-    if (radios.length === radioSlots.length) {
-      for (let i = 0; i < radios.length; i++) {
-        this.props.moveContent(radios[i], radioSlots[i]);
-      }
-    } else {
-      console.log('Expectations Radio Questions and field IDs do not match!')
-    }
-    // Update the values in state when clicking on a radio button.
-    Array.from(document.querySelectorAll('.mrQuestionTable input[type="radio"]')).forEach(item => {
-      item.addEventListener('click', this.handleSelection);
-    });
-
-    let textFields = document.querySelectorAll("div[name='Expectations'] .mrEdit");
-    let textSlots = document.querySelectorAll(".expectationsText");
-    if (textFields.length === textSlots.length) {
-      for (let i = 0; i < textFields.length; i++) {
-        this.props.moveContent(textFields[i], textSlots[i]);
-      }
-    } else {
-      console.log('Expectations Text Questions and field IDs do not match!')
-    }
+    this.props.mountContent('Expectations');
   }
 
   componentWillUnmount() { //before unmount component, return the radio buttons to where they belong
-    let radios = document.querySelectorAll(".expectationsRadios .mrQuestionTable");
-    let radioSlot = document.querySelector("div[name='Expectations']");
-    for (let i = 0; i < radios.length; i++) {
-      this.props.moveContent(radios[i], radioSlot);
-    }
-    let textFields = document.querySelectorAll(".expectationsText .mrEdit");
-    let textSlot = document.querySelector("div[name='Expectations']");
-    for (let i = 0; i < textFields.length; i++) {
-      this.props.moveContent(textFields[i], textSlot);
-    }
+    this.props.unmountContent('Expectations');
   }
 
   render() {
@@ -94,31 +45,31 @@ class Expectations extends Component {
               <tr className="row satisfied-expectation">
                 <td className="question_response -text">
                   <div className="message-text"></div>
-                  <div className="expectationsText"></div>
+                  <div className="textExpectations"></div>
                 </td>
                 <td className="question_response">
                   <div className="message-radio"></div>
-                  <div className="expectationsRadios"></div>
+                  <div className="radiosExpectations"></div>
                 </td>
               </tr>
               <tr className="row satisfied-expectation">
                 <td className="question_response -text">
                   <div className="message-text"></div>
-                  <div className="expectationsText"></div>
+                  <div className="textExpectations"></div>
                 </td>
                 <td className="question_response">
                   <div className="message-radio"></div>
-                  <div className="expectationsRadios"></div>
+                  <div className="radiosExpectations"></div>
                 </td>
               </tr>
               <tr className="row satisfied-expectation">
                 <td className="question_response -text">
                   <div className="message-text"></div>
-                  <div className="expectationsText"></div>
+                  <div className="textExpectations"></div>
                 </td>
                 <td className="question_response">
                   <div className="message-radio"></div>
-                  <div className="expectationsRadios"></div>
+                  <div className="radiosExpectations"></div>
                 </td>
               </tr>
             </tbody>
@@ -137,79 +88,79 @@ class Expectations extends Component {
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... Adequate flexibility in the hours/shifts you work.</td>
                 <td className="question_response row">
-                  <div className="expectationsRadios"></div>
+                  <div className="radiosExpectations"></div>
                 </td>
               </tr>
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... Workloads that are fair and equitable.</td>
                 <td className="question_response row">
-                  <div className="expectationsRadios"></div>
+                  <div className="radiosExpectations"></div>
                 </td>
               </tr>
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... A fair day's pay for a fair day's work.</td>
                 <td className="question_response row">
-                  <div className="expectationsRadios"></div>
+                  <div className="radiosExpectations"></div>
                 </td>
               </tr>
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... Appropriate remuneration for the responsibilities you have.</td>
                 <td className="question_response row">
-                  <div className="expectationsRadios"></div>
+                  <div className="radiosExpectations"></div>
                 </td>
               </tr>
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... The organisation provides … Recognition of my achievements.</td>
                 <td className="question_response row">
-                  <div className="expectationsRadios"></div>
+                  <div className="radiosExpectations"></div>
                 </td>
               </tr>
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... The organisation provides … A friendly work environment.</td>
                 <td className="question_response row">
-                  <div className="expectationsRadios"></div>
+                  <div className="radiosExpectations"></div>
                 </td>
               </tr>
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... The organisation provides … Good career opportunities.</td>
                 <td className="question_response row">
-                  <div className="expectationsRadios"></div>
+                  <div className="radiosExpectations"></div>
                 </td>
               </tr>
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... The organisation provides … Opportunities for personal/professional development.</td>
                 <td className="question_response row">
-                  <div className="expectationsRadios"></div>
+                  <div className="radiosExpectations"></div>
                 </td>
               </tr>
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... The organisation provides … Clear communication about things that affect me.</td>
                 <td className="question_response row">
-                  <div className="expectationsRadios"></div>
+                  <div className="radiosExpectations"></div>
                 </td>
               </tr>
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... The organisation provides … The support I need to get the work done.</td>
                 <td className="question_response row">
-                  <div className="expectationsRadios"></div>
+                  <div className="radiosExpectations"></div>
                 </td>
               </tr>
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... The organisation provides … Good physical conditions of employment.</td>
                 <td className="question_response row">
-                  <div className="expectationsRadios"></div>
+                  <div className="radiosExpectations"></div>
                 </td>
               </tr>
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... A safe working environment for you.</td>
                 <td className="question_response row">
-                  <div className="expectationsRadios"></div>
+                  <div className="radiosExpectations"></div>
                 </td>
               </tr>
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... The organisation provides … Secure employment.</td>
                 <td className="question_response row">
-                  <div className="expectationsRadios"></div>
+                  <div className="radiosExpectations"></div>
                 </td>
               </tr>
             </tbody>
@@ -222,13 +173,13 @@ class Expectations extends Component {
             <tbody>
               <tr>
                 <td>
-                  <div className="expectationsText"></div>
+                  <div className="textExpectations"></div>
                 </td>
                 <td>
-                  <div className="expectationsText"></div>
+                  <div className="textExpectations"></div>
                 </td>
                 <td>
-                  <div className="expectationsText"></div>
+                  <div className="textExpectations"></div>
                 </td>
               </tr>
             </tbody>

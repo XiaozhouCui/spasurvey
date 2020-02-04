@@ -13,7 +13,8 @@ class Header extends Component {
     let logoSlot = document.querySelectorAll(".clientLogoSlot");
     if (logoImg.length === logoSlot.length) {
       for (let i = 0; i < logoImg.length; i++) {
-        this.props.moveContent(logoImg[i], logoSlot[i]);
+        logoImg[i].parentNode.removeChild(logoImg[i]);
+        logoSlot[i].appendChild(logoImg[i]);
       }
     }
   }
