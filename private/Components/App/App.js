@@ -22,50 +22,6 @@ class App extends Component {
       session: this.props.session,
       workUnit: this.props.workunit,
       currentPage: 'Engagement',
-      modules: [
-        'Engagement',
-        'Expectations',
-        'Personal Well-Being',
-        'Work-Life Integration',
-        'Truly Great Place to Work',
-        'Net Promoter Score',
-        'Attraction & Retention',
-        'Inclusion@Work',
-        'Driving the Future',
-        'Strategic Direction',
-        'Strategic Direction Involving a Merger',
-        'Statistical Groupings',
-        'Acknowledgement of Diversity',
-        'Standards of Behaviour',
-        'Team Norms',
-        'Values-In-Action',
-        'The Do’s and Don’ts',
-        'Advice on Living the Values',
-        'Respect@Work',
-        'Causes for Concern',
-        'Safety@Work',
-        'Workplace Safety Culture',
-        'Harassment and Bullying',
-        'Occupational Violence',
-        'Leadership Essentials',
-        'Leadership Strengths',
-        'Leadership Priorities',
-        'Leadership Behaviours',
-        'Message in a Bottle',
-        'Message in a Bottle to Designated Managers',
-        'The Issues That Matter',
-        'Organisational Initiatives',
-        'Embracing Our Challenges',
-        'Change Momentum',
-        'How Are We Travelling',
-        'Your Advice',
-        'Client Expectations',
-        'Risk of Client Abuse',
-        'Client Safety Culture',
-        'Statement on Intellectual Property',
-        'Statement on Privacy'
-      ],
-
       data: {
         // Engagement
         "01183_Optimism01": 999,
@@ -191,6 +147,7 @@ class App extends Component {
     destination.appendChild(target);
   }
 
+  // Move Dimension-rendered form inputs into React-rendered questions after the component is mounted
   mountContent ( page ) {
     let radios = document.querySelectorAll("div[name='" + page + "'] .mrQuestionTable");
     let radioSlots = document.querySelectorAll(".radios" + page);
@@ -214,7 +171,8 @@ class App extends Component {
     }
   }
 
-  unmountContent ( page ) { // Clean up the content before component is unmounted
+  // Clean up the content before the component is unmounted
+  unmountContent ( page ) {
     let radios = document.querySelectorAll(".radios" + page + " .mrQuestionTable");
     let radioSlot = document.querySelector("div[name='" + page + "']");
     for (let i = 0; i < radios.length; i++) {
@@ -234,7 +192,7 @@ class App extends Component {
     Array.from(document.querySelectorAll('.mrQuestionTable input[type="radio"]')).forEach(item => {
       item.addEventListener('click', this.handleSelection);
     })
-    Array.from(document.querySelectorAll(".trulyGreatText .mrEdit")).forEach(item => {
+    Array.from(document.querySelectorAll(".mrEdit")).forEach(item => {
       item.addEventListener('change', this.handleText);
     });
 
@@ -313,7 +271,7 @@ class App extends Component {
         <div className="contentContainer">
           {page}
         </div>
-        <SurveyNav moveContent={this.moveContent} />
+        <SurveyNav page={this.state.currentPage} />
         <Footer moveContent={this.moveContent} />
       </div>
     );

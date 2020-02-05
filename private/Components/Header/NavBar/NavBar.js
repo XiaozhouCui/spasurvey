@@ -7,7 +7,7 @@ class NavBar extends Component {
   }
 
   handlePageChange(event) {
-    let pageName = event.target.innerHTML;
+    let pageName = event.target.innerText;
     // console.log(pageName);
     this.props.onClick(pageName);
   }

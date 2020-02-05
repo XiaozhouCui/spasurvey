@@ -42,6 +42,7 @@
     text-align: center;
     line-height: 22px;
     background-color: #459FE2;
+    transition: ease 0.5s;
 
     @include border-radius-simple(4px);
 }

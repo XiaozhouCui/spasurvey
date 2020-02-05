@@ -450,14 +450,14 @@ document.title = "eSurvey - Best Practice Australia | " + orgn_name;
 /**
  * Automatic progress bar calculation
  */
-(function() {
-	var estimated_progress_calculation = $('.pageInfoElement span:first-child').text()
-	var estimated_progress = Math.round(eval(estimated_progress_calculation) * 100)
-	var progress_bar = $('#progressBar')
-	var progress_bar_width = (estimated_progress / 100) * progress_bar.width()
-	progress_bar.children().first().animate({ width: progress_bar_width }, 500).html(estimated_progress + '%')
-	$(".label").html(estimated_progress + "%" + " completed");
-})();
+// (function() {
+// 	var estimated_progress_calculation = $('.pageInfoElement span:first-child').text()
+// 	var estimated_progress = Math.round(eval(estimated_progress_calculation) * 100)
+// 	var progress_bar = $('#progressBar')
+// 	var progress_bar_width = (estimated_progress / 100) * progress_bar.width()
+// 	progress_bar.children().first().animate({ width: progress_bar_width }, 500).html(estimated_progress + '%')
+// 	$(".label").html(estimated_progress + "%" + " completed");
+// })();
 
 
 /**
