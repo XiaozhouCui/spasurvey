@@ -31,18 +31,6 @@ Survey:
   Survey.Ask()
   '--- End of page Survey ---
 
-AttractionRetention:
-  '--- Start of page AttractionRetention ---
-  AttractionRetention.LayoutTemplate = "AttractionRetention.html"
-  AttractionRetention.Ask()
-  '--- End of page AttractionRetention ---
-
-DrivingTheFuture:
-  '--- Start of page DrivingTheFuture ---
-  DrivingTheFuture.LayoutTemplate = "DrivingTheFuture.html"
-  DrivingTheFuture.Ask()
-  '--- End of page DrivingTheFuture ---
-
 ValuesInAction:
   '--- Start of page ValuesInAction ---
   ValuesInAction.LayoutTemplate = "ValuesInAction.html"

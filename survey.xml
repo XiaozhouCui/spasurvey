@@ -11,8 +11,8 @@
   
   <coverpage />
 
-  <!--Engaging Our People-->
   <page title="Survey">
+    <!-- Engagement -->
     <question class="categorical:Scale1to6Positive" id="01183_Optimism01">People are very optimistic about the organisation’s future.</question>
     <question class="categorical:Scale1to6Positive" id="01184_Optimism02">There is high trust in Executive Management.</question>
     <question class="categorical:Scale1to6Positive" id="01194_Optimism02b">There is high trust in Middle Management.</question>
@@ -23,13 +23,7 @@
     <question class="categorical:Scale1to6Positive" id="01189_Optimism07">People want to improve the way things work in the organisation.</question>
     <question class="categorical:Scale1to6Positive" id="01190_Optimism08">There is a climate of ‘Trust and Respect’ throughout the organisation.</question>
     <question class="categorical:Scale1to6Positive" id="01191_Optimism13">People are proud of the successes and achievements of the organisation.</question>
-    <question class="categorical:YesNo" id="01180_TrulyGreat">On balance, is your organisation a “truly great place to work”?</question>
-    <question class="text:500" id="01181_WhyYes">If YES, what makes it a “truly great place to work”?</question>
-    <question class="text:500" id="01182_WhyNo">If NO, what is stopping it from becoming a “truly great place to work”?</question>
-    <question class="categorical:Scale0to10" id="21833_NPSWork">... a good place to work</question>
-    <question class="text:500" id="21925_NPSWorkReason">Why did you give this score?</question>
-    <question class="categorical:Scale0to10" id="21834_NPSService">... the best choice if they required the type of service we provide</question>
-    <question class="text:500" id="21926_NPSServiceReason">Why did you give this score?</question>
+    <!-- Expectations -->
     <question class="text:250" id="00546_ExpectationOrgn01">What are the 3 most important things that you expect from the organisation?</question>
     <question class="text:250" id="00547_ExpectationOrgn02">What are the 3 most important things that you expect from the organisation?</question>
     <question class="text:250" id="00548_ExpectationOrgn03">What are the 3 most important things that you expect from the organisation?</question>
@@ -77,14 +71,47 @@
     <question class="categorical:Scale1to6Agree" id="21711_WorkEnergizing">... Energising.</question>
     <question class="categorical:Scale1to6Agree" id="37332_WorkProudOf">... Something I am proud of.</question>
     <question class="text:250" id="37815_ProudOfPersonal">What is one thing that you have done well at work during the last 12 months that you are especially proud of?</question>
-  </page>
-  <page title="Attraction &amp; Retention">
+    <!-- Work-Life Integration -->
+    <question class="categorical:YesNo" id="00638_BalanceYesNo">Is it DIFFICULT to maintain a balance between the demands of your working life and the demands of your personal life?</question>
+    <question class="text:250" id="00639_BalanceEasier01">... make balancing work/home EASIER?</question>
+    <question class="text:250" id="00642_BalanceHarder01">... make balancing work/home MORE DIFFICULT?</question>
+    <question class="categorical:YesNo" id="00704_FlexPrac">Are you able to access flexible work practices in your workplace?</question>
+    <question class="categorical:Scale1to6Agree" id="00700_RatingWorkHome01">My manager is aware of and accommodates work/life balance issues.</question>
+    <question class="categorical:Scale1to6Agree" id="00701_RatingWorkHome02">My colleagues are flexible and supportive in helping me attend to work/life balance issues.</question>
+    <question class="categorical:Scale1to6Agree" id="00702_RatingWorkHome03">The organisation actively accommodates the work/life balance needs of employees.</question>
+    <question class="categorical:Scale1to6Agree" id="00703_RatingWorkHome04">Employees are able to access alternative working arrangements to accommodate work/life balance issues</question>
+    <!-- Truly Great -->
+    <question class="categorical:YesNo" id="01180_TrulyGreat">On balance, is your organisation a “truly great place to work”?</question>
+    <question class="text:500" id="01181_WhyYes">If YES, what makes it a “truly great place to work”?</question>
+    <question class="text:500" id="01182_WhyNo">If NO, what is stopping it from becoming a “truly great place to work”?</question>
+    <!-- NPS -->
+    <question class="categorical:Scale0to10" id="21833_NPSWork">... a good place to work</question>
+    <question class="text:500" id="21925_NPSWorkReason">Why did you give this score?</question>
+    <question class="categorical:Scale0to10" id="21834_NPSService">... the best choice if they required the type of service we provide</question>
+    <question class="text:500" id="21926_NPSServiceReason">Why did you give this score?</question>
+    <!-- Attraction &amp; Retention -->
     <question class="text:250" id="00618_Attraction01">What initially attracted you to work in this organisation?</question>
     <question class="text:250" id="00621_Retention01">Why do you continue to work here?</question>
     <question class="categorical:YesNo" id="00666_IntentionToLeave">Have you formed a specific intention to leave the organisation?</question>
     <question class="text:250" id="00667_IntentionToLeaveReason">What was the deciding factor in your decision to leave the organisation?</question>
-  </page>
-  <page title="Driving The Future">
+    <!-- Inclusion@Work -->
+    <question class="categorical:Scale1to6Agree" id="37588_InclusiveRealAction">The organisation is committed to real action on Diversity and Inclusion.</question>
+    <question class="categorical:Scale1to6AgreeNA" id="14773_InclusiveEquityCulture">... Their cultural and/or linguistic background.</question>
+    <question class="categorical:Scale1to6AgreeNA" id="14768_InclusiveEquityGender">... Their gender.</question>
+    <question class="categorical:Scale1to6AgreeNA" id="14772_InclusiveEquitySexual">... Their sexuality.</question>
+    <question class="categorical:Scale1to6AgreeNA" id="37791_InclusiveEquityAge">... Their age.</question>
+    <question class="categorical:Scale1to6AgreeNA" id="37790_InclusiveEquityFaith">... Their faith or religion.</question>
+    <question class="categorical:Scale1to6AgreeNA" id="37789_InclusiveEquityATSI">... Identifying as an Aboriginal and/or Torres Strait Islander person.</question>
+    <question class="categorical:Scale1to6AgreeNA" id="37788_InclusiveEquityDisability">... Identifying as a person with disability.</question>
+    <question class="categorical:Scale1to6Agree" id="10854_InclusiveCultural01">The organisation is a culturally inclusive employer.</question>
+    <question class="categorical:Scale1to6Agree" id="10856_InclusiveCultural03">In my workplace, other employees would be accepting and supportive of any employee who identified themselves as being an Aboriginal or Torres Strait Islander person.</question>
+    <question class="categorical:Scale1to6Agree" id="11438_InclusiveCultural05">In my workplace, other employees would be accepting and supportive of any employee who identified themselves as being of Non-English speaking heritage/background.</question>
+    <question class="categorical:Scale1to6Agree" id="37589_InclusiveCultural06">The organisation provides a culturally safe workplace for staff of diverse cultural backgrounds.</question>
+    <question class="categorical:Scale1to6Agree" id="22291_GenderEquality01">My immediate supervisor/manager genuinely supports equality between women and men.</question>
+    <question class="categorical:Scale1to6Agree" id="22292_GenderEquality02">I have the flexibility I need to manage my work and my family or caring responsibilities.</question>
+    <question class="categorical:Scale1to6Agree" id="22293_GenderEquality03">In my organisation sex-based harassment is not tolerated.</question>
+    <question class="categorical:Scale1to6Agree" id="14770_InclusiveWomenEEO">In my organisation, women are provided with equal opportunity to work in management positions.</question>
+    <!-- Driving The Future -->
     <question class="categorical:Scale1to6Agree" id="36910_DrivingFuture01">Has a strong, clear sense of vision and future direction.</question>
     <question class="categorical:Scale1to6Agree" id="36911_DrivingFuture02">Is innovative, progressive, pro-active and dynamic.</question>
     <question class="categorical:Scale1to6Agree" id="36913_DrivingFuture03">Is focused on performance, results, and achieving its goals.</question>
@@ -96,9 +123,11 @@
     <question class="categorical:Scale1to6Agree" id="36919_DrivingFuture09">Has people who are competent and knowledgeable with good skill levels.</question>
     <question class="categorical:Scale1to6Agree" id="36920_DrivingFuture10">Is very effective at creating strong partnerships with other groups and organisations.</question>
     <question class="categorical:Scale1to6Agree" id="36921_DrivingFuture11">Has appropriate and effective internal processes, systems and procedures.</question>
+    <question class="categorical:Scale1to6Agree" id="37565_DrivingFuture19">Has strong, effective collaboration across teams within the organisation.</question>
     <question class="categorical:Scale1to6Agree" id="36922_DrivingFuture12">Has a supportive internal environment.</question>
     <question class="categorical:Scale1to6Agree" id="36923_DrivingFuture13">Provides effective support services to its client-base.</question>
     <question class="categorical:Scale1to6Agree" id="36924_DrivingFuture14">Has an environment where staff feel valued, encouraged and appreciated.</question>
+    <question class="text:250" id="37816_ProudOfOrg">What is one thing that your organisation does well that you are especially proud of?</question>
   </page>
   <page title="Values-In-Action">
     <question class="categorical:Scale1to6Agree" id="06085_ValueExec01">My organisation’s Executive Management put this value into practice.</question>

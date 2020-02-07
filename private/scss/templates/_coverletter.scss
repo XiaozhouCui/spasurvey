@@ -7,66 +7,69 @@
  */
 
 .coverpage {
-	.header {
-		height: auto;
 
-		.cover_logo {
-			display: block;
-			// margin-top: 50px;
-			text-align: center;
-			line-height: 0; // Fix weird white space bug
+  .cover_logo {
+    display: block;
+    // margin-top: 50px;
+    text-align: center;
+    line-height: 0; // Fix weird white space bug
 
-			img {
-				max-width: 100%;
-				min-height: 150px;
-			}
-		}
-	}
-
-	.container .content {
-		// padding-top: 0;
-		// margin-top: 0;
-
-		.cover_letter {
-			width: 90%;
-			margin-right: 5%;
-			margin-left: 5%;
-			font-size: 14px;
-			text-align: justify;
-		
-			h1, h2 {
-				text-align: center;
-				font-size: 2.5em;
-				margin-bottom: 40px;
-			}
-		
-			.cover_letter__title{
-				text-align: center;
-			}
-		
-			.cover_letter__signature{
-				margin-top: 60px;
-			}
-		
-			.cover_letter__banner{
-				img{
-					width: 100%;
-				}
-			}
-		}
-	}
+    img {
+      max-width: 100%;
+      min-height: 150px;
+    }
+  }
+  .cover_letter {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    font-size: 14px;
+    text-align: justify;
+  
+    h1, h2 {
+      text-align: center;
+      font-size: 3em;
+      margin-bottom: 40px;
+    }
+  
+    .cover_letter__title{
+      text-align: center;
+    }
+  
+    .cover_letter__signature{
+      margin-top: 60px;
+    }
+    
+    .cover_letter__banner{
+      img{
+        width: 100%;
+      }
+    }
+    .cover_letter__logo {
+      
+      position: relative;
+      width: 100%;
+      min-height: 100px;
+      img {
+        position: absolute;
+        right: 20px;
+        top: 50px;
+        transform: scale(1.2);
+      }
+    }
+  }
 }
 
 /* Print Layout */
 @media print {
-	.coverpage {
-		.footer {
-			display: none;
-		}
-		.footerBpanz {
-			position: absolute;
-			bottom: 25px;
-			right: 0px;
-		}
-	}
+  .coverpage {
+    .footer {
+      display: none;
+    }
+    .footerBpanz {
+      position: absolute;
+      bottom: 25px;
+      right: 0px;
+    }
+  }
 }

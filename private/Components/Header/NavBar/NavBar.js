@@ -15,6 +15,11 @@ class NavBar extends Component {
   render() {
 
     const modules = {
+      'Cover': {
+        CoverPage: 'Cover Page',
+        Instructions: 'Instructions',
+        Definitions: 'Definitions'
+      },
       'Engaging Our People': {
         Engagement: 'Engagement',
         Expectations: 'Expectations',
@@ -74,7 +79,6 @@ class NavBar extends Component {
 
     return (
       <ul className="navBar">
-        <li><a href="#">Cover</a></li>
         {Object.keys(modules).map( program => {
           return (
             <li key={program} className="dropdown">

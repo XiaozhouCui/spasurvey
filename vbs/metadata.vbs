@@ -20,6 +20,17 @@ Metadata(en-AU, Question, Label)
     _999 - [ Value = "999" ] NA
   };
 
+  Scale1to6Agree - define
+  { 
+    _1 - [ Value = "1" ],
+    _2 - [ Value = "2" ],
+    _3 - [ Value = "3" ],
+    _4 - [ Value = "4" ],
+    _5 - [ Value = "5" ],
+    _6 - [ Value = "6" ],
+    _999 - [ Value = "999" ] NA
+  };
+
   YesNo - define
   { 
     _1  "Yes" [ Value = "1" ],
@@ -43,7 +54,7 @@ Metadata(en-AU, Question, Label)
     _999 - [ Value = "999" ] NA
   };
 
-  Scale1to6Agree - define
+  Scale1to6AgreeNA - define
   { 
     _1 - [ Value = "1" ],
     _2 - [ Value = "2" ],
@@ -51,6 +62,7 @@ Metadata(en-AU, Question, Label)
     _4 - [ Value = "4" ],
     _5 - [ Value = "5" ],
     _6 - [ Value = "6" ],
+    _7 - [ Value = "7" ],
     _999 - [ Value = "999" ] NA
   };
 
@@ -196,13 +208,6 @@ Metadata(en-AU, Question, Label)
   f01189_Optimism07 -  categorical [..1] { use Scale1to6Positive sublist };
   f01190_Optimism08 -  categorical [..1] { use Scale1to6Positive sublist };
   f01191_Optimism13 -  categorical [..1] { use Scale1to6Positive sublist };
-  f01180_TrulyGreat -  categorical [..1] { use YesNo sublist };
-  f01181_WhyYes - text [..500];
-  f01182_WhyNo - text [..500];
-  f21833_NPSWork - style(Orientation = "Row", Rows = "1") categorical [..1] { use Scale0to10 sublist };
-  f21925_NPSWorkReason - text [..500];
-  f21834_NPSService - style(Orientation = "Row", Rows = "1") categorical [..1] { use Scale0to10 sublist };
-  f21926_NPSServiceReason - text [..500];
   f00546_ExpectationOrgn01 - text [..250];
   f00547_ExpectationOrgn02 - text [..250];
   f00548_ExpectationOrgn03 - text [..250];
@@ -249,20 +254,41 @@ Metadata(en-AU, Question, Label)
   f21711_WorkEnergizing -  categorical [..1] { use Scale1to6Agree sublist };
   f37332_WorkProudOf -  categorical [..1] { use Scale1to6Agree sublist };
   f37815_ProudOfPersonal - text [..250];
-
-  '''''''''''''''''''' End_Survey ''''''''''''''''''''
-
-  '''''''''''''''''''' Begin_AttractionRetention ''''''''''''''''''''
-  
+  f00638_BalanceYesNo -  categorical [..1] { use YesNo sublist };
+  f00639_BalanceEasier01 - text [..250];
+  f00642_BalanceHarder01 - text [..250];
+  f00704_FlexPrac -  categorical [..1] { use YesNo sublist };
+  f00700_RatingWorkHome01 -  categorical [..1] { use Scale1to6Agree sublist };
+  f00701_RatingWorkHome02 -  categorical [..1] { use Scale1to6Agree sublist };
+  f00702_RatingWorkHome03 -  categorical [..1] { use Scale1to6Agree sublist };
+  f00703_RatingWorkHome04 -  categorical [..1] { use Scale1to6Agree sublist };
+  f01180_TrulyGreat -  categorical [..1] { use YesNo sublist };
+  f01181_WhyYes - text [..500];
+  f01182_WhyNo - text [..500];
+  f21833_NPSWork - style(Orientation = "Row", Rows = "1") categorical [..1] { use Scale0to10 sublist };
+  f21925_NPSWorkReason - text [..500];
+  f21834_NPSService - style(Orientation = "Row", Rows = "1") categorical [..1] { use Scale0to10 sublist };
+  f21926_NPSServiceReason - text [..500];
   f00618_Attraction01 - text [..250];
   f00621_Retention01 - text [..250];
   f00666_IntentionToLeave -  categorical [..1] { use YesNo sublist };
   f00667_IntentionToLeaveReason - text [..250];
-
-  '''''''''''''''''''' End_AttractionRetention ''''''''''''''''''''
-
-  '''''''''''''''''''' Begin_DrivingTheFuture ''''''''''''''''''''
-  
+  f37588_InclusiveRealAction -  categorical [..1] { use Scale1to6Agree sublist };
+  f14773_InclusiveEquityCulture -  categorical [..1] { use Scale1to6AgreeNA sublist };
+  f14768_InclusiveEquityGender -  categorical [..1] { use Scale1to6AgreeNA sublist };
+  f14772_InclusiveEquitySexual -  categorical [..1] { use Scale1to6AgreeNA sublist };
+  f37791_InclusiveEquityAge -  categorical [..1] { use Scale1to6AgreeNA sublist };
+  f37790_InclusiveEquityFaith -  categorical [..1] { use Scale1to6AgreeNA sublist };
+  f37789_InclusiveEquityATSI -  categorical [..1] { use Scale1to6AgreeNA sublist };
+  f37788_InclusiveEquityDisability -  categorical [..1] { use Scale1to6AgreeNA sublist };
+  f10854_InclusiveCultural01 -  categorical [..1] { use Scale1to6Agree sublist };
+  f10856_InclusiveCultural03 -  categorical [..1] { use Scale1to6Agree sublist };
+  f11438_InclusiveCultural05 -  categorical [..1] { use Scale1to6Agree sublist };
+  f37589_InclusiveCultural06 -  categorical [..1] { use Scale1to6Agree sublist };
+  f22291_GenderEquality01 -  categorical [..1] { use Scale1to6Agree sublist };
+  f22292_GenderEquality02 -  categorical [..1] { use Scale1to6Agree sublist };
+  f22293_GenderEquality03 -  categorical [..1] { use Scale1to6Agree sublist };
+  f14770_InclusiveWomenEEO -  categorical [..1] { use Scale1to6Agree sublist };
   f36910_DrivingFuture01 -  categorical [..1] { use Scale1to6Agree sublist };
   f36911_DrivingFuture02 -  categorical [..1] { use Scale1to6Agree sublist };
   f36913_DrivingFuture03 -  categorical [..1] { use Scale1to6Agree sublist };
@@ -274,11 +300,13 @@ Metadata(en-AU, Question, Label)
   f36919_DrivingFuture09 -  categorical [..1] { use Scale1to6Agree sublist };
   f36920_DrivingFuture10 -  categorical [..1] { use Scale1to6Agree sublist };
   f36921_DrivingFuture11 -  categorical [..1] { use Scale1to6Agree sublist };
+  f37565_DrivingFuture19 -  categorical [..1] { use Scale1to6Agree sublist };
   f36922_DrivingFuture12 -  categorical [..1] { use Scale1to6Agree sublist };
   f36923_DrivingFuture13 -  categorical [..1] { use Scale1to6Agree sublist };
   f36924_DrivingFuture14 -  categorical [..1] { use Scale1to6Agree sublist };
+  f37816_ProudOfOrg - text [..250];
 
-  '''''''''''''''''''' End_DrivingTheFuture ''''''''''''''''''''
+  '''''''''''''''''''' End_Survey ''''''''''''''''''''
 
   '''''''''''''''''''' Begin_ValuesInAction ''''''''''''''''''''
   
@@ -471,13 +499,6 @@ Metadata(en-AU, Question, Label)
     f01189_Optimism07,
     f01190_Optimism08,
     f01191_Optimism13,
-    f01180_TrulyGreat,
-    f01181_WhyYes,
-    f01182_WhyNo,
-    f21833_NPSWork,
-    f21925_NPSWorkReason,
-    f21834_NPSService,
-    f21926_NPSServiceReason,
     f00546_ExpectationOrgn01,
     f00547_ExpectationOrgn02,
     f00548_ExpectationOrgn03,
@@ -523,21 +544,42 @@ Metadata(en-AU, Question, Label)
     f21715_WorkStimulating,
     f21711_WorkEnergizing,
     f37332_WorkProudOf,
-    f37815_ProudOfPersonal
-    
-  );
-
-  AttractionRetention -
-  page(
+    f37815_ProudOfPersonal,
+    f00638_BalanceYesNo,
+    f00639_BalanceEasier01,
+    f00642_BalanceHarder01,
+    f00704_FlexPrac,
+    f00700_RatingWorkHome01,
+    f00701_RatingWorkHome02,
+    f00702_RatingWorkHome03,
+    f00703_RatingWorkHome04,
+    f01180_TrulyGreat,
+    f01181_WhyYes,
+    f01182_WhyNo,
+    f21833_NPSWork,
+    f21925_NPSWorkReason,
+    f21834_NPSService,
+    f21926_NPSServiceReason,
     f00618_Attraction01,
     f00621_Retention01,
     f00666_IntentionToLeave,
-    f00667_IntentionToLeaveReason
-    
-  );
-
-  DrivingTheFuture -
-  page(
+    f00667_IntentionToLeaveReason,
+    f37588_InclusiveRealAction,
+    f14773_InclusiveEquityCulture,
+    f14768_InclusiveEquityGender,
+    f14772_InclusiveEquitySexual,
+    f37791_InclusiveEquityAge,
+    f37790_InclusiveEquityFaith,
+    f37789_InclusiveEquityATSI,
+    f37788_InclusiveEquityDisability,
+    f10854_InclusiveCultural01,
+    f10856_InclusiveCultural03,
+    f11438_InclusiveCultural05,
+    f37589_InclusiveCultural06,
+    f22291_GenderEquality01,
+    f22292_GenderEquality02,
+    f22293_GenderEquality03,
+    f14770_InclusiveWomenEEO,
     f36910_DrivingFuture01,
     f36911_DrivingFuture02,
     f36913_DrivingFuture03,
@@ -549,9 +591,11 @@ Metadata(en-AU, Question, Label)
     f36919_DrivingFuture09,
     f36920_DrivingFuture10,
     f36921_DrivingFuture11,
+    f37565_DrivingFuture19,
     f36922_DrivingFuture12,
     f36923_DrivingFuture13,
-    f36924_DrivingFuture14
+    f36924_DrivingFuture14,
+    f37816_ProudOfOrg
     
   );
 

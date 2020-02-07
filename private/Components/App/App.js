@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import CoverPage from "../CoverPage/CoverPage";
+import Definitions from "../Definitions/Definitions";
+import Instructions from "../Instructions/Instructions";
 import Engagement from '../Engagement/Engagement';
 import TrulyGreatPlaceToWork from '../TrulyGreatPlaceToWork/TrulyGreatPlaceToWork'
 import NPS from '../NPS/NPS';
 import SurveyNav from '../SurveyNav/SurveyNav';
 import Expectations from "../Expectations/Expectations";
 import PersonalWellBeing from "../PersonalWellBeing/PersonalWellBeing";
-import Definitions from "../Definitions/Definitions";
-import Instructions from "../Instructions/Instructions";
+import WorkLifeIntegration from "../WorkLifeIntegration/WorkLifeIntegration";
 
 
 class App extends Component {
@@ -21,7 +23,53 @@ class App extends Component {
       projectCode: 'TEST_20_ES',
       session: this.props.session,
       workUnit: this.props.workunit,
-      currentPage: 'Engagement',
+      currentPage: 'Cover Page',
+      pages: [
+        'Cover Page',
+        'Instructions',
+        'Definitions',
+        'Engagement',
+        'Expectations',
+        'Personal Well-Being',
+        'Work-Life Integration',
+        'Truly Great Place to Work',
+        'Net Promoter Score',
+        'Attraction & Retention',
+        'Inclusion@Work',
+        'Driving the Future',
+        'Strategic Direction',
+        'Strategic Direction Involving a Merger',
+        'Statistical Groupings',
+        'Acknowledgement of Diversity',
+        'Standards of Behaviour',
+        'Team Norms',
+        'Values-In-Action',
+        'The Do’s and Don’ts',
+        'Advice on Living the Values',
+        'Respect@Work',
+        'Causes for Concern',
+        'Safety@Work',
+        'Workplace Safety Culture',
+        'Harassment and Bullying',
+        'Occupational Violence',
+        'Leadership Essentials',
+        'Leadership Strengths',
+        'Leadership Priorities',
+        'Leadership Behaviours',
+        'Message in a Bottle',
+        'Message in a Bottle to Designated Managers',
+        'The Issues That Matter',
+        'Organisational Initiatives',
+        'Embracing Our Challenges',
+        'Change Momentum',
+        'How Are We Travelling',
+        'Your Advice',
+        'Client Expectations',
+        'Risk of Client Abuse',
+        'Client Safety Culture',
+        'Statement on Intellectual Property',
+        'Statement on Privacy'
+      ],
       data: {
         // Engagement
         "01183_Optimism01": 999,
@@ -95,15 +143,16 @@ class App extends Component {
       },
     }
 
-    this.changePage = this.changePage.bind(this);
+    this.handlePageChange = this.handlePageChange.bind(this);
     this.changeRadioSelection = this.changeRadioSelection.bind(this);
     this.changeTextarea = this.changeTextarea.bind(this);
     this.handleSelection = this.handleSelection.bind(this);
     this.handleText = this.handleText.bind(this);
+    this.handlePageNav = this.handlePageNav.bind(this);
   }
 
   // clicking a radio button will update the corresponding data in state.
-  changePage(page) {
+  handlePageChange(page) {
     this.setState({currentPage: page});
   }
 
@@ -145,6 +194,11 @@ class App extends Component {
   moveContent(target, destination) {
     target.parentNode.removeChild(target);
     destination.appendChild(target);
+  }
+
+  
+  handlePageNav(newPage) {
+    this.setState({currentPage: newPage})
   }
 
   // Move Dimension-rendered form inputs into React-rendered questions after the component is mounted
@@ -201,7 +255,7 @@ class App extends Component {
       'I.Engine': 'engine2',
       'I.Project': this.state.projectCode,
       'I.Session': this.state.session,
-      'I.SavePoint': 'Engagement',
+      'I.SavePoint': 'Survey',
       'I.Renderer': 'HTMLPlayer',
       '_QSurvey_Qf01183__Optimism01_C': '__' + this.state.data['01183_Optimism01'].toString(),
       '_QSurvey_Qf01184__Optimism02_C': '__' + this.state.data['01184_Optimism02'].toString(),
@@ -238,8 +292,12 @@ class App extends Component {
       mountContent: this.mountContent,
       unmountContent: this.unmountContent
     }
+    const isCoverPage = this.state.currentPage === "Cover Page";
     let page = null;
     switch ( this.state.currentPage ) {
+      case ( 'Cover Page' ):
+        page = <CoverPage />;
+        break;
       case ( 'Instructions' ):
         page = <Instructions workunit={this.state.workUnit} />;
         break;
@@ -261,17 +319,21 @@ class App extends Component {
       case ( 'Personal Well-Being' ):
         page = <PersonalWellBeing {...commonProps} />;
         break;
+      case ( 'Work-Life Integration' ):
+        page = <WorkLifeIntegration {...commonProps} />;
+        break;
       default:
         page = null;
     }
 
     return (
       <div>
-        { this.state.currentPage==='Cover Page' ? null : <Header title={this.state.currentPage} onPageChange={this.changePage} />}
-        <div className="contentContainer">
+        { isCoverPage ? null : <Header title={this.state.currentPage} onPageChange={this.handlePageChange} />}
+        <div className="contentContainer" style={isCoverPage ? {padding: 0} : null}>
           {page}
         </div>
-        <SurveyNav page={this.state.currentPage} />
+        <SurveyNav page={this.state.currentPage} pages={this.state.pages} onBrowse={this.handlePageNav} />
+        { isCoverPage ? <div><br/><br/></div> : null}
         <Footer moveContent={this.moveContent} />
       </div>
     );
