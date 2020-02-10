@@ -93,7 +93,15 @@
     <question class="text:250" id="00618_Attraction01">What initially attracted you to work in this organisation?</question>
     <question class="text:250" id="00621_Retention01">Why do you continue to work here?</question>
     <question class="categorical:YesNo" id="00666_IntentionToLeave">Have you formed a specific intention to leave the organisation?</question>
+    <question class="categorical:YesNo" id="00616_LeavingOrgnYesNo">Do you OFTEN think of leaving this organisation?</question>
+    <question class="text:250" id="00624_StayInOrgn01">... to want to STAY working here?</question>
+    <question class="text:250" id="00625_StayInOrgn02">... to want to STAY working here?</question>
+    <question class="text:250" id="00626_StayInOrgn03">... to want to STAY working here?</question>
+    <question class="text:250" id="00627_LeaveOrgn01">... to want to LEAVE the organisation?</question>
+    <question class="text:250" id="00628_LeaveOrgn02">... to want to LEAVE the organisation?</question>
+    <question class="text:250" id="00629_LeaveOrgn03">... to want to LEAVE the organisation?</question>
     <question class="text:250" id="00667_IntentionToLeaveReason">What was the deciding factor in your decision to leave the organisation?</question>
+    <question class="categorical:D0347_Intention" id="D0347_Intention">Overall, how long do you intend to stay working for the organisation in the future?</question>
     <!-- Inclusion@Work -->
     <question class="categorical:Scale1to6Agree" id="37588_InclusiveRealAction">The organisation is committed to real action on Diversity and Inclusion.</question>
     <question class="categorical:Scale1to6AgreeNA" id="14773_InclusiveEquityCulture">... Their cultural and/or linguistic background.</question>

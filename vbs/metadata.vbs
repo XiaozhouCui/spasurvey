@@ -54,6 +54,18 @@ Metadata(en-AU, Question, Label)
     _999 - [ Value = "999" ] NA
   };
 
+  D0347_Intention_list - define
+  { 
+    _1  "< 1 yr" [ Value = "1" ],
+    _2  "1 - 2 yrs" [ Value = "2" ],
+    _3  "3 - 5 yrs" [ Value = "3" ],
+    _4  "6 - 10 yrs " [ Value = "4" ],
+    _5  "> 10 yrs" [ Value = "5" ],
+    _6  "Not sure" [ Value = "6" ],
+    _998  "Prefer not to say" [ Value = "998" ],
+    _999 - [ Value = "999" ] NA
+  };
+
   Scale1to6AgreeNA - define
   { 
     _1 - [ Value = "1" ],
@@ -272,7 +284,15 @@ Metadata(en-AU, Question, Label)
   f00618_Attraction01 - text [..250];
   f00621_Retention01 - text [..250];
   f00666_IntentionToLeave -  categorical [..1] { use YesNo sublist };
+  f00616_LeavingOrgnYesNo -  categorical [..1] { use YesNo sublist };
+  f00624_StayInOrgn01 - text [..250];
+  f00625_StayInOrgn02 - text [..250];
+  f00626_StayInOrgn03 - text [..250];
+  f00627_LeaveOrgn01 - text [..250];
+  f00628_LeaveOrgn02 - text [..250];
+  f00629_LeaveOrgn03 - text [..250];
   f00667_IntentionToLeaveReason - text [..250];
+  D0347_Intention - style(Orientation = "Column", Columns = "3") categorical [..1] { use D0347_Intention_list sublist };
   f37588_InclusiveRealAction -  categorical [..1] { use Scale1to6Agree sublist };
   f14773_InclusiveEquityCulture -  categorical [..1] { use Scale1to6AgreeNA sublist };
   f14768_InclusiveEquityGender -  categorical [..1] { use Scale1to6AgreeNA sublist };
@@ -563,7 +583,15 @@ Metadata(en-AU, Question, Label)
     f00618_Attraction01,
     f00621_Retention01,
     f00666_IntentionToLeave,
+    f00616_LeavingOrgnYesNo,
+    f00624_StayInOrgn01,
+    f00625_StayInOrgn02,
+    f00626_StayInOrgn03,
+    f00627_LeaveOrgn01,
+    f00628_LeaveOrgn02,
+    f00629_LeaveOrgn03,
     f00667_IntentionToLeaveReason,
+    D0347_Intention,
     f37588_InclusiveRealAction,
     f14773_InclusiveEquityCulture,
     f14768_InclusiveEquityGender,
