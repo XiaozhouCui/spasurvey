@@ -136,41 +136,228 @@
     <question class="categorical:Scale1to6Agree" id="36923_DrivingFuture13">Provides effective support services to its client-base.</question>
     <question class="categorical:Scale1to6Agree" id="36924_DrivingFuture14">Has an environment where staff feel valued, encouraged and appreciated.</question>
     <question class="text:250" id="37816_ProudOfOrg">What is one thing that your organisation does well that you are especially proud of?</question>
-  </page>
-  <page title="Values-In-Action">
+    <!-- Strategic Direction -->
+    <question class="text:250" id="21606_ValuesAboveAll">The one thing that this organisation values above everything else, is TO …</question>
+    <question class="categorical:Scale1to6AgreeNA" id="00217_QSD01a">Executive Management has clearly communicated the organisation’s strategic direction and priorities to all employees.</question>
+    <question class="categorical:Scale1to6AgreeNA" id="00218_QSD01b">The decisions and policies of Executive Management are consistently focused on achieving the organisation’s strategic direction</question>
+    <question class="categorical:Scale1to6AgreeNA" id="09937_QSD04b">Employees are very clear about the organisation’s strategic direction and priorities.</question>
+    <question class="categorical:Scale1to6AgreeNA" id="06998_QSD09a">I understand what the current Strategic Plan means for my work.</question>
+    <question class="categorical:Scale1to6AgreeNA" id="06999_QSD09b">I know where I can get more information about the current Strategic Plan.</question>
+    <question class="categorical:Scale1to6AgreeNA" id="09938_QSD11a">Is achievable</question>
+    <question class="categorical:Scale1to6AgreeNA" id="09939_QSD11b">Is going in the right direction</question>
+    <question class="categorical:Scale1to6AgreeNA" id="09940_QSD11c">Will provide good opportunities for me</question>
+    <question class="text:250" id="00955_Present01">... What it’s like to work in the organisation right now?</question>
+    <question class="text:250" id="00956_Present02">... What it’s like to work in the organisation right now?</question>
+    <question class="text:250" id="00957_Present03">... What it’s like to work in the organisation right now?</question>
+    <question class="text:250" id="00961_Future01">... Your views of what the organisation needs to become in the future in order to survive and grow?</question>
+    <question class="text:250" id="00962_Future02">... Your views of what the organisation needs to become in the future in order to survive and grow?</question>
+    <question class="text:250" id="00963_Future03">... Your views of what the organisation needs to become in the future in order to survive and grow?</question>
+    <!-- Strategic Direction Involving A Merger -->
+    <question class="categorical:Scale1to6AgreeNK" id="11475_QSD09d_Merger">I understand why the Merger is/was required.</question>
+    <question class="categorical:Scale1to6AgreeNK" id="11476_QSD09b_Merger">I know where I can get more information about what is happening.</question>
+    <question class="categorical:Scale1to6AgreeNK" id="11477_QSD11b_Merger">Is going in the right direction</question>
+    <question class="categorical:Scale1to6AgreeNK" id="11478_QSD11c_Merger">Will provide good opportunities for me</question>
+    <question class="categorical:Scale1to6AgreeNK" id="11479_QSD11d_Merger">Will improve services for our clients</question>
+    <question class="text:250" id="04996_MergeExcited01">... you currently most excited about?</question>
+    <question class="text:250" id="04999_MergeConcerned01">... you currently most concerned about?</question>
+    <question class="text:250" id="05008_MergeMainRetain01">What does the organisation currently do well that we should endeavour to retain in this Merger?</question>
+    <!-- Statistical Groupings -->
+    <question class="categorical:D0069_Years" id="D0069_Years">How long have you worked for this organisation?</question>
+    <question class="categorical:D0060_Age" id="D0060_Age">What is your age group?</question>
+    <question class="categorical:D0039_EmployStatus" id="D0039_EmployStatus">What is your employment status?</question>
+    <question class="categorical:D0077_Position" id="D0077_Position">What is your position?</question>
+    <!-- Acknowledgement Of Diversity -->
+    <question class="categorical:D0024_Gender_other_specify" id="D0024_Gender">What is your gender?</question>
+    <question class="text:250" id="21930_Gender_Other_Specify">Other (please specify if you wish)</question>
+    <question class="categorical:YesNoPreferNotToSay" id="D0793_BornAusYesNo">Were you born in Australia?</question>
+    <question class="categorical:YesNoPreferNotToSay" id="D0794_EnglishFirstYesNo">Was English the first language you spoke?</question>
+    <question class="categorical:YesNoPreferNotToSay" id="D0220_ATSI">Do you identify yourself as being of Aboriginal and/or Torres Strait Islander origin?</question>
+    <question class="categorical:YesNoPreferNotToSay" id="D0795_DisabilityYesNo">Are you a person with disability?</question>
+    <question class="categorical:YesNoPreferNotToSay" id="D0739_LGBTI">Do you identify as part of the Lesbian, Gay, Bisexual, Transgender, Intersex (LGBTI) communities?</question>
+    <!-- Standards Of Behaviour -->
+    <question class="categorical:Scale1to6Agree" id="05536_M70Respect">Respect</question>
+    <question class="categorical:Scale1to6Agree" id="05537_M71Honesty">Honesty</question>
+    <question class="categorical:Scale1to6Agree" id="05538_M72Fairness">Fairness</question>
+    <question class="categorical:Scale1to6Agree" id="05539_M73Equality">Equality</question>
+    <question class="categorical:Scale1to6Agree" id="05545_M79StdBehaviour">High ethical standards of behaviour</question>
+    <question class="categorical:Scale1to6Agree" id="05546_M80StdWork">High quality standards of work</question>
+    <question class="categorical:Scale1to6Agree" id="05547_M81StdService">High quality standards of service to clients</question>
+    <question class="categorical:Scale1to6Agree" id="37787_M82StdAccountability">High standards of accountability.</question>
+    <question class="categorical:Scale1to3Integrity" id="05339_Integrity15Understanding">Each person has a clear understanding about what they are accountable and responsible for.</question>
+    <question class="categorical:Scale1to3Integrity" id="05332_Integrity08Equitable">Any decisions they make are fair and equitable - they do not show favouritism or bias.</question>
+    <question class="categorical:Scale1to3Integrity" id="05334_Integrity10Interference">There is no inappropriate interference in recruitment, selection and promotion processes.</question>
+    <question class="categorical:Scale1to3Integrity" id="05331_Integrity07Economical">Any decisions they make about the use of resources are prudent and economical - they are not wasteful or extravagant.</question>
+    <question class="categorical:Scale1to3Integrity" id="05326_Integrity02Computer">Any usage of their computer access is for appropriate purposes - they do not download offensive material off the internet, make excessive personal use of emails, or make personal use of social networking sites in work time.</question>
+    <question class="categorical:Scale1to3Integrity" id="09895_Integrity16Honesty">Each person that I work with is open and honest when reporting to senior staff.</question>
+    <question class="categorical:Scale1to3Integrity" id="09896_Integrity17Risk">Each person that I work with considers risks and takes appropriate action.</question>
+    <question class="categorical:Scale1to3Integrity" id="09897_Integrity18Ethics">Each person that I work with makes decisions based on ethics and integrity.</question>
+    <question class="categorical:Scale1to3Integrity" id="05335_Integrity11Legal">Any actions they take are proper and legal - they would easily withstand external scrutiny.</question>
+    <question class="categorical:Scale1to3Integrity" id="05329_Integrity05Corrupt">Each person is prepared to speak up about misconduct or corrupt activity - they do not tolerate improper or unlawful behaviour</question>
+    <!-- Team Norms -->
+    <question class="categorical:Scale1to6Positive" id="01269_Team01">Know each other well.</question>
+    <question class="categorical:Scale1to6Positive" id="01270_Team02">Are quick to step in and help each other</question>
+    <question class="categorical:Scale1to6Positive" id="01271_Team03">Are clear about what other team members expect from them.</question>
+    <question class="categorical:Scale1to6Positive" id="01272_Team04">Have confidence and trust in the team leader.</question>
+    <question class="categorical:Scale1to6Positive" id="01273_Team05">Never leave the job half done.</question>
+    <question class="categorical:Scale1to6Positive" id="01274_Team06">Work to fix any mistakes - rather than cover them up.</question>
+    <question class="categorical:Scale1to6Positive" id="01247_Innovation01">I feel safe in discussing work problems with other team members.</question>
+    <question class="categorical:Scale1to6Positive" id="01248_Innovation02">I feel safe in discussing work problems with my team leader.</question>
+    <question class="categorical:Scale1to6Positive" id="01249_Innovation03">My team leader encourages me to find new ways of doing my job better.</question>
+    <question class="categorical:Scale1to6Positive" id="01250_Innovation04">I feel that any new ideas or changes I make are appreciated.</question>
+    <question class="categorical:Scale1to6Positive" id="01251_Innovation05">I feel a sense of pride when the changes I make in my job have good results.</question>
+    <question class="categorical:Scale1to6Positive" id="05396_Innovation17">... Press hard for better answers to long term problems.</question>
+    <question class="categorical:Scale1to6Positive" id="05397_Innovation18">... Seek innovative solutions to tough problems.</question>
+    <question class="categorical:Scale1to6Positive" id="05399_Innovation20">... Look for new and better ways of doing things.</question>
+    <question class="categorical:Scale1to6Positive" id="05400_Innovation21">... Speak up if they see a problem.</question>
+    <!-- Values-In-Action -->
     <question class="categorical:Scale1to6Agree" id="06085_ValueExec01">My organisation’s Executive Management put this value into practice.</question>
     <question class="categorical:Scale1to6Agree" id="06086_ValueExec02">My organisation’s Executive Management put this value into practice.</question>
     <question class="categorical:Scale1to6Agree" id="06087_ValueExec03">My organisation’s Executive Management put this value into practice.</question>
     <question class="categorical:Scale1to6Agree" id="06088_ValueExec04">My organisation’s Executive Management put this value into practice.</question>
-    <question class="categorical:Scale1to6Agree" id="06089_ValueExec05">My organisation’s Executive Management put this value into practice.</question>
     <question class="categorical:Scale1to6Agree" id="10369_ValueManager01">My Manager/Supervisor (the person I report to) puts this value into practice.</question>
     <question class="categorical:Scale1to6Agree" id="10370_ValueManager02">My Manager/Supervisor (the person I report to) puts this value into practice.</question>
     <question class="categorical:Scale1to6Agree" id="10371_ValueManager03">My Manager/Supervisor (the person I report to) puts this value into practice.</question>
     <question class="categorical:Scale1to6Agree" id="10372_ValueManager04">My Manager/Supervisor (the person I report to) puts this value into practice.</question>
-    <question class="categorical:Scale1to6Agree" id="10480_ValueManager05">My Manager/Supervisor (the person I report to) puts this value into practice.</question>
     <question class="categorical:Scale1to6Agree" id="01347_ValuePrac01">The People I Work With put this value into practice.</question>
     <question class="categorical:Scale1to6Agree" id="01348_ValuePrac02">The People I Work With put this value into practice.</question>
     <question class="categorical:Scale1to6Agree" id="01349_ValuePrac03">The People I Work With put this value into practice.</question>
     <question class="categorical:Scale1to6Agree" id="01350_ValuePrac04">The People I Work With put this value into practice.</question>
-    <question class="categorical:Scale1to6Agree" id="01351_ValuePrac05">The People I Work With put this value into practice.</question>
     <question class="categorical:Scale1to3YesNotSureNo" id="10493_ValuesDiscuss01">At an appropriate time or place, discuss with the staff member the behaviour you saw and how it was inconsistent</question>
     <question class="categorical:Scale1to3YesNotSureNo" id="10495_ValuesReport01">Report this behaviour to the staff member’s supervisor.</question>
     <question class="categorical:Scale1to3YesNotSureNo" id="10494_ValuesManaged01">Trust that, if such behaviour was reported, then it would be appropriately managed.</question>
-  </page>
-  <page title="Leadership Essentials">
+    <!-- The Do's and Don'ts -->
+    <question class="text:250" id="01283_Do1">Do This ...</question>
+    <question class="text:250" id="01284_Do2">Do This ...</question>
+    <question class="text:250" id="01285_Do3">Do This ...</question>
+    <question class="text:250" id="01288_Dont1">Don’t Do This ...</question>
+    <question class="text:250" id="01289_Dont2">Don’t Do This ...</question>
+    <question class="text:250" id="01290_Dont3">Don’t Do This ...</question>
+    <!-- The Do's and Don'ts for Each Value -->
+    <question class="text:250" id="04594_Value01Do">Do This ...</question>
+    <question class="text:250" id="04596_Value02Do">Do This ...</question>
+    <question class="text:250" id="04597_Value03Do">Do This ...</question>
+    <question class="text:250" id="04598_Value04Do">Do This ...</question>
+    <question class="text:250" id="04595_Value01Dont">Don’t Do This ...</question>
+    <question class="text:250" id="04599_Value02Dont">Don’t Do This ...</question>
+    <question class="text:250" id="04600_Value03Dont">Don’t Do This ...</question>
+    <question class="text:250" id="04601_Value04Dont">Don’t Do This ...</question>
+    <!-- Advice On Living The Values -->
+    <question class="text:250" id="22336_ValuesNoChange">... What is 1 thing that we should NOT change?</question>
+    <question class="text:250" id="22334_ValuesLess">... What is 1 thing that we should do a little LESS of?</question>
+    <question class="text:250" id="22335_ValuesMore">... What is 1 thing that we should do a little MORE of?</question>
+    <!-- Respect@Work -->
+    <question class="categorical:Scale1to6Agree" id="00760_FreeFromBullying">Free from bullying</question>
+    <question class="categorical:Scale1to6Agree" id="00759_FreeFromHarassment">Free from harassment</question>
+    <question class="categorical:Scale1to6Agree" id="19112_FreeFromSexualHarassment">Free from sexual harassment</question>
+    <question class="categorical:Scale1to6Agree" id="05548_M83Favouritism">Free from favouritism</question>
+    <question class="categorical:Scale1to6Agree" id="00763_M42Discrimination">Free from discrimination</question>
+    <question class="categorical:Scale1to6Agree" id="19109_M104GenderDiscrimination">Free from gender-based discrimination</question>
+    <!-- CAUSES FOR CONCERN -->
+    <question class="categorical:Scale1to3YesNotSureNo" id="21690_BullyHarassConcern01">Harrassment or bullying</question>
+    <question class="categorical:Scale1to3YesNotSureNo" id="10275_FavouritismConcern01">Favouritism (in favour of someone)</question>
+    <question class="categorical:Scale1to3YesNotSureNo" id="19110_DiscriminationConcern01">Discrimination (against someone)</question>
+    <question class="text:500" id="21691_BullyHarassExample01">Bullying or Harassment</question>
+    <question class="text:500" id="10276_FavouritismExample01">Favouritism (in favour of someone)</question>
+    <question class="text:500" id="19111_DiscriminationExample01">Discrimination (against someone)</question>
+    <!-- Safety@Work -->
+    <question class="categorical:YesNo" id="00910_SafeWork">Is your workplace a safe place for you to work?</question>
+    <question class="text:500" id="04450_SafeWorkNo">If NO, what are the things that make it unsafe for you personally?</question>
+    <question class="categorical:Scale1to6AgreeNA" id="00912_RatingSafeRaise01">Your co-workers.</question>
+    <question class="categorical:Scale1to6AgreeNA" id="00913_RatingSafeRaise02">Your manager.</question>
+    <question class="categorical:Scale1to6AgreeNA" id="00914_RatingSafeRaise03">Your workplace's Safety Representative.</question>
+    <question class="categorical:Scale1to6AgreeNA" id="00915_RatingSafeRaise04">Your organisation's Executive Management.</question>
+    <question class="categorical:Scale1to6AgreeNA" id="05550_RatingSafeRaise08">Your professional colleagues.</question>
+    <question class="categorical:Scale1to6Agree" id="00919_RatingSafeReport01">Report this safety problem.</question>
+    <question class="categorical:Scale1to6Agree" id="00920_RatingSafeReport02">Know how to go about reporting this safety problem.</question>
+    <question class="categorical:Scale1to6Agree" id="00921_RatingSafeReport03">Trust that, if this safety problem was reported, then it would be appropriately addressed.</question>
+    <question class="categorical:Scale1to6Agree" id="00922_RatingSafeSystem01">Reporting workplace safety problems.</question>
+    <question class="categorical:Scale1to6Agree" id="00923_RatingSafeSystem02">Addressing workplace safety problems.</question>
+    <question class="categorical:Scale1to6Agree" id="00924_RatingSafeSystem03">Consulting staff prior to making changes that could affect workplace safety.</question>
+    <!-- Workplace Safety Culture -->
+    <question class="categorical:Scale1to6Positive" id="05574_OrgnWorkplaceSafety01">Workplace Safety is a priority for Management.</question>
+    <question class="categorical:Scale1to6Positive" id="05578_OrgnWorkplaceSafety05">The organisation is getting better at fixing Workplace Safety problems.</question>
+    <question class="categorical:Scale1to6Positive" id="05580_OrgnWorkplaceSafety07">The organisation has high standards of Workplace Safety because it has enough staff doing the work.</question>
+    <question class="categorical:Scale1to6Positive" id="05581_OrgnWorkplaceSafety08">The organisation has high standards of Workplace Safety because it makes sure that staff are competent.</question>
+    <question class="categorical:Scale1to6Positive" id="05582_OrgnWorkplaceSafety09">Workplace Safety is included in the organisation’s orientation and development programs for all staff.</question>
+    <question class="categorical:Scale1to6Positive" id="05575_OrgnWorkplaceSafety02">The organisation monitors Workplace Safety all the time.</question>
+    <question class="categorical:Scale1to6Positive" id="05579_OrgnWorkplaceSafety06">The organisation is very open about dealing with Workplace Safety problems.</question>
+    <question class="categorical:Scale1to6Positive" id="05576_OrgnWorkplaceSafety03">The organisation fixes Workplace Safety risks quickly.</question>
+    <question class="categorical:Scale1to6Positive" id="05577_OrgnWorkplaceSafety04">Internal Workplace Safety investigations focus on fixing things... not on judging people.</question>
+    <!-- Harassment And Bullying -->
+    <question class="categorical:Scale1to6AgreeNA" id="00835_BullyingByPatients">Clients.</question>
+    <question class="categorical:Scale1to6AgreeNA" id="00836_BullyingByRelatives">Friends and relatives of clients.</question>
+    <question class="categorical:Scale1to6AgreeNA" id="00838_BullyingByManager">Your supervisor/manager.</question>
+    <question class="categorical:Scale1to6AgreeNA" id="05782_BullyingByStaff">Staff under your supervision.</question>
+    <question class="categorical:Scale1to6AgreeNA" id="00837_BullyingByCoworkers">Co-workers in your immediate team.</question>
+    <question class="categorical:Scale1to6AgreeNA" id="00844_BullyingByExecutive">Senior managers (other than your supervisor/manager).</question>
+    <question class="categorical:Scale1to6AgreeNA" id="04445_BullyingByStaffOther">Co-workers outside your immediate team.</question>
+    <question class="categorical:Scale1to6AgreeNA" id="09936_BullyingBySuppliers">Suppliers and other service providers.</question>
+    <question class="categorical:Scale1to6Agree" id="09816_ReportBullyHarass">Report this behaviour.</question>
+    <question class="categorical:Scale1to6Agree" id="09817_KnowRptBullyHarass">Know how to go about reporting such behaviour.</question>
+    <question class="categorical:Scale1to6Agree" id="09818_TrustRptBullyHarass">Trust that, if such behaviour was reported, then it would be appropriately managed.</question>
+    <question class="categorical:Scale1to6Agree" id="05779_BullyImprove05">Identifying and addressing harassing and bullying behaviour.</question>
+    <question class="categorical:Scale1to6Agree" id="04447_BullyImprove02">Training activities to address harassment and bullying.</question>
+    <question class="categorical:Scale1to6Agree" id="04448_BullyImprove03">Reducing harassment and bullying in the workplace.</question>
+    <question class="categorical:Scale1to6Agree" id="04449_BullyImprove04">Your manager’s preparedness to eliminate harassment and bullying.</question>
+    <question class="categorical:Scale1to6Agree" id="05780_BullyImprove06">Your team’s preparedness to eliminate harassment and bullying.</question>
+    <!-- Occupational Violence -->
+    <question class="categorical:Scale1to6AgreeNA" id="36851_OccViolence_Clients">Patients/clients/consumers</question>
+    <question class="categorical:Scale1to6AgreeNA" id="36852_OccViolence_Relatives">Friends and relatives of patients/clients/consumers</question>
+    <question class="categorical:Scale1to6AgreeNA" id="36854_OccViolence_Public">Members of the public</question>
+    <question class="categorical:Scale1to6AgreeNA" id="00795_AbuseByPatients">... Clients</question>
+    <question class="categorical:Scale1to6AgreeNA" id="00796_AbuseByRelatives">... Friends and relatives of clients</question>
+    <question class="categorical:Scale1to6AgreeNA" id="37792_AbuseByPublic">... Members of the public</question>
+    <question class="categorical:Scale1to6Agree" id="36861_ReportOccViolence">Report this behaviour.</question>
+    <question class="categorical:Scale1to6Agree" id="36862_KnowRptOccViolence">Know how to go about reporting such behaviour.</question>
+    <question class="categorical:Scale1to6Agree" id="36863_TrustRptOccViolence">Trust that, if such behaviour was reported, then it would be appropriately managed.</question>
+    <question class="categorical:Scale1to6Agree" id="36855_OccViolImprove01">Identifying and addressing occupational violence.</question>
+    <question class="categorical:Scale1to6Agree" id="36856_OccViolImprove02">Training activities to prevent and manage occupational violence in the workplace.</question>
+    <question class="categorical:Scale1to6Agree" id="36857_OccViolImprove03">Reducing occupational violence in the workplace.</question>
+    <question class="categorical:Scale1to6Agree" id="36858_OccViolImprove04">Your manager’s preparedness to eliminate or prevent occupational violence.</question>
+    <question class="categorical:Scale1to6Agree" id="36859_OccViolImprove05">Senior manager’s preparedness to eliminate or prevent occupational violence.</question>
+    <question class="categorical:Scale1to6Agree" id="36860_OccViolImprove06">Your team’s preparedness to eliminate or prevent occupational violence.</question>
+    <!-- Leadership Essential -->
     <question class="categorical:D0111_Manager" id="D0111_Manager">Think of your manager, the person you primarily report to, who is responsible for conducting your performance review.</question>
     <question class="text:250" id="00716_LeadershipStyle01">What are the 3 words or phrases you would use to describe the leadership style of this person?</question>
     <question class="text:250" id="00717_LeadershipStyle02">What are the 3 words or phrases you would use to describe the leadership style of this person?</question>
     <question class="text:250" id="00718_LeadershipStyle03">What are the 3 words or phrases you would use to describe the leadership style of this person?</question>
-    <question class="text:250" id="00555_MgrPriorityExpectation01">What are the 3 most important things that this person expects from you?</question>
-    <question class="text:250" id="00556_MgrPriorityExpectation02">What are the 3 most important things that this person expects from you?</question>
-    <question class="text:250" id="00557_MgrPriorityExpectation03">What are the 3 most important things that this person expects from you?</question>
+    <!-- LEADERSHIP STRENGTHS -->
+    <question class="categorical:Scale1to6Agree" id="05542_M76Trustworthy">Trustworthy</question>
+    <question class="categorical:Scale1to6Agree" id="37812_M137Friendly">Friendly</question>
+    <question class="categorical:Scale1to6Agree" id="37811_M136Dedicated">Motivated</question>
+    <question class="categorical:Scale1to6Agree" id="37813_M138Hardworking">Hardworking</question>
+    <question class="categorical:Scale1to6Agree" id="05541_M75Professional">Professional</question>
+    <question class="categorical:Scale1to6Agree" id="05540_M74Competent">Competent</question>
+    <question class="categorical:Scale1to6Agree" id="37799_M120Fair">Fair</question>
+    <question class="categorical:Scale1to6Agree" id="37800_M121Inclusive">Inclusive</question>
+    <question class="categorical:Scale1to6Agree" id="37798_M122Decisive">Decisive</question>
+    <question class="categorical:Scale1to6Agree" id="37793_M123Consistent">Consistent</question>
+    <question class="categorical:Scale1to6Agree" id="37794_M124Flexible">Flexible</question>
+    <question class="categorical:Scale1to6Agree" id="37795_M125Proactive">Proactive</question>
+    <question class="categorical:Scale1to6Agree" id="37796_M126Visionary">Visionary</question>
+    <question class="categorical:Scale1to6Agree" id="37797_M127LeadByExample">A Role Model (leading by example)</question>
+    <question class="categorical:Scale1to6Agree" id="05544_M78Communicator">Good communicators</question>
+    <question class="categorical:Scale1to6Agree" id="37809_M128Inspirational">Inspirational</question>
+    <question class="categorical:Scale1to6Agree" id="05543_M77Supportive">Supportive</question>
+    <question class="categorical:Scale1to6Agree" id="37810_M129Approachable">Approachable</question>
+    <question class="categorical:Scale1to6Agree" id="37808_M130Encouraging">Encouraging</question>
+    <question class="categorical:Scale1to6Agree" id="37801_M131Empowering">Empowering</question>
+    <question class="categorical:Scale1to6Agree" id="37802_M132Understanding">Understanding</question>
+    <question class="categorical:Scale1to6Agree" id="37803_M133Helpful">Helpful</question>
+    <question class="categorical:Scale1to6Agree" id="37804_M134Team">A good Team-Builder</question>
+    <question class="categorical:Scale1to6Agree" id="37805_M135Listens">A good Listener</question>
+    <question class="categorical:Scale1to6Agree" id="10635_M99Accessible">Accessible</question>
+    <question class="categorical:Scale1to6Agree" id="10633_M98Responsive">Responsive</question>
+    <!-- LEADERSHIP PRIORITIES -->
     <question class="text:250" id="00533_ExpectationMgr01">1 What are the 3 most important things that you expect from this person?</question>
     <question class="text:250" id="00534_ExpectationMgr02">2 What are the 3 most important things that you expect from this person?</question>
     <question class="text:250" id="00535_ExpectationMgr03">3 What are the 3 most important things that you expect from this person?</question>
     <question class="categorical:Scale1to6Agree" id="00536_RatingMgr01">1 How much do you agree that your manager consistently meets your expectations?</question>
     <question class="categorical:Scale1to6Agree" id="00537_RatingMgr02">2 How much do you agree that your manager consistently meets your expectations?</question>
     <question class="categorical:Scale1to6Agree" id="00538_RatingMgr03">3 How much do you agree that your manager consistently meets your expectations?</question>
+    <question class="text:250" id="00555_MgrPriorityExpectation01">What are the 3 most important things that this person expects from you?</question>
+    <question class="text:250" id="00556_MgrPriorityExpectation02">What are the 3 most important things that this person expects from you?</question>
+    <question class="text:250" id="00557_MgrPriorityExpectation03">What are the 3 most important things that this person expects from you?</question>
     <question class="categorical:Scale1to3RegularlySometimesNever" id="00059_Coach01">Clearly communicates to you what they expect from you.</question>
     <question class="categorical:Scale1to3RegularlySometimesNever" id="00060_Coach02">Measures how well you perform against these expectations.</question>
     <question class="categorical:Scale1to3RegularlySometimesNever" id="00061_Coach03">Gives you constructive feedback on your performance.</question>
@@ -184,40 +371,46 @@
     <question class="categorical:Scale1to3RegularlySometimesNever" id="00069_Coach10a">Provides appreciation for good performance.</question>
     <question class="categorical:Scale1to3RegularlySometimesNever" id="00070_Coach11a">Provides support and guidance to help overcome any performance shortfalls.</question>
     <question class="categorical:Scale1to3RegularlySometimesNever" id="00071_Coach12a">Is prepared to address poor performance in a constructive manner.</question>
-  </page>
-  <page title="Leadership Behaviours">
-    <!-- Setting Standards -->
+    <!-- Leadership Behaviours -->
     <question class="categorical:Scale1to6Agree" id="00846_Lead20">Has set the standards for building a great team - they will settle for nothing less.</question>
     <question class="categorical:Scale1to6Agree" id="00847_Lead21">Has an unwavering resolve to do whatever it takes to produce the best long term results - no matter how big or hard the decisions.</question>
     <question class="categorical:Scale1to6Agree" id="00848_Lead22">Has a quiet, self-effacing, modest style - they are never boastful or arrogant.</question>
     <question class="categorical:Scale1to6Agree" id="00849_Lead23">Displays a constant diligence to continually find a better way to do things.</question>
-    <!-- Building Effective Teams -->
     <question class="categorical:Scale1to6Agree" id="00850_Lead24">Is tough - but fair.</question>
     <question class="categorical:Scale1to6Agree" id="00851_Lead25">Leads the team well.</question>
     <question class="categorical:Scale1to6Agree" id="00852_Lead26">Communicates a very clear vision and direction for where they want the team to go.</question>
     <question class="categorical:Scale1to6Agree" id="00853_Lead27">Creates a strong sense of team cohesion and purpose.</question>
-    <!-- Creating Accountability -->
     <question class="categorical:Scale1to6Agree" id="00854_Lead28">Puts an extraordinary amount of time and attention into getting the right team members in the right jobs.</question>
     <question class="categorical:Scale1to6Agree" id="00855_Lead29">Holds team members accountable for what they should be doing.</question>
     <question class="categorical:Scale1to6Agree" id="00856_Lead30">Acts decisively in moving/removing team members who are not performing.</question>
     <question class="categorical:Scale1to6Agree" id="00857_Lead31">Recognises and rewards great performance by team members.</question>
-    <!-- Communicating & Listening -->
     <question class="categorical:Scale1to6Agree" id="00858_Lead32">Communicates well on a one-to-one basis.</question>
     <question class="categorical:Scale1to6Agree" id="00859_Lead33">Listens well on a one-to-one basis.</question>
     <question class="categorical:Scale1to6Agree" id="00860_Lead34">Considers the views and opinions of others.</question>
     <question class="categorical:Scale1to6Agree" id="00861_Lead35">Knows when to say ‘no’ - and does so!</question>
-    <!-- Leading in Tough Times -->
     <question class="categorical:Scale1to6Agree" id="00862_Lead36">Encourages robust debate amongst the team as a way of reaching the best decisions for the team.</question>
     <question class="categorical:Scale1to6Agree" id="00863_Lead37">Always wants to hear the truth - regardless of how uncomfortable it may be.</question>
     <question class="categorical:Scale1to6Agree" id="00864_Lead38">When faced with adversity, this person will make a determined effort to expose, and face up to, the brutal facts of the situation.</question>
     <question class="categorical:Scale1to6Agree" id="00865_Lead39">Regardless of how difficult the situation, this person always exudes a sense of confidence that we will get through it.</question>
-  </page>
-  <page title="The Issues That Matter">
-    <!-- Professional Development -->
+    <!-- Message in a Bottle -->
+    <question class="text:1000" id="00930_MessageinaBottle">If there was one message you would like to pass on to the most senior executive in this organisation</question>
+    <!-- Feedback From the Last Survey -->
+    <question class="categorical:YesNotSureNoNotEmployed" id="D0344_BPASurveyPast">Did you complete the organisation’s last employee survey?</question>
+    <question class="categorical:YesNotSureNoNotEmployed" id="D1043_BPASurveyProvider">Was this a BPA employee survey?</question>
+    <question class="categorical:YesNotSureNoNotEmployed" id="D0674_BPASurveyFeedbackOrg">From the organisation?</question>
+    <question class="categorical:YesNotSureNoNotEmployed" id="D0675_BPASurveyFeedbackMgr">From your manager?</question>
+    <question class="categorical:YesNotSureNoNotEmployed" id="D1044_BPASurveyAccurate">Accurate (it was a truthful and balanced picture of the organisation).</question>
+    <question class="categorical:YesNotSureNoNotEmployed" id="D1045_BPASurveyTimely">Timely (it was delivered within a short time after the survey).</question>
+    <question class="categorical:YesNotSureNoNotEmployed" id="D1046_BPASurveyActionOriented">Action oriented (it set out a clear plan of action for the future).</question>
+    <question class="categorical:YesNotSureNoNotEmployed" id="D0676_BPASurveyAction">Was action taken as a result of the survey?</question>
+    <question class="categorical:YesNotSureNoNotEmployed" id="D0677_BPASurveyPosImpact">Was there a positive impact resulting from the survey?</question>
+    <!-- Message in a Bottle to Designated Managers -->
+    <question class="categorical:Message_2ndChoice" id="Message_2ndChoice">If there was one message you would like to pass on to one of the senior managers listed below</question>
+    <question class="text:1000" id="00931_MessageinaBottle2nd">If there was one message you would like to pass on to one of the senior managers listed below</question>
+    <!-- The Issues That Matter -->
     <question class="categorical:Scale1to3Issues" id="05403_Issues02">Provides good development and career opportunities</question>
     <question class="categorical:Scale1to3Issues" id="05409_Issues08">Addresses training and skills issues</question>
     <question class="categorical:Scale1to3Issues" id="05426_Issues25">Addresses manager competency issues</question>
-    <!-- Leadership Engagement -->
     <question class="categorical:Scale1to3Issues" id="05404_Issues03">Provides a climate of honesty and trust</question>
     <question class="categorical:Scale1to3Issues" id="05407_Issues06">Ensures management get to know staff</question>
     <question class="categorical:Scale1to3Issues" id="05410_Issues09">Addresses communication issues</question>
@@ -227,92 +420,176 @@
     <question class="categorical:Scale1to3Issues" id="05431_Issues30">Puts its values into practice</question>
     <question class="categorical:Scale1to3Issues" id="05424_Issues23">Addresses morale issues</question>
     <question class="categorical:Scale1to3Issues" id="05427_Issues26">Provides a supportive work environment</question>
-    <!-- Teamwork -->
+    <question class="categorical:Scale1to3Issues" id="05405_Issues04">Provides a flexible and innovative work environment</question>
     <question class="categorical:Scale1to3Issues" id="05402_Issues01">Provides a team-oriented environment</question>
     <question class="categorical:Scale1to3Issues" id="05417_Issues16">Provides a climate of mutual respect</question>
     <question class="categorical:Scale1to3Issues" id="10637_Issues37">Promotes multidisciplinary collaboration</question>
-    <question class="categorical:Scale1to3Issues" id="11442_Issues42">The organisation addresses favouritism issues.</question>
-    <question class="categorical:Scale1to3Issues" id="05429_Issues28">The organisation addresses bullying issues.</question>
-    <!-- Service & Standards -->
     <question class="categorical:Scale1to3Issues" id="05411_Issues10">Recruits quality staff</question>
     <question class="categorical:Scale1to3Issues" id="05412_Issues11">Retains quality staff</question>
     <question class="categorical:Scale1to3Issues" id="05416_Issues15">Addresses professional quality standards</question>
     <question class="categorical:Scale1to3Issues" id="10638_Issues38">Provides adequate professional autonomy in the workplace</question>
+    <question class="categorical:Scale1to3Issues" id="11093_Issues40">Addresses any potential for adverse client safety events</question>
     <question class="categorical:Scale1to3Issues" id="21692_Issues45">Ensures high quality service is delivered to clients</question>
-    <!-- Resources & Staffing -->
     <question class="categorical:Scale1to3Issues" id="05408_Issues07">Addresses staffing issues</question>
     <question class="categorical:Scale1to3Issues" id="05419_Issues18">Provides a good physical working environment</question>
     <question class="categorical:Scale1to3Issues" id="05423_Issues22">Addresses equipment issues</question>
     <question class="categorical:Scale1to3Issues" id="05428_Issues27">Addresses funding and resources issues</question>
     <question class="categorical:Scale1to3Issues" id="05418_Issues17">Addresses employee safety issues</question>
     <question class="categorical:Scale1to3Issues" id="05430_Issues29">Addresses working hours issue</question>
-  </page>
-  <page title="Change Momentum">
+    <!-- ORGANISATIONAL INITIATIVES -->
+    <question class="categorical:YesNoVertical" id="37299_InitiativeAware01">Initiative 1</question>
+    <question class="categorical:Scale1to3" id="37300_InitiativeProgress01">Initiative 1</question>
+    <question class="categorical:YesNoVertical" id="37301_InitiativeAware02">Initiative 2</question>
+    <question class="categorical:Scale1to3" id="37302_InitiativeProgress02">Initiative 2</question>
+    <question class="categorical:YesNoVertical" id="37303_InitiativeAware03">Initiative 3</question>
+    <question class="categorical:Scale1to3" id="37304_InitiativeProgress03">Initiative 3</question>
+    <question class="categorical:YesNoVertical" id="37305_InitiativeAware04">Initiative 4</question>
+    <question class="categorical:Scale1to3" id="37306_InitiativeProgress04">Initiative 4</question>
+    <question class="categorical:YesNoVertical" id="37307_InitiativeAware05">Initiative 5</question>
+    <question class="categorical:Scale1to3" id="37308_InitiativeProgress05">Initiative 5</question>
+    <!-- Embracing Our Challenges -->
+    <question class="categorical:Scale1to6Agree" id="10810_QSD12">I broadly understand the challenges that the organisation will experience over the next 12-18 months.</question>
+    <question class="categorical:Scale1to6Agree" id="01254_Innovation08">I am confident that the changes that the organisation introduces will be well planned, well thought-out and client focused.</question>
+    <question class="categorical:Scale1to6Agree" id="10811_QSD13">I have a good understanding of how these changes will affect me in my work area.</question>
+    <question class="categorical:Scale1to6Agree" id="10812_QSD14">I am confident that I’ll be well communicated with about these changes when information is at hand.</question>
+    <question class="categorical:Scale1to6Agree" id="10813_QSD15a">Me personally</question>
+    <question class="categorical:Scale1to6Agree" id="10814_QSD15b">My work area</question>
+    <question class="categorical:Scale1to6Agree" id="10815_QSD15c">The organisation’s clients</question>
+    <question class="categorical:Scale1to6Agree" id="22326_QSD15e">The organisation itself</question>
+    <question class="categorical:Scale1to6Agree" id="10816_QSD15d">The community in general</question>
+    <question class="categorical:Scale1to6Agree" id="14938_QSD17">I am confident that if these changes produce any unintended consequences, then the organisation will be fast and flexible</question>
+    <question class="categorical:Scale1to6Agree" id="14937_QSD16">I am confident in my own ability to respond well to this environment of constant change in how we do things.</question>
+    <question class="text:250" id="05086_ChallengeExcited01">... the thing you are most excited about?</question>
+    <question class="text:250" id="05089_ChallengeConcerned01">... the thing you are most concerned about?</question>
+    <!-- Change Momentum -->
     <question class="categorical:Scale1to6Positive" id="01255_Innovation09">The organisation introduces change quickly. It is fast, focused and flexible.</question>
     <question class="categorical:Scale1to6Positive" id="04459_SigImprove">In the last 1 to 2 years, the organisation has made significant improvements.</question>
+    <question class="text:250" id="00971_Improvement01">What is one thing that has improved in your working environment during the past year?</question>
+    <question class="text:250" id="00974_Deteriorated01">What is one thing that has deteriorated in your working environment during the past year?</question>
+    <question class="categorical:Scale1to6Agree" id="00186_Q16a">The organisation wants to hear the bad news as well as the good news about itself.</question>
+    <question class="categorical:Scale1to6Agree" id="00187_Q16b">The organisation acts quickly to stop small problems becoming large problems.</question>
+    <question class="categorical:Scale1to6Agree" id="00188_Q16aMgr">My manager wants to hear the bad news as well as the good news.</question>
+    <question class="categorical:Scale1to6Agree" id="00189_Q16bMgr">My manager acts quickly to stop small problems becoming large problems.</question>
+    <question class="categorical:Scale1to6Agree" id="00208_Q58a">Communication in the organisation</question>
+    <question class="categorical:Scale1to6Agree" id="00209_Q58b">Motivation in the organisation</question>
+    <question class="categorical:Scale1to6Agree" id="00201_Q46a">The organisation’s services and facilities</question>
+    <question class="categorical:Scale1to6Agree" id="00204_Q46b">The organisation’s client satisfaction levels</question>
+    <!-- How Are We Travelling? -->
+    <question class="categorical:Scale1to6Agree" id="18965_Transition25">Communication regarding the previous employee survey’s results was open and honest.</question>
+    <question class="categorical:Scale1to6Agree" id="19264_Transition38">We are positive about the changes that have occurred in the last few months.</question>
+    <question class="categorical:Scale1to6Agree" id="11445_Transition03">We are continuing to improve our processes and the way we do our work.</question>
+    <question class="categorical:Scale1to6Agree" id="11447_Transition05">People are committed to improving the way we do things in the organisation.</question>
+    <question class="categorical:Scale1to6Agree" id="11448_Transition06">Communication from Executive Management is providing a sense of purpose and direction.</question>
+    <question class="categorical:Scale1to6Agree" id="11449_Transition07">We recognise our achievements - staff are acknowledged for their work and the contributions they make.</question>
+    <question class="categorical:Scale1to6Agree" id="11450_Transition08">We celebrate our successes.</question>
+    <question class="categorical:Scale1to6Agree" id="19263_Transition39">We are trying to maintain a positive work environment.</question>
+    <question class="categorical:Scale1to6Agree" id="18974_Transition26">We put into practice our organisational values.</question>
+    <question class="categorical:Scale1to6Agree" id="11642_Transition23">Executive Management is supportive in this time of change.</question>
+    <question class="categorical:Scale1to6Agree" id="11643_Transition24">My manager is supportive in this time of change.</question>
+    <question class="categorical:Scale1to6Agree" id="18972_Transition28">My manager has the skills and capability to support me in this time of change.</question>
+    <question class="categorical:Scale1to6Agree" id="11456_Transition14">Unacceptable behaviour is being responded to and dealt with.</question>
+    <question class="categorical:Scale1to6Agree" id="11461_Transition19">We are breaking down the silos and working more effectively with our colleagues.</question>
+    <question class="categorical:Scale1to6Agree" id="11462_Transition20">Team work is being encouraged.</question>
+    <question class="categorical:Scale1to6Agree" id="11463_Transition21">We are well prepared for the changes ahead.</question>
+    <!-- Your Advice -->
+    <question class="text:250" id="11578_OrgnNoChange01">... What is 1 thing that we should NOT change?</question>
+    <question class="text:250" id="11581_OrgnLess01">... What is 1 thing that we should do a little LESS of?</question>
+    <question class="text:250" id="11584_OrgnMore01">... What is 1 thing that we should do a little MORE of?</question>
+    <!-- Client Expectations -->
+    <question class="text:250" id="00572_ExpectationClient01">1 What are the 3 most important things that this client group expects from your organisation?</question>
+    <question class="text:250" id="00573_ExpectationClient02">2 What are the 3 most important things that this client group expects from your organisation?</question>
+    <question class="text:250" id="00574_ExpectationClient03">3 What are the 3 most important things that this client group expects from your organisation?</question>
+    <question class="categorical:Scale1to6Agree" id="00575_RatingClient01">1 How much do you agree that each expectation is consistently met?</question>
+    <question class="categorical:Scale1to6Agree" id="00576_RatingClient02">2 How much do you agree that each expectation is consistently met?</question>
+    <question class="categorical:Scale1to6Agree" id="00577_RatingClient03">3 How much do you agree that each expectation is consistently met?</question>
+    <question class="categorical:Scale1to6Agree" id="00166_Q3aExecCommitted">Executive Management is committed to providing quality service to clients.</question>
+    <question class="categorical:Scale1to6Agree" id="00167_Q3bExecWantFeedback">Executive Management wants to know feedback from clients.</question>
+    <question class="categorical:Scale1to6Agree" id="00164_Q2aDefinedService">This organisation has specifically defined what exceptional service is.</question>
+    <question class="categorical:Scale1to6Agree" id="00165_Q2bEmployeesUnderstand">Employees understand exactly what they must do to deliver exceptional service.</question>
+    <question class="categorical:Scale1to6Agree" id="00175_Q6aStaffingAdequate">Staffing levels are adequate to meet client needs.</question>
+    <question class="categorical:Scale1to6Agree" id="00176_Q6bMeetsClientExpectations">Employees meet the clients’ expectations on delivering exceptional service.</question>
+    <question class="categorical:Scale1to6Agree" id="00197_Q43bRightFirstTime">This organisation prides itself on providing service that is “right the first time”.</question>
+    <question class="categorical:Scale1to6Agree" id="00196_Q43aErrorFree">The client records completed by employees are totally error-free.</question>
+    <question class="text:500" id="11573_ClientFrustration01">What is one thing that currently frustrates clients the most in their experiences with the organisation?</question>
+    <!-- Risk Of Client Abuse -->
+    <question class="categorical:Scale1to4" id="10802_ClientAbusePhysical">Physical abuse or harm</question>
+    <question class="categorical:Scale1to4" id="11563_ClientAbuseSexual">Sexual abuse or harm</question>
+    <question class="categorical:Scale1to4" id="10796_ClientAbuseEmotional">Emotional abuse or harm</question>
+    <question class="categorical:Scale1to4" id="10797_ClientAbuseFinancial">Financial abuse or harm</question>
+    <question class="categorical:Scale1to4" id="10801_ClientAbuseNeglect">Abuse or harm caused by Neglect</question>
+    <question class="categorical:Scale1to4" id="36926_ClientAbuseStaffBehaviour">Abuse or harm caused by inappropriate behaviour by staff</question>
+    <question class="categorical:Scale1to4" id="36927_ClientAbuseOther">Other forms of abuse or harm</question>
+    <question class="text:500" id="36928_ClientAbusePhysicalEvents">Please describe any Physical abuse</question>
+    <question class="text:500" id="36929_ClientAbuseSexuallEvents">Please describe any Sexual abuse</question>
+    <question class="text:500" id="36930_ClientAbuseEmotionalEvents">Please describe any Emotional abuse</question>
+    <question class="text:500" id="36931_ClientAbuseFinancialEvents">Please describe any Financial abuse</question>
+    <question class="text:500" id="36932_ClientAbuseNeglectEvents">Please describe any Neglect</question>
+    <question class="text:500" id="36934_ClientAbuseStaffBehaviourEvents">Please describe any Abuse or harm caused by inappropriate role modelling / behaviour by staff</question>
+    <question class="text:500" id="36935_ClientAbuseOtherEvents">Please describe any Other forms of abuse or harm</question>
+    <question class="categorical:Scale1to6Agree" id="10798_ClientAbuseM50a">Report this behaviour.</question>
+    <question class="categorical:Scale1to6Agree" id="10799_ClientAbuseM51a">Know how to go about reporting such behaviour.</question>
+    <question class="categorical:Scale1to6Agree" id="10800_ClientAbuseM52a">Trust that, if such behaviour was reported, then it would be appropriately managed.</question>
+    <question class="categorical:Scale1to6AgreeNK" id="10803_ClientAbuseImprove01">Identifying and addressing client abuse.</question>
+    <question class="categorical:Scale1to6AgreeNK" id="10804_ClientAbuseImprove02">Training activities to address client abuse.</question>
+    <question class="categorical:Scale1to6AgreeNK" id="10805_ClientAbuseImprove03">Reducing client abuse.</question>
+    <question class="categorical:Scale1to6AgreeNK" id="10806_ClientAbuseImprove04">Your manager’s preparedness to eliminate client abuse.</question>
+    <question class="categorical:Scale1to6AgreeNK" id="10807_ClientAbuseImprove05">Your team’s preparedness to eliminate client abuse.</question>
+    <!-- Client Safety Culture -->
+    <question class="categorical:Scale1to6Positive" id="06116_WorkUnitPtSafety01">People in my work unit are highly conscious of the potential for adverse patient safety events.</question>
+    <question class="categorical:Scale1to6Positive" id="06117_WorkUnitPtSafety02">People in my work unit report adverse patient safety events and complaints quickly and openly.</question>
+    <question class="categorical:Scale1to6Positive" id="06120_WorkUnitPtSafety05">People in my work unit treat patient safety events as learning opportunities.</question>
+    <question class="categorical:Scale1to6Positive" id="11224_WorkUnitPtSafety11">People in my work unit always follow evidence, guidelines, standards, procedures, and pathways</question>
+    <question class="categorical:Scale1to6Positive" id="11225_WorkUnitPtSafety12">People in my work unit exercise good judgement about when to escalate a deterioration in a patient’s condition.</question>
+    <question class="categorical:Scale1to6Positive" id="11226_WorkUnitPtSafety13">People in my work unit will persevere in escalating concerns when they believe it’s clinically appropriate.</question>
+    <question class="categorical:Scale1to6Positive" id="11219_Innovation17PtSafety">... Press hard for better answers to long term patient safety and quality of care problems.</question>
+    <question class="categorical:Scale1to6Positive" id="11220_Innovation18PtSafety">... Seek innovative solutions to recurring patient safety and quality of care problems.</question>
+    <question class="categorical:Scale1to6Positive" id="11221_Innovation19PtSafety">... Learn from the experience of others outside the work unit to improve patient safety and quality of care.</question>
+    <question class="categorical:Scale1to6Positive" id="11222_Innovation20PtSafety">... Look for new and better ways of managing patient safety and quality of care.</question>
+    <question class="categorical:Scale1to6Positive" id="11223_Innovation21PtSafety">... Speak up if they see a patient safety or quality of care problem.</question>
+    <question class="categorical:Scale1to6Positive" id="14764_Innovation22PtSafety">... Implement solutions to any patient safety or quality of care problems identified.</question>
+    <question class="categorical:Scale1to6Positive" id="14763_Innovation23PtSafety">... Close the loop by checking that solutions implemented fixed the problem for the patient.</question>
   </page>
-  <page title="Community Expectations" module="Expectations">
-    <question class="text:250" id="ph_CommunityExpect01">What are the 3 most important things that you expect from the organisation?</question>
-    <question class="text:250" id="ph_CommunityExpect02">What are the 3 most important things that you expect from the organisation?</question>
-    <question class="text:250" id="ph_CommunityExpect03">What are the 3 most important things that you expect from the organisation?</question>
-    <question class="categorical:Scale1to6Agree" id="ph_RatingComExp01">How much do you agree that the organisation consistently meets your expectations?</question>
-    <question class="categorical:Scale1to6Agree" id="ph_RatingComExp02">How much do you agree that the organisation consistently meets your expectations?</question>
-    <question class="categorical:Scale1to6Agree" id="ph_RatingComExp03">How much do you agree that the organisation consistently meets your expectations?</question>
-  </page>
-  <page title="Message in a Bottle">
-    <question class="text:1000" id="00930_MessageinaBottle">If there was one message you would like to pass on to the most senior executive in this organisation</question>
-  </page>
-  <page title="Feedback From the Last Survey">
-    <question class="categorical:YesNotSureNoNotEmployed" id="D0344_BPASurveyPast">Did you complete the organisation’s last employee survey?</question>
-    <question class="categorical:YesNotSureNoNotEmployed" id="D0674_BPASurveyFeedbackOrg">From the organisation?</question>
-    <question class="categorical:YesNotSureNoNotEmployed" id="D0675_BPASurveyFeedbackMgr">From your manager?</question>
-    <question class="categorical:YesNotSureNoNotEmployed" id="D0676_BPASurveyAction">Was action taken as a result of the survey?</question>
-    <question class="categorical:YesNotSureNoNotEmployed" id="D0677_BPASurveyPosImpact">Was there a positive impact resulting from the survey?</question>
-  </page>
-  <page title="Statistical Groupings">
-    <question class="categorical:D0069_Years" id="D0069_Years">How long have you worked for this organisation?</question>
-    <question class="categorical:D0060_Age" id="D0060_Age">What is your age group?</question>
-    <question class="categorical:D0039_EmployStatus" id="D0039_EmployStatus">What is your employment status?</question>
-    <question class="categorical:D0077_Position" id="D0077_Position">What is your position?</question>
-  </page>
-  <page title="Acknowledgement Of Diversity">
-    <question class="categorical:D0024_Gender_other_identify" id="D0024_Gender">What is your gender?</question><!-- Prefer not to identify as either ... -->
-    <question class="categorical:YesNoPreferNotToSay" id="D0793_BornAusYesNo">Were you born in Australia?</question>
-    <question class="categorical:YesNoPreferNotToSay" id="D0794_EnglishFirstYesNo">Was English the first language you spoke?</question>
-    <question class="categorical:YesNoPreferNotToSay" id="D0220_ATSI">Do you identify yourself as being of Aboriginal and/or Torres Strait Islander origin?</question>
-    <question class="categorical:YesNoPreferNotToSay" id="D0795_DisabilityYesNo">Are you a person with disability?</question>
-    <question class="categorical:YesNoPreferNotToSay" id="D0739_LGBTI">Do you identify as part of the Lesbian, Gay, Bisexual, Transgender, Intersex (LGBTI) communities?</question>
-  </page>
-  <page title="Thank You For Completing The Survey">
-    <!-- <question class="categorical:YesNo" id="SupervisorYesNo">Are you a School Crossing Supervisor?</question> -->
-    <question class="categorical:PaidYes" id="PaidYesNo">Do you wish to be paid 60 minutes wage for completing this survey?</question>
-    <question class="text:255" id="NameForRelease">Your Name:</question>
+
+  <page title="Change Momentum">
   </page>
 
 
-  <categories id="PaidYes">
-    <category value="1"><![CDATA[<strong>Yes,</strong> I wish to be paid 1 hour’s wage for completing this survey.]]></category>
+  <categories id="Scale1to4ClientAbuse">
+    <category value="1" description="No cause for concern" />
+    <category value="2" description="Some potential signs" />
+    <category value="3" description="Cause for concern" />
+    <category value="3" description="Cause for concern" />
     <category value="999" missing="true" />
   </categories>
   <categories id="D0077_Position" orientation="column" columns="1">
-    <category value="1">CEO &amp; SLT</category>
-    <category value="2">Manager</category>
-    <category value="3">Team Leader</category>
-    <category value="4">Co-ordinator</category>
-    <category value="5">Supervisor</category>
-    <category value="6">Officer</category>
+    <category value="1">Position 1</category>
+    <category value="2">Position 2</category>
+    <category value="3">Position 3</category>
+    <category value="4">Position 4</category>
+    <category value="5">Position 5</category>
+    <category value="6">Position 6</category>
     <category value="998" label="Prefer not to say" refused="true"></category>
     <category value="999" missing="true" />
   </categories>
   <categories id="D0111_Manager" orientation="column" columns="1">
-    <category value="1">CEO</category>
-    <category value="2">SLT</category>
-    <category value="3">Manager</category>
-    <category value="4">Team Leader</category>
-    <category value="5">Co-ordinator</category>
-    <category value="6">Supervisor</category>
-    <category value="7">Officer</category>
+    <category value="1">Position 1</category>
+    <category value="2">Position 2</category>
+    <category value="3">Position 3</category>
+    <category value="4">Position 4</category>
+    <category value="5">Position 5</category>
+    <category value="6">Position 6</category>
+    <category value="7">Position 7</category>
+    <category value="8">Position 8</category>
     <category value="998" label="Prefer not to say" refused="true"></category>
+    <category value="999" missing="true" />
+  </categories>
+  <categories id="Message_2ndChoice" orientation="column" columns="2">
+    <category value="1"><![CDATA[Name<br/><em> – Position Description</em>]]></category>
+    <category value="2"><![CDATA[Name<br/><em> – Position Description</em>]]></category>
+    <category value="3"><![CDATA[Name<br/><em> – Position Description</em>]]></category>
+    <category value="4"><![CDATA[Name<br/><em> – Position Description</em>]]></category>
+    <category value="5"><![CDATA[Name<br/><em> – Position Description</em>]]></category>
+    <category value="6"><![CDATA[Name<br/><em> – Position Description</em>]]></category>
     <category value="999" missing="true" />
   </categories>
 </survey>

@@ -1,13 +1,6 @@
 import React, { Component } from 'react'
 
 class Instructions extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-         
-    }
-  }
 
   render() {
     return (

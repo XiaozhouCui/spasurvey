@@ -14,6 +14,10 @@ import NPS from '../NPS/NPS';
 import AttractionRetention from "../AttractionRetention/AttractionRetention";
 import InclusionWork from "../InclusionWork/InclusionWork";
 import DrivingTheFuture from "../DrivingTheFuture/DrivingTheFuture";
+import StrategicDirection from "../StrategicDirection/StrategicDirection";
+import StrategicDirectionIAM from "../StrategicDirectionIAM/StrategicDirectionIAM";
+import StatisticalGroupings from "../StatisticalGroupings/StatisticalGroupings";
+import AcknowledgementOfDiversity from "../AcknowledgementOfDiversity/AcknowledgementOfDiversity";
 
 
 class App extends Component {
@@ -41,7 +45,7 @@ class App extends Component {
         InclusionWork: 'Inclusion@Work',
         DrivingTheFuture: 'Driving the Future',
         StrategicDirection: 'Strategic Direction',
-        StrategicDirectionInvolvingAMerger: 'Strategic Direction Involving a Merger',
+        StrategicDirectionIAM: 'Strategic Direction Involving a Merger',
         StatisticalGroupings: 'Statistical Groupings',
         AcknowledgementOfDiversity: 'Acknowledgement of Diversity',
         StandardsOfBehaviour: 'Standards of Behaviour',
@@ -138,7 +142,7 @@ class App extends Component {
         radioSlots[i].appendChild(radios[i]);
       }
     } else {
-      console.log(page + ' Radio Questions and field IDs do not match!')
+      console.log(page + ' Radio Questions and field IDs do not match')
     }
     let textFields = document.querySelectorAll("div[name='" + page + "'] .mrEdit");
     let textSlots = document.querySelectorAll(".text" + page);
@@ -148,7 +152,7 @@ class App extends Component {
         textSlots[j].appendChild(textFields[j].parentNode);
       }
     } else {
-      console.log(page + ' Text Questions and field IDs do not match!')
+      console.log(page + ' Text Questions and field IDs do not match')
     }
   }
 
@@ -260,6 +264,20 @@ class App extends Component {
       case ( 'Driving the Future' ):
         page = <DrivingTheFuture {...commonProps} />;
         break;
+      case ( 'Strategic Direction' ):
+        page = <StrategicDirection {...commonProps} />;
+        break;
+      case ( 'Strategic Direction Involving a Merger' ):
+        page = <StrategicDirectionIAM {...commonProps} />;
+        break;
+      case ( 'Statistical Groupings' ):
+        page = <StatisticalGroupings {...commonProps} />;
+        break;
+      case ( 'Acknowledgement of Diversity' ):
+        page = <AcknowledgementOfDiversity {...commonProps} />;
+        break;
+
+
 
 
       default:

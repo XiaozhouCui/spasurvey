@@ -11,12 +11,13 @@ class WorkLifeIntegration extends Component {
   }
 
   render() {
+    const pageId = this.props.moduleName;
     return (
       <div>
         <div className="demographic">
           <div className="question_title"><strong>Is it DIFFICULT to maintain a balance between the demands of your working life and the demands of your personal life?</strong> <em>(please select)</em></div>
           <div className="question_response">
-            <div className="radiosWorkLifeIntegration"></div>
+            <div className={'radios'+pageId}></div>
           </div>
         </div>
         <div className="demographic">
@@ -32,12 +33,12 @@ class WorkLifeIntegration extends Component {
               <tr>
                 <td>
                   <div className="response_field smallheight">
-                    <div className="textWorkLifeIntegration"></div>
+                    <div className={'text'+pageId}></div>
                   </div>
                 </td>
                 <td>
                   <div className="response_field smallheight">
-                    <div className="textWorkLifeIntegration"></div>
+                    <div className={'text'+pageId}></div>
                   </div>
                 </td>
               </tr>
@@ -49,7 +50,7 @@ class WorkLifeIntegration extends Component {
             <strong>Are you able to access flexible work practices in your workplace?</strong>
           </div>
           <div className="question_response">
-            <div className="radiosWorkLifeIntegration"></div>
+            <div className={'radios'+pageId}></div>
           </div>
         </div>
         <div className="extent -no_rating_scale" id="scale_tooltips_section">
@@ -80,25 +81,25 @@ class WorkLifeIntegration extends Component {
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">My manager is aware of and accommodates work/life balance issues.</td>
                 <td className="question_response row">
-                  <div className="radiosWorkLifeIntegration"></div>
+                  <div className={'radios'+pageId}></div>
                 </td>
               </tr>
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">My colleagues are flexible and supportive in helping me attend to work/life balance issues.</td>
                 <td className="question_response row">
-                  <div className="radiosWorkLifeIntegration"></div>
+                  <div className={'radios'+pageId}></div>
                 </td>
               </tr>
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">The <span className="definition" id="orga">organisation</span> actively accommodates the work/life balance needs of employees.</td>
                 <td className="question_response row">
-                  <div className="radiosWorkLifeIntegration"></div>
+                  <div className={'radios'+pageId}></div>
                 </td>
               </tr>
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">Employees are able to access alternative working arrangements to accommodate work/life balance issues (such as child care or working from home).</td>
                 <td className="question_response row">
-                  <div className="radiosWorkLifeIntegration"></div>
+                  <div className={'radios'+pageId}></div>
                 </td>
               </tr>
             </tbody>

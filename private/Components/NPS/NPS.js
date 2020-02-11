@@ -11,6 +11,7 @@ class NPS extends Component {
   }
 
   render() {
+    const pageId = this.props.moduleName;
     return (
       <div>
         <div className="question_title -no_shadow" style={{ margin:10 }}><em>(Please note the rating scale is reversed for this next question.)</em></div>
@@ -27,7 +28,7 @@ class NPS extends Component {
                 <p>I would absolutely <strong>NOT</strong> recommend the organisation.</p><img src="https://i.bpanz.com/i/p0y9ejL.png" alt="sad face"/>
               </td>
               <td className="question_response">
-                <div className="radiosNPS"></div>
+                <div className={'radios'+pageId}></div>
                 <div className="numbers_fallback">
                   <span className="red">0</span>
                   <span className="red">1</span>
@@ -52,7 +53,7 @@ class NPS extends Component {
               <td className="reason" colSpan="3" style={{paddingBottom:30}}>
                 <div className="question_title -no_shadow"><strong>Why did you give this score?</strong></div>
                 <div className="question_response">
-                  <div className="textNPS"></div>
+                  <div className={'text'+pageId}></div>
                 </div>
               </td>
             </tr>
@@ -64,7 +65,7 @@ class NPS extends Component {
                 <p>I would absolutely <strong>NOT</strong> recommend the organisation.</p><img src="https://i.bpanz.com/i/p0y9ejL.png" alt="sad face"/>
               </td>
               <td className="question_response">
-                <div className="radiosNPS"></div>
+                <div className={'radios'+pageId}></div>
                 <div className="numbers_fallback">
                   <span className="red">0</span>
                   <span className="red">1</span>
@@ -89,7 +90,7 @@ class NPS extends Component {
               <td className="reason" colSpan="3">
                 <div className="question_title -no_shadow"><strong>Why did you give this score?</strong></div>
                 <div className="question_response">
-                  <div className="textNPS"></div>
+                  <div className={'text'+pageId}></div>
                 </div>
               </td>
             </tr>

@@ -11,6 +11,7 @@ class TrulyGreatPlaceToWork extends Component {
   }
 
   render() {
+    const pageId = this.props.moduleName;
     return (
       <div className="truly_great">
         <table className="question_table">
@@ -19,7 +20,7 @@ class TrulyGreatPlaceToWork extends Component {
               <td colSpan="4">
                 <div className="question_title"><strong>On balance, is your <span className="definition" name="orga">organisation</span> a "<em>truly great place to work</em>"?</strong> <em>(please select)</em></div>
                 <div className="question_response">
-                  <div className="radiosTrulyGreat"></div>
+                  <div className={'radios'+pageId}></div>
                 </div>
               </td>
             </tr>
@@ -30,7 +31,7 @@ class TrulyGreatPlaceToWork extends Component {
               <td>
                 <div className="question_response -text">
                   <p>If <strong>YES</strong>, what makes it a <br/> "<em>truly great place to work</em>"?</p>
-                  <div className="textTrulyGreat"></div>
+                  <div className={'text'+pageId}></div>
                 </div>
               </td>
               <td rowSpan="2">
@@ -39,7 +40,7 @@ class TrulyGreatPlaceToWork extends Component {
               <td>
                 <div className="question_response -text">
                   <p>If <strong>NO</strong>, what is stopping it from becoming <br/> a "<em>truly great place to work</em>"?</p>
-                  <div className="textTrulyGreat"></div>
+                  <div className={'text'+pageId}></div>
                 </div>
               </td>
             </tr>

@@ -31,70 +31,10 @@ Survey:
   Survey.Ask()
   '--- End of page Survey ---
 
-ValuesInAction:
-  '--- Start of page ValuesInAction ---
-  ValuesInAction.LayoutTemplate = "ValuesInAction.html"
-  ValuesInAction.Ask()
-  '--- End of page ValuesInAction ---
-
-LeadershipEssentials:
-  '--- Start of page LeadershipEssentials ---
-  LeadershipEssentials.LayoutTemplate = "LeadershipEssentials.html"
-  LeadershipEssentials.Ask()
-  '--- End of page LeadershipEssentials ---
-
-LeadershipBehaviours:
-  '--- Start of page LeadershipBehaviours ---
-  LeadershipBehaviours.LayoutTemplate = "LeadershipBehaviours.html"
-  LeadershipBehaviours.Ask()
-  '--- End of page LeadershipBehaviours ---
-
-TheIssuesThatMatter:
-  '--- Start of page TheIssuesThatMatter ---
-  TheIssuesThatMatter.LayoutTemplate = "TheIssuesThatMatter.html"
-  TheIssuesThatMatter.Ask()
-  '--- End of page TheIssuesThatMatter ---
-
 ChangeMomentum:
   '--- Start of page ChangeMomentum ---
   ChangeMomentum.LayoutTemplate = "ChangeMomentum.html"
   ChangeMomentum.Ask()
   '--- End of page ChangeMomentum ---
-
-CommunityExpectations:
-  '--- Start of page CommunityExpectations ---
-  CommunityExpectations.LayoutTemplate = "CommunityExpectations.html"
-  CommunityExpectations.Ask()
-  '--- End of page CommunityExpectations ---
-
-MessageinaBottle:
-  '--- Start of page MessageinaBottle ---
-  MessageinaBottle.LayoutTemplate = "MessageinaBottle.html"
-  MessageinaBottle.Ask()
-  '--- End of page MessageinaBottle ---
-
-FeedbackFromtheLastSurvey:
-  '--- Start of page FeedbackFromtheLastSurvey ---
-  FeedbackFromtheLastSurvey.LayoutTemplate = "FeedbackFromtheLastSurvey.html"
-  FeedbackFromtheLastSurvey.Ask()
-  '--- End of page FeedbackFromtheLastSurvey ---
-
-StatisticalGroupings:
-  '--- Start of page StatisticalGroupings ---
-  StatisticalGroupings.LayoutTemplate = "StatisticalGroupings.html"
-  StatisticalGroupings.Ask()
-  '--- End of page StatisticalGroupings ---
-
-AcknowledgementOfDiversity:
-  '--- Start of page AcknowledgementOfDiversity ---
-  AcknowledgementOfDiversity.LayoutTemplate = "AcknowledgementOfDiversity.html"
-  AcknowledgementOfDiversity.Ask()
-  '--- End of page AcknowledgementOfDiversity ---
-
-ThankYouForCompletingTheSurvey:
-  '--- Start of page ThankYouForCompletingTheSurvey ---
-  ThankYouForCompletingTheSurvey.LayoutTemplate = "ThankYouForCompletingTheSurvey.html"
-  ThankYouForCompletingTheSurvey.Ask()
-  '--- End of page ThankYouForCompletingTheSurvey ---
 
 End Routing

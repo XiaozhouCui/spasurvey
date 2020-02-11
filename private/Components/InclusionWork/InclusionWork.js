@@ -11,6 +11,7 @@ class InclusionWork extends Component {
   }
 
   render() {
+    const pageId = this.props.moduleName;
     return (
       <div>
         <div className="question_title"><strong>To what extent do you agree (or disagree) with the following statements?</strong> <em>(please select)</em></div>
@@ -46,7 +47,7 @@ class InclusionWork extends Component {
                   </ul>
                 </td>
                 <td className="question_response">
-                  <div className="radiosInclusionWork"></div>
+                  <div className={'radios'+pageId}></div>
                 </td>
               </tr>
               <tr className="row">
@@ -59,43 +60,43 @@ class InclusionWork extends Component {
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... Their cultural and/or linguistic background.</td>
                 <td className="question_response">
-                  <div className="radiosInclusionWork"></div>
+                  <div className={'radios'+pageId}></div>
                 </td>
               </tr>
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... Their gender.</td>
                 <td className="question_response">
-                  <div className="radiosInclusionWork"></div>
+                  <div className={'radios'+pageId}></div>
                 </td>
               </tr>
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... Their sexuality.</td>
                 <td className="question_response">
-                  <div className="radiosInclusionWork"></div>
+                  <div className={'radios'+pageId}></div>
                 </td>
               </tr>
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... Their age.</td>
                 <td className="question_response">
-                  <div className="radiosInclusionWork"></div>
+                  <div className={'radios'+pageId}></div>
                 </td>
               </tr>
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... Their faith or religion.</td>
                 <td className="question_response">
-                  <div className="radiosInclusionWork"></div>
+                  <div className={'radios'+pageId}></div>
                 </td>
               </tr>
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... Identifying as an Aboriginal and/or Torres Strait Islander person.</td>
                 <td className="question_response">
-                  <div className="radiosInclusionWork"></div>
+                  <div className={'radios'+pageId}></div>
                 </td>
               </tr>
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... Identifying as a person with disability.</td>
                 <td className="question_response">
-                  <div className="radiosInclusionWork"></div>
+                  <div className={'radios'+pageId}></div>
                 </td>
               </tr>
 
@@ -109,7 +110,7 @@ class InclusionWork extends Component {
                   </ul>
                 </td>
                 <td className="question_response">
-                  <div className="radiosInclusionWork"></div>
+                  <div className={'radios'+pageId}></div>
                 </td>
               </tr>
               <tr className="row">
@@ -119,7 +120,7 @@ class InclusionWork extends Component {
                   </ul>
                 </td>
                 <td className="question_response">
-                  <div className="radiosInclusionWork"></div>
+                  <div className={'radios'+pageId}></div>
                 </td>
               </tr>
               <tr className="row">
@@ -129,7 +130,7 @@ class InclusionWork extends Component {
                   </ul>
                 </td>
                 <td className="question_response">
-                  <div className="radiosInclusionWork"></div>
+                  <div className={'radios'+pageId}></div>
                 </td>
               </tr>
               <tr className="row">
@@ -139,7 +140,7 @@ class InclusionWork extends Component {
                   </ul>
                 </td>
                 <td className="question_response">
-                  <div className="radiosInclusionWork"></div>
+                  <div className={'radios'+pageId}></div>
                 </td>
               </tr>
 
@@ -153,7 +154,7 @@ class InclusionWork extends Component {
                   </ul>
                 </td>
                 <td className="question_response">
-                  <div className="radiosInclusionWork"></div>
+                  <div className={'radios'+pageId}></div>
                 </td>
               </tr>
               <tr className="row">
@@ -163,7 +164,7 @@ class InclusionWork extends Component {
                   </ul>
                 </td>
                 <td className="question_response">
-                  <div className="radiosInclusionWork"></div>
+                  <div className={'radios'+pageId}></div>
                 </td>
               </tr>
               <tr className="row">
@@ -173,7 +174,7 @@ class InclusionWork extends Component {
                   </ul>
                 </td>
                 <td className="question_response">
-                  <div className="radiosInclusionWork"></div>
+                  <div className={'radios'+pageId}></div>
                 </td>
               </tr>
               <tr className="row">
@@ -183,7 +184,7 @@ class InclusionWork extends Component {
                   </ul>
                 </td>
                 <td className="question_response">
-                  <div className="radiosInclusionWork"></div>
+                  <div className={'radios'+pageId}></div>
                 </td>
               </tr>
             </tbody>
