@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 
 class PersonalWellBeing extends Component {
 
-componentDidMount() {
-  this.props.mountContent('PersonalWellBeing');
-}
+  componentDidMount() {
+    this.props.mountContent(this.props.moduleName);
+  }
 
-componentWillUnmount() { //before unmount component, return the radio buttons to where they belong
-  this.props.unmountContent('PersonalWellBeing');
-}
+  componentWillUnmount() {
+    this.props.unmountContent(this.props.moduleName);
+  }
 
 
   render() {

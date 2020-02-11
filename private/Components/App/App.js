@@ -21,58 +21,58 @@ class App extends Component {
     super(props);
 
     this.state = {
-      isLocalHost: false,
+      isLocalHost: true,
       isStaging: false,
       projectCode: 'TEST_20_ES',
       session: this.props.session,
       workUnit: this.props.workunit,
       currentPage: 'Cover Page',
-      pages: [
-        'Cover Page',
-        'Instructions',
-        'Definitions',
-        'Engagement',
-        'Expectations',
-        'Personal Well-Being',
-        'Work-Life Integration',
-        'Truly Great Place to Work',
-        'Net Promoter Score',
-        'Attraction & Retention',
-        'Inclusion@Work',
-        'Driving the Future',
-        'Strategic Direction',
-        'Strategic Direction Involving a Merger',
-        'Statistical Groupings',
-        'Acknowledgement of Diversity',
-        'Standards of Behaviour',
-        'Team Norms',
-        'Values-In-Action',
-        'The Do’s and Don’ts',
-        'Advice on Living the Values',
-        'Respect@Work',
-        'Causes for Concern',
-        'Safety@Work',
-        'Workplace Safety Culture',
-        'Harassment and Bullying',
-        'Occupational Violence',
-        'Leadership Essentials',
-        'Leadership Strengths',
-        'Leadership Priorities',
-        'Leadership Behaviours',
-        'Message in a Bottle',
-        'Message in a Bottle to Designated Managers',
-        'The Issues That Matter',
-        'Organisational Initiatives',
-        'Embracing Our Challenges',
-        'Change Momentum',
-        'How Are We Travelling',
-        'Your Advice',
-        'Client Expectations',
-        'Risk of Client Abuse',
-        'Client Safety Culture',
-        'Statement on Intellectual Property',
-        'Statement on Privacy'
-      ],
+      modules: {
+        CoverPage: 'Cover Page',
+        Instructions: 'Instructions',
+        Definitions: 'Definitions',
+        Engagement: 'Engagement',
+        Expectations: 'Expectations',
+        PersonalWellBeing: 'Personal Well-Being',
+        WorkLifeIntegration: 'Work-Life Integration',
+        TrulyGreat: 'Truly Great Place to Work',
+        NPS: 'Net Promoter Score',
+        AttractionRetention: 'Attraction & Retention',
+        InclusionWork: 'Inclusion@Work',
+        DrivingTheFuture: 'Driving the Future',
+        StrategicDirection: 'Strategic Direction',
+        StrategicDirectionInvolvingAMerger: 'Strategic Direction Involving a Merger',
+        StatisticalGroupings: 'Statistical Groupings',
+        AcknowledgementOfDiversity: 'Acknowledgement of Diversity',
+        StandardsOfBehaviour: 'Standards of Behaviour',
+        TeamNorms: 'Team Norms',
+        ValuesInAction: 'Values-In-Action',
+        TheDosAndDonts: 'The Do’s and Don’ts',
+        AdviceOnLivingTheValues: 'Advice on Living the Values',
+        RespectWork: 'Respect@Work',
+        CausesForConcern: 'Causes for Concern',
+        SafetyWork: 'Safety@Work',
+        WorkplaceSafetyCulture: 'Workplace Safety Culture',
+        HarassmentAndBullying: 'Harassment and Bullying',
+        OccupationalViolence: 'Occupational Violence',
+        LeadershipEssentials: 'Leadership Essentials',
+        LeadershipStrengths: 'Leadership Strengths',
+        LeadershipPriorities: 'Leadership Priorities',
+        LeadershipBehaviours: 'Leadership Behaviours',
+        MessageInABottle: 'Message in a Bottle',
+        MessageInABottleToDesignatedManagers: 'Message in a Bottle to Designated Managers',
+        TheIssuesThatMatter: 'The Issues That Matter',
+        OrganisationalInitiatives: 'Organisational Initiatives',
+        EmbracingOurChallenges: 'Embracing Our Challenges',
+        ChangeMomentum: 'Change Momentum',
+        HowAreWeTravelling: 'How Are We Travelling',
+        YourAdvice: 'Your Advice',
+        ClientExpectations: 'Client Expectations',
+        RiskOfClientAbuse: 'Risk of Client Abuse',
+        ClientSafetyCulture: 'Client Safety Culture',
+        StatementOnIntellectualProperty: 'Statement on Intellectual Property',
+        StatementOnPrivacy: 'Statement on Privacy'
+      },
       data: {},
     }
 
@@ -124,12 +124,6 @@ class App extends Component {
     this.changeTextarea(fieldId, targetText);
   }
 
-  moveContent(target, destination) {
-    target.parentNode.removeChild(target);
-    destination.appendChild(target);
-  }
-
-  
   handlePageNav(newPage) {
     this.setState({currentPage: newPage})
   }
@@ -175,7 +169,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-
+    console.log('App component mounted')
     Array.from(document.querySelectorAll('.mrQuestionTable input[type="radio"]')).forEach(item => {
       item.addEventListener('click', this.handleSelection);
     })
@@ -223,8 +217,10 @@ class App extends Component {
   render() {
     const commonProps = {
       mountContent: this.mountContent,
-      unmountContent: this.unmountContent
+      unmountContent: this.unmountContent,
+      moduleName: Object.keys(this.state.modules).find(key => this.state.modules[key] === this.state.currentPage)
     }
+    const pageTitles = Object.keys(this.state.modules).map(key => this.state.modules[key]);
     const isCoverPage = this.state.currentPage === "Cover Page";
     let page = null;
     switch ( this.state.currentPage ) {
@@ -276,9 +272,9 @@ class App extends Component {
         <div className="contentContainer" style={isCoverPage ? {padding: 0} : null}>
           {page}
         </div>
-        <SurveyNav page={this.state.currentPage} pages={this.state.pages} onBrowse={this.handlePageNav} />
+        <SurveyNav page={this.state.currentPage} pages={pageTitles} onBrowse={this.handlePageNav} />
         { isCoverPage ? <div><br/><br/></div> : null}
-        <Footer moveContent={this.moveContent} />
+        <Footer />
       </div>
     );
   }

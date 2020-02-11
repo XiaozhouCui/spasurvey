@@ -3,11 +3,11 @@ import React, { Component } from 'react'
 class InclusionWork extends Component {
 
   componentDidMount() {
-    this.props.mountContent('InclusionWork');
+    this.props.mountContent(this.props.moduleName);
   }
 
-  componentWillUnmount() { //before unmount component, return the radio buttons to where they belong
-    this.props.unmountContent('InclusionWork');
+  componentWillUnmount() {
+    this.props.unmountContent(this.props.moduleName);
   }
 
   render() {

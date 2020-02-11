@@ -3,11 +3,11 @@ import React, { Component } from "react";
 class TrulyGreatPlaceToWork extends Component {
 
   componentDidMount() {
-    this.props.mountContent('TrulyGreat');
+    this.props.mountContent(this.props.moduleName);
   }
 
-  componentWillUnmount() { //before unmount component, return the radio buttons to where they belong
-    this.props.unmountContent('TrulyGreat')
+  componentWillUnmount() {
+    this.props.unmountContent(this.props.moduleName);
   }
 
   render() {

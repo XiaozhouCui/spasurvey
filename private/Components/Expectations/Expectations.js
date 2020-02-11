@@ -3,11 +3,11 @@ import React, { Component } from 'react'
 class Expectations extends Component {
 
   componentDidMount() {
-    this.props.mountContent('Expectations');
+    this.props.mountContent(this.props.moduleName);
   }
 
-  componentWillUnmount() { //before unmount component, return the radio buttons to where they belong
-    this.props.unmountContent('Expectations');
+  componentWillUnmount() {
+    this.props.unmountContent(this.props.moduleName);
   }
 
   render() {
