@@ -145,7 +145,10 @@ Metadata(en-AU, Question, Label)
   { 
     _1  "Man" [ Value = "1" ],
     _2  "Woman" [ Value = "2" ],
-    _3  "Prefer to self describe in another way" [ Value = "3" ],
+    _3  "Transgender man" [ Value = "3" ],
+    _4  "Transgender woman" [ Value = "4" ],
+    _5  "Non-Binary" [ Value = "5" ],
+    _6  "Prefer to self describe in another way" [ Value = "6" ],
     _998  "Prefer not to say" [ Value = "998" ],
     _999 - [ Value = "999" ] NA
   };

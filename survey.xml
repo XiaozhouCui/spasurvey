@@ -553,12 +553,14 @@
   <page title="Change Momentum">
   </page>
 
-
-  <categories id="Scale1to4ClientAbuse">
-    <category value="1" description="No cause for concern" />
-    <category value="2" description="Some potential signs" />
-    <category value="3" description="Cause for concern" />
-    <category value="3" description="Cause for concern" />
+  <categories id="D0024_Gender_other_specify" orientation="column" columns="1">
+    <category value="1">Man</category>
+    <category value="2">Woman</category>
+    <category value="3">Transgender man</category>
+    <category value="4">Transgender woman</category>
+    <category value="5">Non-Binary</category>
+    <category value="6">Prefer to self describe in another way</category>
+    <category value="998" label="Prefer not to say" refused="true"></category>
     <category value="999" missing="true" />
   </categories>
   <categories id="D0077_Position" orientation="column" columns="1">

@@ -18,6 +18,11 @@ import StrategicDirection from "../StrategicDirection/StrategicDirection";
 import StrategicDirectionIAM from "../StrategicDirectionIAM/StrategicDirectionIAM";
 import StatisticalGroupings from "../StatisticalGroupings/StatisticalGroupings";
 import AcknowledgementOfDiversity from "../AcknowledgementOfDiversity/AcknowledgementOfDiversity";
+import StandardsOfBehaviour from "../StandardsOfBehaviour/StandardsOfBehaviour";
+import TeamNorms from "../TeamNorms/TeamNorms";
+import ValuesInAction from "../ValuesInAction/ValuesInAction";
+import TheDosAndDonts from "../TheDosAndDonts/TheDosAndDonts";
+import AdviceOnLivingTheValues from "../AdviceOnLivingTheValues/AdviceOnLivingTheValues";
 
 
 class App extends Component {
@@ -64,7 +69,7 @@ class App extends Component {
         LeadershipPriorities: 'Leadership Priorities',
         LeadershipBehaviours: 'Leadership Behaviours',
         MessageInABottle: 'Message in a Bottle',
-        MessageInABottleToDesignatedManagers: 'Message in a Bottle to Designated Managers',
+        MessageInABottleTDM: 'Message in a Bottle to Designated Managers',
         TheIssuesThatMatter: 'The Issues That Matter',
         OrganisationalInitiatives: 'Organisational Initiatives',
         EmbracingOurChallenges: 'Embracing Our Challenges',
@@ -74,8 +79,8 @@ class App extends Component {
         ClientExpectations: 'Client Expectations',
         RiskOfClientAbuse: 'Risk of Client Abuse',
         ClientSafetyCulture: 'Client Safety Culture',
-        StatementOnIntellectualProperty: 'Statement on Intellectual Property',
-        StatementOnPrivacy: 'Statement on Privacy'
+        IntellectualProperty: 'Statement on Intellectual Property',
+        Privacy: 'Statement on Privacy'
       },
       data: {},
     }
@@ -276,10 +281,20 @@ class App extends Component {
       case ( 'Acknowledgement of Diversity' ):
         page = <AcknowledgementOfDiversity {...commonProps} />;
         break;
+      case ( 'Standards of Behaviour' ):
+        page = <StandardsOfBehaviour {...commonProps} />;
+        break;
+      case ( 'Team Norms' ):
+        page = <TeamNorms {...commonProps} />;
+        break;
+      case ( 'Values-In-Action' ):
+        page = <ValuesInAction {...commonProps} />;
+        break;
+      case ( 'The Do’s and Don’ts' ):
+        page = <TheDosAndDonts {...commonProps} />;
+        break;
 
-
-
-
+        
       default:
         page = null;
     }
