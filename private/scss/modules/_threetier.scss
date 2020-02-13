@@ -96,7 +96,18 @@
 	.question_table__header {
 		@extend %grid__item;
 		@extend %one-third;
-
+		&.-col_two {
+			table {
+				width: 86%;
+				tr {
+					width: 100%;
+					text-align: center;
+					td {
+						width:30%
+					}
+				}
+			}
+		}
 		&.-scale_img {
 			text-align: center;
 		}

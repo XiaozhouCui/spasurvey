@@ -23,6 +23,12 @@ import TeamNorms from "../TeamNorms/TeamNorms";
 import ValuesInAction from "../ValuesInAction/ValuesInAction";
 import TheDosAndDonts from "../TheDosAndDonts/TheDosAndDonts";
 import AdviceOnLivingTheValues from "../AdviceOnLivingTheValues/AdviceOnLivingTheValues";
+import RespectWork from "../RespectWork/RespectWork";
+import CausesForConcern from "../CausesForConcern/CausesForConcern";
+import SafetyWork from "../SafetyWork/SafetyWork";
+import WorkplaceSafetyCulture from "../WorkplaceSafetyCulture/WorkplaceSafetyCulture";
+import HarassmentAndBullying from "../HarassmentAndBullying/HarassmentAndBullying";
+import OccupationalViolence from "../OccupationalViolence/OccupationalViolence";
 
 
 class App extends Component {
@@ -293,8 +299,34 @@ class App extends Component {
       case ( 'The Do’s and Don’ts' ):
         page = <TheDosAndDonts {...commonProps} />;
         break;
+      case ( 'Advice on Living the Values' ):
+        page = <AdviceOnLivingTheValues {...commonProps} />;
+        break;
+      case ( 'Respect@Work' ):
+        page = <RespectWork {...commonProps} />;
+        break;
+      case ( 'Causes for Concern' ):
+        page = <CausesForConcern {...commonProps} />;
+        break;
+      case ( 'Safety@Work' ):
+        page = <SafetyWork {...commonProps} />;
+        break;
+      case ( 'Workplace Safety Culture' ):
+        page = <WorkplaceSafetyCulture {...commonProps} />;
+        break;
+      case ( 'Harassment and Bullying' ):
+        page = <HarassmentAndBullying {...commonProps} />;
+        break;
+      case ( 'Occupational Violence' ):
+        page = <OccupationalViolence {...commonProps} />;
+        break;
 
-        
+
+
+
+
+
+
       default:
         page = null;
     }
