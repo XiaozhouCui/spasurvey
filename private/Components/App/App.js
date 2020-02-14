@@ -22,6 +22,7 @@ import StandardsOfBehaviour from "../StandardsOfBehaviour/StandardsOfBehaviour";
 import TeamNorms from "../TeamNorms/TeamNorms";
 import ValuesInAction from "../ValuesInAction/ValuesInAction";
 import TheDosAndDonts from "../TheDosAndDonts/TheDosAndDonts";
+import TheDosAndDontsForEachValue from "../TheDosAndDontsForEachValue/TheDosAndDontsForEachValue";
 import AdviceOnLivingTheValues from "../AdviceOnLivingTheValues/AdviceOnLivingTheValues";
 import RespectWork from "../RespectWork/RespectWork";
 import CausesForConcern from "../CausesForConcern/CausesForConcern";
@@ -29,6 +30,18 @@ import SafetyWork from "../SafetyWork/SafetyWork";
 import WorkplaceSafetyCulture from "../WorkplaceSafetyCulture/WorkplaceSafetyCulture";
 import HarassmentAndBullying from "../HarassmentAndBullying/HarassmentAndBullying";
 import OccupationalViolence from "../OccupationalViolence/OccupationalViolence";
+import LeadershipEssentials from "../LeadershipEssentials/LeadershipEssentials";
+import LeadershipStrengths from "../LeadershipStrengths/LeadershipStrengths";
+import LeadershipPriorities from "../LeadershipPriorities/LeadershipPriorities";
+import LeadershipBehaviours from "../LeadershipBehaviours/LeadershipBehaviours";
+import MessageInABottle from "../MessageInABottle/MessageInABottle";
+import MessageInABottleTDM from "../MessageInABottleTDM/MessageInABottleTDM";
+
+
+
+
+
+
 
 
 class App extends Component {
@@ -63,6 +76,7 @@ class App extends Component {
         TeamNorms: 'Team Norms',
         ValuesInAction: 'Values-In-Action',
         TheDosAndDonts: 'The Do’s and Don’ts',
+        TheDosAndDontsForEachValue: 'The Do’s and Don’ts for Each Value',
         AdviceOnLivingTheValues: 'Advice on Living the Values',
         RespectWork: 'Respect@Work',
         CausesForConcern: 'Causes for Concern',
@@ -299,6 +313,9 @@ class App extends Component {
       case ( 'The Do’s and Don’ts' ):
         page = <TheDosAndDonts {...commonProps} />;
         break;
+      case ( 'The Do’s and Don’ts for Each Value' ):
+        page = <TheDosAndDontsForEachValue {...commonProps} />;
+        break;
       case ( 'Advice on Living the Values' ):
         page = <AdviceOnLivingTheValues {...commonProps} />;
         break;
@@ -319,6 +336,24 @@ class App extends Component {
         break;
       case ( 'Occupational Violence' ):
         page = <OccupationalViolence {...commonProps} />;
+        break;
+      case ( 'Leadership Essentials' ):
+        page = <LeadershipEssentials {...commonProps} />;
+        break;
+      case ( 'Leadership Strengths' ):
+        page = <LeadershipStrengths {...commonProps} />;
+        break;
+      case ( 'Leadership Priorities' ):
+        page = <LeadershipPriorities {...commonProps} />;
+        break;
+      case ( 'Leadership Behaviours' ):
+        page = <LeadershipBehaviours {...commonProps} />;
+        break;
+      case ( 'Message in a Bottle' ):
+        page = <MessageInABottle {...commonProps} />;
+        break;
+      case ( 'Message in a Bottle to Designated Managers' ):
+        page = <MessageInABottleTDM {...commonProps} />;
         break;
 
 
