@@ -35,7 +35,14 @@ import LeadershipStrengths from "../LeadershipStrengths/LeadershipStrengths";
 import LeadershipPriorities from "../LeadershipPriorities/LeadershipPriorities";
 import LeadershipBehaviours from "../LeadershipBehaviours/LeadershipBehaviours";
 import MessageInABottle from "../MessageInABottle/MessageInABottle";
+import FeedbackFromLastSurvey from "../FeedbackFromLastSurvey/FeedbackFromLastSurvey";
 import MessageInABottleTDM from "../MessageInABottleTDM/MessageInABottleTDM";
+import TheIssuesThatMatter from "../TheIssuesThatMatter/TheIssuesThatMatter";
+import OrganisationalInitiatives from "../OrganisationalInitiatives/OrganisationalInitiatives";
+import EmbracingOurChallenges from "../EmbracingOurChallenges/EmbracingOurChallenges";
+import ChangeMomentum from "../ChangeMomentum/ChangeMomentum";
+import HowAreWeTravelling from "../HowAreWeTravelling/HowAreWeTravelling";
+import YourAdvice from "../YourAdvice/YourAdvice";
 
 
 
@@ -89,6 +96,7 @@ class App extends Component {
         LeadershipPriorities: 'Leadership Priorities',
         LeadershipBehaviours: 'Leadership Behaviours',
         MessageInABottle: 'Message in a Bottle',
+        FeedbackFromLastSurvey: 'Feedback From Your Organisation’s Last Employee Survey',
         MessageInABottleTDM: 'Message in a Bottle to Designated Managers',
         TheIssuesThatMatter: 'The Issues That Matter',
         OrganisationalInitiatives: 'Organisational Initiatives',
@@ -352,8 +360,29 @@ class App extends Component {
       case ( 'Message in a Bottle' ):
         page = <MessageInABottle {...commonProps} />;
         break;
+      case ( 'Feedback From Your Organisation’s Last Employee Survey' ):
+        page = <FeedbackFromLastSurvey {...commonProps} />;
+        break;
       case ( 'Message in a Bottle to Designated Managers' ):
         page = <MessageInABottleTDM {...commonProps} />;
+        break;
+      case ( 'The Issues That Matter' ):
+        page = <TheIssuesThatMatter {...commonProps} />;
+        break;
+      case ( 'Organisational Initiatives' ):
+        page = <OrganisationalInitiatives {...commonProps} />;
+        break;
+      case ( 'Embracing Our Challenges' ):
+        page = <EmbracingOurChallenges {...commonProps} />;
+        break;
+      case ( 'Change Momentum' ):
+        page = <ChangeMomentum {...commonProps} />;
+        break;
+      case ( 'How Are We Travelling' ):
+        page = <HowAreWeTravelling {...commonProps} />;
+        break;
+      case ( 'Your Advice' ):
+        page = <YourAdvice {...commonProps} />;
         break;
 
 
