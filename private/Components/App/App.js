@@ -43,6 +43,11 @@ import EmbracingOurChallenges from "../EmbracingOurChallenges/EmbracingOurChalle
 import ChangeMomentum from "../ChangeMomentum/ChangeMomentum";
 import HowAreWeTravelling from "../HowAreWeTravelling/HowAreWeTravelling";
 import YourAdvice from "../YourAdvice/YourAdvice";
+import ClientExpectations from "../ClientExpectations/ClientExpectations";
+import RiskOfClientAbuse from "../RiskOfClientAbuse/RiskOfClientAbuse";
+import ClientSafetyCulture from "../ClientSafetyCulture/ClientSafetyCulture";
+import IntellectualProperty from "../IntellectualProperty/IntellectualProperty";
+import Privacy from "../Privacy/Privacy";
 
 
 
@@ -384,13 +389,21 @@ class App extends Component {
       case ( 'Your Advice' ):
         page = <YourAdvice {...commonProps} />;
         break;
-
-
-
-
-
-
-
+      case ( 'Client Expectations' ):
+        page = <ClientExpectations {...commonProps} />;
+        break;
+      case ( 'Risk of Client Abuse' ):
+        page = <RiskOfClientAbuse {...commonProps} />;
+        break;
+      case ( 'Client Safety Culture' ):
+        page = <ClientSafetyCulture {...commonProps} />;
+        break;
+      case ( 'Statement on Intellectual Property' ):
+        page = <IntellectualProperty {...commonProps} />;
+        break;
+      case ( 'Statement on Privacy' ):
+        page = <Privacy {...commonProps} />;
+        break;
       default:
         page = null;
     }
