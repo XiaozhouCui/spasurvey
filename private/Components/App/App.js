@@ -24,7 +24,7 @@ class App extends Component {
         Expectations: 'Expectations',
         PersonalWellBeing: 'Personal Well-Being',
         WorkLifeIntegration: 'Work-Life Integration',
-        TrulyGreat: 'Truly Great Place to Work',
+        TrulyGreatPlaceToWork: 'Truly Great Place to Work',
         NPS: 'Net Promoter Score',
         AttractionRetention: 'Attraction & Retention',
         InclusionWork: 'Inclusion@Work',
@@ -210,19 +210,17 @@ class App extends Component {
       mountContent: this.mountContent,
       unmountContent: this.unmountContent,
     }
-    const pageTitles = Object.keys(this.state.modules).map(key => this.state.modules[key]);
+    const pageTitles = Object.values(this.state.modules);
     const isCoverPage = this.state.currentPage === "Cover Page";
 
     return (
       <BrowserRouter>
-        { isCoverPage ? null : <Header title={this.state.currentPage} onPageChange={this.handlePageChange} />}
+        { isCoverPage ? null : <Header title={this.state.currentPage} onPageChange={this.handlePageChange} links={Object.entries(this.state.modules)} />}
         <div className="contentContainer" style={isCoverPage ? {padding: 0} : null}>
-          <ul>
-            {Object.keys(this.state.modules).map( page => <li key={page}><Link to={`/${page}`}>{page}</Link></li> )}
-          </ul>
           <Switch>
             {Object.keys(this.state.modules).map( page => { return (
               <Route
+                key={page}
                 path={`/${page}`}
                 render={(props) => <SwitchedPages {...props} {...commonProps} type={page} moduleName={page} />}
               />

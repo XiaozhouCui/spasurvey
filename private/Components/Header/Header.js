@@ -104,7 +104,7 @@ class Header extends Component {
         <div className="header__logo -client">
           <div className="clientLogoSlot"></div>
         </div>
-        <NavBar onClick={this.props.onPageChange} titles={titles} />
+        <NavBar onClick={this.props.onPageChange} titles={titles} links={this.props.links} />
         <div className="header-bar">
           <h1>{this.props.title}</h1>
         </div>
