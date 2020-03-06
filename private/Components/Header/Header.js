@@ -88,7 +88,7 @@ class Header extends Component {
 
     let subtitles = {}; // extract title-subtitle pairs
     Object.keys(titles).map(program => {
-      for (key in titles[program]) {
+      for (let key in titles[program]) {
         subtitles[key] = titles[program][key];
       }
     });

@@ -99,7 +99,7 @@ load_script('https://cdnjs.cloudflare.com/ajax/libs/keymaster/1.6.1/keymaster.mi
 	var goForward = function() {
 		console.log('going forward a page')
 		if ($('input[type="submit"][value*="Finish Survey"]').length) return;
-		$('#mrForm input[type="submit"][name="_NNext"]').click()
+		$('#mrForm a[name="_NNext"]')[0].click()
 	}
 	var stop = function() {
 		console.log('stopping')
@@ -107,7 +107,7 @@ load_script('https://cdnjs.cloudflare.com/ajax/libs/keymaster/1.6.1/keymaster.mi
 	}
 	var goBackward = function() {
 		console.log('going back a page')
-		$('#mrForm input[type="submit"][name="_NPrev"]').click()
+		$('#mrForm a[name="_NPrev"]')[0].click()
 	}
 	key('alt+c', goForward)
 

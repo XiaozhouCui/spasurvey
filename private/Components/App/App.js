@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Link, NavLink, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import SwitchedPages from '../SwitchedPages/SwitchedPages';
 import Header from '../Header/Header';
 import SurveyNav from '../SurveyNav/SurveyNav';
@@ -15,7 +15,7 @@ class App extends Component {
       projectCode: 'TEST_20_ES',
       session: this.props.session,
       workUnit: this.props.workunit,
-      currentPage: 'Cover Page',
+      currentPage: 'CoverPage',
       modules: {
         CoverPage: 'Cover Page',
         Instructions: 'Instructions',
@@ -210,27 +210,31 @@ class App extends Component {
       mountContent: this.mountContent,
       unmountContent: this.unmountContent,
     }
-    const pageTitles = Object.values(this.state.modules);
-    const isCoverPage = this.state.currentPage === "Cover Page";
+    const pageIds = Object.keys(this.state.modules);
+    const isCoverPage = this.state.currentPage === "CoverPage";
+    const currentTitle = this.state.modules[this.state.currentPage];
 
     return (
-      <BrowserRouter>
-        { isCoverPage ? null : <Header title={this.state.currentPage} onPageChange={this.handlePageChange} links={Object.entries(this.state.modules)} />}
+      <div>
+        { isCoverPage ? null : <Header title={currentTitle} onPageChange={this.handlePageChange} links={Object.entries(this.state.modules)} />}
         <div className="contentContainer" style={isCoverPage ? {padding: 0} : null}>
           <Switch>
-            {Object.keys(this.state.modules).map( page => { return (
+            <Route exact path="/">
+              <Redirect to="/CoverPage" />
+            </Route>
+            {pageIds.map( pageId => { return (
               <Route
-                key={page}
-                path={`/${page}`}
-                render={(props) => <SwitchedPages {...props} {...commonProps} type={page} moduleName={page} />}
+                key={pageId}
+                path={`/${pageId}`}
+                render={(props) => <SwitchedPages {...props} {...commonProps} type={pageId} moduleName={pageId} />}
               />
             )})}
           </Switch>
         </div>
-        <SurveyNav page={this.state.currentPage} pages={pageTitles} onBrowse={this.handlePageNav} />
+        <SurveyNav page={this.state.currentPage} pages={pageIds} onBrowse={this.handlePageNav} />
         { isCoverPage ? <div><br/><br/></div> : null}
         <Footer />
-      </BrowserRouter>
+      </div>
     );
   }
 }

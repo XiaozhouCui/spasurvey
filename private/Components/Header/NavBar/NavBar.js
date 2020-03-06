@@ -8,48 +8,23 @@ class NavBar extends Component {
   }
 
   handlePageChange(event) {
-    let pageName = event.target.innerText;
-    // console.log(pageName);
-    this.props.onClick(pageName);
+    const pageId = event.target.getAttribute('href').replace(/^\//g, '');
+    this.props.onClick(pageId);
   }
 
   render() {
-    let programs = {
-      'Cover':[],
-      'Engaging Our People':[],
-      'Identity & Direction':[],
-      'Values':[],
-      'Risk@Work':[],
-      'Leadership Landscape':[],
-      'Organisational Change':[],
-      'Client Engagement':[],
+    // divide the pages into programs
+    const links = [...this.props.links];
+    const programs = {
+      'Cover':links.slice(0, 3),
+      'Engaging Our People':links.slice(3, 7),
+      'Identity & Direction':links.slice(7, 16),
+      'Values':links.slice(16, 22),
+      'Risk@Work':links.slice(22, 28),
+      'Leadership Landscape':links.slice(28, 35),
+      'Organisational Change':links.slice(35, 41),
+      'Client Engagement':links.slice(41, 46),
     };
-    for(let i = 0; i <= this.props.links.length; i++) {
-      if (i < 3) {
-        programs['Cover'].push(this.props.links[i]);
-      }
-      else if (i >= 3 && i < 7) {
-        programs['Engaging Our People'].push(this.props.links[i]);
-      }
-      else if (i >= 7 && i < 16) {
-        programs['Identity & Direction'].push(this.props.links[i]);
-      }
-      else if (i >= 16 && i < 22) {
-        programs['Values'].push(this.props.links[i]);
-      }
-      else if (i >= 22 && i < 28) {
-        programs['Risk@Work'].push(this.props.links[i]);
-      }
-      else if (i >= 28 && i < 35) {
-        programs['Leadership Landscape'].push(this.props.links[i]);
-      }
-      else if (i >= 35 && i < 41) {
-        programs['Organisational Change'].push(this.props.links[i]);
-      }
-      else if (i >= 41 && i < 46) {
-        programs['Client Engagement'].push(this.props.links[i]);
-      }
-    }
 
     return (
       <ul className="navBar">
