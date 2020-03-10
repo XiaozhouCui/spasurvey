@@ -19,6 +19,14 @@ class SurveyNav extends Component {
       this.props.onBrowse(newPage);
     }
   }
+
+  componentDidUpdate() {
+    // Handle the css transition initial state for gprgress bar when component is mounted for the first time
+    if (this.props.page === 'Engagement') {
+      let bar = document.querySelector('#progressBar .bar')
+      setTimeout(()=>{bar.style.width = '6px'}, 10)
+    }
+  }
   
   render() {
     // Nav button variables
@@ -40,8 +48,6 @@ class SurveyNav extends Component {
           {estimatedProgress === 100 ? <input type="submit" name="_NNext" value="Finish Survey" title="Finish and submit your response" onClick={() => confirm('Finished with your survey? Select OK to submit responses or Cancel to continue answering.')}/> : <NavLink to={`/${nextPage}`} title="Proceed to the next page" name="_NNext" onClick={this.navigate}>Next</NavLink>}
         </div>
         {hideProgress ? null : <div id="progressBar" className="progress"><div className="bar" style={{width: progressBarWidth}}>{estimatedProgress + '%'}</div></div>}
-        {/* <input type="submit" name="_NPrev" value="Previous" onClick={this.navigate} title="Return to the previous page"/> */}
-        {/* <input type="submit" name="_NNext" value="Next" onClick={this.navigate} title="Proceed to the next page"/> */}
       </div>
     )
   }

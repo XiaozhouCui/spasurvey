@@ -69,14 +69,15 @@
 		text-decoration: none;
 		height: auto;
 		min-width: 4em !important;
-		font-size: 18px !important;
+		font-size: 20px !important;
+		font-weight: 500;
 		margin: 0 5px;
 
 		&[value="Previous"] {
 			//min-width: 5em !important;
 		}
 
-		&[value="Next"] {
+		&[name="_NNext"] {
 			@extend .btn-info;
 		}
 
