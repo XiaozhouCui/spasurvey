@@ -36,7 +36,7 @@
 		border: 1px solid #FF0000;
 	}
 
-	input{
+	input, a {
 		width	    :100px !important; // Important to override SPSS Styling
 		height	    :30px;
 		padding     :5px;
@@ -47,7 +47,7 @@
 		cursor      :pointer;
 		border      :1px solid #CCCCCC;
 
-		@include border-radius-simple(5px);
+
 
 		&:hover{
 			color: #ffffff;
@@ -63,19 +63,21 @@
 	text-align: center;
 	margin-top: 20px;
 
-	input {
+	input, a {
 		@extend .btn;
-
-		height: 2em;
+		padding: 8px 12px;
+		text-decoration: none;
+		height: auto;
 		min-width: 4em !important;
-		font-size: 18px !important;
+		font-size: 20px !important;
+		font-weight: 500;
 		margin: 0 5px;
 
 		&[value="Previous"] {
 			//min-width: 5em !important;
 		}
 
-		&[value="Next"] {
+		&[name="_NNext"] {
 			@extend .btn-info;
 		}
 

@@ -24,7 +24,7 @@ class LeadershipStrengths extends Component {
                 </td>
                 <td className="question_table__header -col_two" style={{padding:0, marginBottom:'1em'}}><img src="https://i.bpanz.com/i/DBOuI2y.png" alt="agree ---- disagree"/>
                 </td>
-                <td className="question_table__header -col_three" rowspan="10">
+                <td className="question_table__header -col_three" rowSpan="10">
                   <div className="rating_scale">
                     <p className="rating_scale__heading">1 to 6 Rating Scale</p>
                     <div className="smileyFaceHappy"><img src="https://i.bpanz.com/eTbY9Np.png"/></div>

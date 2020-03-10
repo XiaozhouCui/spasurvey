@@ -15,6 +15,7 @@ class Privacy extends Component {
           <li>Information gained from qualitative free-text questions is provided verbatim to the BPA client organisation. By completing a qualitative free-text question, the individual gives consent for that piece of text data to be included in reports to the BPA client organisation.</li>
           <li>Personal information is not otherwise disclosed except as required by law.</li>
         </ol>
+        <p>For a full summary of BPA's Privacy and Confidentiality Policy you can head to <a href='https://bpanz.com/privacypolicy' target='_blank'>www.bpanz.com/privacypolicy</a> (opens in a new window).</p>
         <p>For any enquiries about privacy please contact BPA’s Privacy Officer:</p>
         <p>Email: privacyofficer@bpanz.com</p>
         <p>Phone: (61 7) 3367 0613</p>

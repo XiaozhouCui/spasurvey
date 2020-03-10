@@ -1,60 +1,9 @@
 import React, { Component } from "react";
+import { Route, Switch, Redirect } from 'react-router-dom';
+import SwitchedPages from '../SwitchedPages/SwitchedPages';
 import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import CoverPage from "../CoverPage/CoverPage";
-import Definitions from "../Definitions/Definitions";
-import Instructions from "../Instructions/Instructions";
-import Engagement from '../Engagement/Engagement';
 import SurveyNav from '../SurveyNav/SurveyNav';
-import Expectations from "../Expectations/Expectations";
-import PersonalWellBeing from "../PersonalWellBeing/PersonalWellBeing";
-import WorkLifeIntegration from "../WorkLifeIntegration/WorkLifeIntegration";
-import TrulyGreatPlaceToWork from '../TrulyGreatPlaceToWork/TrulyGreatPlaceToWork'
-import NPS from '../NPS/NPS';
-import AttractionRetention from "../AttractionRetention/AttractionRetention";
-import InclusionWork from "../InclusionWork/InclusionWork";
-import DrivingTheFuture from "../DrivingTheFuture/DrivingTheFuture";
-import StrategicDirection from "../StrategicDirection/StrategicDirection";
-import StrategicDirectionIAM from "../StrategicDirectionIAM/StrategicDirectionIAM";
-import StatisticalGroupings from "../StatisticalGroupings/StatisticalGroupings";
-import AcknowledgementOfDiversity from "../AcknowledgementOfDiversity/AcknowledgementOfDiversity";
-import StandardsOfBehaviour from "../StandardsOfBehaviour/StandardsOfBehaviour";
-import TeamNorms from "../TeamNorms/TeamNorms";
-import ValuesInAction from "../ValuesInAction/ValuesInAction";
-import TheDosAndDonts from "../TheDosAndDonts/TheDosAndDonts";
-import TheDosAndDontsForEachValue from "../TheDosAndDontsForEachValue/TheDosAndDontsForEachValue";
-import AdviceOnLivingTheValues from "../AdviceOnLivingTheValues/AdviceOnLivingTheValues";
-import RespectWork from "../RespectWork/RespectWork";
-import CausesForConcern from "../CausesForConcern/CausesForConcern";
-import SafetyWork from "../SafetyWork/SafetyWork";
-import WorkplaceSafetyCulture from "../WorkplaceSafetyCulture/WorkplaceSafetyCulture";
-import HarassmentAndBullying from "../HarassmentAndBullying/HarassmentAndBullying";
-import OccupationalViolence from "../OccupationalViolence/OccupationalViolence";
-import LeadershipEssentials from "../LeadershipEssentials/LeadershipEssentials";
-import LeadershipStrengths from "../LeadershipStrengths/LeadershipStrengths";
-import LeadershipPriorities from "../LeadershipPriorities/LeadershipPriorities";
-import LeadershipBehaviours from "../LeadershipBehaviours/LeadershipBehaviours";
-import MessageInABottle from "../MessageInABottle/MessageInABottle";
-import FeedbackFromLastSurvey from "../FeedbackFromLastSurvey/FeedbackFromLastSurvey";
-import MessageInABottleTDM from "../MessageInABottleTDM/MessageInABottleTDM";
-import TheIssuesThatMatter from "../TheIssuesThatMatter/TheIssuesThatMatter";
-import OrganisationalInitiatives from "../OrganisationalInitiatives/OrganisationalInitiatives";
-import EmbracingOurChallenges from "../EmbracingOurChallenges/EmbracingOurChallenges";
-import ChangeMomentum from "../ChangeMomentum/ChangeMomentum";
-import HowAreWeTravelling from "../HowAreWeTravelling/HowAreWeTravelling";
-import YourAdvice from "../YourAdvice/YourAdvice";
-import ClientExpectations from "../ClientExpectations/ClientExpectations";
-import RiskOfClientAbuse from "../RiskOfClientAbuse/RiskOfClientAbuse";
-import ClientSafetyCulture from "../ClientSafetyCulture/ClientSafetyCulture";
-import IntellectualProperty from "../IntellectualProperty/IntellectualProperty";
-import Privacy from "../Privacy/Privacy";
-
-
-
-
-
-
-
+import Footer from '../Footer/Footer';
 
 class App extends Component {
   constructor(props) {
@@ -66,7 +15,7 @@ class App extends Component {
       projectCode: 'TEST_20_ES',
       session: this.props.session,
       workUnit: this.props.workunit,
-      currentPage: 'Cover Page',
+      currentPage: 'CoverPage',
       modules: {
         CoverPage: 'Cover Page',
         Instructions: 'Instructions',
@@ -75,7 +24,7 @@ class App extends Component {
         Expectations: 'Expectations',
         PersonalWellBeing: 'Personal Well-Being',
         WorkLifeIntegration: 'Work-Life Integration',
-        TrulyGreat: 'Truly Great Place to Work',
+        TrulyGreatPlaceToWork: 'Truly Great Place to Work',
         NPS: 'Net Promoter Score',
         AttractionRetention: 'Attraction & Retention',
         InclusionWork: 'Inclusion@Work',
@@ -260,161 +209,29 @@ class App extends Component {
     const commonProps = {
       mountContent: this.mountContent,
       unmountContent: this.unmountContent,
-      moduleName: Object.keys(this.state.modules).find(key => this.state.modules[key] === this.state.currentPage)
     }
-    const pageTitles = Object.keys(this.state.modules).map(key => this.state.modules[key]);
-    const isCoverPage = this.state.currentPage === "Cover Page";
-    let page = null;
-    switch ( this.state.currentPage ) {
-      case ( 'Cover Page' ):
-        page = <CoverPage />;
-        break;
-      case ( 'Instructions' ):
-        page = <Instructions workunit={this.state.workUnit} />;
-        break;
-      case ( 'Definitions' ):
-        page = <Definitions />;
-        break;
-      case ( 'Engagement' ):
-        page = <Engagement {...commonProps} />;
-        break;
-      case ( 'Expectations' ):
-        page = <Expectations {...commonProps} />;
-        break;
-      case ( 'Personal Well-Being' ):
-        page = <PersonalWellBeing {...commonProps} />;
-        break;
-      case ( 'Work-Life Integration' ):
-        page = <WorkLifeIntegration {...commonProps} />;
-        break;
-      case ( 'Truly Great Place to Work' ):
-        page = <TrulyGreatPlaceToWork {...commonProps} />;
-        break;
-      case ( 'Net Promoter Score' ):
-        page = <NPS {...commonProps} />;
-        break;
-      case ( 'Attraction & Retention' ):
-        page = <AttractionRetention {...commonProps} />;
-        break;
-      case ( 'Inclusion@Work' ):
-        page = <InclusionWork {...commonProps} />;
-        break;
-      case ( 'Driving the Future' ):
-        page = <DrivingTheFuture {...commonProps} />;
-        break;
-      case ( 'Strategic Direction' ):
-        page = <StrategicDirection {...commonProps} />;
-        break;
-      case ( 'Strategic Direction Involving a Merger' ):
-        page = <StrategicDirectionIAM {...commonProps} />;
-        break;
-      case ( 'Statistical Groupings' ):
-        page = <StatisticalGroupings {...commonProps} />;
-        break;
-      case ( 'Acknowledgement of Diversity' ):
-        page = <AcknowledgementOfDiversity {...commonProps} />;
-        break;
-      case ( 'Standards of Behaviour' ):
-        page = <StandardsOfBehaviour {...commonProps} />;
-        break;
-      case ( 'Team Norms' ):
-        page = <TeamNorms {...commonProps} />;
-        break;
-      case ( 'Values-In-Action' ):
-        page = <ValuesInAction {...commonProps} />;
-        break;
-      case ( 'The Do’s and Don’ts' ):
-        page = <TheDosAndDonts {...commonProps} />;
-        break;
-      case ( 'The Do’s and Don’ts for Each Value' ):
-        page = <TheDosAndDontsForEachValue {...commonProps} />;
-        break;
-      case ( 'Advice on Living the Values' ):
-        page = <AdviceOnLivingTheValues {...commonProps} />;
-        break;
-      case ( 'Respect@Work' ):
-        page = <RespectWork {...commonProps} />;
-        break;
-      case ( 'Causes for Concern' ):
-        page = <CausesForConcern {...commonProps} />;
-        break;
-      case ( 'Safety@Work' ):
-        page = <SafetyWork {...commonProps} />;
-        break;
-      case ( 'Workplace Safety Culture' ):
-        page = <WorkplaceSafetyCulture {...commonProps} />;
-        break;
-      case ( 'Harassment and Bullying' ):
-        page = <HarassmentAndBullying {...commonProps} />;
-        break;
-      case ( 'Occupational Violence' ):
-        page = <OccupationalViolence {...commonProps} />;
-        break;
-      case ( 'Leadership Essentials' ):
-        page = <LeadershipEssentials {...commonProps} />;
-        break;
-      case ( 'Leadership Strengths' ):
-        page = <LeadershipStrengths {...commonProps} />;
-        break;
-      case ( 'Leadership Priorities' ):
-        page = <LeadershipPriorities {...commonProps} />;
-        break;
-      case ( 'Leadership Behaviours' ):
-        page = <LeadershipBehaviours {...commonProps} />;
-        break;
-      case ( 'Message in a Bottle' ):
-        page = <MessageInABottle {...commonProps} />;
-        break;
-      case ( 'Feedback From Your Organisation’s Last Employee Survey' ):
-        page = <FeedbackFromLastSurvey {...commonProps} />;
-        break;
-      case ( 'Message in a Bottle to Designated Managers' ):
-        page = <MessageInABottleTDM {...commonProps} />;
-        break;
-      case ( 'The Issues That Matter' ):
-        page = <TheIssuesThatMatter {...commonProps} />;
-        break;
-      case ( 'Organisational Initiatives' ):
-        page = <OrganisationalInitiatives {...commonProps} />;
-        break;
-      case ( 'Embracing Our Challenges' ):
-        page = <EmbracingOurChallenges {...commonProps} />;
-        break;
-      case ( 'Change Momentum' ):
-        page = <ChangeMomentum {...commonProps} />;
-        break;
-      case ( 'How Are We Travelling' ):
-        page = <HowAreWeTravelling {...commonProps} />;
-        break;
-      case ( 'Your Advice' ):
-        page = <YourAdvice {...commonProps} />;
-        break;
-      case ( 'Client Expectations' ):
-        page = <ClientExpectations {...commonProps} />;
-        break;
-      case ( 'Risk of Client Abuse' ):
-        page = <RiskOfClientAbuse {...commonProps} />;
-        break;
-      case ( 'Client Safety Culture' ):
-        page = <ClientSafetyCulture {...commonProps} />;
-        break;
-      case ( 'Statement on Intellectual Property' ):
-        page = <IntellectualProperty {...commonProps} />;
-        break;
-      case ( 'Statement on Privacy' ):
-        page = <Privacy {...commonProps} />;
-        break;
-      default:
-        page = null;
-    }
+    const pageIds = Object.keys(this.state.modules);
+    const isCoverPage = this.state.currentPage === "CoverPage";
+    const currentTitle = this.state.modules[this.state.currentPage];
 
     return (
       <div>
-        { isCoverPage ? null : <Header title={this.state.currentPage} onPageChange={this.handlePageChange} />}
+        { isCoverPage ? null : <Header title={currentTitle} onPageChange={this.handlePageChange} links={Object.entries(this.state.modules)} />}
         <div className="contentContainer" style={isCoverPage ? {padding: 0} : null}>
-          {page}
+          <Switch>
+            <Route exact path="/">
+              <Redirect to="/CoverPage" />
+            </Route>
+            {pageIds.map( pageId => { return (
+              <Route
+                key={pageId}
+                path={`/${pageId}`}
+                render={(props) => <SwitchedPages {...props} {...commonProps} type={pageId} moduleName={pageId} />}
+              />
+            )})}
+          </Switch>
         </div>
-        <SurveyNav page={this.state.currentPage} pages={pageTitles} onBrowse={this.handlePageNav} />
+        <SurveyNav page={this.state.currentPage} pages={pageIds} onBrowse={this.handlePageNav} />
         { isCoverPage ? <div><br/><br/></div> : null}
         <Footer />
       </div>
