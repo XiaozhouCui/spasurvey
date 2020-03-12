@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import validators from '../../utils/validators';
 
 class Expectations extends Component {
 
   componentDidMount() {
     this.props.mountContent(this.props.moduleName);
+    validators.validate();
   }
 
   componentWillUnmount() {

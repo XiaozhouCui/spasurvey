@@ -4,6 +4,7 @@ import SwitchedPages from '../SwitchedPages/SwitchedPages';
 import Header from '../Header/Header';
 import SurveyNav from '../SurveyNav/SurveyNav';
 import Footer from '../Footer/Footer';
+import toolTips from '../../utils/tooltips';
 
 class App extends Component {
   constructor(props) {
@@ -120,7 +121,7 @@ class App extends Component {
   }
 
   // Move Dimension-rendered form inputs into React-rendered questions after the component is mounted
-  mountContent ( page ) {
+  mountContent (page) {
     let radios = document.querySelectorAll("div[name='" + page + "'] .mrQuestionTable");
     let radioSlots = document.querySelectorAll(".radios" + page);
     if (radios.length === radioSlots.length) {
@@ -144,7 +145,7 @@ class App extends Component {
   }
 
   // Clean up the content before the component is unmounted
-  unmountContent ( page ) {
+  unmountContent (page) {
     let radios = document.querySelectorAll(".radios" + page + " .mrQuestionTable");
     let radioSlot = document.querySelector("div[name='" + page + "']");
     for (let i = 0; i < radios.length; i++) {
@@ -203,7 +204,12 @@ class App extends Component {
 
     // fetch("https://esurvey.bpanz.com/mrIWeb/mrIWeb.dll", {"credentials":"include","headers":{"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3","accept-language":"en-GB,en-US;q=0.9,en;q=0.8","cache-control":"no-cache","content-type":"application/x-www-form-urlencoded","pragma":"no-cache","sec-fetch-mode":"navigate","sec-fetch-site":"same-origin","sec-fetch-user":"?1","upgrade-insecure-requests":"1"},"referrer":"https://esurvey.bpanz.com/mrIWeb/mrIWeb.dll","referrerPolicy":"no-referrer-when-downgrade","body":"I.Engine=engine2&I.Project=SCCWA_19_ES&I.Session=fx4kvvs4jpbe6a2lenkgidqkgbpakaaa&I.SavePoint=Engagement&I.Renderer=HTMLPlayer&_QEngagement_Qf01183__Optimism01_C=__1&_QEngagement_Qf01184__Optimism02_C=__1&_QEngagement_Qf01194__Optimism02b_C=__1&_QEngagement_Qf01185__Optimism03_C=__3&_QEngagement_Qf01186__Optimism04_C=__3&_QEngagement_Qf01187__Optimism05_C=__3&_QEngagement_Qf01188__Optimism06_C=__6&_QEngagement_Qf01189__Optimism07_C=__6&_QEngagement_Qf01190__Optimism08_C=__6&_QEngagement_Qf01191__Optimism13_C=__6&_NNext=Next","method":"POST","mode":"cors"});
   }
-
+  // add tooltip contents (title attributes) whenever a new page is rendered
+  componentDidUpdate() {
+    toolTips.hoverText();
+    toolTips.hoverRadios();
+    toolTips.write();
+  }
 
   render() {
     const commonProps = {
