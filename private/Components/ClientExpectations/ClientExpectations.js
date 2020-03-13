@@ -93,7 +93,7 @@ class ClientExpectations extends Component {
                 <td className="question_table__header -col_two" style={{paddingBottom:5}}>
                 <img src="https://i.bpanz.com/i/DBOuI2y.png" alt="Agree ---- Disagree"/><br />
                 </td>
-                <td className="question_table__header -col_three" rowspan="9"></td>
+                <td className="question_table__header -col_three" rowSpan="9"></td>
               </tr>
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">

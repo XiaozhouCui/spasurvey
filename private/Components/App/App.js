@@ -13,7 +13,7 @@ class App extends Component {
     this.state = {
       isLocalHost: true,
       isStaging: false,
-      projectCode: 'TEST_20_ES',
+      projectCode: 'FULL_MODULE_SUIT',
       session: this.props.session,
       workUnit: this.props.workunit,
       currentPage: 'CoverPage',

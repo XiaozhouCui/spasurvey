@@ -219,11 +219,6 @@ let toolTips = {
     if (!!el) {
       el.html('<input type="submit" name="_NStop" value="Stop &amp; Save" title="Click to save your progress and return later"/> <input type="submit" name="_NNext" class="mrNext" value="Next" title="Click to proceed to the next page"/>')
     }
-    
-    el = $('.survey-nav#repl')
-    if (!!el) {
-      el.html('<input type="submit" name="_NStop" value="Stop &amp; Save" title="Click to save your progress and return later"/> <input type="submit" name="_NNext" class="mrNext" value="Next" title="Click to proceed to the next page"/>')
-    }
 
     el = document.querySelector('.demo7 label[for=_Q0_C3]');
     if (!!el) {

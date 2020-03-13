@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<survey code="TEST_20_ES" xmlns="http://www.bpanz.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.bpanz.com survey.xsd">
+<survey code="FULL_MODULE_SUIT" xmlns="http://www.bpanz.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.bpanz.com survey.xsd">
   <organisationName>BPA</organisationName>
   <title>Test Survey</title>
   
@@ -548,9 +548,6 @@
     <question class="categorical:Scale1to6Positive" id="11223_Innovation21PtSafety">... Speak up if they see a patient safety or quality of care problem.</question>
     <question class="categorical:Scale1to6Positive" id="14764_Innovation22PtSafety">... Implement solutions to any patient safety or quality of care problems identified.</question>
     <question class="categorical:Scale1to6Positive" id="14763_Innovation23PtSafety">... Close the loop by checking that solutions implemented fixed the problem for the patient.</question>
-  </page>
-
-  <page title="Change Momentum">
   </page>
 
   <categories id="D0024_Gender_other_specify" orientation="column" columns="1">

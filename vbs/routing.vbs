@@ -31,10 +31,4 @@ Survey:
   Survey.Ask()
   '--- End of page Survey ---
 
-ChangeMomentum:
-  '--- Start of page ChangeMomentum ---
-  ChangeMomentum.LayoutTemplate = "ChangeMomentum.html"
-  ChangeMomentum.Ask()
-  '--- End of page ChangeMomentum ---
-
 End Routing

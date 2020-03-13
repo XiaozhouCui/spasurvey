@@ -384,6 +384,11 @@ var orgn_name = "BPA";
 /* Change the Title of HTML file for Analytics purposes. */
 document.title = "eSurvey - Best Practice Australia | " + orgn_name;
 
+el = $('.survey-nav#repl')
+if (!!el) {
+	el.html('<input type="submit" name="_NStop" value="Stop &amp; Save" title="Click to save your progress and return later"/> <input type="submit" name="_NNext" class="mrNext" value="Next" title="Click to proceed to the next page"/>')
+}
+
 /**
  * Automatic progress bar calculation
  */

@@ -4,7 +4,7 @@ var fs = require('fs')
 var uglify = require('uglify-js')
 var stripCssComments = require('strip-css-comments')
 
-var outputFolder = './public/TEST_20_ES_files/'
+var outputFolder = './public/FULL_MODULE_SUIT_files/'
 
 /** https://github.com/sass/node-sass */
 var sassOpts = {

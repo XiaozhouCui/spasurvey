@@ -2,7 +2,7 @@ Metadata(en-AU, Question, Label)
   'Metadata VBScript file for [BPA, Test Survey]
   HDATA -
   [
-    TemplateLocation = "TEST_20_ES_files",
+    TemplateLocation = "FULL_MODULE_SUIT_files",
     Template = "DefaultLayout.html",
     HtmlOptions = "NoExpiryMetaTags"
   ];
@@ -761,10 +761,6 @@ Metadata(en-AU, Question, Label)
 
   '''''''''''''''''''' End_Survey ''''''''''''''''''''
 
-  '''''''''''''''''''' Begin_ChangeMomentum ''''''''''''''''''''
-  
-
-  '''''''''''''''''''' End_ChangeMomentum ''''''''''''''''''''
 
   CoverPage -
   page(
@@ -1270,10 +1266,6 @@ Metadata(en-AU, Question, Label)
     f14764_Innovation22PtSafety,
     f14763_Innovation23PtSafety
     
-  );
-
-  ChangeMomentum -
-  page(
   );
 
 

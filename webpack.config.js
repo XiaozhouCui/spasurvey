@@ -34,7 +34,7 @@ module.exports = {
   entry: './private/index.tsx',
   output: {
     filename: 'master.js',
-    path: path.resolve(__dirname, 'public/TEST_20_ES_files'),
+    path: path.resolve(__dirname, 'public/FULL_MODULE_SUIT_files'),
     publicPath: publicPath,
   },
   resolve: {

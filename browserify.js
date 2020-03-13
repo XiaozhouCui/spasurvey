@@ -15,7 +15,7 @@ var privateFiles = __dirname + '/private/'
 var scssFiles = privateFiles + 'scss/'
 var styleFilePath = scssFiles + 'style.scss'
 
-var publicFiles = __dirname + '/public/TEST_20_ES_files/'
+var publicFiles = __dirname + '/public/FULL_MODULE_SUIT_files/'
 var jsFileName = 'master.js'
 var jsMapFileName = jsFileName + '.map'
 var jsOutputFilePath = publicFiles + jsFileName
