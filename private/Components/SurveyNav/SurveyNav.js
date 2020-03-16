@@ -22,9 +22,13 @@ class SurveyNav extends Component {
 
   componentDidUpdate() {
     // Handle the css transition initial state for gprgress bar when component is mounted for the first time
-    if (this.props.page === 'Engagement') {
-      let bar = document.querySelector('#progressBar .bar')
-      setTimeout(()=>{bar.style.width = '6px'}, 10)
+    let totalPages = this.props.pages.length - 3; // Page counter starts from the Engagement module
+    let pageCounter = this.props.pages.indexOf(this.props.page) - 2;
+    let progressBar = $('#progressBar');
+    let progressBarWidth = Math.round((pageCounter / totalPages) * progressBar.width());
+    let bar = document.querySelector('#progressBar .bar');
+    if (bar) {
+      setTimeout(()=>{bar.style.width = progressBarWidth + 'px'}, 10)
     }
   }
   
@@ -37,8 +41,6 @@ class SurveyNav extends Component {
     let totalPages = this.props.pages.length - 3; // Page counter starts from the Engagement module
     let pageCounter = this.props.pages.indexOf(this.props.page) - 2;
     let estimatedProgress = Math.round(pageCounter/totalPages * 100);
-    let progressBar = $('#progressBar');
-    let progressBarWidth = (estimatedProgress / 100) * progressBar.width();
     let hideProgress = ['CoverPage', 'Instructions', 'Definitions'].includes(this.props.page); // Hide the progress bar on certain pages
     return (
       <div>
@@ -47,7 +49,7 @@ class SurveyNav extends Component {
           <input type="submit" name="_NStop" value="Stop &amp; Save" title="Save your progress and return later"/>
           {estimatedProgress === 100 ? <input type="submit" name="_NNext" value="Finish Survey" title="Finish and submit your response" onClick={() => confirm('Finished with your survey? Select OK to submit responses or Cancel to continue answering.')}/> : <NavLink to={`/${nextPage}`} title="Proceed to the next page" name="_NNext" onClick={this.navigate}>Next</NavLink>}
         </div>
-        {hideProgress ? null : <div id="progressBar" className="progress"><div className="bar" style={{width: progressBarWidth}}>{estimatedProgress + '%'}</div></div>}
+        {hideProgress ? null : <div id="progressBar" className="progress"><div className="bar">{estimatedProgress + '%'}</div></div>}
       </div>
     )
   }

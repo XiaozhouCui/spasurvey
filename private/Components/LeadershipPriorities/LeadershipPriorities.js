@@ -122,12 +122,12 @@ class LeadershipPriorities extends Component {
                 </td>
               </tr>
               <tr className="row coaching1">
-                <td className="question_title -no_shadow -align_right">Gives you constructive feedback on your performance.</td>
-                <td className="question_response row">
+                <td style={{paddingBottom: '2em'}} className="question_title -no_shadow -align_right">Gives you constructive feedback on your performance.</td>
+                <td style={{paddingBottom: '2em'}} className="question_response row">
                   <div className={'radios'+pageId}></div>
                 </td>
               </tr>
-              <tr> <td colSpan="2" style={{height:10}} /> </tr>
+
               <tr className="row coaching1">
                 <td className="question_title -no_shadow -align_right">Helps you to set realistic performance objectives.</td>
                 <td className="question_response row">
@@ -141,12 +141,12 @@ class LeadershipPriorities extends Component {
                 </td>
               </tr>
               <tr className="row coaching1">
-                <td className="question_title -no_shadow -align_right">Helps you to plan your personal/professional development.</td>
-                <td className="question_response row">
+                <td style={{paddingBottom: '2em'}} className="question_title -no_shadow -align_right">Helps you to plan your personal/professional development.</td>
+                <td style={{paddingBottom: '2em'}} className="question_response row">
                   <div className={'radios'+pageId}></div>
                 </td>
               </tr>
-              <tr> <td colSpan="2" style={{height:10}} /> </tr>
+
               <tr className="row coaching1">
                 <td className="question_title -no_shadow -align_right">Reviews your progress in achieving your objectives.</td>
                 <td className="question_response row">
@@ -160,22 +160,24 @@ class LeadershipPriorities extends Component {
                 </td>
               </tr>
               <tr className="row coaching1">
-                <td className="question_title -no_shadow -align_right">Is a role model you look up to and learn from.</td>
-                <td className="question_response row">
+                <td style={{paddingBottom: '2em'}} className="question_title -no_shadow -align_right">Is a role model you look up to and learn from.</td>
+                <td style={{paddingBottom: '2em'}} className="question_response row">
                   <div className={'radios'+pageId}></div>
                 </td>
               </tr>
-              <tr> <td colSpan="2" style={{height:10}} /> </tr>
+
               <tr>
                 <td className="question_table__header -col_one" style={{paddingRight:30}}>
                 </td>
                 <td className="question_table__header -col_two" style={{paddingBottom:9}}>
                   <table>
-                    <tr>
-                      <td><strong>As Appropriate</strong></td>
-                      <td><strong>Sometimes</strong></td>
-                      <td><strong>Never</strong></td>
-                    </tr>
+                    <tbody>
+                      <tr>
+                        <td><strong>As Appropriate</strong></td>
+                        <td><strong>Sometimes</strong></td>
+                        <td><strong>Never</strong></td>
+                      </tr>
+                    </tbody>
                   </table>
                 </td>
               </tr>

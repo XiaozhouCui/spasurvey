@@ -69,12 +69,12 @@ class PersonalWellBeing extends Component {
                 </td>
               </tr>
               <tr className="row">
-                <td className="question_title -no_shadow -align_right">... Making a difference in my chosen field.</td>
-                <td className="question_response">
+                <td style={{paddingBottom:'2em'}} className="question_title -no_shadow -align_right">... Making a difference in my chosen field.</td>
+                <td style={{paddingBottom:'2em'}} className="question_response">
                   <div className="radiosPersonalWellBeing"></div>
                 </td>
               </tr>
-              <tr> <td style={{height:'1em'}}> </td> </tr>
+              
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... Being valued by others.</td>
                 <td className="question_response">
@@ -94,12 +94,12 @@ class PersonalWellBeing extends Component {
                 </td>
               </tr>
               <tr className="row">
-                <td className="question_title -no_shadow -align_right">... Being treated as an individual, not just a number.</td>
-                <td className="question_response">
+                <td style={{paddingBottom:'2em'}} className="question_title -no_shadow -align_right">... Being treated as an individual, not just a number.</td>
+                <td style={{paddingBottom:'2em'}} className="question_response">
                   <div className="radiosPersonalWellBeing"></div>
                 </td>
               </tr>
-              <tr> <td style={{height:'1em'}}> </td> </tr>
+              
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... Being included by others around me.</td>
                 <td className="question_response">
@@ -119,12 +119,12 @@ class PersonalWellBeing extends Component {
                 </td>
               </tr>
               <tr className="row">
-                <td className="question_title -no_shadow -align_right">... Feeling safe at work to “speak up” when required.</td>
-                <td className="question_response">
+                <td style={{paddingBottom:'2em'}} className="question_title -no_shadow -align_right">... Feeling safe at work to “speak up” when required.</td>
+                <td style={{paddingBottom:'2em'}} className="question_response">
                   <div className="radiosPersonalWellBeing"></div>
                 </td>
               </tr>
-              <tr> <td style={{height:'1em'}}> </td> </tr>
+              
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">... Being supported to do my best.</td>
                 <td className="question_response">

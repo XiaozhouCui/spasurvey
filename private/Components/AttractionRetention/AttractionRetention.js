@@ -96,21 +96,23 @@ class AttractionRetention extends Component {
             <div className={'radios'+pageId}></div>
           </div>
           <table>
-            <tr>
-              <td valign="top">
-                <div className="arrow">
-                  <img src="https://i.bpanz.com/SurveyAssets/rightAngleRightArrow.png"></img>
-                </div>
-              </td>
-              <td>
-                <div className="question_title -no_shadow -why_question">
-                  If <strong>YES</strong>, what was the deciding factor in your decision to leave the organisation?
-                </div>
-                <div className="question_response">
-                  <div className={'text'+pageId}></div>
-                </div>
-              </td>
-            </tr>
+            <tbody>
+              <tr>
+                <td valign="top">
+                  <div className="arrow">
+                    <img src="https://i.bpanz.com/SurveyAssets/rightAngleRightArrow.png"></img>
+                  </div>
+                </td>
+                <td>
+                  <div className="question_title -no_shadow -why_question">
+                    If <strong>YES</strong>, what was the deciding factor in your decision to leave the organisation?
+                  </div>
+                  <div className="question_response">
+                    <div className={'text'+pageId}></div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
         <div className="demographic">

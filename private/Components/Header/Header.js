@@ -93,6 +93,20 @@ class Header extends Component {
       }
     });
 
+    const titlesText = Object.keys(subtitles);
+    const links = this.props.links;
+    let titlePairs = [];
+    let currentTitle = '';
+    let currentSubtitle = '';
+    for (let i = 0; i <= links.length; i++) {
+      titlePairs.push([links[i], titlesText[i]]);
+      if (links[i] === this.props.currentPage) {
+        currentTitle = titlesText[i];
+        currentSubtitle = subtitles[titlesText[i]];
+      }
+    }
+    
+
     return (
       <div className="header">
         <div className="header__logo -bpanz">
@@ -104,12 +118,12 @@ class Header extends Component {
         <div className="header__logo -client">
           <div className="clientLogoSlot"></div>
         </div>
-        <NavBar onClick={this.props.onPageChange} titles={titles} links={this.props.links} />
+        <NavBar onClick={this.props.onPageChange} titlePairs={titlePairs} />
         <div className="header-bar">
-          <h1>{this.props.title}</h1>
+          <h1>{currentTitle}</h1>
         </div>
         <div className="subtitle">
-          <p>{subtitles[this.props.title]}</p>
+          <p>{currentSubtitle}</p>
         </div>
       </div>
     );

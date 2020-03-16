@@ -71,12 +71,12 @@ class LeadershipStrengths extends Component {
                 </td>
               </tr>
               <tr className="row">
-                <td className="question_title -no_shadow -align_right">Competent</td>
-                <td className="question_response">
+                <td style={{paddingBottom: '2em'}} className="question_title -no_shadow -align_right">Competent</td>
+                <td style={{paddingBottom: '2em'}} className="question_response">
                   <div className={'radios'+pageId}></div>
                 </td>
               </tr>
-              <tr> <td style={{height:'1em'}}> </td> </tr>
+
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">Fair</td>
                 <td className="question_response">
@@ -114,12 +114,12 @@ class LeadershipStrengths extends Component {
                 </td>
               </tr>
               <tr className="row">
-                <td className="question_title -no_shadow -align_right">Visionary</td>
-                <td className="question_response">
+                <td style={{paddingBottom: '2em'}} className="question_title -no_shadow -align_right">Visionary</td>
+                <td style={{paddingBottom: '2em'}} className="question_response">
                   <div className={'radios'+pageId}></div>
                 </td>
               </tr>
-              <tr> <td style={{height:'1em'}}> </td> </tr>
+
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">A Role Model (leading by example)</td>
                 <td className="question_response">
@@ -133,12 +133,12 @@ class LeadershipStrengths extends Component {
                 </td>
               </tr>
               <tr className="row">
-                <td className="question_title -no_shadow -align_right">Inspirational</td>
-                <td className="question_response">
+                <td style={{paddingBottom: '2em'}} className="question_title -no_shadow -align_right">Inspirational</td>
+                <td style={{paddingBottom: '2em'}} className="question_response">
                   <div className={'radios'+pageId}></div>
                 </td>
               </tr>
-              <tr> <td style={{height:'1em'}}> </td> </tr>
+
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">Supportive</td>
                 <td className="question_response">
@@ -164,12 +164,12 @@ class LeadershipStrengths extends Component {
                 </td>
               </tr>
               <tr className="row">
-                <td className="question_title -no_shadow -align_right">Understanding</td>
-                <td className="question_response">
+                <td style={{paddingBottom: '2em'}} className="question_title -no_shadow -align_right">Understanding</td>
+                <td style={{paddingBottom: '2em'}} className="question_response">
                   <div className={'radios'+pageId}></div>
                 </td>
               </tr>
-              <tr> <td style={{height:'1em'}}> </td> </tr>
+
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">Helpful</td>
                 <td className="question_response">

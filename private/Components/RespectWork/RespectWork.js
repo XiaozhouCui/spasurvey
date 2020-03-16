@@ -54,14 +54,14 @@ class RespectWork extends Component {
                 </td>
               </tr>
               <tr className="row">
-                <td className="question_title -no_shadow -align_right">
+                <td style={{paddingBottom:20}} className="question_title -no_shadow -align_right">
                   ... Free from <span className="definition" id="sexu">sexual harassment</span>.
                 </td>
-                <td className="question_response">
+                <td style={{paddingBottom:20}} className="question_response">
                   <div className={'radios'+pageId}></div>
                 </td>
               </tr>
-              <tr> <td colSpan="2" style={{height:10}} /> </tr>
+              {/* <tr> <td colSpan="2" style={{height:10}} /> </tr> */}
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">
                   ... Free from <span className="definition" id="favo">favouritism</span>.

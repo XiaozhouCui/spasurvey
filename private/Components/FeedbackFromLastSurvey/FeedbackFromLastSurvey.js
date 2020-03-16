@@ -36,12 +36,12 @@ class FeedbackFromLastSurvey extends Component {
                 </td>
               </tr>
               <tr className="row">
-                <td className="question_title -no_shadow">Was this a BPA employee survey?</td>
-                <td className="question_response row">
+                <td style={{paddingBottom: '2em'}} className="question_title -no_shadow">Was this a BPA employee survey?</td>
+                <td style={{paddingBottom: '2em'}} className="question_response row">
                   <div className={'radios'+pageId}></div>
                 </td>
               </tr>
-              <tr> <td style={{height:'1em'}}> </td> </tr>
+
               <tr>
                 <td className="question_title -no_shadow">Did you receive feedback on the findings from that survey ...</td>
               </tr>
@@ -56,17 +56,17 @@ class FeedbackFromLastSurvey extends Component {
                 </td>
               </tr>
               <tr className="row">
-                <td className="question_title -no_shadow">
+                <td style={{paddingBottom: '2em'}} className="question_title -no_shadow">
                   <ul>
                   <li>From your manager?</li>
                   </ul>
                 </td>
-                <td className="question_response row">
+                <td style={{paddingBottom: '2em'}} className="question_response row">
                   <div className={'radios'+pageId}></div>
                 </td>
               </tr>
 
-              <tr> <td style={{height:'1em'}}> </td> </tr>
+
               <tr>
                 <td className="question_title -no_shadow">The survey feedback was ...</td>
               </tr>
@@ -91,17 +91,17 @@ class FeedbackFromLastSurvey extends Component {
                 </td>
               </tr>
               <tr className="row">
-                <td className="question_title -no_shadow">
+                <td style={{paddingBottom: '2em'}} className="question_title -no_shadow">
                   <ul>
                     <li>Action oriented (it set out a clear plan of action for the future).</li>
                   </ul>
                 </td>
-                <td className="question_response row">
+                <td style={{paddingBottom: '2em'}} className="question_response row">
                   <div className={'radios'+pageId}></div>
                 </td>
               </tr>
 
-              <tr> <td style={{height:'1em'}}> </td> </tr>
+
               <tr className="row">
                 <td className="question_title -no_shadow">Was action taken as a result of the survey?</td>
                 <td className="question_response row">

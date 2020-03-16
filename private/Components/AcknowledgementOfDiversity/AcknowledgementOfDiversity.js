@@ -52,14 +52,16 @@ class AcknowledgementOfDiversity extends Component {
           <div id="21930_Gender_Other_Specify">
             <div style={{marginLeft:45}}>
               <table>
-                <tr>
-                  <td valign="top">
-                    <img src="https://i.bpanz.com/SurveyAssets/rightAngleRightArrow.png"/>
-                  </td>
-                  <td className="specify">
-                    <div className={'text'+pageId}></div>
-                  </td>
-                </tr>
+                <tbody>
+                  <tr>
+                    <td valign="top">
+                      <img src="https://i.bpanz.com/SurveyAssets/rightAngleRightArrow.png"/>
+                    </td>
+                    <td className="specify">
+                      <div className={'text'+pageId}></div>
+                    </td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>

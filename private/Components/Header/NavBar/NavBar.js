@@ -14,16 +14,17 @@ class NavBar extends Component {
 
   render() {
     // divide the pages into programs
-    const links = [...this.props.links];
+    let titlePairs = [...this.props.titlePairs];
+
     const programs = {
-      'Cover':links.slice(0, 3),
-      'Engaging Our People':links.slice(3, 7),
-      'Identity & Direction':links.slice(7, 16),
-      'Values':links.slice(16, 22),
-      'Risk@Work':links.slice(22, 28),
-      'Leadership Landscape':links.slice(28, 35),
-      'Organisational Change':links.slice(35, 41),
-      'Client Engagement':links.slice(41, 46),
+      'Cover':titlePairs.slice(0, 3),
+      'Engaging Our People':titlePairs.slice(3, 7),
+      'Identity & Direction':titlePairs.slice(7, 16),
+      'Values':titlePairs.slice(16, 22),
+      'Risk@Work':titlePairs.slice(22, 28),
+      'Leadership Landscape':titlePairs.slice(28, 35),
+      'Organisational Change':titlePairs.slice(35, 41),
+      'Client Engagement':titlePairs.slice(41, 46),
     };
 
     return (
