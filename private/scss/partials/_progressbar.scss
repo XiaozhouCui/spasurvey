@@ -27,20 +27,21 @@
 // }
 
 #progressBar {
-    width: 300px;
-    height: 22px;
+    width: 500px;
+    height: 30px;
     background-color: #ddd;
-    margin: 20px auto 0 auto;
+    margin: 30px auto 0 auto;
     @include box-shadow(inset 0 2px 2px rgba(0,0,0,.2), inset 0 0 0 1px rgba(0,0,0,.16));
     border-radius: (4px);
 }
 
 #progressBar div {
+    font-size: 1.2em;
     height: 100%;
     width: 1px;
     color: #fff;
     text-align: center;
-    line-height: 22px;
+    line-height: 30px;
     background-color: #459FE2;
     transition: ease 0.5s;
     border-radius: (4px);

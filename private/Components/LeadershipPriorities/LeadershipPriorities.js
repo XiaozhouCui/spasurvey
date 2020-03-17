@@ -101,11 +101,13 @@ class LeadershipPriorities extends Component {
                 </td>
                 <td className="question_table__header -col_two" style={{paddingBottom:9}}>
                   <table>
-                    <tr>
-                      <td><strong>Regularly</strong></td>
-                      <td><strong>Sometimes</strong></td>
-                      <td><strong>Never</strong></td>
-                    </tr>
+                    <tbody>
+                      <tr>
+                        <td><strong>Regularly</strong></td>
+                        <td><strong>Sometimes</strong></td>
+                        <td><strong>Never</strong></td>
+                      </tr>
+                    </tbody>
                   </table>
                 </td>
               </tr>

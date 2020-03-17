@@ -8,14 +8,13 @@ class NavBar extends Component {
   }
 
   handlePageChange(event) {
-    const pageId = event.target.getAttribute('href').replace(/^\//g, '');
+    const pageId = event.target.getAttribute('href').replace(/^\#\//g, '');
     this.props.onClick(pageId);
   }
 
   render() {
     // divide the pages into programs
-    let titlePairs = [...this.props.titlePairs];
-
+    let titlePairs = this.props.titlePairs;
     const programs = {
       'Cover':titlePairs.slice(0, 3),
       'Engaging Our People':titlePairs.slice(3, 7),
@@ -34,7 +33,7 @@ class NavBar extends Component {
             <li key={program} className="dropdown">
               <a href="#" className="dropbtn">{program}</a>
               <div className="dropdown-content">
-                {programs[program].map( page => <Link key={page[0]} to={`/${page[0]}`} onClick={this.handlePageChange} >{page[1]}</Link> )}
+                {programs[program].map( page => <Link key={page[0]} to={page[0]} onClick={this.handlePageChange} >{page[1]}</Link> )}
               </div>
             </li>
           )

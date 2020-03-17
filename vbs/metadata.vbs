@@ -254,12 +254,6 @@ Metadata(en-AU, Question, Label)
 
   '''''''''''''''''''' End shared lists ''''''''''''''''''''
 
-  '''''''''''''''''''' Coverpage ''''''''''''''''''''
-
-  CoverpageInfo - info;
-
-  '''''''''''''''''''' End_Coverpage ''''''''''''''''''''
-
   '''''''''''''''''''' Begin_Survey ''''''''''''''''''''
   
   SurveyInfo "{#WorkUnit}" info;
@@ -762,10 +756,6 @@ Metadata(en-AU, Question, Label)
   '''''''''''''''''''' End_Survey ''''''''''''''''''''
 
 
-  CoverPage -
-  page(
-    CoverpageInfo
-  );
 
   Survey -
   page(

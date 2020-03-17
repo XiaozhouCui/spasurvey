@@ -58,24 +58,24 @@ class Engagement extends Component {
               </tr>
               <tr className="question_table__question_row row">
                 <td className="question_table__question -align_right">
-                  There is high trust in the <span className="definition" name="exec">Senior Leadership Team</span>.
+                  There is high trust in <span className="definition" name="exec">Executive Management</span>.
                 </td>
                 <td className="question_table__question -align_center">
                   <div className={'radios'+pageId}></div>
                 </td>
                 <td className="question_table__question -align_left">
-                  There is low trust in the Senior Leadership Team.
+                  There is low trust in Executive Management.
                 </td>
               </tr>
               <tr className="question_table__question_row row">
                 <td className="question_table__question -align_right">
-                  There is high trust in <span className="definition" name="midd">Management</span>.
+                  There is high trust in <span className="definition" name="midd">Middle Management</span>.
                 </td>
                 <td className="question_table__question -align_center">
                   <div className={'radios'+pageId}></div>
                 </td>
                 <td className="question_table__question -align_left">
-                  There is low trust in Management.
+                  There is low trust in Middle Management.
                 </td>
               </tr>
               <tr className="question_table__question_row row">

@@ -31,6 +31,18 @@ class SurveyNav extends Component {
       setTimeout(()=>{bar.style.width = progressBarWidth + 'px'}, 10)
     }
   }
+
+  componentDidMount() {
+    // Handle the css transition initial state for gprgress bar when browser refresh
+    let totalPages = this.props.pages.length - 3; // Page counter starts from the Engagement module
+    let pageCounter = this.props.pages.indexOf(this.props.page) - 2;
+    let progressBar = $('#progressBar');
+    let progressBarWidth = Math.round((pageCounter / totalPages) * progressBar.width());
+    let bar = document.querySelector('#progressBar .bar');
+    if (bar) {
+      setTimeout(()=>{bar.style.width = progressBarWidth + 'px'}, 10)
+    }
+  }
   
   render() {
     // Nav button variables

@@ -10,12 +10,6 @@ Variables:
   WorkUnit = IOM.SampleRecord.Item["WorkUnit"]
   '--- End of IOM Script item Variables ---
 
-Coverpage:
-  '--- Start of page Coverpage ---
-  Coverpage.LayoutTemplate = "Coverpage.html"
-  Coverpage.Ask()
-  '--- End of page Coverpage ---
-
 Script:
   '--- Start of IOM Script item Script ---
   IOM.Info.EstimatedPages = IOM.Pages.Count - 1

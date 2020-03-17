@@ -104,14 +104,14 @@ class ClientExpectations extends Component {
                 </td>
               </tr>
               <tr className="row">
-                <td className="question_title -no_shadow -align_right">
+                <td style={{paddingBottom:'2em'}} className="question_title -no_shadow -align_right">
                   Executive Management wants to know feedback from clients.
                 </td>
-                <td className="question_response">
+                <td style={{paddingBottom:'2em'}} className="question_response">
                   <div className={'radios'+pageId}></div>
                 </td>
               </tr>
-              <tr> <td colspan="2" style={{height:'0.5em'}}> </td> </tr>
+
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">
                   This organisation has specifically defined what exceptional service is.
@@ -121,14 +121,14 @@ class ClientExpectations extends Component {
                 </td>
               </tr>
               <tr className="row">
-                <td className="question_title -no_shadow -align_right">
+                <td style={{paddingBottom:'2em'}} className="question_title -no_shadow -align_right">
                   Employees understand exactly what they must do to deliver exceptional service.
                 </td>
-                <td className="question_response">
+                <td style={{paddingBottom:'2em'}} className="question_response">
                   <div className={'radios'+pageId}></div>
                 </td>
               </tr>
-              <tr> <td colspan="2" style={{height:'0.5em'}}> </td> </tr>
+
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">
                   Staffing levels are adequate to meet client needs.
@@ -138,14 +138,14 @@ class ClientExpectations extends Component {
                 </td>
               </tr>
               <tr className="row">
-                <td className="question_title -no_shadow -align_right">
+                <td style={{paddingBottom:'2em'}} className="question_title -no_shadow -align_right">
                   Employees meet client expectations on delivering exceptional service.
                 </td>
-                <td className="question_response">
+                <td style={{paddingBottom:'2em'}} className="question_response">
                   <div className={'radios'+pageId}></div>
                 </td>
               </tr>
-              <tr> <td colspan="2" style={{height:'0.5em'}}> </td> </tr>
+
               <tr className="row">
                 <td className="question_title -no_shadow -align_right">
                   This organisation prides itself on providing service that is “right the first time”.

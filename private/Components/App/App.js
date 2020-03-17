@@ -5,6 +5,7 @@ import Header from '../Header/Header';
 import SurveyNav from '../SurveyNav/SurveyNav';
 import Footer from '../Footer/Footer';
 import toolTips from '../../utils/tooltips';
+import CoverPage from "../CoverPage/CoverPage";
 
 class App extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class App extends Component {
       projectCode: 'FULL_MODULE_SUIT',
       session: this.props.session,
       workUnit: this.props.workunit,
-      currentPage: 'CoverPage',
+      currentPage: this.props.currentPage,
       modules: [
         'CoverPage',
         'Instructions',
@@ -218,15 +219,13 @@ class App extends Component {
     }
     const pageIds = this.state.modules;
     const isCoverPage = this.state.currentPage === "CoverPage";
-
+    //https://staging7.spsscloud.com/mrIWeb/mrIWeb.dll
     return (
       <div>
         { isCoverPage ? null : <Header currentPage={this.state.currentPage} onPageChange={this.handlePageChange} links={this.state.modules} />}
         <div className="contentContainer" style={isCoverPage ? {padding: 0} : null}>
           <Switch>
-            <Route exact path="/">
-              <Redirect to="/CoverPage" />
-            </Route>
+            <Route exact path="/" component={CoverPage} />
             {pageIds.map( pageId => { return (
               <Route
                 key={pageId}
